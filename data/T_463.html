@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Superbike race 1 classification of 2007 Phillip Island Superbike World Championship round
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: did james toseland score more or less points than shinichi nakatomi?
+            </div>
+            <div>
+                Answer: more
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Pos', 'No', 'Rider', 'Bike', 'Laps', 'Time', 'Grid', 'Points'], ['1', '21', 'https://drive.google.com/thumbnail?id=1CuNYigPY5FdFLbQaytzbszSfcYJJkoBq', 'https://drive.google.com/thumbnail?id=1OqQZXlJuV-Za4fmlNGtKSJWQuPXClWsE', '22', '34:11.276', '1', '25'], ['2', '52', 'https://drive.google.com/thumbnail?id=10avQixyJEssP_TYTti56adT8aHS3qabD', 'Honda CBR1000RR', '22', '+2.096', '2', '20'], ['3', '3', 'https://drive.google.com/thumbnail?id=1uxCFYPigmCT2RQOlq2LTrSoTjPNPdyDY', 'Suzuki GSX-R1000 K7', '22', '+10.143', '5', '16'], ['4', '41', 'https://drive.google.com/thumbnail?id=1bX7SdqgHBMOAkw8gSDy4bSOgSPTV8WbX', 'https://drive.google.com/thumbnail?id=1_YrR4OQhDwd7Gl6RMVKb2F6_allQiDcB', '22', '+18.923', '4', '13'], ['5', '11', 'https://drive.google.com/thumbnail?id=1KKzXIRucEm54MMwd2nD45cqfZPwum7do', 'https://drive.google.com/thumbnail?id=1_YrR4OQhDwd7Gl6RMVKb2F6_allQiDcB', '22', '+19.742', '3', '11'], ['6', '57', 'https://drive.google.com/thumbnail?id=1D7IhZ3B_tjfedQob6DymOXQH1YSbRC0M', 'https://drive.google.com/thumbnail?id=1OqQZXlJuV-Za4fmlNGtKSJWQuPXClWsE', '22', '+24.765', '10', '10'], ['7', '111', 'https://drive.google.com/thumbnail?id=1TN0RHM8IKw9oFJoDsaQSNWIOkc7RbbNP', 'https://drive.google.com/thumbnail?id=1OqQZXlJuV-Za4fmlNGtKSJWQuPXClWsE', '22', '+27.404', '8', '9'], ['8', '76', 'https://drive.google.com/thumbnail?id=10oVv4VSmXZZxfD1GXC8JuzNQBEc8BiSp', 'https://drive.google.com/thumbnail?id=1FTQ8gSHfv46AWDsCyNH5vEE63en3ZTfQ', '22', '+34.614', '7', '8'], ['9', '10', 'https://drive.google.com/thumbnail?id=1sfC6o54lfvygFqrZjtqxnxXQo8Q4GuhY', 'https://drive.google.com/thumbnail?id=1MnDEyKHZxah16OGovdH5XLLr4dPM_SeT', '22', '+35.339', '6', '7'], ['10', '99', 'Steve Martin', 'https://drive.google.com/thumbnail?id=1snJiYxZbXwWQfQkckcbKnqG18bO6eSth', '22', '+36.238', '11', '6'], ['11', '44', 'https://drive.google.com/thumbnail?id=15scVZwDw0IkQLjA4qdIrt9CAbzMhQg6q', 'https://drive.google.com/thumbnail?id=1snJiYxZbXwWQfQkckcbKnqG18bO6eSth', '22', '+38.067', '15', '5'], ['12', '25', 'https://drive.google.com/thumbnail?id=17Ndc0RFu4Dx0g9uWI5SzbM3Ms3NueLr5', 'https://drive.google.com/thumbnail?id=1snJiYxZbXwWQfQkckcbKnqG18bO6eSth', '22', '+47.078', '12', '4'], ['13', '38', 'Shinichi Nakatomi', 'https://drive.google.com/thumbnail?id=1_YrR4OQhDwd7Gl6RMVKb2F6_allQiDcB', '22', '+58.571', '17', '3'], ['14', '96', 'https://drive.google.com/thumbnail?id=1tfcaJA61j-qCLeWQj8bFkB8bT0o8XeIZ', 'https://drive.google.com/thumbnail?id=1OqQZXlJuV-Za4fmlNGtKSJWQuPXClWsE', '22', '+1:08.000', '14', '2'], ['15', '53', 'Alex Polita', 'Suzuki GSX-R1000 K6', '22', '+1:22.584', '18', '1'], ['16', '73', 'Christian Zaiser', 'https://drive.google.com/thumbnail?id=1C4P5UM7xzg8ApeZeXv7BK0lYFvuhcHKL', '22', '+1:28.374', '19', ''], ['17', '42', 'https://drive.google.com/thumbnail?id=1NO33HZrLb0-mWhvei9x3A9PJzp0HFQPd', 'Ducati 999RS', '22', '+1:30.184', '21', ''], ['18', '36', 'Jiri Drazdak', 'https://drive.google.com/thumbnail?id=1_YrR4OQhDwd7Gl6RMVKb2F6_allQiDcB', '21', '+1 Lap', '20', ''], ['Ret', '55', 'https://drive.google.com/thumbnail?id=1tY3XksqlA8qLiR9jf7PKGR37cRKqsHxv', 'https://drive.google.com/thumbnail?id=1MnDEyKHZxah16OGovdH5XLLr4dPM_SeT', '16', 'Retirement', '9', ''], ['Ret', '84', 'https://drive.google.com/thumbnail?id=1O83Xg8Qte4OyH49tRNWcd_3FaL8cQb9k', 'Honda CBR1000RR', '5', 'Retirement', '13', '']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

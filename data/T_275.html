@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Regular season|Schedule of 1990 Southern Miss Golden Eagles football team
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: did the eagles play against virginia tech or alabama on september 8?
+            </div>
+            <div>
+                Answer: Alabama
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Date', 'Opponent#', 'Rank#', 'Site', 'Result', 'Attendance'], ['September 1', 'https://drive.google.com/thumbnail?id=1SQvpyWNRSFPy8oReKnx6hwZsuIL7GPaH *', '', 'M.M. Roberts Stadium •  https://drive.google.com/thumbnail?id=1LLR4oVpREP2k81-5GmH-viE1aO6lPw27', 'W\xa012-0', '17,590'], ['September 8', 'at\xa0#13\xa0Alabama*', '', 'https://drive.google.com/thumbnail?id=1HwGXZD-SRB29fi9_sKn2zXjuf0Nbrkzt  •  https://drive.google.com/thumbnail?id=1Gd-R530avfGan9yTeiyQRcVfT8hm5KML', 'W\xa027-24', '75,962'], ['September 15', 'at\xa0Georgia*', '', 'https://drive.google.com/thumbnail?id=17lED7eSrnGdgNuCSn-cuazY-HWWuG0Ha  •  https://drive.google.com/thumbnail?id=14IG45KOFskflpBsbx2jx2m_DjTIU41lW', 'L\xa017-18', '79,812'], ['September 22', 'at\xa0 https://drive.google.com/thumbnail?id=1CxMWph3CKH3lc39EY-pcojHR-iy7u_Yu *', '', 'Scott Field • Starkville, MS', 'L\xa010-13', '40,115'], ['September 29', 'Louisville*', '', 'M.M. Roberts Stadium • Hattiesburg, MS', 'W\xa025-13', '20,545'], ['October 6', 'at\xa0East Carolina*', '', 'Ficklen Memorial Stadium •  https://drive.google.com/thumbnail?id=1f6tcGGFO_ESuIuJG28kwK0ywumY7bP1y', 'W\xa016-7', '31,305'], ['October 13', 'at\xa0 https://drive.google.com/thumbnail?id=1tBlYs9hkSayxoEQBhVng98281XwCOsXE *', '', 'https://drive.google.com/thumbnail?id=1WdPidHsNZc7GyRrI7eyfxpImLn6_iNVN  •  https://drive.google.com/thumbnail?id=1sgOpxAjjc5ErjE8hYztDSn1uvT_xvAyF', 'W\xa020-14', '26,662'], ['October 20', 'https://drive.google.com/thumbnail?id=1-3RcxNErBXSQaxUmudq6U6XgEZUV0_q_ *', '', 'M.M. Roberts Stadium • Hattiesburg, MS', 'W\xa023-7', '24,520'], ['October 27', 'at\xa0 https://drive.google.com/thumbnail?id=1ZtuiNpovgLP6Q2nzZGFKltnhzoYhiDtG *', '', 'https://drive.google.com/thumbnail?id=1af8gwtl5wkXz8hAtsJbI8bnbroraGW7L  • Blacksburg, VA', 'L\xa016-20', '37,462'], ['November 3', 'at\xa0 https://drive.google.com/thumbnail?id=1sXseHgy1AueIi8L4TLu-P9lGJ7sH_J8n *', '', 'Cajun Field •  https://drive.google.com/thumbnail?id=1OW01CjVkKhJdvs8tmWdZSHmOyMakb_EQ', 'W\xa014-13', '17,860'], ['November 10', 'at\xa0#15\xa0 https://drive.google.com/thumbnail?id=1NshDvHOZ6ykmDw_lra9OKQEz1FqFgYWf *', '', 'Jordan-Hare Stadium • Auburn, AL', 'W\xa013-12', '85,214'], ['December 28', 'vs.\xa0 https://drive.google.com/thumbnail?id=1PebH0GqsBIDLO8oi8bZBLi2enUzRoacf *', '#23', 'https://drive.google.com/thumbnail?id=1HwGXZD-SRB29fi9_sKn2zXjuf0Nbrkzt  •  https://drive.google.com/thumbnail?id=1Gd-R530avfGan9yTeiyQRcVfT8hm5KML  (All-American Bowl)', 'L\xa027-31', '44,000']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to International career|International goals of Jari Litmanen
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: in what stadium did finland defeat san marino 8-0?
+            </div>
+            <div>
+                Answer: Helsinki Olympic Stadium
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['No.', 'Date', 'Home team', 'Visiting team', 'Goals', 'Score', 'Result', 'Venue', 'Competition'], ['1.', '16 May 1991', 'https://drive.google.com/thumbnail?id=1-QL9Ojn9k5k1YlGIV7WZS4Xc8mEbRLqh', 'https://drive.google.com/thumbnail?id=1_zLdC7MoycJWPEVomiRISjgoh-r6cnWZ', "87' 2–0", '2–0', 'Win', 'https://drive.google.com/thumbnail?id=1kDGHxJ4g-AjD8wwO-q4dw91aeDQwh-eX', 'UEFA Euro 1992 qualifying'], ['2.', '25 Mar 1992', 'Scotland', 'https://drive.google.com/thumbnail?id=1-QL9Ojn9k5k1YlGIV7WZS4Xc8mEbRLqh', "41' 1–1", '1–1', 'Draw', 'https://drive.google.com/thumbnail?id=1mkVtN8vhxP5faXUrxh43L1CVY6-tMwle ,  https://drive.google.com/thumbnail?id=1ISxkvyRspyNOPFCo53UPcQM74dcNMoL_', 'Friendly'], ['3.', '13 Oct 1993', 'https://drive.google.com/thumbnail?id=1URFTfcTB0ouUvRwgDBYr0pB4ESRp-wF4', 'https://drive.google.com/thumbnail?id=1-QL9Ojn9k5k1YlGIV7WZS4Xc8mEbRLqh', "60' 3–2", '3–2', 'Loss', 'Råsunda Stadium, Stockholm', '1994 FIFA World Cup qualification'], ['4.', '16 Nov 1994', 'Finland', 'Faroe Islands', "53' 2–0 \xa072' 3–0", '5–0', 'Win', 'https://drive.google.com/thumbnail?id=1kDGHxJ4g-AjD8wwO-q4dw91aeDQwh-eX', 'UEFA Euro 1996 qualifying'], ['5.', '16 Nov 1994', 'https://drive.google.com/thumbnail?id=1-QL9Ojn9k5k1YlGIV7WZS4Xc8mEbRLqh', 'https://drive.google.com/thumbnail?id=1BzooTnVixjxJXA260qqbPSFU6sEJ-dvy', "53' 2–0 \xa072' 3–0", '5–0', 'Win', 'https://drive.google.com/thumbnail?id=1kDGHxJ4g-AjD8wwO-q4dw91aeDQwh-eX', 'UEFA Euro 1996 qualifying'], ['6.', '29 Mar 1995', 'https://drive.google.com/thumbnail?id=1kOYqWpAk_4JU-tC7hH80o4R0CHWepAfU', 'https://drive.google.com/thumbnail?id=1-QL9Ojn9k5k1YlGIV7WZS4Xc8mEbRLqh', "45' 0–1", '0–2', 'Win', 'https://drive.google.com/thumbnail?id=1GosjVl0TKpo7VtRWHr84ur9H_9iFjp3N , Serravalle', 'UEFA Euro 1996 qualifying'], ['7.', '11 Jun 1995', 'https://drive.google.com/thumbnail?id=1-QL9Ojn9k5k1YlGIV7WZS4Xc8mEbRLqh', 'https://drive.google.com/thumbnail?id=1BbqnWsqupGJYc32jCy6t8J1LkyV-kCyu', "45+1' 1–1 (pen.)", '2–1', 'Win', 'https://drive.google.com/thumbnail?id=1kDGHxJ4g-AjD8wwO-q4dw91aeDQwh-eX', 'UEFA Euro 1996 qualifying'], ['8.', '2 Jun 1996', 'https://drive.google.com/thumbnail?id=1-QL9Ojn9k5k1YlGIV7WZS4Xc8mEbRLqh', 'Turkey', "25' 1–0", '1–2', 'Loss', 'https://drive.google.com/thumbnail?id=1kDGHxJ4g-AjD8wwO-q4dw91aeDQwh-eX', 'Friendly'], ['9.', '2 Feb 1997', 'Turkey', 'https://drive.google.com/thumbnail?id=1-QL9Ojn9k5k1YlGIV7WZS4Xc8mEbRLqh', "17' 0–1", '1–1', 'Draw', 'https://drive.google.com/thumbnail?id=1l2_vTQhsMin1UUYzk1Ar8ci8vD6CD7nV ,  https://drive.google.com/thumbnail?id=1xzxRX6Le0IiGRHK8uaG4r4U-3lL4-G-v', 'Friendly'], ['10.', '2 Apr 1997', 'https://drive.google.com/thumbnail?id=1KBywiSbmIqWkTRrdYVjQKLwKcbGkob-K', 'https://drive.google.com/thumbnail?id=1-QL9Ojn9k5k1YlGIV7WZS4Xc8mEbRLqh', "26 ' 0–1", '1–2', 'Win', 'https://drive.google.com/thumbnail?id=1SkWOxubU0jmpwwMkq9my6usL_uTDJVQp ,  https://drive.google.com/thumbnail?id=1g29bIUnOWmlXRT_DSRaaZb_ED2hlvodZ', '1998 FIFA World Cup qualification'], ['11.', '8 Jun 1997', 'https://drive.google.com/thumbnail?id=1-QL9Ojn9k5k1YlGIV7WZS4Xc8mEbRLqh', 'Azerbaijan', "65' 2–0", '3–0', 'Win', 'https://drive.google.com/thumbnail?id=1kDGHxJ4g-AjD8wwO-q4dw91aeDQwh-eX', '1998 FIFA World Cup qualification'], ['12.', '6 Sep 1997', 'https://drive.google.com/thumbnail?id=1DhZW0WyghmCDQtsRcW8rKB96pV-OZral', 'https://drive.google.com/thumbnail?id=1-QL9Ojn9k5k1YlGIV7WZS4Xc8mEbRLqh', "16' 0–1", '1–2', 'Win', 'Stade Olympique de la Pontaise, Lausanne', '1998 FIFA World Cup qualification'], ['13.', '14 Oct 1998', 'https://drive.google.com/thumbnail?id=1c8HVx3vVb7eS2fmDMwLZNnWP5KyocVix', 'https://drive.google.com/thumbnail?id=1-QL9Ojn9k5k1YlGIV7WZS4Xc8mEbRLqh', "90+6' 1–3", '1–3', 'Win', 'https://drive.google.com/thumbnail?id=1NSBOZ3Sh2jOCFBxXhPSdi2bL1ozcuyUD ,  https://drive.google.com/thumbnail?id=1Kl1Kz5nQ4O-eaoa8psOvriP79FeDk4H2', 'UEFA Euro 2000 qualifying'], ['14.', '29 Mar 2000', 'Wales', 'https://drive.google.com/thumbnail?id=1-QL9Ojn9k5k1YlGIV7WZS4Xc8mEbRLqh', "21' 0–1", '1–2', 'Win', 'https://drive.google.com/thumbnail?id=1tYIymxj-ZKRZufspBaiayp9V21RyR5Yy ,  https://drive.google.com/thumbnail?id=1db-UwMXL-a0xPtv6yWuW0Om8_plDW53d', 'Friendly'], ['15.', '16 Aug 2000', 'https://drive.google.com/thumbnail?id=1-QL9Ojn9k5k1YlGIV7WZS4Xc8mEbRLqh', 'Norway', "24' 1–0 \xa061' 2–1", '3–1', 'Win', 'https://drive.google.com/thumbnail?id=1KcziILo6U0UamWAnM8VWLGxs9mu_PPeD ,  https://drive.google.com/thumbnail?id=1EEKp9qn0iVj_OoUe1T2QeF31G4tAz14c', '2000–01 Nordic Football Championship'], ['16.', '16 Aug 2000', 'https://drive.google.com/thumbnail?id=1-QL9Ojn9k5k1YlGIV7WZS4Xc8mEbRLqh', 'Norway', "24' 1–0 \xa061' 2–1", '3–1', 'Win', 'https://drive.google.com/thumbnail?id=1KcziILo6U0UamWAnM8VWLGxs9mu_PPeD ,  https://drive.google.com/thumbnail?id=1EEKp9qn0iVj_OoUe1T2QeF31G4tAz14c', '2000–01 Nordic Football Championship'], ['17.', '2 Sep 2000', 'https://drive.google.com/thumbnail?id=1-QL9Ojn9k5k1YlGIV7WZS4Xc8mEbRLqh', 'Albania', "45 ' 1–0", '2–1', 'Win', 'Finnair Stadium, Helsinki', '2002 FIFA World Cup qualification'], ['18.', '15 Aug 2001', 'Finland', 'https://drive.google.com/thumbnail?id=1fYNBgY4PZdjbSv660rU6mZMEj6YkxWT5', '3–0 (pen.)', '4–1', 'Win', 'https://drive.google.com/thumbnail?id=1kDGHxJ4g-AjD8wwO-q4dw91aeDQwh-eX', 'Friendly'], ['19.', '5 Sep 2001', 'https://drive.google.com/thumbnail?id=1-QL9Ojn9k5k1YlGIV7WZS4Xc8mEbRLqh', 'https://drive.google.com/thumbnail?id=1BbqnWsqupGJYc32jCy6t8J1LkyV-kCyu', "53' 5–1", '5–1', 'Win', 'Helsinki Olympic Stadium', '2002 FIFA World Cup qualification'], ['20.', '27 Mar 2002', 'https://drive.google.com/thumbnail?id=1nJpPg_h_G_urLuwR814PPbEcy5tzuURe', 'https://drive.google.com/thumbnail?id=1-QL9Ojn9k5k1YlGIV7WZS4Xc8mEbRLqh', "41' 1–3 \xa053' 1–4", '1–4', 'Win', 'https://drive.google.com/thumbnail?id=1vk_U6pbQTcKMzmqm8N5pslgBxlanXU1L ,  https://drive.google.com/thumbnail?id=1k15xGQdCoVrr4aU0_P1yYxAVoorWVtGn', 'Friendly'], ['21.', '27 Mar 2002', 'https://drive.google.com/thumbnail?id=1nJpPg_h_G_urLuwR814PPbEcy5tzuURe', 'https://drive.google.com/thumbnail?id=1-QL9Ojn9k5k1YlGIV7WZS4Xc8mEbRLqh', "41' 1–3 \xa053' 1–4", '1–4', 'Win', 'Estádio do Bessa, Porto', 'Friendly'], ['22.', '30 Apr 2003', 'https://drive.google.com/thumbnail?id=1-QL9Ojn9k5k1YlGIV7WZS4Xc8mEbRLqh', 'https://drive.google.com/thumbnail?id=11nUpYx892-DNY4JfKS_GisIKlfR5g46i', "55' 1–0 (pen.)", '3–0', 'Win', 'https://drive.google.com/thumbnail?id=1wHVxU4t2xm_-b00AaAsJZi9caVrGXzVu , Myyrmäki,  https://drive.google.com/thumbnail?id=1hetK7t7rKyLJxcZ4O54RnrK0nV5btM44', 'Friendly'], ['23.', '31 Apr 2004', 'https://drive.google.com/thumbnail?id=1_zLdC7MoycJWPEVomiRISjgoh-r6cnWZ', 'https://drive.google.com/thumbnail?id=1-QL9Ojn9k5k1YlGIV7WZS4Xc8mEbRLqh', "86' 0–2", '1–2', 'Win', 'https://drive.google.com/thumbnail?id=1OZ2EfU1RDnM8X0KVu9GISQKKAhd5JA1x , Valletta', 'Friendly'], ['24.', '28 May 2004', 'https://drive.google.com/thumbnail?id=1-QL9Ojn9k5k1YlGIV7WZS4Xc8mEbRLqh', 'Sweden', "8' 1–0 (pen.)", '1–3', 'Loss', 'https://drive.google.com/thumbnail?id=14kbq8FP_YwBtCbxC-iQo5QCS4PKv7UGA ,  https://drive.google.com/thumbnail?id=1FXwkwNtIzXdqAWqdErF0BtGDu4qLzkjM', 'Friendly'], ['25.', '26 Mar 2005', 'https://drive.google.com/thumbnail?id=1-sQEbkRhcJn9Cc9RVeubzm5cFkvkbddP', 'https://drive.google.com/thumbnail?id=1-QL9Ojn9k5k1YlGIV7WZS4Xc8mEbRLqh', "46 ' 2–1", '4–3', 'Loss', 'https://drive.google.com/thumbnail?id=1G1J-1rWyQGqSjd4S2c4qRwhd6xLXjKj- ,  https://drive.google.com/thumbnail?id=1XKyJwfX8tV9WxoWcThvFJiPBbnvRbIdk', '2006 FIFA World Cup qualification'], ['26.', '2 Sep 2006', 'Poland', 'Finland', "54' 0–1 \xa076' 0–2 (pen.)", '1–3', 'Win', 'https://drive.google.com/thumbnail?id=18SLbuYmzx1qZaMxNkZy2YBkk6DgMsDpn ,  https://drive.google.com/thumbnail?id=1VTuJCDTyF7deKTjuWpluAwUeQV43JWxg', 'UEFA Euro 2008 qualifying'], ['27.', '2 Sep 2006', 'https://drive.google.com/thumbnail?id=1WvenDF-DagtBQJB-WLRJ656W9BRfavtN', 'https://drive.google.com/thumbnail?id=1-QL9Ojn9k5k1YlGIV7WZS4Xc8mEbRLqh', "54' 0–1 \xa076' 0–2 (pen.)", '1–3', 'Win', 'Zdzisław Krzyszkowiak, Bydgoszcz', 'UEFA Euro 2008 qualifying'], ['28.', '11 Oct 2006', 'Kazakhstan', 'https://drive.google.com/thumbnail?id=1-QL9Ojn9k5k1YlGIV7WZS4Xc8mEbRLqh', "29' 0–1", '0–2', 'Win', 'Almaty Central Stadium, Almaty', 'UEFA Euro 2008 qualifying'], ['29.', '6 Feb 2008', 'https://drive.google.com/thumbnail?id=1-QL9Ojn9k5k1YlGIV7WZS4Xc8mEbRLqh', 'https://drive.google.com/thumbnail?id=1BbqnWsqupGJYc32jCy6t8J1LkyV-kCyu', "66' 1–0", '1–2', 'Loss', 'https://drive.google.com/thumbnail?id=1GvaIZ-zPm0pZi38DGwAtKZBEeR7w0y-r ,  https://drive.google.com/thumbnail?id=16cVeSt86Br1G6tQ_9SoKkCbBauNk3OMW', 'Friendly'], ['30.', '26 Mar 2008', 'https://drive.google.com/thumbnail?id=1lPnYKbyucggIkXfDROX5hRYOoAmMUah1', 'https://drive.google.com/thumbnail?id=1-QL9Ojn9k5k1YlGIV7WZS4Xc8mEbRLqh', "22' 0–1 (pen.)", '2–1', 'Loss', 'https://drive.google.com/thumbnail?id=1V_IAT72g11Xgta5DW0WDuLtKenIYUe4c ,  https://drive.google.com/thumbnail?id=1nlihIMR44eOUKdyIsF49_s_iKGGrnObI', 'Friendly'], ['31.', '9 Sep 2009', 'Liechtenstein', 'https://drive.google.com/thumbnail?id=1-QL9Ojn9k5k1YlGIV7WZS4Xc8mEbRLqh', "74' 0–1 (pen.)", '1–1', 'Draw', 'Rheinpark Stadion, Vaduz', '2010 FIFA World Cup qualification'], ['32.', '17 Nov 2010', 'https://drive.google.com/thumbnail?id=1-QL9Ojn9k5k1YlGIV7WZS4Xc8mEbRLqh', 'https://drive.google.com/thumbnail?id=1kOYqWpAk_4JU-tC7hH80o4R0CHWepAfU', "71' 6–0 (pen.)", '8–0', 'Win', 'https://drive.google.com/thumbnail?id=1kDGHxJ4g-AjD8wwO-q4dw91aeDQwh-eX', 'UEFA Euro 2012 qualifying']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

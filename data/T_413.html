@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to List|National teams|Men of Star (football badge)
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: what is the total count of stars for european countries?
+            </div>
+            <div>
+                Answer: 10
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['National Team', 'Title(s) represented', 'First worn', 'Number of stars', 'Notes'], ['https://drive.google.com/thumbnail?id=18nAZZc6Opfsqoqo9wVKs58Gu4bD1-QXR', 'World Cup', '1971', '5', 'Third win was in 1970; fourth and fifth stars added after 1994 and 2002 wins. Briefly wore 2 stars on a tour of Europe in 1968.'], ['Italy', 'World Cup', '1982', '4', 'Added after third win; fourth star added after the 2006 win. Incorporated into the badge since 2006.'], ['Germany', 'World Cup', '1996', '3', '1954, 1974, Third win was in 1990.'], ['https://drive.google.com/thumbnail?id=17Fr2OPdQ_yL2xVbuoZ_atKzr1hxhauzG', 'World Cup and Olympics', '1930', '4', 'Represent 2 World Cups (1930 & 1950) and 2 Olympic football titles (1924 & 1928) recognized as FIFA World Championships.'], ['https://drive.google.com/thumbnail?id=1SGDm6GFJ6zBlETTLrW0xf_FoZjvkzEW9', 'World Cup', '2003', '2', '1978, Second win was in 1986.'], ['https://drive.google.com/thumbnail?id=1IXqNjo1GBu82hskV-Ot5vyWF8zZvrxGt', 'World Cup', '2003', '1', "Title won in 1966. Star added after a campaign on Sky Sports' Soccer AM programme, first worn on the sleeve."], ['https://drive.google.com/thumbnail?id=1J-MyE-ri1rO5yzzpZyMiqFXgWLE62deq', 'World Cup', '1998', '1', 'Title won in 1998. Star added above their badge which was unveiled at their opening qualifying game for Euro 2000'], ['https://drive.google.com/thumbnail?id=1uzjj2tOYGZUtWakcyse3-38d-D7M_do2', 'World Cup', '2010', '1', 'Title won in 2010. Spain played in their away kit for the final, but upon winning the World Cup they changed into their home kit, complete with a star above the badge, for the presentation ceremony.']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

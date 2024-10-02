@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Results and fixtures of Australia women's national association football team
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: what is the greatest number of first stage opponents for any given cup?
+            </div>
+            <div>
+                Answer: 4
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Competition', 'Stage', 'Opponent', 'Result', 'Scorers'], ['https://drive.google.com/thumbnail?id=1xBHsv-t28HgEkn8g0OqD9T_XsIhYQr4M', 'First stage', 'https://drive.google.com/thumbnail?id=1ebAWsTqDjJ4cUHdg_ODhA3gWbNlg2654  \xa0 https://drive.google.com/thumbnail?id=1Hnf1zkIQLUc1XLpYwrInQ5_AAePbi0vE', '2–3 3–0', ''], ['https://drive.google.com/thumbnail?id=1xBHsv-t28HgEkn8g0OqD9T_XsIhYQr4M', 'Semifinals', 'https://drive.google.com/thumbnail?id=1IaUMxXIHLwx0wH3fJPU70h0kz0VRv4YZ', '2–3', ''], ['https://drive.google.com/thumbnail?id=1xBHsv-t28HgEkn8g0OqD9T_XsIhYQr4M', 'Third place', 'https://drive.google.com/thumbnail?id=174Ws12uutX_XnUkL4YgfwWve8hjtp1_Z', '5–0', ''], ['1983 OFC Championship', 'First stage', 'https://drive.google.com/thumbnail?id=1IaUMxXIHLwx0wH3fJPU70h0kz0VRv4YZ  \xa0 https://drive.google.com/thumbnail?id=1JoXsvT_8XzwqEMihV05FYcQ9sFaKz-EG  \xa0 https://drive.google.com/thumbnail?id=19y3UtdgCQY0sELezyqcebDmLU_YkbSzh', '0–0 5–0 13–0', '0 Dolan 2, Heydon, Porter, Wardell Iserief 3, Monteath 3, Heydon 3, Wardell 3, Millman'], ['1983 OFC Championship', 'Final', 'https://drive.google.com/thumbnail?id=1IaUMxXIHLwx0wH3fJPU70h0kz0VRv4YZ', '2–3 (AET)', 'Brentnall, Dolan'], ['1986 OFC Championship', 'First stage', 'https://drive.google.com/thumbnail?id=1IaUMxXIHLwx0wH3fJPU70h0kz0VRv4YZ  \xa0 https://drive.google.com/thumbnail?id=17ppZd0vyQapUizWbUy2GKlxJF4Oi8lSi  New Zealand B', '1–0 0–1 2–1', 'Iserief 0 Mateljan, Monteath'], ['1986 OFC Championship', 'Final', 'https://drive.google.com/thumbnail?id=17ppZd0vyQapUizWbUy2GKlxJF4Oi8lSi', '1–4', 'Martin'], ['https://drive.google.com/thumbnail?id=1WeGjRMMv3wlWZyoLOBfibZlnD-ie7V1t', 'First stage', 'https://drive.google.com/thumbnail?id=1yskEARJwkSxDs0dZpMIVjQglcY0M12Eo  \xa0 https://drive.google.com/thumbnail?id=1ebAWsTqDjJ4cUHdg_ODhA3gWbNlg2654  \xa0 https://drive.google.com/thumbnail?id=1XYdrpmS_3XesOxwYt5rIA6c80vGpT1FA', '1–0 3–0 0–3', ''], ['https://drive.google.com/thumbnail?id=1WeGjRMMv3wlWZyoLOBfibZlnD-ie7V1t', 'Quarterfinals', 'China PR', '0–7', ''], ['1989 OFC Championship', 'First stage', 'New Zealand Australia B \xa0Papua New Guinea \xa0Taiwan', '0–2 0–0 6–0 1–4', '0 0 Riddington 3, Vinson 2,\xa0? Riddington'], ['1989 OFC Championship', 'Third place', 'Australia B', 'not played', ''], ['1991 OFC Championship', 'Round robin', 'New Zealand \xa0Papua New Guinea', '0–1 1–0 12–0 8–0', ''], ['1995 OFC Championship', 'Round robin', 'https://drive.google.com/thumbnail?id=1IaUMxXIHLwx0wH3fJPU70h0kz0VRv4YZ  \xa0 https://drive.google.com/thumbnail?id=1ds1UGN4ZyKAznqS6wLJGs5WC83fyAI5n', '1–2 1–0 7–0 4–0', ''], ['1995 FIFA World Cup', 'First stage', 'https://drive.google.com/thumbnail?id=12ov4hkzY0iI1kzHYOUU3CfooT7uQVCgS  \xa0 https://drive.google.com/thumbnail?id=1AwvYqR7-HUNwLY11A2CZs4tc0GZuwuwi  \xa0 https://drive.google.com/thumbnail?id=1Bxz3k6JJgQ8R_kpIyqt1pxhdDW_GrC11', '0–5 2–4 1–4', '0 Hughes, Iannotta Casagrande'], ['1998 OFC Championship', 'First stage', 'https://drive.google.com/thumbnail?id=15VTFp9aXsAeAKnoyIPZIReQ81BSmBezP  \xa0 https://drive.google.com/thumbnail?id=1ds1UGN4ZyKAznqS6wLJGs5WC83fyAI5n', '21–0 8–0', ''], ['1998 OFC Championship', 'Semifinals', 'Fiji', '17–0', ''], ['1998 OFC Championship', 'Final', 'New Zealand', '3–1', ''], ['1999 FIFA World Cup', 'First stage', 'https://drive.google.com/thumbnail?id=1JKyDvrcIQr-OQxXYHTdZAbvm3A9WzGSe  \xa0 https://drive.google.com/thumbnail?id=1i2-0fqNxW9Oup7SqE708eQ-i0aCHIUbX  \xa0 https://drive.google.com/thumbnail?id=1AwvYqR7-HUNwLY11A2CZs4tc0GZuwuwi', '1–1 1–3 1–3', 'Murray Murray  https://drive.google.com/thumbnail?id=1lKf_WSEjhOsPgz-4e7ENhEO-F2jRtu8X'], ['2000 Summer Olympics', 'First stage', 'https://drive.google.com/thumbnail?id=1cc0ePQv774Uidt5TfeDijB2eSPV-7xBI  \xa0 https://drive.google.com/thumbnail?id=1i2-0fqNxW9Oup7SqE708eQ-i0aCHIUbX  \xa0 https://drive.google.com/thumbnail?id=1yskEARJwkSxDs0dZpMIVjQglcY0M12Eo', '0–3 1–1 1–2', '0  https://drive.google.com/thumbnail?id=1lKf_WSEjhOsPgz-4e7ENhEO-F2jRtu8X  Hughes'], ['2003 OFC Championship', 'Round robin', 'https://drive.google.com/thumbnail?id=1KCg039FwgPUHodUR6IXnxBRWvLYZMNBL  \xa0 https://drive.google.com/thumbnail?id=16htDtZWQNqMdDRsMpGx0XHpWgC67mpuV  \xa0 https://drive.google.com/thumbnail?id=1ds1UGN4ZyKAznqS6wLJGs5WC83fyAI5n  \xa0 https://drive.google.com/thumbnail?id=1IaUMxXIHLwx0wH3fJPU70h0kz0VRv4YZ', '19–0 11–0 13–0 2–0', 'https://drive.google.com/thumbnail?id=1DmBT0gplYo9SEW-q1w5bvkfL0h_pZo3x  4,  https://drive.google.com/thumbnail?id=1L7PfMbTF-LbB7PCKkGmWVbM6lKvQacFz  4,  https://drive.google.com/thumbnail?id=1YPmlFgVOVWuR-jb6qa8mY2MUdUMQ17Qk  4,  https://drive.google.com/thumbnail?id=1BVT9zsMPDz2cvFkUmAT0S8AeztWd4Xls  2,  https://drive.google.com/thumbnail?id=1IlAqwXAf6OnSM3qC08VTT3AQYzAaj96n , Davies,  https://drive.google.com/thumbnail?id=1-QszOcaGtgASqtgGf9i6jbT9dhl2r9cv , Wainwright  https://drive.google.com/thumbnail?id=1oZQUp54qF4QRcGhO-w7vtUSharRXrDkk  2,  https://drive.google.com/thumbnail?id=1Ga7PtXFU6XB6hK5CJfmZVu__lwg0gg2O  2, Wilson 2, Davies, Hohnke,  https://drive.google.com/thumbnail?id=1926L-sOb5X0N3XfjQJTZd2HaEX5ThTuo , Small Mann 4, Garriock 3, Golebiowski 2,  https://drive.google.com/thumbnail?id=1lKf_WSEjhOsPgz-4e7ENhEO-F2jRtu8X  2, Alagich, Peters Peters, Small'], ['2003 FIFA World Cup', 'First stage', 'https://drive.google.com/thumbnail?id=1G45SWM94RkHYevGQuOKV7gG8lV3VWsQw  \xa0 https://drive.google.com/thumbnail?id=1AwvYqR7-HUNwLY11A2CZs4tc0GZuwuwi  \xa0 https://drive.google.com/thumbnail?id=1JKyDvrcIQr-OQxXYHTdZAbvm3A9WzGSe', '1–2 1–1 1–2', 'https://drive.google.com/thumbnail?id=1DmBT0gplYo9SEW-q1w5bvkfL0h_pZo3x   https://drive.google.com/thumbnail?id=1-QszOcaGtgASqtgGf9i6jbT9dhl2r9cv  Garriock'], ['2004 Summer Olympics', 'First stage', 'https://drive.google.com/thumbnail?id=1yskEARJwkSxDs0dZpMIVjQglcY0M12Eo  \xa0 https://drive.google.com/thumbnail?id=1doxtKRfr1X_NL39RixiFE-vzbCwAIhIH  \xa0 https://drive.google.com/thumbnail?id=1Bxz3k6JJgQ8R_kpIyqt1pxhdDW_GrC11', '0–1 1–0 1–1', '0  https://drive.google.com/thumbnail?id=1-QszOcaGtgASqtgGf9i6jbT9dhl2r9cv   https://drive.google.com/thumbnail?id=1YPmlFgVOVWuR-jb6qa8mY2MUdUMQ17Qk'], ['2004 Summer Olympics', 'Quarterfinals', 'Sweden', '1–2', 'https://drive.google.com/thumbnail?id=1920YnLdJ-mjSQwYQYqlf3C4bnPAXYKXy'], ['2006 AFC Asian Cup', 'First stage', 'South Korea \xa0Myanmar \xa0North Korea \xa0Thailand', '4–0 2–0 0–0 5–0', 'https://drive.google.com/thumbnail?id=1FyWg-9GTzcmauxzxKbpFgpYdkCTljgBX ,  https://drive.google.com/thumbnail?id=1920YnLdJ-mjSQwYQYqlf3C4bnPAXYKXy ,  https://drive.google.com/thumbnail?id=1GNDLv1JR7U72fUUCd9GG7mXRgE_GhLzG  + 1 o.g.  https://drive.google.com/thumbnail?id=11vLVKiBA6B8wJ79-Ab7yGTt66irccjNY , de Vanna 0  https://drive.google.com/thumbnail?id=1I94n7XnZDwRv4oj9lSSeLh9g8gVOgNCo ,  https://drive.google.com/thumbnail?id=1QCTsmPYJczEez3R20cUk3bIANexgqE5- ,  https://drive.google.com/thumbnail?id=1V8-0-Ho-CxNvtHid7AkTH3FELZJmFY6c , de Vanna, Walsh'], ['2006 AFC Asian Cup', 'Semifinals', 'Japan', '2–0', 'Munoz,  https://drive.google.com/thumbnail?id=1YPmlFgVOVWuR-jb6qa8mY2MUdUMQ17Qk'], ['2006 AFC Asian Cup', 'Final', 'https://drive.google.com/thumbnail?id=1AwvYqR7-HUNwLY11A2CZs4tc0GZuwuwi', '2–2 (PSO: 2–4)', 'Munoz, Peters — Shipard, Ferguson  https://drive.google.com/thumbnail?id=1fvEyST1w5u8O8qOpzutt4WVZVndLhUzy , Peters'], ['2007 FIFA World Cup', 'First stage', 'https://drive.google.com/thumbnail?id=1JKyDvrcIQr-OQxXYHTdZAbvm3A9WzGSe  \xa0 https://drive.google.com/thumbnail?id=1XYdrpmS_3XesOxwYt5rIA6c80vGpT1FA  \xa0 https://drive.google.com/thumbnail?id=18jlq9_QNUYxdSP6IckcEa77yRE4nB4jV', '4–1 1–1 2–2', 'https://drive.google.com/thumbnail?id=1920YnLdJ-mjSQwYQYqlf3C4bnPAXYKXy  2,  https://drive.google.com/thumbnail?id=1-QszOcaGtgASqtgGf9i6jbT9dhl2r9cv ,  https://drive.google.com/thumbnail?id=1GNDLv1JR7U72fUUCd9GG7mXRgE_GhLzG  de Vanna  https://drive.google.com/thumbnail?id=1fvEyST1w5u8O8qOpzutt4WVZVndLhUzy ,  https://drive.google.com/thumbnail?id=1lKf_WSEjhOsPgz-4e7ENhEO-F2jRtu8X'], ['2007 FIFA World Cup', 'Quarterfinals', 'https://drive.google.com/thumbnail?id=1yskEARJwkSxDs0dZpMIVjQglcY0M12Eo', '2–3', 'https://drive.google.com/thumbnail?id=1KpMUZWS4HZqdw6r1T0H648nw27GhTnYo , de Vanna'], ['2008 AFC Asian Cup', 'First stage', 'https://drive.google.com/thumbnail?id=17ppZd0vyQapUizWbUy2GKlxJF4Oi8lSi  \xa0 https://drive.google.com/thumbnail?id=1nxvUPGr05BsXOPxu5vDKoJZKsLkNwebz  \xa0 https://drive.google.com/thumbnail?id=1Mk7X9wXWwGqrhyHYac9GW53rkolug7NL', '4–0 2–0', 'https://drive.google.com/thumbnail?id=1-QszOcaGtgASqtgGf9i6jbT9dhl2r9cv  2, Tristram,  https://drive.google.com/thumbnail?id=1920YnLdJ-mjSQwYQYqlf3C4bnPAXYKXy   https://drive.google.com/thumbnail?id=1lS7UMI43mMoVoKTYnPUpan0h8WHtaXYx , de Vanna  https://drive.google.com/thumbnail?id=1QyEibYYlES_-moUVVN2wbsfRyndYT7j4'], ['2008 AFC Asian Cup', 'Semifinals', 'https://drive.google.com/thumbnail?id=1s3IYek31oJATD-MHFWazC4TBrOkaVBBT', '0–3', ''], ['2008 AFC Asian Cup', 'Third place', 'https://drive.google.com/thumbnail?id=1Mk7X9wXWwGqrhyHYac9GW53rkolug7NL', '0–3', ''], ['2010 AFC Asian Cup', 'First stage', 'https://drive.google.com/thumbnail?id=1Om5NcPfcmyNF7NjpfO4Z67faIPFPy5L7  \xa0 https://drive.google.com/thumbnail?id=1nxvUPGr05BsXOPxu5vDKoJZKsLkNwebz  \xa0 https://drive.google.com/thumbnail?id=1AwvYqR7-HUNwLY11A2CZs4tc0GZuwuwi', '2–0 3–1 0–1', 'https://drive.google.com/thumbnail?id=1R_eWRH3_77I5JIWBpM8f9xuufEfMCJq1 ,  https://drive.google.com/thumbnail?id=1rlyrFF8lRqU23NceMmhj8nZv64zUvXp0   https://drive.google.com/thumbnail?id=10sR-UvDOtAEPqbJe8QrqgYm-_rJLTROO ,  https://drive.google.com/thumbnail?id=1Qt_oddg94LLXkQUXYTRmRhWKUDwTcKSr ,  https://drive.google.com/thumbnail?id=1920YnLdJ-mjSQwYQYqlf3C4bnPAXYKXy  0'], ['2010 AFC Asian Cup', 'Semifinals', 'https://drive.google.com/thumbnail?id=1Mk7X9wXWwGqrhyHYac9GW53rkolug7NL', '1–0', 'https://drive.google.com/thumbnail?id=1V8-0-Ho-CxNvtHid7AkTH3FELZJmFY6c'], ['2010 AFC Asian Cup', 'Final', 'https://drive.google.com/thumbnail?id=1s3IYek31oJATD-MHFWazC4TBrOkaVBBT', '1–1 (PSO: 5–4)', 'https://drive.google.com/thumbnail?id=1nV149SK0uSHAw4mlBXjUucacCFWHuRY5  — PSO:  https://drive.google.com/thumbnail?id=11vLVKiBA6B8wJ79-Ab7yGTt66irccjNY , Ledbrook, Gill,  https://drive.google.com/thumbnail?id=1-QszOcaGtgASqtgGf9i6jbT9dhl2r9cv ,  https://drive.google.com/thumbnail?id=1haZ5ZuOnRWVQXHDyjrUiI_ll3Ln1x6ai'], ['2011 FIFA World Cup', 'First stage', 'https://drive.google.com/thumbnail?id=1yskEARJwkSxDs0dZpMIVjQglcY0M12Eo  \xa0 https://drive.google.com/thumbnail?id=1oYdMyuHRoMJa0RMTNUaRtzBij5hNdHoJ  \xa0 https://drive.google.com/thumbnail?id=1XYdrpmS_3XesOxwYt5rIA6c80vGpT1FA', '0–1 3–2 2–1', '0  https://drive.google.com/thumbnail?id=1_WQ0eHt4O-gAxjRnYdpF6vrEueW5cWlL ,  https://drive.google.com/thumbnail?id=1R_eWRH3_77I5JIWBpM8f9xuufEfMCJq1 ,  https://drive.google.com/thumbnail?id=1920YnLdJ-mjSQwYQYqlf3C4bnPAXYKXy   https://drive.google.com/thumbnail?id=1haZ5ZuOnRWVQXHDyjrUiI_ll3Ln1x6ai  2'], ['2011 FIFA World Cup', 'Quarterfinals', 'Sweden', '1–3', 'https://drive.google.com/thumbnail?id=1lS7UMI43mMoVoKTYnPUpan0h8WHtaXYx'], ['2012 Summer Olympics AFC qualification', 'Final round', 'https://drive.google.com/thumbnail?id=1s3IYek31oJATD-MHFWazC4TBrOkaVBBT  \xa0 https://drive.google.com/thumbnail?id=1ebAWsTqDjJ4cUHdg_ODhA3gWbNlg2654  \xa0 https://drive.google.com/thumbnail?id=1Mk7X9wXWwGqrhyHYac9GW53rkolug7NL  \xa0 https://drive.google.com/thumbnail?id=1AwvYqR7-HUNwLY11A2CZs4tc0GZuwuwi  \xa0 https://drive.google.com/thumbnail?id=1nxvUPGr05BsXOPxu5vDKoJZKsLkNwebz', '0–1 5–1 0–1 1–0 2–1', '0  https://drive.google.com/thumbnail?id=1DSTJE5UsOEuSmDddL5EqM2I6Cc9ZmEvH  2,  https://drive.google.com/thumbnail?id=1Fie7GFooQDwAJbCL6Qog42y3DhzgVnyU ,  https://drive.google.com/thumbnail?id=1_WQ0eHt4O-gAxjRnYdpF6vrEueW5cWlL ,  https://drive.google.com/thumbnail?id=1haZ5ZuOnRWVQXHDyjrUiI_ll3Ln1x6ai  0 van Egmond Butt,  https://drive.google.com/thumbnail?id=1920YnLdJ-mjSQwYQYqlf3C4bnPAXYKXy'], ['2014 AFC Asian Cup', 'First stage', 'https://drive.google.com/thumbnail?id=1Mk7X9wXWwGqrhyHYac9GW53rkolug7NL  \xa0 https://drive.google.com/thumbnail?id=18mu0GuCBZxx8FS07JE5QW5mGzOl26Aoz  \xa0 https://drive.google.com/thumbnail?id=1Om5NcPfcmyNF7NjpfO4Z67faIPFPy5L7', 'TBD TBD TBD', '']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

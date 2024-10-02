@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Results of Shooting at the 1924 Summer Olympics – Men's 100 metre team running deer, single shots
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: who is the only shooter without a 4 pt shot?
+            </div>
+            <div>
+                Answer: Cyril Mackworth-Praed
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Place', 'Shooter', '5 pts', '4 pts', '3 pts', '2 pts', '1 pts', '0 pts', 'Total', 'Rank'], ['1', 'https://drive.google.com/thumbnail?id=1E5qT9uLUnnyaonsWE0az-GyppG0YkI7y \xa0(NOR)', '12', '16', '12', '-', '-', '-', '160', ''], ['1', 'https://drive.google.com/thumbnail?id=1xODmqeWMd2OjSe3LJGiItW67sfAzJHGg', '4', '5', '1', '-', '-', '-', '43', '1'], ['1', 'Einar Liberg', '5', '2', '3', '-', '-', '-', '42', '2'], ['1', 'https://drive.google.com/thumbnail?id=1bwyM19IY6P2sgjS0caWXKuZ6wAJVdGD_', '2', '4', '4', '-', '-', '-', '38', '8'], ['1', 'Otto Olsen', '1', '5', '4', '-', '-', '-', '37', '11'], ['2', 'https://drive.google.com/thumbnail?id=12pAGs_JPD5GiAty5jaaxUWV2ca1zByh6 \xa0(SWE)', '8', '19', '12', '1', '-', '-', '154', ''], ['2', 'https://drive.google.com/thumbnail?id=1RiRAYnb7r2xwuDn4thjM3gRo3r1nOiJU', '3', '4', '3', '-', '-', '-', '40', '5'], ['2', 'https://drive.google.com/thumbnail?id=1TMIqFtkFKfwdKGx9Ow4lKSBcd0VMFwlf', '2', '5', '3', '-', '-', '-', '39', '7'], ['2', 'Otto Hultberg', '1', '6', '3', '-', '-', '-', '38', '8'], ['2', 'Mauritz Johansson', '2', '4', '3', '1', '-', '-', '37', '11'], ['3', 'https://drive.google.com/thumbnail?id=1JTM3zPOtzCyGLNJzTVzKHguaRT4dlF1E \xa0(USA)', '7', '17', '13', '3', '-', '-', '148', ''], ['3', 'John Boles', '3', '5', '2', '-', '-', '-', '41', '3'], ['3', 'Walter Stokes', '1', '6', '3', '-', '-', '-', '38', '8'], ['3', 'Raymond Coulter', '2', '4', '3', '1', '-', '-', '37', '11'], ['3', 'Dennis Fenton', '1', '2', '5', '2', '-', '-', '32', '16'], ['4', 'https://drive.google.com/thumbnail?id=1ucLfcpIj4Yv_bayym7VRYcFEl-5lTeXa \xa0(GBR)', '8', '9', '18', '3', '-', '2', '136', ''], ['4', 'Cyril Mackworth-Praed', '6', '-', '3', '1', '-', '-', '41', '3'], ['4', 'Alexander Rogers', '1', '2', '5', '2', '-', '-', '32', '16'], ['4', 'https://drive.google.com/thumbnail?id=1_oTVmz49MtnEVKP9gwtEcEREpEq7JCM-', '-', '5', '4', '-', '-', '1', '32', '16'], ['4', "John O'Leary", '1', '2', '6', '-', '-', '1', '31', '19'], ['5', 'https://drive.google.com/thumbnail?id=1ore0T0pmjPG8uxMwNJ9uJabC1JY3o09v \xa0(FIN)', '7', '10', '15', '5', '-', '3', '130', ''], ['5', 'https://drive.google.com/thumbnail?id=1KuMYG8Ynz-FTjs2MzIfMlQVUQkUXR6eH', '2', '6', '2', '-', '-', '-', '40', '5'], ['5', 'Martti Liuttula', '3', '2', '3', '2', '-', '-', '36', '14'], ['5', 'Jalo Autonen', '1', '1', '5', '2', '-', '1', '28', '21'], ['5', 'https://drive.google.com/thumbnail?id=1CeCyaooRNvjK0efEWGeMcoKDiTEpScFu', '1', '1', '5', '1', '-', '2', '26', '22'], ['6', 'https://drive.google.com/thumbnail?id=1TdrkOUruwD6vWVEVQyLqzudivDgvI3_y \xa0(HUN)', '1', '8', '17', '4', '1', '9', '97', ''], ['6', 'Gusztáv Szomjas', '-', '4', '4', '1', '-', '1', '30', '20'], ['6', 'Rezső Velez', '-', '1', '5', '2', '-', '2', '23', '23'], ['6', 'Elemér Takács', '1', '2', '3', '-', '1', '3', '23', '23'], ['6', 'László Szomjas', '-', '1', '5', '1', '-', '3', '21', '25'], ['–', 'https://drive.google.com/thumbnail?id=1K2mYVsvqvs4TnVdiOcs-Zh3nsrJjbEEe \xa0(TCH)', '1', '2', '6', '1', '-', '-', '33', ''], ['–', 'Miloslav Hlaváč', '1', '2', '6', '1', '-', '-', '33', '15']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

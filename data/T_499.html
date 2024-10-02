@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Results|Qualifying round of Cycling at the 1996 Summer Olympics – Men's team pursuit
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: which team ranked below the team whose flag has white color, rectangle shape and stars?
+            </div>
+            <div>
+                Answer: Colombia
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Rank', 'Team', 'Names', 'Time', 'Qualification'], ['1', 'https://drive.google.com/thumbnail?id=1DVXV37ryrcOv92L3cq4fambabMn8LSDH', 'https://drive.google.com/thumbnail?id=1Xg3ztzrdppFTrvLf6wocMt4ucdHZwmnG  Philippe Ermenault  https://drive.google.com/thumbnail?id=1bwpeTQfaruLdNLMovh4AXVjg56UI_MKf   https://drive.google.com/thumbnail?id=10K4PrW4fSqtAjZdXiMkGA8Pn03BKxtU0', '4:09.570', 'q'], ['2', 'https://drive.google.com/thumbnail?id=1bSILGVmMWg9W9KWAFkt2aachUe30q1Gw', 'Adler Capelli  https://drive.google.com/thumbnail?id=1Ny4leOnub4zNJYMVEcpMC8VlmHNGJdb6   https://drive.google.com/thumbnail?id=1JcAwFcDKUxsWWVsnGaXjm9jz9G4BiUtg  Cristiano Citton', '4:09.695', 'q'], ['3', 'https://drive.google.com/thumbnail?id=1IsSEhWm6--MOijBrPwGDoPiKfNBWriy2', "https://drive.google.com/thumbnail?id=1NBP1tMLGRT42f4-5Y5ZlpWQHDRpcz48E   https://drive.google.com/thumbnail?id=1AGYpqeQV_e8B14hj620LolgDnVqmspCH  Timothy O'Shannessey Dean Woods", '4:09.750', 'q'], ['4', 'https://drive.google.com/thumbnail?id=1QMLtEdT78qzbMjUBPQP7b-9PlCjh_vVu', 'Bohdan Bondaryev Oleksandr Fedenko Andriy Yatsenko Alexander Simonenko', '4:11.545', 'q'], ['5', 'Russia', 'Eduard Gritsun Nikolay Kuznetsov  https://drive.google.com/thumbnail?id=1mEA4Kn7KkVvTcblGgwEiQpa4WKi1uT1m   https://drive.google.com/thumbnail?id=1wi8RdBDr7SD475qaS_bw5SStCk5_9HgD', '4:11.665', 'q'], ['6', 'https://drive.google.com/thumbnail?id=1-TfFlCEILqt9VoQMoQrn_RJOOewsaC7h', 'Dirk Copeland Mariano Friedick Adam Laurent Michael McCarthy', '4:11.950', 'q'], ['7', 'https://drive.google.com/thumbnail?id=1OS5MT9aKQDPwVq8ozN03UECHdv4UK5rh', 'Juan Martinez  https://drive.google.com/thumbnail?id=1Ww7_8X7uZXOdqKEJh7x8mxk293s_ddoM   https://drive.google.com/thumbnail?id=1Ajg2_QXF4vQT6B7sKMeOy7cPV7yc5vMa  Adolfo Alperi', '4:12.780', 'q'], ['8', 'New Zealand', 'https://drive.google.com/thumbnail?id=1UUDIdeQvlFFGh3n8Fn0u3RvBUhMsdvxc  Brendon Cameron Timothy Carswell  https://drive.google.com/thumbnail?id=1E-V95nvAuFuNnmT1K_ayVUsPq4JUMxAz', '4:15.140', 'q'], ['9', 'https://drive.google.com/thumbnail?id=1CmstEv5ZEMBIebNoXl6aoVenSCpHT3lB', 'https://drive.google.com/thumbnail?id=1g8Oe3qJaK3O3bHeOePou38phNW7hH_ZS   https://drive.google.com/thumbnail?id=1r1rXBnhv9n-RFiGuyc9MyEvPGcnNCvOy   https://drive.google.com/thumbnail?id=18aJFU3O9b2LLeJDL_GqzcEzBYND_FSKX  Heiko Szonn', '4:15.140', ''], ['10', 'https://drive.google.com/thumbnail?id=1ixH30Xix5A2yq6ck59JSn6Ax8-c5t8hv', 'Robert Hayes Matthew Illingsworth Bryan Steel Chris Newton', '4:16.510', ''], ['11', 'Lithuania', 'https://drive.google.com/thumbnail?id=1ybBRIlMxd6_Ad6nURiJICyDgLG1o0QJN  Remigijus Lupeikis Mindaugus Umaris Arturas Trumpauskas', '4:16.050', ''], ['12', 'Netherlands', 'Jarich Bakker  https://drive.google.com/thumbnail?id=1xsjj9y7m65Ie43GFZYFvsJH_QaFQ2_Xr  Richard Rozendaal  https://drive.google.com/thumbnail?id=1QIeusye3zVs79nyjgWA8sTVDNsuzOIZh', '4:16.175', ''], ['13', 'https://drive.google.com/thumbnail?id=1fDZKdCc2lByikrb33nwqZJc03PdnWg3m', 'Frederik Bertelsen Jimmi Madsen Michael Nielsen  https://drive.google.com/thumbnail?id=1gaE7_qzNZAD_Bp7weXh78rGgBrrfBP8W', '4:16.175', ''], ['14', 'Argentina', 'https://drive.google.com/thumbnail?id=1kOmLbekTX86IU6sMLUkR2GdbL4ZoMCm6   https://drive.google.com/thumbnail?id=1_Sm-tElwCSjyKcPfMsQO-fmnrVuMIZCA  Gonzalo Garcia Gabriel Curuchet', '4:20.840', ''], ['15', 'https://drive.google.com/thumbnail?id=1bJoRU_MCK8QIMTV4a7AZ5xyPF48zOX2y', 'Dae-Hong Chun Young Chung Jong-Mo Kim Younk-Sik Noh', '4:25.215', ''], ['16', 'https://drive.google.com/thumbnail?id=1Y0v7K_Rvpt5-TDmrsHY02Z46TYNo88Fj', 'Jose Medina Luis Sepulveda Marco Arriagada Marcelo Arriagada', '4:25.960', ''], ['17', 'https://drive.google.com/thumbnail?id=1dyjwqyHrag2jbqrowrVWVRZgBpKPilIJ', 'John Garcia  https://drive.google.com/thumbnail?id=1avIcmZSo43FP80H6txzmS2inyPZa-7CA  Yovani Lopez Jos Velasquez de la Cuesta', '4:26.400', '']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

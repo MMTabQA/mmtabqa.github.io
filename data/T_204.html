@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Career finals|Singles: 20 (8–12) of Todd Martin
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: who was the opponent after mikael pernfors?
+            </div>
+            <div>
+                Answer: Ivan Lendl
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Outcome', 'No.', 'Date', 'Championship', 'Surface', 'Opponent in the final', 'Score in the final'], ['Runner-up', '1.', 'February 15, 1993', 'Memphis, Tennessee,  https://drive.google.com/thumbnail?id=1ZxcftVF7KM1cY2FwE34xpGnW3js7Ou_M', 'Hard (i)', 'https://drive.google.com/thumbnail?id=1i696W1vr6Nm_Jn1BBsOpfqbTIDIndRUA', '7–5, 6–7(4–7), 6–7(4–7)'], ['Winner', '1.', 'May 17, 1993', 'Coral Springs, Florida,  https://drive.google.com/thumbnail?id=1ZxcftVF7KM1cY2FwE34xpGnW3js7Ou_M', 'Clay', 'https://drive.google.com/thumbnail?id=1115cLtfL6rwCDhRkI_o9uRe3xqJoky2j', '6–3, 6–4'], ['Runner-up', '2.', 'July 26, 1993', 'https://drive.google.com/thumbnail?id=14QQIWqw-srKZjliAcIYMYi2mxHZWBzVu , USA', 'Hard', 'https://drive.google.com/thumbnail?id=1AqZchpdboMYYN5hKj1R3QkVV8jPDIpMQ', '6–7(3–7), 5–7'], ['Runner-up', '3.', 'August 2, 1993', 'https://drive.google.com/thumbnail?id=1U7WwCx5iVtinE6oo_pBkv5UoYGbwWJjl ,  https://drive.google.com/thumbnail?id=1ZD1mhLK4dah7mOLGTRyKjZfPN_CBpNQR', 'Hard', 'Mikael Pernfors', '6–2, 2–6, 5–7'], ['Runner-up', '4.', 'October 18, 1993', 'Tokyo,  https://drive.google.com/thumbnail?id=1mu3dfqkZXcRoC-nC0Ddrumuigq-zpnJ7', 'Carpet', 'https://drive.google.com/thumbnail?id=1ufRDqkvhI0BMYn55DpDJhpj5CJ6fw-3D', '4–6, 4–6'], ['Runner-up', '5.', 'January 31, 1994', 'https://drive.google.com/thumbnail?id=11CvcTYfzejnoDzkesuSbhRNTGq0pnzvN ,  https://drive.google.com/thumbnail?id=17oMEY3LJKoOd504wCTPw-e4tu_qXJlYE ,  https://drive.google.com/thumbnail?id=1AeGo524YTu5FD5C1uaXhXojiQEsBRnMJ', 'Hard', 'https://drive.google.com/thumbnail?id=1kildrOi9Sgv8EYAcVmar0hK9sITv7JUz', '6–7(4–7), 4–6, 4–6'], ['Winner', '2.', 'February 14, 1994', 'Memphis, Tennessee, USA', 'Hard', 'Brad Gilbert', '6–4, 7–5'], ['Runner-up', '6.', 'May 2, 1994', 'Atlanta, Georgia, USA', 'Clay', 'https://drive.google.com/thumbnail?id=1gNrTsHci3TMfDnZVC6yNGQXdLUIAwY7o', '7–6(7–4), 6–7(4–7), 0–6'], ['Runner-up', '7.', 'May 9, 1994', 'https://drive.google.com/thumbnail?id=12C92kXdZTL6ttANc9KxFSQ02UIe9RN9k , USA', 'Clay', 'Jared Palmer', '4–6, 6–7(5–7)'], ['Winner', '3.', 'June 13, 1994', 'https://drive.google.com/thumbnail?id=1avCLvuD9bKmLPxJ7gWeeAytjkCFKb_GH ,  https://drive.google.com/thumbnail?id=1dnpKxXI__kxYdH_QWViSrNV9CIcLXSoA', 'Grass', 'Pete Sampras', '7–6(7–4), 7–6(7–4)'], ['Winner', '4.', 'February 20, 1995', 'Memphis, Tennessee, USA', 'Hard', 'Paul Haarhuis', '7–6(7–2), 6–4'], ['Runner-up', '8.', 'December 18, 1995', 'Grand Slam Cup,  https://drive.google.com/thumbnail?id=1BWoni14q0sfLmhVTzFgjnTkmVt0xdHsc ,  https://drive.google.com/thumbnail?id=1YL7Rs3jJaWkxhXtkvgydw69g3uORU09n', 'Carpet', 'https://drive.google.com/thumbnail?id=1jh73koxs0rGKCu1saej8ePEqqE3FwQed', '6–7(4–7), 3–6, 4–6'], ['Winner', '5.', 'January 15, 1996', 'https://drive.google.com/thumbnail?id=1Sy8M6_W9xSi5QY5sq4rKi2Z9j4TJk-8Q ,  https://drive.google.com/thumbnail?id=1AeGo524YTu5FD5C1uaXhXojiQEsBRnMJ', 'Hard', 'https://drive.google.com/thumbnail?id=1jh73koxs0rGKCu1saej8ePEqqE3FwQed', '5–7, 6–3, 6–4'], ['Runner-up', '9.', 'February 26, 1996', 'Memphis, Tennessee, USA', 'Hard (i)', 'https://drive.google.com/thumbnail?id=1kildrOi9Sgv8EYAcVmar0hK9sITv7JUz', '4–6, 6–7(2–7)'], ['Runner-up', '10.', 'August 22, 1996', 'https://drive.google.com/thumbnail?id=1ItEtulf0wnqPf-gDCUK9FC5q0w_LZUy4 ,  https://drive.google.com/thumbnail?id=1htf-W51OGpjcfvDYoJbMR7WKfJuDFikh', 'Hard (i)', 'https://drive.google.com/thumbnail?id=1vCgX1k2v8Ws9QFYBRKmE6KQrRqyramug', '5–7, 4–6, 6–7(0–7)'], ['Winner', '6.', 'April 20, 1998', 'Barcelona,  https://drive.google.com/thumbnail?id=1U2rMSB-Fj_cTfvAphP4OeqTVRtHoRXFt', 'Clay', 'Alberto Berasategui', '6–2, 1–6, 6–3, 6–2'], ['Winner', '7.', 'November 16, 1998', 'https://drive.google.com/thumbnail?id=1ItEtulf0wnqPf-gDCUK9FC5q0w_LZUy4 ,  https://drive.google.com/thumbnail?id=1htf-W51OGpjcfvDYoJbMR7WKfJuDFikh', 'Hard', 'https://drive.google.com/thumbnail?id=1XrbBO_jkhEnON8OP0c27WWgTYawncaCl', '6–3, 6–4, 6–4'], ['Winner', '8.', 'January 18, 1999', 'Sydney, Australia', 'Hard', 'https://drive.google.com/thumbnail?id=1PnJ3tr9If14XnpZeqspgxv31ap9BJwKZ', '6–3, 7–6(7–5)'], ['Runner-up', '11.', 'April 12, 1999', 'Estoril,  https://drive.google.com/thumbnail?id=1SZDBsrjlJ1Bdz4l39Xd2pdrOtfaIA7gs', 'Clay', 'https://drive.google.com/thumbnail?id=1LuYMazP-w8Xofwo65FdJpJCKIdrBTmGC', '6–7(4–7), 6–2, 3–6'], ['Runner-up', '12.', 'September 12, 1999', 'US Open,  https://drive.google.com/thumbnail?id=1QOnoWsWwaiaMI8Pl04Jf7oOrEQD-_R4x ,  https://drive.google.com/thumbnail?id=1ZxcftVF7KM1cY2FwE34xpGnW3js7Ou_M', 'Hard', 'https://drive.google.com/thumbnail?id=1JtO3WR3YbARBnyteyCUhVIfd4xFoIpo9', '4–6, 7–6(7–5), 7–6(7–2), 3–6, 2–6']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Medal leaders of List of Olympic medalists in figure skating
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: how many more silver medals did gillis grafström have compared to sonja henie?
+            </div>
+            <div>
+                Answer: 1
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Athlete', 'Nation', 'Olympics', 'Gold', 'Silver', 'Bronze', 'Total'], ['https://drive.google.com/thumbnail?id=1H__sVakXinMPSh1iYp0Wt-RJVbqUoOnC', 'https://drive.google.com/thumbnail?id=1rERhjTtjphCAdZGLTMrHfVtnVrJ2Q4kc \xa0(SWE)', '1920–1932', '3', '1', '0', '4'], ['https://drive.google.com/thumbnail?id=1HX3TVfQEVc0rh_lP9mfvTTca2Lm7Md0s', 'Russia\xa0(RUS)', '2002–2014', '2', '2', '0', '4'], ['https://drive.google.com/thumbnail?id=1JCw_SreOCcyfkGvSbZ2OHFYkshrGN0v3', 'https://drive.google.com/thumbnail?id=18pPeesW1qAf5VWO18vah0o0ryYWgaQe1 \xa0(NOR)', '1928–1936', '3', '0', '0', '3'], ['https://drive.google.com/thumbnail?id=1tgwfNW7iDMr4fZIbSqXlSzsd3cHNivuj  /  https://drive.google.com/thumbnail?id=16eM6osxZ3IXCl3DyYouCuvvkFlnc4Yif', 'https://drive.google.com/thumbnail?id=1WHKySRY9khYd8aITaspJqUwyiSufbEhZ \xa0(URS)', '1972–1980', '3', '0', '0', '3'], ['Artur Dmitriev / Natalia Mishkutenok', 'https://drive.google.com/thumbnail?id=1obruim0gR0D-cL_hzZaIWRdQhYcl0zP1 \xa0(EUN) \xa0 https://drive.google.com/thumbnail?id=1merkh2uCm9SmoS23_p6bfcte5tlZt4KZ \xa0(RUS)', '1992–1998', '2', '1', '0', '3'], ['https://drive.google.com/thumbnail?id=19TQEyyK_FCedF_Acwy3C3vIAub9PQ6Dt  /  https://drive.google.com/thumbnail?id=1rc_tEq3iPfcbz75BpCZEJ0sH-PSPR0zC', 'France\xa0(FRA)', '1924–1932', '2', '0', '1', '3'], ['https://drive.google.com/thumbnail?id=1ctKafcLa2wT1KekflAEipMA_P4-xkhqN  /  https://drive.google.com/thumbnail?id=1PY3GtCfMSam8xbdYsdPE5_T9xJSPiNwa', 'https://drive.google.com/thumbnail?id=1WHKySRY9khYd8aITaspJqUwyiSufbEhZ \xa0(URS)', '1964–1968', '2', '0', '0', '2'], ['Dick Button', 'https://drive.google.com/thumbnail?id=1RxhMATOxMx2zhJvJsNwtrJn9R_eJQsvi \xa0(USA)', '1948–1952', '2', '0', '0', '2'], ['https://drive.google.com/thumbnail?id=1QjFuTh7mDU4TZNhHpgVf-StFRAn9Bj9R  /  https://drive.google.com/thumbnail?id=1GUHwjwpabLplMekDu-lQrTze_mdQYVMK', 'https://drive.google.com/thumbnail?id=1WHKySRY9khYd8aITaspJqUwyiSufbEhZ \xa0(URS) \xa0 https://drive.google.com/thumbnail?id=1merkh2uCm9SmoS23_p6bfcte5tlZt4KZ \xa0(RUS)', '1988, 1994', '2', '0', '0', '2'], ['https://drive.google.com/thumbnail?id=1aaJCfmyvBHhoH2U4WJjJ_CwGnDMXTRnP  /  https://drive.google.com/thumbnail?id=1fuMMWIJufEHGWQU_M6jOO2UH1KSYX8aL', 'https://drive.google.com/thumbnail?id=1merkh2uCm9SmoS23_p6bfcte5tlZt4KZ \xa0(RUS)', '1994–1998', '2', '0', '0', '2'], ['Karl Schäfer', 'Austria\xa0(AUT)', '1928–1936', '2', '0', '0', '2'], ['https://drive.google.com/thumbnail?id=1ytvr8p7Io9xBPxj7nga8M82wHQ7Dfp0T  /  https://drive.google.com/thumbnail?id=14YB8Bnl1yyTGwdfXJWdyBgMIEeeBvZjm', 'https://drive.google.com/thumbnail?id=1merkh2uCm9SmoS23_p6bfcte5tlZt4KZ \xa0(RUS)', '2014', '2', '0', '0', '2'], ['https://drive.google.com/thumbnail?id=1F9ln1Tsjw_zAZP3HNor3M9il4GFzXJL6', 'https://drive.google.com/thumbnail?id=1l5HZ-VFFLY9CHj6-A3VyRRSp-kFVvIpR \xa0(GDR)', '1984–1988', '2', '0', '0', '2'], ['https://drive.google.com/thumbnail?id=1n4OxnAI4xMJzfnZYDEvAPW7fACpp-DMF  /  https://drive.google.com/thumbnail?id=1SzcVf1OoXbyRbfdgQ-KkDSigEG6stg4_', 'https://drive.google.com/thumbnail?id=1zuGKjEVOx0WUR0iyABYrkf2nKPgaTzqg \xa0(CAN)', '2010-2014', '1', '2', '0', '3'], ['https://drive.google.com/thumbnail?id=17DWl2RCIadrMSJbrX8ZEZPijfOwQqmk4  /  https://drive.google.com/thumbnail?id=1hdr6UUlcOWhazF1VQPTeBc8em4WMkYAi', 'United States\xa0(USA)', '2010-2014', '1', '1', '1', '3'], ['https://drive.google.com/thumbnail?id=1oCB9zd1NiBhdGI_zZowZyWGq4Ipfo9Hh  /  https://drive.google.com/thumbnail?id=1unid9-VTNhYyE1B3WlGJ0lzXc0vhg6vL', 'Unified Team\xa0(EUN) \xa0Soviet Union\xa0(URS)', '1984–1992', '1', '1', '1', '3'], ['https://drive.google.com/thumbnail?id=1_Teb8gg25jezqcg8lOdD81ehkhiKCq1Q', 'https://drive.google.com/thumbnail?id=1RxhMATOxMx2zhJvJsNwtrJn9R_eJQsvi \xa0(USA)', '1952-1956', '1', '1', '0', '2'], ['https://drive.google.com/thumbnail?id=1wh4MiRt14hCNDV42tlIWbtVRDAOTloCY  /  https://drive.google.com/thumbnail?id=1utrKY022lTBZGrQOlL5R2GByr24_pwll', 'https://drive.google.com/thumbnail?id=1merkh2uCm9SmoS23_p6bfcte5tlZt4KZ \xa0(RUS)', '1998-2002', '1', '1', '0', '2'], ['https://drive.google.com/thumbnail?id=1neSCdPw_uFMeZUUS1P_VxE-98-T06sYq', 'https://drive.google.com/thumbnail?id=1bHKpDGBOWrr0fvQnZrxwEpAeUPSenmcs \xa0(NED)', '1960-1964', '1', '1', '0', '2'], ['https://drive.google.com/thumbnail?id=1HGj3_eyryBjYDmw3f3M_Yy3Ze7Q1iMMA', 'https://drive.google.com/thumbnail?id=1RxhMATOxMx2zhJvJsNwtrJn9R_eJQsvi \xa0(USA)', '1956-1960', '1', '1', '0', '2'], ['Ludowika Jakobsson / Walter Jakobsson', 'https://drive.google.com/thumbnail?id=1jXJtxmQ2Rs02sHy-rs1Upb1LZkqNULyJ \xa0(FIN)', '1920-1924', '1', '1', '0', '2'], ['https://drive.google.com/thumbnail?id=1tSlh_zYmt4QwGuGhN8Rz3JQ312DIyS-h', 'https://drive.google.com/thumbnail?id=1HHq5NBYC0DMfR_UvMWHyPh5IAqwaMApW \xa0(KOR)', '2010–2014', '1', '1', '0', '2'], ['https://drive.google.com/thumbnail?id=1WMY5lZ9udTTSZZbc9MhwehKAn3gkJc_I  /  https://drive.google.com/thumbnail?id=1hG00otdAmKq4FDMm17rR9IM7vV-_BjLY', 'https://drive.google.com/thumbnail?id=1annH8eqnazUOGTbPI9u--dVqhLnj86_a \xa0(CHN)', '2002–2010', '1', '0', '2', '3'], ['https://drive.google.com/thumbnail?id=1VmE6012Qoj6VGppsMvG2Ke5-M1rVkUJi', 'https://drive.google.com/thumbnail?id=1HcBvYAMsfrtCYR1a4WSZaVuEV6kTyQF7 \xa0(GBR)', '1948-1952', '1', '0', '1', '2'], ['Marina Anissina / Gwendal Peizerat', 'France\xa0(FRA)', '1998-2002', '1', '0', '1', '2'], ['https://drive.google.com/thumbnail?id=130GolCHk5NQaOxB-QsKFizQ4bfNCaIgY', 'https://drive.google.com/thumbnail?id=1RxhMATOxMx2zhJvJsNwtrJn9R_eJQsvi \xa0(USA)', '1956-1960', '1', '0', '1', '2'], ['https://drive.google.com/thumbnail?id=1y5mtKE_dBrdbVPQXtyMu1M_we0EdsV9h', 'Soviet Union\xa0(URS) \xa0Unified Team\xa0(EUN)', '1988-1992', '1', '0', '1', '2'], ['https://drive.google.com/thumbnail?id=12A6KG0j7aL4Jq1F86h4JY-I-B7W2P4YS', 'United States\xa0(USA)', '1924–1932', '0', '2', '1', '3'], ['https://drive.google.com/thumbnail?id=1F3Fl1ONbBWsRmiHcKtOwMZKKHOHqdI4B', 'Austria\xa0(AUT)', '1924-1928', '0', '2', '0', '2'], ['https://drive.google.com/thumbnail?id=13xmxKkfPrtb-ZohDXytNZE5tMoqpxTdc', 'https://drive.google.com/thumbnail?id=1rkp3erizA080K0Wiv2iGwT_MMdVT-P6o \xa0(AUT)', '1928-1932', '0', '2', '0', '2'], ['Patrick Chan', 'https://drive.google.com/thumbnail?id=1zuGKjEVOx0WUR0iyABYrkf2nKPgaTzqg \xa0(CAN)', '2014', '0', '2', '0', '2'], ['https://drive.google.com/thumbnail?id=1Jum_9_CjG6DmTwVTT922Zpygvfy3sbVh  /  https://drive.google.com/thumbnail?id=1rT9iOdMt_2cIW0uyJlaeAC2xSbC3lWg-', 'https://drive.google.com/thumbnail?id=1Qi-0Lg1Z0tY4MZHOKVJXG6YRFZrpoLT2 \xa0(EUA)', '1960-1964', '0', '2', '0', '2'], ['Brian Orser', 'https://drive.google.com/thumbnail?id=1zuGKjEVOx0WUR0iyABYrkf2nKPgaTzqg \xa0(CAN)', '1984-1988', '0', '2', '0', '2'], ['https://drive.google.com/thumbnail?id=1S_5CGkpw3YrlAD7gShInl3b4lmXBIavv', 'https://drive.google.com/thumbnail?id=1zuGKjEVOx0WUR0iyABYrkf2nKPgaTzqg \xa0(CAN)', '1994-1998', '0', '2', '0', '2'], ['Phyllis Johnson', 'https://drive.google.com/thumbnail?id=1HcBvYAMsfrtCYR1a4WSZaVuEV6kTyQF7 \xa0(GBR)', '1908-1920', '0', '1', '1', '2'], ['https://drive.google.com/thumbnail?id=1Wx73cwOa9h3K9Oooq5tyTrEj2lTAQpK7', 'https://drive.google.com/thumbnail?id=1RxhMATOxMx2zhJvJsNwtrJn9R_eJQsvi \xa0(USA)', '1992-1994', '0', '1', '1', '2'], ['https://drive.google.com/thumbnail?id=1TeVC_oBT3Wa0TriSOASCFqksE26ygrSx', 'https://drive.google.com/thumbnail?id=1RxhMATOxMx2zhJvJsNwtrJn9R_eJQsvi \xa0(USA)', '1998-2002', '0', '1', '1', '2'], ['https://drive.google.com/thumbnail?id=1EJwgw-lSjMtzqW4gk5clhyEACusD-yW1', 'https://drive.google.com/thumbnail?id=1merkh2uCm9SmoS23_p6bfcte5tlZt4KZ \xa0(RUS)', '2002-2006', '0', '1', '1', '2'], ['Maya Usova / Alexander Zhulin', 'Unified Team\xa0(EUN) \xa0Russia\xa0(RUS)', '1992-1994', '0', '1', '1', '2'], ['Isabelle Brasseur / Lloyd Eisler', 'https://drive.google.com/thumbnail?id=1zuGKjEVOx0WUR0iyABYrkf2nKPgaTzqg \xa0(CAN)', '1992-1994', '0', '0', '2', '2'], ['https://drive.google.com/thumbnail?id=1Yb2qoIk_uIHailuYRcOm8E8ExQwwTKoW', 'https://drive.google.com/thumbnail?id=1Wic2MwSDBFWP1W2vMKVRmVnWyU39Hszb \xa0(FRA)', '1994-1998', '0', '0', '2', '2'], ['https://drive.google.com/thumbnail?id=1129Du_jQ0eeP_f2EMrML377IMcLrEa7j  /  https://drive.google.com/thumbnail?id=10TyWIqe8GA-NCqTqNOYZtVqSspObGGTU', 'https://drive.google.com/thumbnail?id=1l5HZ-VFFLY9CHj6-A3VyRRSp-kFVvIpR \xa0(GDR)', '1972-1976', '0', '0', '2', '2'], ['Chen Lu', 'https://drive.google.com/thumbnail?id=1annH8eqnazUOGTbPI9u--dVqhLnj86_a \xa0(CHN)', '1994-1998', '0', '0', '2', '2'], ['https://drive.google.com/thumbnail?id=1LplBCCTaOmaysq6ZHlU_DeO5cQCzkZaa  /  https://drive.google.com/thumbnail?id=1uPz9WrV-mTkpBPVSkN9FprodKgQVWuhD', 'https://drive.google.com/thumbnail?id=1EQJ2gHDGngO7uPdRYl7GIeqSUuDafxMU \xa0(HUN)', '1952-1956', '0', '0', '2', '2'], ['https://drive.google.com/thumbnail?id=1mayLLcQG5KH4rivd2FrhdUcWMpGrMdHT', 'France\xa0(FRA)', '1968-1972', '0', '0', '2', '2'], ['https://drive.google.com/thumbnail?id=1OU-K8DC5PTeSwRnOonkzWpd0gLCPE0t0  /  https://drive.google.com/thumbnail?id=1ZHtn0thBafXTEfqrwoB_pu6LdLLVBu-V', 'Hungary\xa0(HUN)', '1932-1936', '0', '0', '2', '2'], ['Aliona Savchenko / Robin Szolkowy', 'https://drive.google.com/thumbnail?id=1dqMvB_w--UYH8k3JgOg-8CcX6V6BxVlJ \xa0(GER)', '2010-2014', '0', '0', '2', '2']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

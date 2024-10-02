@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Top grossing films (U.S.) of 1965 in film
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: which film had the best rank?
+            </div>
+            <div>
+                Answer: The Sound of Music
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Rank', 'Title', 'Studio', 'Director', 'Actors', 'Gross'], ['1.', 'https://drive.google.com/thumbnail?id=1GZHriTT9BM9wCnVX1xFbMlOzMjGDJJie *', 'https://drive.google.com/thumbnail?id=1jVpArO2n19geSV9H7wAIDEOeKep_GyrW', 'https://drive.google.com/thumbnail?id=1vouv7BaotqKjJsbzyVreFN2euCU_4Qeq', 'https://drive.google.com/thumbnail?id=1bxu9t_LydmeehVd3oOrr0LKB81K2xNqs ,  https://drive.google.com/thumbnail?id=1vi5GLqqwc0WYjkd5XEonIufKrimZ2nYU ,  https://drive.google.com/thumbnail?id=1rRS9rjqvgLV6NCWQwwXPAa43VDBfJS-X ,  https://drive.google.com/thumbnail?id=1WL-7t3vVuFdvOcpILS1XQ552CpPo7Z-3 ,  https://drive.google.com/thumbnail?id=1J8Am0B9HtAmZ-IguyTUtsEI7wwP6fwpt , Duane Chase,  https://drive.google.com/thumbnail?id=1GrSu4QcfvGz8oHaWc7BPUYcf0rnrtBKE , Debbie Turner, Kym Karath,  https://drive.google.com/thumbnail?id=1fWBpHHbl3kGa8mH6Yqu1B0musamT7C0X ,  https://drive.google.com/thumbnail?id=1qnbJ4EBzRfGgC5OqssGv38t2KJNDjydT ,  https://drive.google.com/thumbnail?id=1lms5afAQfKyxDhaDGSVIwP7gDWXA4mtY ,  https://drive.google.com/thumbnail?id=1eW7FaN2ZPeeUSXsiW8bs0ohmTr_7lNm4 , Portia Nelson,  https://drive.google.com/thumbnail?id=1rk-346gVfHib7RT7OXapHlgqmrEqJb0v , Daniel Truhitte,  https://drive.google.com/thumbnail?id=1vAxPG28-WyugdNR9m3Z6mRxcJyc9qYwJ', '$163,214,286'], ['2.', 'Doctor Zhivago*', 'https://drive.google.com/thumbnail?id=100ilaCrnOackxo6c6NM_QQaMAdyon-JM', 'David Lean', 'https://drive.google.com/thumbnail?id=11htGmW4bXug4xpipjjLTvTzTD6YZgqpO ,  https://drive.google.com/thumbnail?id=1gsLcMEdBNsPXgo3ZrcxpML0NO7ME0zFR ,  https://drive.google.com/thumbnail?id=19fUGYOJ_vJTBGEVFQZIGA1mwAuAfhZzq ,  https://drive.google.com/thumbnail?id=1ASertFYYkaHo4iVH3N3L1uwvnoO2KQKO ,  https://drive.google.com/thumbnail?id=1ksb-eWcEzUo3mH4s8agm96mdg87NBLC8 ,  https://drive.google.com/thumbnail?id=1GXSNDkHZQmy6-mpARHAKFtyr2peg6dvc ,  https://drive.google.com/thumbnail?id=11ZcAv1wPjll6QknjS7Gknc-nrX8h4QQ4 ,  https://drive.google.com/thumbnail?id=1nrriffZVs0JrbxKdFSaYqB7NQNvU2CXC ,  https://drive.google.com/thumbnail?id=14Krnyv_msT8ZqF_rtr5_PCCsRqOrIn1m', '$111,721,910'], ['3.', 'https://drive.google.com/thumbnail?id=1fHIVDTrSoqls2ky9gksYapZWKZdJc-0_', 'https://drive.google.com/thumbnail?id=1JoZaOMII0H7DNSRL9gOnskqoZPjT7TMl', 'https://drive.google.com/thumbnail?id=1atJA1bYl7VSZmkEoNA5A-_IXIcaxFRVH', 'https://drive.google.com/thumbnail?id=19ZEvaTj8BpjHqy5WWCWDbpAJRrlE3aqO ,  https://drive.google.com/thumbnail?id=1bEIa4ENASThPJDevxsQ0mjNoWuXLleqA ,  https://drive.google.com/thumbnail?id=1xUfkLi4f_xqsNAvKTxD3jESYZd1bAQL5 ,  https://drive.google.com/thumbnail?id=19-fKjMiBD2j-flC0jdoDs8OQaw2bXbg4 ,  https://drive.google.com/thumbnail?id=1YuixewahB8qM0Han3zTujX8p5WiD0Vbk ,  https://drive.google.com/thumbnail?id=1heSUv-F8TWCQvrreK833F8a3KS6pc4gj ,  https://drive.google.com/thumbnail?id=1FwYLDmVz3FrNrlZOBD2NrV0T9D1jIwup', '$63,595,658'], ['4.', 'https://drive.google.com/thumbnail?id=1B8ydxy18T9hr7gcSCp-7NiwpxlCVFQmz', '20th Century Fox', 'https://drive.google.com/thumbnail?id=1D3clZwfCvyR3PFKwLlgZCpTDntaEh-q0', 'Stuart Whitman, Sarah Miles, James Fox, Terry-Thomas, Robert Morley, Alberto Sordi, Gert Fröbe, Jean-Pierre Cassel, Irina Demick, Red Skelton, Yujiro Ishihara, Karl Michael Vogler, Dame Flora Robson, Sam Wanamaker, Gordon Jackson', '$31,111,111'], ['5.', 'https://drive.google.com/thumbnail?id=18g2fvk8cHFnGTH1cVtYeRI25YOjIoSqv', 'https://drive.google.com/thumbnail?id=1CCnvE_Onu1nUwuKHSWMpiVQA42JDdLi5', 'Robert Stevenson', 'https://drive.google.com/thumbnail?id=1HIX5Sw0NrCTatVl8wEaDaYBhxIEalTg6 ,  https://drive.google.com/thumbnail?id=1k9Kq5e8k0itwd89QuSvp_4ov-QZG-rMy ,  https://drive.google.com/thumbnail?id=1QpDP0Ew8n5qs5sonq9Rdg37PRLsT18nj ,  https://drive.google.com/thumbnail?id=1p-wX6y6nP1qgPayhcX-R2n7ndrK0mjEM ,  https://drive.google.com/thumbnail?id=1KcODbj_goXEt8B0AGEmY0ZT91s61gCBf ,  https://drive.google.com/thumbnail?id=1gKPHUMdfTA6SzMi77W7uLNc5PZjfuqNI ,  https://drive.google.com/thumbnail?id=18q06i3YAxQr25voU2HoPy527wU4cmoCF ,  https://drive.google.com/thumbnail?id=1iPfcMaNTDmqegYDDM8ZkVdyGcl5rQv1n ,  https://drive.google.com/thumbnail?id=1BmK2dI7sycPeFlSbXKkwD72OITlSbcC5 ,  https://drive.google.com/thumbnail?id=11PTkL_ZShPyuOSMpLAN-l0LTckxhNyi6', '$28,068,222'], ['6.', 'https://drive.google.com/thumbnail?id=1RbxLKAV_PqMt8HvDmZcAxjf8y9ci_sy-', 'https://drive.google.com/thumbnail?id=1KE5vcGi7s37dFBp8M-hgdEonVE-nNCvH', 'https://drive.google.com/thumbnail?id=1s0Y7yCg5VwePsEptuDx801I1yDhXEx4S', "Tony Curtis, Jack Lemmon, Natalie Wood, Peter Falk, Keenan Wynn, Larry Storch, Dorothy Provine, Arthur O'Connell, Vivian Vance, Ross Martin, George Macready", '$25,333,333'], ['7.', 'https://drive.google.com/thumbnail?id=1FxovMcAvekwIQIbBRMyT_XrelJXaPykl', 'https://drive.google.com/thumbnail?id=1yo5Utfh7KmDYoELTril-8cXlTyZQf2Ne', 'Elliot Silverstein', 'https://drive.google.com/thumbnail?id=1-VvG8J4wdRcdF_RBylpOy4efeWRe-w5U ,  https://drive.google.com/thumbnail?id=1HPaNDyOGQfc9xhSHtEzni5TrrgR4MEzw ,  https://drive.google.com/thumbnail?id=1BJurRST8fHxnPXBzM65MjmNgnTbT8EzX ,  https://drive.google.com/thumbnail?id=1fvw2uufrz0_ZtRkP8IryO6SMnxLQuWHl ,  https://drive.google.com/thumbnail?id=1--eAmm_JsxFdnZtxnnvwdjSa9RZKwxll ,  https://drive.google.com/thumbnail?id=1b-fB68rgMaLTZqT0MeSEDMAbKq38j5k3', '$20,666,667'], ['8.', 'https://drive.google.com/thumbnail?id=1OvqzvOrXHpS7i8Ud1W6vcqEn-qU0WK0D', 'United Artists', 'Clive Donner', 'https://drive.google.com/thumbnail?id=1ev7mJZjTiObFaxmxVWU9-CmvcXdJ_WH7 ,  https://drive.google.com/thumbnail?id=1NCNzSiqXAk7t2HoltthFyUXq8TkUqBHo ,  https://drive.google.com/thumbnail?id=1_zB3a1S79hysEUtN6mcN_C3CNiJwxK4Z ,  https://drive.google.com/thumbnail?id=1reJwG2KsPi44QhF3sdl6vkU5dfeF2DNM ,  https://drive.google.com/thumbnail?id=1CGNDH-cxyKaf2rsOgO6m_hhJfksUReOj ,  https://drive.google.com/thumbnail?id=14S6iCyvb6fqluq6NEgyJgPRlZI37UBa6 ,  https://drive.google.com/thumbnail?id=1XOohIgVobDdv_WIHdZVITOlLeQlwxSao', '$18,820,000'], ['9.', 'https://drive.google.com/thumbnail?id=12LqB3tPlClpWjHZqfsT6BZ1hzT0VSfvp', 'https://drive.google.com/thumbnail?id=1cP5H7a3q_9HyyanhNQ8FV1xJArg_N3Cd', 'Andrew V. McLaglen', 'https://drive.google.com/thumbnail?id=1T9_yVM9Xw20RPn1g92rH9Ez7DyHS5W-t ,  https://drive.google.com/thumbnail?id=1zyhWnkVHlUL5eIx88DeyaYABudy85SXI ,  https://drive.google.com/thumbnail?id=1c4lm3oKf-3dfcwgbQSPV8UjVY1CcsiWk ,  https://drive.google.com/thumbnail?id=1bOpxwQFyr2bQ6Ew-ikEnC6SGhRJ0eZ1H ,  https://drive.google.com/thumbnail?id=1_hNpbbe_I6mrArCabysjDo2tH4474VY5 , Rosemary Forsyth', '$17,268,889'], ['10.', 'https://drive.google.com/thumbnail?id=195tmTFAUfhrpLQ8KOzgAIE48jzXBJnft', '20th Century Fox', 'Mark Robson', 'https://drive.google.com/thumbnail?id=1856cYuxDlyDvrZ3EOzf8OUZtQx5NVjmG ,  https://drive.google.com/thumbnail?id=1jcHIz6zbFUlnPFxGvROASUIDaqvUtGrR ,  https://drive.google.com/thumbnail?id=1Xjn-y6M-1ecihHyxARHXctTjhldZS5Vu ,  https://drive.google.com/thumbnail?id=1bhKZLPtbnTLE4Q5wyhoO8qaz3BCseH-T ,  https://drive.google.com/thumbnail?id=1MoUmtODp5-8F7I4Oy0hJh8PCeyNZ5m-t ,  https://drive.google.com/thumbnail?id=1pw4kllsu7mLgL7eaNX0ZDTKMxBXJq1wG ,  https://drive.google.com/thumbnail?id=1-ZRKfd8vAUPWIAGwkHWTWzVL11h4znn1 , Wolfgang Preiss,  https://drive.google.com/thumbnail?id=1-gocgPqrPvZElsbclzvHo7HmApkApORl ,  https://drive.google.com/thumbnail?id=1tqkhYrNPNc1CWDtVyx-DLaloRUcZzoZ4 ,  https://drive.google.com/thumbnail?id=1xUfkLi4f_xqsNAvKTxD3jESYZd1bAQL5', '$17,111,111'], ['11.', 'https://drive.google.com/thumbnail?id=1J1B8R-JNSpzLdaHi9KeVYWzqNZ0WcItM', 'United Artists', 'https://drive.google.com/thumbnail?id=1PowEmkIoVk_kwkWQFmLu_cH4eVi7ABfX', 'Max von Sydow, Jose Ferrer, Van Heflin, Charlton Heston, David McCallum, Roddy McDowell, Dorothy McGuire, Sal Mineo, Donald Pleasence, Sidney Poitier, Claude Rains, Telly Savalas, John Wayne, Shelley Winters, Ed Wynn, Carroll Baker, Martin Landau, Angela Lansbury', '$15,473,333'], ['12.', 'For a Few Dollars More', 'United Artists', 'https://drive.google.com/thumbnail?id=1fC5dUkZ7MrTo5zS5Znv0-2muJS07XDLm', 'https://drive.google.com/thumbnail?id=122v0IB3FBVt81qL3mSSUMgic4RjSSLhB ,  https://drive.google.com/thumbnail?id=16YhvxWxQzWntjcg6loM-M8ijAF38t70m ,  https://drive.google.com/thumbnail?id=1D3yC5AyFlLXCsoCk-k2YJvkbGzPYfLOp , Mario Brega,  https://drive.google.com/thumbnail?id=1GzkC8TzV_pR-qRPcMMwD6hnqU2ZBwCvr ,  https://drive.google.com/thumbnail?id=1wiG6B5GkO3iRnywNTDjAZZRlaxCcRbK- ,  https://drive.google.com/thumbnail?id=1zMZpbCqzz5IQZoViDSF7nGRzxRYMr0-X', '$15,000,000'], ['13.', 'https://drive.google.com/thumbnail?id=1HfJubhSmeFsoCjKz64xjN9SB_lqYBFFc', 'Metro-Goldwyn-Mayer', 'https://drive.google.com/thumbnail?id=1vb3nfefX5nOHpwvVZsF9EbpJQ5fetu1K', 'https://drive.google.com/thumbnail?id=1Y8KLX1JAOGjrnFPpSo2mPfBRLtX5B98p ,  https://drive.google.com/thumbnail?id=1sTPfnZVTqbAu_eEdZNjf2OxyKuHxg41T ,  https://drive.google.com/thumbnail?id=1mPlCtNH_s-CyRlnoubYnAAU27W5fZmdw ,  https://drive.google.com/thumbnail?id=1_IvWhx546BUta_f3liIBRR9XqBFEmRwJ ,  https://drive.google.com/thumbnail?id=1IxTB_oZ9d_dGUKHbCplUcw3ixI10cjRx', '$13,691,111'], ['14.', 'A Patch of Blue', 'Metro-Goldwyn-Mayer', 'https://drive.google.com/thumbnail?id=18vEghJfJi8YS9YjOtUwLleqFiH4ZlJEU', 'https://drive.google.com/thumbnail?id=1xgt9VKBVy_hFx6nctI2hi592H5tPq0Zy ,  https://drive.google.com/thumbnail?id=1BGITCDiJVGTx2hHWxVXrQV5jA3i-pcKq ,  https://drive.google.com/thumbnail?id=1lXy_w2-5AWSqnsHIKSMiEyWUnFyJwCFk ,  https://drive.google.com/thumbnail?id=1WDZKSxDo7PVj4tUqUhriHUIrPo87fEen ,  https://drive.google.com/thumbnail?id=1mIidb-C8LgBlRaOLud3YARtL7htx130R', '$13,500,000'], ['15.', 'https://drive.google.com/thumbnail?id=1nHEyRQr-2Yz5LBhbKyk990aBIyRaYIc1', 'https://drive.google.com/thumbnail?id=1xGVjAKOAb7ugpiqhzY55yZL68TnC62TN', 'Henry Hathaway', 'https://drive.google.com/thumbnail?id=1FgZeVNGv_bxebnwrB7zojM-BlvmWOIKw ,  https://drive.google.com/thumbnail?id=1bYG6hNyOkWQzc3DHZ_zLGC3q1-OSlAbc ,  https://drive.google.com/thumbnail?id=1ETo0ndi79XVmwPKPrJ0lVhneR2pqPWI0 ,  https://drive.google.com/thumbnail?id=1mmYliWIvEA5XAgPg3nQahAKjeTnmmOGK ,  https://drive.google.com/thumbnail?id=12q2sE-l5pug2xhcMdNij1vTQHWsMMoo0 ,  https://drive.google.com/thumbnail?id=1ldKf6Sg4PYplYx7uHRCGLTRX_MlInWzk ,  https://drive.google.com/thumbnail?id=1s67Gdak7pX-wsbxbHAcrMtniBSaB5X6W ,  https://drive.google.com/thumbnail?id=11EfxeTce7l0zfYf6MEJXOYlkKXbWUYNP', '$13,333,333'], ['16.', 'Help!', 'United Artists', 'https://drive.google.com/thumbnail?id=1rELH0qJ208KRlEy17GRu7jvZysJcIVYp', 'https://drive.google.com/thumbnail?id=11h7U1Y_mBM9yOZmJhT7AqQSl53CVRICy ,  https://drive.google.com/thumbnail?id=1gSS52EBAzJjzxk9XmvW2ejFhZqpRZlIu ,  https://drive.google.com/thumbnail?id=1m3ObCrR8Sj-s1aB37Ni88Nn5qDPHRdBS ,  https://drive.google.com/thumbnail?id=1IQhpXPdOjl1Hs5Z4duBi5-C1sUGCii0u ,  https://drive.google.com/thumbnail?id=1v6LeTyysenyY2LbA8cQMOSoFtMojs9k1 ,  https://drive.google.com/thumbnail?id=10BUuH01XdzOpXbp1rSeRsWrhJ72GMzW3 ,  https://drive.google.com/thumbnail?id=1SKa_aa36ZN8aWkCsNfe6PSHgtNqzPghd', '$12,066,667'], ['17.', 'https://drive.google.com/thumbnail?id=1Zq8FOMer-UAtUCsvgt-LLNzhpdvaGith', 'United Artists', 'https://drive.google.com/thumbnail?id=1dQ7aIlCn-2fwMJv6ZuPz2OvHV1762b-4', 'https://drive.google.com/thumbnail?id=1ImsAP84IOl-HU-V-j1khqY7HXNZmORhT ,  https://drive.google.com/thumbnail?id=1CjvajfQt2wyvWy-yoNwZmBQG8ccvIVJS ,  https://drive.google.com/thumbnail?id=13pEAhul96sigvmtGCtZKVDxBrwVETyw9 ,  https://drive.google.com/thumbnail?id=1Ay4xeDaiajm1U1A5ghwb0NWSvuA3LWZt', '$12,000,000'], ['18.', 'Darling', 'https://drive.google.com/thumbnail?id=1jmE3cKAz7b4dVRNSbBCs4-OgLy6mHGkR', 'https://drive.google.com/thumbnail?id=1Tpb6qvrhC_2d9-rSRYym_0yCcsm2aiA_', 'Julie Christie, Laurence Harvey, Dirk Bogarde, José Luis de Vilallonga, Roland Curram, Basil Henson', '$12,000,000'], ['19.', 'https://drive.google.com/thumbnail?id=1UFAnE-BMBMHjwOwt9vHbrzao0pMipsLC', '20th Century Fox', 'https://drive.google.com/thumbnail?id=1JmTPOMmRpb0NhyNKJlZnMCOePGcnBQ8M', 'https://drive.google.com/thumbnail?id=1JdJwNNeZ9Yo4xJhX1nADQGqv5NK3Pgl4 ,  https://drive.google.com/thumbnail?id=1umH5s9-0G7FUfCzw9IqkLEp8G6zY2Y3x ,  https://drive.google.com/thumbnail?id=14faGK-qyRWj2qsR11qJnL24UTGftk3en ,  https://drive.google.com/thumbnail?id=1dZcdhCUW3IfGImgk1A9MaeBeqDRosNQK ,  https://drive.google.com/thumbnail?id=1e74MjIJDloPvHyqfhCbb1CUkDnTzA4Eg ,  https://drive.google.com/thumbnail?id=1xUfkLi4f_xqsNAvKTxD3jESYZd1bAQL5 ,  https://drive.google.com/thumbnail?id=1-Y27uA64E3jfvCIdnpqM71KAGY3kSGbd', '$8,000,000'], ['20.', 'https://drive.google.com/thumbnail?id=1nYgKpWQbKr1U3hGya4CutPrV2ngQwESM', '20th Century Fox', 'Ralph Levy,  https://drive.google.com/thumbnail?id=1rlNI6b6XlH3YVwZAJ3o_UNNbNfoZpAQg', 'https://drive.google.com/thumbnail?id=14fEJWmv9UEtCus0CVtvTA5QFjNggOxTL ,  https://drive.google.com/thumbnail?id=19_mVMPSVh0fqWaJyB097p0huJJ0O5JSs ,  https://drive.google.com/thumbnail?id=1L7I4oJoD-U-55H9k0vt5XYA6znw-sC6F ,  https://drive.google.com/thumbnail?id=1MoUmtODp5-8F7I4Oy0hJh8PCeyNZ5m-t ,  https://drive.google.com/thumbnail?id=1UB2WB26Atxr0aybU6PTFTHfVWIS6WrQX', '$8,000,000'], ['21.', 'The Spy Who Came in from the Cold', 'Paramount', 'https://drive.google.com/thumbnail?id=1feiRDu01ahBFRaGIdShZCZqNdo-4_BaJ', 'Richard Burton, Claire Bloom, Oskar Werner, Sam Wanamaker', '$7,600,000'], ['22.', 'https://drive.google.com/thumbnail?id=1c080nEJ-bzb1nx9hFnIqrMJmHQSGw_--', 'Columbia', 'https://drive.google.com/thumbnail?id=1i3EHUxLg5bD69e31AyPIp6eC75W2MCwC', 'Vivien Leigh, Simone Signoret, Oskar Werner, Lee Marvin, Elizabeth Ashley, George Segal, José Greco, Michael Dunn', '$7,000,000'], ['23.', 'https://drive.google.com/thumbnail?id=1c3J0EgQ2NajEO6tCh0tkPivd_-pCO1h9', 'Columbia', 'https://drive.google.com/thumbnail?id=1DVHyuI9IskeBYF83b_9RTKssdlseO0sJ', 'https://drive.google.com/thumbnail?id=1ojMObfqCYhAKG_7ePGhXNg-Hd5dwLppd ,  https://drive.google.com/thumbnail?id=18qNvunZFOv5tLSyqmdDrwPsatb-XH2q1 ,  https://drive.google.com/thumbnail?id=1P1sBeLZNNL9egPSichYi-vf_Z-vA0ASD', '$7,000,000'], ['24.', 'https://drive.google.com/thumbnail?id=1m1lEBB4Gcg7Ea3vtjbWkyhGB9YEW4Dj1', 'United Artists', 'https://drive.google.com/thumbnail?id=1FTBTlMVoPvnw4mtrOfGxmh1m2kA9IoIS', 'https://drive.google.com/thumbnail?id=1JyLNdbXYjroQqSAJ3rCXHAFdSHqHhHu0 ,  https://drive.google.com/thumbnail?id=1KSvtqT-MkkUhFtp5155urpLgD70qxu29 ,  https://drive.google.com/thumbnail?id=1YIOlMc9m7BLfqnOCQSoLSLt67CMi6gaz ,  https://drive.google.com/thumbnail?id=1_wrNzeRsrqIqZYi9ddQbl0xOrrZcrBQt', '$6,800,000']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

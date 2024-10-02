@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Winners and runners-up of Hazfi Cup
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: which club has the largest number of championships?
+            </div>
+            <div>
+                Answer: Esteghlal (Taj)
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['#', 'Club', 'Winner', 'Last win', 'Runner-up', 'Last losing final'], ['1', 'https://drive.google.com/thumbnail?id=1RUaxDAxcU9h_deAG72-6r8JvPnKUFKb4', '6', '2012', '3', '2004'], ['2', 'https://drive.google.com/thumbnail?id=13Ytl1J2JkNs9H5znuh-myhC0SC-RMzMU', '5', '2011', '2', '2013'], ['3', 'https://drive.google.com/thumbnail?id=1eLKTveakridITt4aXnx25griru1UK4hT', '4', '2013', '0', 'N/A'], ['4', 'https://drive.google.com/thumbnail?id=1RTKxm1ybnzyiPXfvhVK3xH1kbwyUUeZD', '3', '1990', '4', '2011'], ['5', 'https://drive.google.com/thumbnail?id=1nAKB18jaKKrkszgWjWtjPQCTT1jRLAoX', '2', '2009', '1', '2001'], ['6', 'Bahman', '1', '1995', '2', '2000'], ['=', 'https://drive.google.com/thumbnail?id=1CvhmNp5WVq5oMXfDkKDVeI8QkKMugcbe', '1', '2001', '2', '2003'], ['=', 'https://drive.google.com/thumbnail?id=1rDrvsU2KZ8-to828UdGyiP3UP6TBx8Rt', '1', '2014', '2', '1995'], ['8', 'https://drive.google.com/thumbnail?id=1eK2H5KMZ7JzE2N_-HhEBPN8AVOPluop7', '1', '1997', '1', '1996'], ['=', 'https://drive.google.com/thumbnail?id=1mxScmyH59juarqKDj3XAkc18NgsJKY_c', '1', '2005', '1', '2007'], ['10', 'https://drive.google.com/thumbnail?id=1buWa1DMCzbTIfExQiW9x2XNYvT0NZf7T', '1', '1994', '0', 'N/A'], ['=', 'https://drive.google.com/thumbnail?id=1Pf6O0zwv-JldsoKR4H0ESdixbfb7a3wQ', '1', '1988', '0', 'N/A'], ['13', 'https://drive.google.com/thumbnail?id=11v4U_kFiA8nV_Ti2RLQz7EAqJenTnGrH', '0', 'N/A', '1', '1977'], ['=', 'https://drive.google.com/thumbnail?id=1mycJoRn6bb1_oEBN_ByDCiVVZ58W-8MM', '0', 'N/A', '1', '1986'], ['=', 'Jonoob Ahvaz', '0', 'N/A', '1', '1994'], ['=', 'Aboomoslem', '0', 'N/A', '1', '2005'], ['=', 'Damash (Pegah)', '0', 'N/A', '1', '2008'], ['=', 'https://drive.google.com/thumbnail?id=14hymtLfYkUrJYXCkvQwhNBqSpAv4hEIC', '0', 'N/A', '1', '2009'], ['=', 'Gostaresh Foolad', '0', 'N/A', '1', '2010'], ['=', 'https://drive.google.com/thumbnail?id=1X0Hhkz8s4oikVYtApyuAZatEtr8EIow7', '0', 'N/A', '1', '2012'], ['=', 'Mes Kerman', '0', 'N/A', '1', '2014']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

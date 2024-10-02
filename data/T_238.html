@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Medal table of Biathlon at the Winter Paralympics
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: what is the number of gold medals won by japan?
+            </div>
+            <div>
+                Answer: 2
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Rank', 'Nation', 'Gold', 'Silver', 'Bronze', 'Total'], ['1', 'https://drive.google.com/thumbnail?id=1Yk6QQUkX1L98K_W9rXAPVHQhqPPn9AcE', '17', '9', '14', '40'], ['2', 'https://drive.google.com/thumbnail?id=1GMZFm82OVNpmx53A8BENd63-j2BBporV', '12', '16', '8', '36'], ['3', 'https://drive.google.com/thumbnail?id=1JD6Z5TiqBh_V5h12auTHQ_EdhEyv2PZV', '6', '11', '9', '26'], ['4', 'https://drive.google.com/thumbnail?id=1DxC3xh3obn2ECtzsmt8embkDOtO8n9g1', '6', '2', '7', '15'], ['5', 'https://drive.google.com/thumbnail?id=1JaFvQ5u1RcDppAhKAZY8vtqsPZUaluUM', '5', '4', '3', '12'], ['6', 'https://drive.google.com/thumbnail?id=1YUeSnI-i6DkfhcvB1HVpQtxK13kkjo1u', '3', '5', '3', '11'], ['7', 'Finland', '3', '2', '4', '9'], ['8', 'https://drive.google.com/thumbnail?id=11QTcDPn99TqLA54pKtZs3wSpcnO_PsEt', '2', '2', '1', '5'], ['9', 'https://drive.google.com/thumbnail?id=14EKcUUAZ7Y4r8Xqnbq7pg03oWc7d7osA', '2', '0', '1', '3'], ['10', 'https://drive.google.com/thumbnail?id=1KdKz03fBI7_Zweq4SR5OjiIfWsYWtKv7', '1', '2', '2', '5'], ['11', 'Denmark', '1', '0', '1', '2'], ['12', 'https://drive.google.com/thumbnail?id=1burZzNflInaQVv3wHw8n_jvaendCT4ti', '1', '0', '0', '1'], ['13', 'https://drive.google.com/thumbnail?id=1wInt6aB0Nlaw9f1br4POJlVY2943atML', '0', '4', '0', '4'], ['14', 'https://drive.google.com/thumbnail?id=1yFcELq9whs0kAXXwoUkgzlf_rTXdWtiw', '0', '2', '1', '3'], ['15', 'Italy', '0', '0', '1', '1'], ['15', 'https://drive.google.com/thumbnail?id=1KPgFgIImeiPDWnJxEuiOdsakGWGhvetl', '0', '0', '1', '1'], ['15', 'https://drive.google.com/thumbnail?id=1s6OyPEJzLsmK3jkOvxnhPZ4FmXkprUNZ', '0', '0', '1', '1'], ['15', 'https://drive.google.com/thumbnail?id=1DUjgtSEt8GrJPGlHwOJIdtxCH33NVqL9', '0', '0', '1', '1'], ['15', 'United States', '0', '0', '1', '1'], ['Total 19 nations', 'Total 19 nations', '59', '59', '59', '177']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

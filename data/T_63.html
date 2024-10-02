@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to History|Previous Passenger Air Service History of Toledo Express Airport
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: what is the only destination served by american eagle airlines?
+            </div>
+            <div>
+                Answer: Dallas/Fort Worth
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Airline', 'Destination(s)', 'Aircraft Scheduled', 'Service Date(s)', 'Comments'], ['https://drive.google.com/thumbnail?id=1jmcpYKIFh923CYazNcZh3D9YIPi5vgj7', 'New York JFK, Tampa, Washington National', 'Boeing 737-200, DC-9-10', 'JFK: 6/14/79-9/5/79, DCA: 10/26/79-9/30/1982, TPA: 02/1980-9/30/1982', ''], ['https://drive.google.com/thumbnail?id=1wwYRSMdyn3B8SkaeKSEX938zB7ESrJtV', 'Atlanta, Dayton, Orlando', 'Boeing 737-200, DC-9-30, Boeing 717-200', '11/14/1996-2/28/1998, 10/3/2000-4/29/2002', ''], ['https://drive.google.com/thumbnail?id=1ijLQBqfp2BHZHGhbdaX4YFIvA9AI7s1E', "Akron-Canton, Chicago O'Hare, Cleveland, Columbus, Flint, Fort Wayne, Kalamazoo, Pittsburgh, South Bend", 'BAe 146, BAe ATP, Dash 8-300, Dash 7, Metro III', '?-02/03/1993', 'Original and operating as United Express.'], ['https://drive.google.com/thumbnail?id=1LfWJ7y-D5sJF79pH02NQ62LtNqBHubbe *', 'Las Vegas', 'MD-80', '12/15/2005-4/24/2006', ''], ['https://drive.google.com/thumbnail?id=15yBfrIaPiczm_u49UB5PTFz0emndUUcx', 'Columbus, Flint', 'Beech 1900', '', 'Operated by Mesa dba Superior Airlines'], ['https://drive.google.com/thumbnail?id=1LoJ99pqdakWHc_DtYyCGJyuzIw4sGwYG *', 'Dallas/Fort Worth', 'ERJ-145', '', 'Operated by Simmons Airlines (now American Eagle Airlines) and Chautauqua Airlines (dba AmericanConnection until name change to American Eagle)'], ['https://drive.google.com/thumbnail?id=1BcuXMiG6tVgalpNzL7CWZboxC56ENWdy', 'Cincinnati', 'Dornier 328JET', '', 'dba Delta Connection'], ['https://drive.google.com/thumbnail?id=1JVoFGtKSixJ9Eg4DO3Qrlo9OBfNkmKnZ', 'Atlanta, Cincinnati', 'ATR 72, CRJ-200, CRJ-700', '', 'dba Delta Connection'], ['Beaver Aviation / BAS Airlines', 'Beaver Falls (PA), Detroit City, Youngstown', 'Piper Navajo', 'Early 1980s', ''], ['Capital Airlines', 'Akron, Chicago, Cleveland, Detroit, Flint, Grand Rapids, Lansing, Muskegon, Pittsburgh, Philadelphia', 'Viscount, DC-3, DC-4', '1/8/1948-05-31-1961', '* Merged with United. * At the time, 14 flights at startup was the most ever for a new city.'], ['https://drive.google.com/thumbnail?id=1g7A1HMJwH9DjedjmqmztpWSE-iWEXfTW', 'Chicago Midway, South Bend', 'Jetstream 31, Saab 340', '1993-1995, 6/28/2002-1/4/2005', 'Original and returned as ATA Connection'], ['https://drive.google.com/thumbnail?id=1fv8uCUm8QYToXwrlJyzCJjF2nIYu0BU0', 'Deroit, Fort Wayne', '', '', 'Merged with Delta'], ['Comair', 'Atlanta, Cincinnati, Columbus, Indianapolis', 'Piper Chieftain, Piper Navajo, EMB-110, Saab 340, EMB-120, Metro III, CRJ-100, CRJ-200, CRJ-700', '1979, 01/03/1981-?', 'Original and as Delta Connection'], ['https://drive.google.com/thumbnail?id=1vMwv-CgepdjF8XW_OI28waGAlHjf1BAN', 'Cleveland', 'EMB-120, Beech 1900, Dash-8-200', '', ''], ['https://drive.google.com/thumbnail?id=1BkINX_JLNhAIHPY85BhmNHfMKwUZaPeG', 'Atlanta, Cincinnati, Dayton, Detroit, Fort Wayne', 'Convair 440, Boeing 727-200, Boeing 737-300, MD-88, DC-9-30', '', ''], ['https://drive.google.com/thumbnail?id=1a6v462l886z1qhMXu-MiRllllRHgyWPj', 'Columbus', 'Constellation L-1049G, Locheed Electra, Boeing 727-100, Boeing 727-200, DC-9-30, DC-9-50', '', ''], ['https://drive.google.com/thumbnail?id=1sQV-2VPHh4hS2_cYSbjImqsHVjecyEwL  mk 1', 'Denver, Detroit', 'Boeing 737-200, MD-80', '', ''], ['Liberty Airlines', "Chicago Midway & O'Hare", 'Convair 440', '02/1982-5/16/1983', 'Plans for CMH, CLE, STL, BUF, & EWR scrapped. Also flew CAK-ORD'], ['https://drive.google.com/thumbnail?id=14Gnd3f6HPM4lHcVy2pA9ZsyPQU8PSmig', 'Chicago Midway', 'EMB-120, Dornier 228', '', ''], ['Mesaba Aviation', 'Detroit, Youngstown', 'Dash 8-200, Fokker 27, Metro III, Saab 340', '', 'Original and dba Northwest Airlink'], ['https://drive.google.com/thumbnail?id=12xICBA0xxT6xtZYZ9Y0gAMSXOHQWG-hw', 'Dayton', 'Boeing 727-200, Boeing 737-200', '', 'Merged with USAir'], ['TransMeridian Airlines', 'Las Vegas, Sanford/Orlando', 'Boeing 757-200, Boeing 727-200, MD-80', '', 'Filed for Bankruptcy'], ['Trans Midwest Airlines', 'Columbus, Dayton, Detroit Metro, Lima', 'Piper Navajo', '1983-1985', ''], ['https://drive.google.com/thumbnail?id=1DevbGt0jIbcGuyR3XXfwVJ4iUwY0_o-N', 'St. Louis', 'Boeing 727-100, DC-9, Martin 404', '', ''], ['https://drive.google.com/thumbnail?id=133P9fC26ZsphH9JVhwsDpP6gAjHRFg04', "Chicago O'Hare, Cleveland, Denver, Fort Wayne, Peoria, Saginaw", 'DC-8 series 21, Boeing 727-122, 727-222, Boeing 737-222,Caravelle, Boeing 720, Convair 340, DC-6B', '', ''], ['https://drive.google.com/thumbnail?id=1Cpt7Cw3aj_c0eT0f7UbwrmLwTPpKdBBo  (USAir/Allegheny)', 'Pittsburgh', 'Convair 580, Boeing 727-200, MD-80, Boeing 737-200/300/400, DC-9-30, BAe 1-11, Fokker 100, Fokker 28', '', ''], ['https://drive.google.com/thumbnail?id=1bCfjO-r5alEVJ961HIiN_dlc9Dtni3zr', 'Dayton, Indianapolis, Pittsburgh', 'Metro III, Jetstream 31, Saab 340, Dash 8-100/200, ERJ 145, Dornier 328', '', "Operated by Trans States Airlines, Jetstream Int'l / PSA Airlines, Allegheny Airlines, Chautauqua Airlines, Shuttle America"], ['https://drive.google.com/thumbnail?id=15zCdA3jOuIohG7_fv63uSFZYtrmtd6bO', 'Myrtle Beach', 'Boeing 737-400', '6/1 - 6/29/2012', '']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Past Conferences of ACM Multimedia
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: how many times was the conference not held in the us?
+            </div>
+            <div>
+                Answer: 9
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Year', 'Date', 'Venue', 'City', 'Country', 'Notes'], ['2012', 'Oct 27 - 31', 'Nara Prefectural New Public Hall', 'Nara', 'Japan', ''], ['2011', 'Noc 28 - Dec 1st', 'Hyatt Regency Scottsdale Resort and Spa @ Gainey Ranch', 'Scottsdale, Arizona', 'https://drive.google.com/thumbnail?id=1ZxcftVF7KM1cY2FwE34xpGnW3js7Ou_M', ''], ['2010', 'Oct 25 - 29', 'Palazzo degli Affari', 'Firenze', 'https://drive.google.com/thumbnail?id=1WIoYHbvl5wvvQph9bRjlVlbg3lIio0rd', ''], ['2009', 'Oct 19 - 24', 'Beijing Hotel', 'https://drive.google.com/thumbnail?id=1uMI_Xc2-n2oQBvbm7HDfdU41AZZjgqTb', 'China', ''], ['2008', 'Oct 27\xa0– Nov 1', 'Pan Pacific Hotel', 'https://drive.google.com/thumbnail?id=1vOUy_FWpmG04LFEsfgekaNEu_c09VYkQ , BC', 'https://drive.google.com/thumbnail?id=1ZD1mhLK4dah7mOLGTRyKjZfPN_CBpNQR', ''], ['2007', 'Sep 24-29', 'https://drive.google.com/thumbnail?id=133OwqhxetlybRxh5G6XTWzG3cNNoMqvY', 'Augsburg', 'Germany', ''], ['2006', 'Oct 23-27', 'https://drive.google.com/thumbnail?id=1Jm44Oi0fI2U7agD6cXrBniUaFbqZzTeB', 'Santa Barbara', 'https://drive.google.com/thumbnail?id=1ZxcftVF7KM1cY2FwE34xpGnW3js7Ou_M', 'ISBN 1-59593-447-2'], ['2005', 'Nov 6-11', 'Hilton', 'Singapore', 'Singapore', 'ISBN 1-59593-044-2'], ['2004', 'Oct 10-16', '', 'New York', 'https://drive.google.com/thumbnail?id=1ZxcftVF7KM1cY2FwE34xpGnW3js7Ou_M', 'ISBN 1-58113-893-8'], ['2003', 'Nov 2-8', '', 'Berkeley, California', 'https://drive.google.com/thumbnail?id=1ZxcftVF7KM1cY2FwE34xpGnW3js7Ou_M', 'ISBN 1-58113-722-2'], ['2002', 'Dec 1-6', '', 'Juan-les-Pins on the French Riviera', 'https://drive.google.com/thumbnail?id=1Am0swQyQjY77puLR3yDT2-thl7_I8i5S', 'ISBN 1-58113-620-X'], ['2001', 'Sep 30 - Oct 5', '', 'Ottawa', 'https://drive.google.com/thumbnail?id=1ZD1mhLK4dah7mOLGTRyKjZfPN_CBpNQR', 'ISBN 1-58113-394-4'], ['2000', 'Oct 30 - Nov 3', 'Marina del Rey', 'https://drive.google.com/thumbnail?id=1NjlyCCxKIiwMYp2U4vAAhXRuOHvc25Dh , CA', 'https://drive.google.com/thumbnail?id=1ZxcftVF7KM1cY2FwE34xpGnW3js7Ou_M', 'Proceedings: ISBN 1-58113-198-4; Workshops: ISBN 1-58113-311-1'], ['1999', 'Oct 30 - Nov 5', '', 'Orlando, Florida', 'https://drive.google.com/thumbnail?id=1ZxcftVF7KM1cY2FwE34xpGnW3js7Ou_M', 'Proc. Part 1: ISBN 1-58113-151-8; Proc. Part 2: ISBN 1-58113-239-5'], ['1998', 'Sep 12-16', 'https://drive.google.com/thumbnail?id=1fAFe-SOMwmjOHseGO89ZCbg0TdRmKR_B', 'Bristol', 'United Kingdom', 'ISBN 0-201-30990-4'], ['1997', 'Nov 9-13', '', 'Seattle, WA', 'https://drive.google.com/thumbnail?id=1ZxcftVF7KM1cY2FwE34xpGnW3js7Ou_M', 'ISBN 0-89791-991-2'], ['1996', 'Nov 18 - 22', 'Hynes Convention Center', 'Boston, MA', 'https://drive.google.com/thumbnail?id=1ZxcftVF7KM1cY2FwE34xpGnW3js7Ou_M', 'ISBN 0-89791-871-1'], ['1995', 'Nov 5-9', '', 'San Francisco, CA', 'https://drive.google.com/thumbnail?id=1ZxcftVF7KM1cY2FwE34xpGnW3js7Ou_M', 'ISBN 0-89791-751-0'], ['1994', 'Oct 15-20', '', 'San Francisco, CA', 'https://drive.google.com/thumbnail?id=1ZxcftVF7KM1cY2FwE34xpGnW3js7Ou_M', 'ISBN 0-89791-686-7'], ['1993', 'Aug 1-6', '', 'Anaheim, CA.', 'https://drive.google.com/thumbnail?id=1ZxcftVF7KM1cY2FwE34xpGnW3js7Ou_M', 'ISBN 0-89791-596-8']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

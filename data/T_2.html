@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to In X Factor of Babou (singer)
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: how many songs did babou sing during his time on the x factor?
+            </div>
+            <div>
+                Answer: 10
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Date', 'Week (Stage)', 'Song choice', 'Original artist', 'Theme', 'Result'], ['11 February 2011', 'Week 1 (Top 9)', 'https://drive.google.com/thumbnail?id=1B76f1-P2F1ZQs5FIoB42mKFIm23XLnv4', 'https://drive.google.com/thumbnail?id=121wQHhhKufUAg0lWrYwTYSnAcSegUA15', 'Free choice', 'Safe'], ['18 February 2011', 'Week 2 (Top 8)', 'https://drive.google.com/thumbnail?id=10NHW4fk6PS76-TzoFoih2YIP8xbd6zDB', 'https://drive.google.com/thumbnail?id=1pk3DDgKTTpyvhALqXJ79NU2gyD2ieQnc', 'https://drive.google.com/thumbnail?id=1pk3DDgKTTpyvhALqXJ79NU2gyD2ieQnc  songs', 'Safe'], ['25 February 2011', 'Week 3 (Top 7)', 'De første kærester på månen', 'tv.2', 'Songs from the 2000s', 'Safe'], ['4 March 2011', 'Week 4 (Top 6)', 'https://drive.google.com/thumbnail?id=1NKKRsqoIwST6c0z5enMP9QwrTlSjbujO', 'https://drive.google.com/thumbnail?id=1lCyEiVgd4fYg192BF3Hts6ue2bMWa7VV', 'https://drive.google.com/thumbnail?id=1DWYIGQMKR_FuPK693rkV18CWAG0TpLpd', 'Safe'], ['11 March 2011', 'Week 5 (Top 5)', 'https://drive.google.com/thumbnail?id=14IMoDmDcZMUwQwdepA_-R-jAbf9LkXLU', 'Christina Aguilera', 'Free choice (with Danish National Chamber Orchestra', 'Safe'], ['18 March 2011', 'Week 6 (Top 4)', 'https://drive.google.com/thumbnail?id=10b6SOr4_tcnVZrtZz4qNoG-iVtb995g1', 'https://drive.google.com/thumbnail?id=1wsFvi4HFBbAqfBIX3sadiolg81V8uBlz  feat.  https://drive.google.com/thumbnail?id=1QhgiYxVtZduWzx1b7-RX8kyRdiVimr-O', 'DJ Night with  https://drive.google.com/thumbnail?id=14ziydVSMgubs2htG8Pxf5uHCG9IeIvWM  and  https://drive.google.com/thumbnail?id=1vbj2X0NX_RkAjVEM9cZR_N70fXiRBahe', 'Safe'], ['18 March 2011', 'Week 6 (Top 4)', 'https://drive.google.com/thumbnail?id=17cusEL7pb4EtOEw2QKhXMzq6UKmUly_n', 'https://drive.google.com/thumbnail?id=1MDGgRKyPQ7Iv_UKWtulhe0V_nX1M2S5F', 'Free choice', 'Safe'], ['25 March 2011', 'Week 7 (Final 3)', 'The Flood*', 'https://drive.google.com/thumbnail?id=1zibNW9G04QqdIrM35nWxAPUxCUSHUHgE', 'Joint song with guest Take That performed jointly with The Kidz (Booba, Sarah and Annelouise', 'Third'], ['25 March 2011', 'Week 7 (Final 3)', 'https://drive.google.com/thumbnail?id=13yTszr793ur-pIsb0XpKJb04_SzL8WnT', 'https://drive.google.com/thumbnail?id=1eNQXncVWAuerp6mArO9krlrvDk1yRfKj', 'Free choice', 'Third'], ['25 March 2011', 'Week 7 (Final 3)', 'Back to the 80s', 'Aqua', 'Joint song with guest Aqua', 'Third']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

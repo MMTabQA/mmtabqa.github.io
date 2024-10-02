@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Results of History of rugby union matches between New Zealand and Wales
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: how many matches were played at ballymore, brisbane?
+            </div>
+            <div>
+                Answer: 1
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Date', 'Venue', 'Score', 'Victor', 'Comments', 'Match reports'], ['24 November 2012', 'https://drive.google.com/thumbnail?id=1tYIymxj-ZKRZufspBaiayp9V21RyR5Yy ,  https://drive.google.com/thumbnail?id=1db-UwMXL-a0xPtv6yWuW0Om8_plDW53d', '10 – 33', 'https://drive.google.com/thumbnail?id=1PnYfT6e96g48yRHzOK960gvsdw9WaBeN', '2012 Autumn International', ''], ['27 November 2010', 'https://drive.google.com/thumbnail?id=1tYIymxj-ZKRZufspBaiayp9V21RyR5Yy ,  https://drive.google.com/thumbnail?id=1db-UwMXL-a0xPtv6yWuW0Om8_plDW53d', '25 – 37', 'https://drive.google.com/thumbnail?id=1PnYfT6e96g48yRHzOK960gvsdw9WaBeN', '2010 Autumn International', 'BBC'], ['26 June 2010', 'https://drive.google.com/thumbnail?id=1gS6kVOtIIIAS2JqlfRMnurZm8R-vqxGq ,  https://drive.google.com/thumbnail?id=1OyRfGBFplM5kcbu8Vrfbs4ar4L9l7s90', '29 – 10', 'https://drive.google.com/thumbnail?id=1PnYfT6e96g48yRHzOK960gvsdw9WaBeN', '2010 mid-year rugby test series', ''], ['19 June 2010', 'https://drive.google.com/thumbnail?id=1EbAsHkXsib5b1nfb4mHsC9LpyRWwIyr- ,  https://drive.google.com/thumbnail?id=1Ix0cUGwxqz--1msZ39D7HYkqTY3AHvZC', '42 – 9', 'https://drive.google.com/thumbnail?id=1PnYfT6e96g48yRHzOK960gvsdw9WaBeN', '2010 mid-year rugby test series', 'Stuff'], ['7 November 2009', 'Millennium Stadium, Cardiff', '12 – 19', 'New Zealand', '2009 Autumn International', 'BBC'], ['22 November 2008', 'Millennium Stadium, Cardiff', '9 – 29', 'New Zealand', '2008 Autumn International', 'BBC'], ['25 November 2006', 'Millennium Stadium, Cardiff', '10 – 45', 'https://drive.google.com/thumbnail?id=1PnYfT6e96g48yRHzOK960gvsdw9WaBeN', '2006 Autumn International', 'BBC'], ['5 November 2005', 'Millennium Stadium, Cardiff', '3 – 41', 'https://drive.google.com/thumbnail?id=1PnYfT6e96g48yRHzOK960gvsdw9WaBeN', '2005 Autumn Internationals', 'BBC'], ['20 November 2004', 'Millennium Stadium, Cardiff', '25 – 26', 'https://drive.google.com/thumbnail?id=1PnYfT6e96g48yRHzOK960gvsdw9WaBeN', '2004 Autumn Internationals', 'BBC'], ['2 November 2003', 'Stadium Australia,  https://drive.google.com/thumbnail?id=10A6mU8_zfFAtVCaMiSQlt_q5mayB2lZe', '53 – 37', 'https://drive.google.com/thumbnail?id=1PnYfT6e96g48yRHzOK960gvsdw9WaBeN', '2003 Rugby World Cup', 'BBC'], ['23 June 2003', 'https://drive.google.com/thumbnail?id=1gS6kVOtIIIAS2JqlfRMnurZm8R-vqxGq ,  https://drive.google.com/thumbnail?id=1OyRfGBFplM5kcbu8Vrfbs4ar4L9l7s90', '55 – 3', 'New Zealand', '', ''], ['23 November 2002', 'Millennium Stadium, Cardiff', '17 – 43', 'New Zealand', '2002 NZ Tour', ''], ['29 November 1997', 'https://drive.google.com/thumbnail?id=1hXKXdnD-Dk49FQzKduvJwC-o3wzWSZE2 ,  https://drive.google.com/thumbnail?id=1BeCL4jPWAmBfEWj8yTL6J1nUy5QopkM4', '7 – 42', 'New Zealand', '1997 New Zealand rugby union tour of Britain and Ireland', ''], ['31 May 1995', 'https://drive.google.com/thumbnail?id=1pv477vI0Eywrd5iQrT5osqHMd4oC5yAu ,  https://drive.google.com/thumbnail?id=1Hp7kKnrD_PBgFaFp4kQPI3AjI686OUwW', '34 – 9', 'New Zealand', '1995 Rugby World Cup', ''], ['4 November 1989', 'National Stadium, Cardiff', '9 – 34', 'https://drive.google.com/thumbnail?id=1PnYfT6e96g48yRHzOK960gvsdw9WaBeN', '1989 New Zealand rugby union tour', ''], ['11 June 1988', 'https://drive.google.com/thumbnail?id=11rVKvc-GeGyGz4n4G94thrXt96wsMnP- ,  https://drive.google.com/thumbnail?id=1mf_FmvMss2UCM3mIwigETRmU_e6N-0mG', '54 – 9', 'https://drive.google.com/thumbnail?id=1PnYfT6e96g48yRHzOK960gvsdw9WaBeN', '1988 Wales Tour', ''], ['28 May 1988', 'https://drive.google.com/thumbnail?id=1v9womNnNWTplOA_InxN_mLrNRYY8qfLn ,  https://drive.google.com/thumbnail?id=151AbWho-8rxyfoh9dog3jVhb8nlKG1Es', '52 – 3', 'https://drive.google.com/thumbnail?id=1PnYfT6e96g48yRHzOK960gvsdw9WaBeN', '1988 Wales Tour', ''], ['14 June 1987', 'Ballymore,  https://drive.google.com/thumbnail?id=17szPtINeKLXyXKBR2qJVXt3XDT-BzNHl', '49 – 6', 'https://drive.google.com/thumbnail?id=1PnYfT6e96g48yRHzOK960gvsdw9WaBeN', '1987 Rugby World Cup', ''], ['1 November 1980', 'National Stadium, Cardiff', '3 – 23', 'https://drive.google.com/thumbnail?id=1PnYfT6e96g48yRHzOK960gvsdw9WaBeN', '1980 NZ Tour', ''], ['11 November 1978', 'National Stadium, Cardiff', '12 – 13', 'https://drive.google.com/thumbnail?id=1PnYfT6e96g48yRHzOK960gvsdw9WaBeN', '1978 NZ Tour', ''], ['2 December 1972', 'National Stadium, Cardiff', '16 – 19', 'https://drive.google.com/thumbnail?id=1PnYfT6e96g48yRHzOK960gvsdw9WaBeN', '1972/73 NZ Tour', ''], ['14 June 1969', 'https://drive.google.com/thumbnail?id=11rVKvc-GeGyGz4n4G94thrXt96wsMnP- ,  https://drive.google.com/thumbnail?id=1mf_FmvMss2UCM3mIwigETRmU_e6N-0mG', '33 – 12', 'https://drive.google.com/thumbnail?id=1PnYfT6e96g48yRHzOK960gvsdw9WaBeN', '1969 Wales Tour', ''], ['31 May 1969', 'https://drive.google.com/thumbnail?id=1v9womNnNWTplOA_InxN_mLrNRYY8qfLn ,  https://drive.google.com/thumbnail?id=151AbWho-8rxyfoh9dog3jVhb8nlKG1Es', '19 – 0', 'New Zealand', '1969 Wales Tour', ''], ['11 November 1967', 'National Stadium, Cardiff', '6 – 13', 'New Zealand', '1967 New Zealand rugby union tour of Britain, France and Canada', ''], ['21 December 1963', 'National Stadium, Cardiff', '0 – 6', 'https://drive.google.com/thumbnail?id=1PnYfT6e96g48yRHzOK960gvsdw9WaBeN', '1963/64 NZ Tour', ''], ['19 December 1953', 'National Stadium, Cardiff', '13 – 8', 'https://drive.google.com/thumbnail?id=12FTAg6neL9PbXoX9rEupp4gwn2svQ-_l', '1953/54 NZ Tour', ''], ['21 December 1935', 'National Stadium, Cardiff', '13 – 12', 'https://drive.google.com/thumbnail?id=12FTAg6neL9PbXoX9rEupp4gwn2svQ-_l', '1935/36 NZ Tour', ''], ['29 November 1924', "St Helen's,  https://drive.google.com/thumbnail?id=1DHJnvIsmu6Jn22d0koqJYKRyp3qi3vDG", '0 – 19', 'https://drive.google.com/thumbnail?id=1PnYfT6e96g48yRHzOK960gvsdw9WaBeN', 'The Invincibles Tour', ''], ['16 December 1905', 'Cardiff Arms Park,  https://drive.google.com/thumbnail?id=1db-UwMXL-a0xPtv6yWuW0Om8_plDW53d', '3 – 0', 'https://drive.google.com/thumbnail?id=12FTAg6neL9PbXoX9rEupp4gwn2svQ-_l', 'The Originals Tour', '']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

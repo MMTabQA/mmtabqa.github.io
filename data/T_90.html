@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Ships of Wave-class oiler
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: name a builder with "and" in the name.
+            </div>
+            <div>
+                Answer: Harland and Wolff
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Name', 'Pennant', 'Builder', 'Launched', 'Original name', 'Fate'], ['Wave Baron', 'A242', 'Furness Shipbuilding Company', '19 February 1946', 'Empire Flodden', 'Scrapped in 1972'], ['Wave Chief', 'A265', 'https://drive.google.com/thumbnail?id=1bJhHUTlqIktRPyqtFDYGLhQHFmdpUEcT', '30 August 1946', 'Empire Edgehill', 'Scrapped in 1974'], ['Wave Commander', 'A244', 'Furness Shipbuilding Company', '21 April 1944', 'Empire Paladin', 'Scrapped in 1959'], ['https://drive.google.com/thumbnail?id=1SB3x-C--GJo_t1dwztDp1hQTrNlDs0ZS', 'A245', 'Furness Shipbuilding Company', '27 November 1943', 'Empire Law', 'Scrapped in 1960'], ['https://drive.google.com/thumbnail?id=1YS29R05RB3BeC6trNHH1Zq8uv_zIn1FR', 'A246', 'Sir J. Laing & Sons Ltd', '16 November 1944', 'Empire Mars', 'Scrapped in 1969'], ['https://drive.google.com/thumbnail?id=1qgg3-tD0nqAtXdfU7he33kgKAS3QRC2g', 'A100', 'Furness Shipbuilding Company', '16 October 1944', '', 'Scrapped in 1966'], ['Wave Governor', 'A247', 'Furness Shipbuilding Company', '30 November 1944', '', 'Scrapped in 1960'], ['https://drive.google.com/thumbnail?id=1QcOymDJtgkvMh8fV1BUV885U2Q3bmPwT', 'A182', 'Harland and Wolff', '21 July 1944', '', 'Scrapped in 1966'], ['Wave Knight', 'A249', 'Sir J. Laing & Sons Ltd', '22 October 1945', 'Empire Naseby', 'Scrapped in 1964'], ['Wave Laird', 'A119', 'Sir J. Laing & Sons Ltd', '3 April 1946', 'Empire Dunbar', 'Scrapped in 1970'], ['Wave Liberator', 'A248', 'Furness Shipbuilding Company', '9 February 1944', 'Empire Milner', 'Scrapped in 1959'], ['https://drive.google.com/thumbnail?id=1WT0l1ONJoDZ043yEQ0DD1KqXcFKE6g0Q', 'A193', 'Sir J. Laing & Sons Ltd', '20 May 1944', 'Empire Salisbury', 'Scrapped in 1963'], ['Wave Monarch', 'A264', 'Harland and Wolff', '6 July 1944', '', 'Sold as oil hulk in 1960'], ['Wave Premier', 'A129', 'Furness Shipbuilding Company', '27 June 1946', '', 'Scrapped in 1960'], ['https://drive.google.com/thumbnail?id=1GFtnqyO-NY1B-q1SCfzAdI71ZL_veiEi', 'A207', 'Sir J. Laing & Sons Ltd', '27 July 1945', 'Empire Herald', 'Scrapped in 1971'], ['Wave Protector', 'A215', 'Furness Shipbuilding Company', '20 July 1944', 'Empire Protector', 'Scrapped in 1963'], ['Wave Regent', 'A210', 'Furness Shipbuilding Company', '29 March 1945', '', 'Scrapped in 1960'], ['Wave Ruler', 'A212', 'Furness Shipbuilding Company', '17 January 1946', 'Empire Evesham', 'Scrapped in 1977'], ['https://drive.google.com/thumbnail?id=1BkrGu9_P2BdpWla3bUMeVdl_dDQn9EnE', 'A211', 'Furness Shipbuilding Company', '20 November 1945', '', 'Scrapped in 1966'], ['Wave Victor', 'A220', 'Furness Shipbuilding Company', '30 September 1943', 'Empire Bounty', 'Chartered to Air Ministry in 1960']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

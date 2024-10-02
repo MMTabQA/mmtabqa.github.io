@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Film Production of Annapurna Studios
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: how many awards did mass win compared to the film whose poster has a couple in the top half and a red title with a heart next to it?
+            </div>
+            <div>
+                Answer: 2
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Year', 'Film', 'Director', 'Cast', 'Details'], ['2014', 'https://drive.google.com/thumbnail?id=1TtokvR1PCCsoCpwWR0LUdaoJ1qhjeLrM', 'Vikram Kumar', 'https://drive.google.com/thumbnail?id=1ZS0ZZWeUaDFSxsRuwXC8wgZxifhT0lRl   https://drive.google.com/thumbnail?id=1gBK6dMl6zy2FDrlGpTCF7jYcQIJJEOev   https://drive.google.com/thumbnail?id=10zqsaRoW8YdL_IcmS8-x9OSa7LlV_pbe', 'in-production. first time starring three generations of great akkineni dynasty heroes acting together.'], ['2013', 'https://drive.google.com/thumbnail?id=1uOf9m-zklRIYtm6DuFUx_uy0RU3OOGxv', 'Veerabhadram', 'https://drive.google.com/thumbnail?id=1gBK6dMl6zy2FDrlGpTCF7jYcQIJJEOev   https://drive.google.com/thumbnail?id=1dVQsMbmOIx8PG_4TCbNoEiMWqUhZe8tD', ''], ['2011', 'https://drive.google.com/thumbnail?id=1ntv63rAbMIW_KyhnN5XkBw6_J7gfs1Vm', 'Vijayendra Prasad', 'https://drive.google.com/thumbnail?id=1gBK6dMl6zy2FDrlGpTCF7jYcQIJJEOev   https://drive.google.com/thumbnail?id=1kLzXGr6flJA9U0K3E98o7GlPctcWioTp', 'Won Nandi Award for Best Feature Film (Silver), Nandi Award for Best Child Actress (Baby Annie), Nandi Award for Best Character Actor (Gandhi), Nandi Award for Best Art Director (S Ravinder), Nandi Award for Best Female Playback Singer (Malavika), Nandi Special Jury Award (Nagarjuna)'], ['2005', 'https://drive.google.com/thumbnail?id=1oNgNmVixqbm9wKwt4cFTjmtpFP7CcogB', 'https://drive.google.com/thumbnail?id=1N5qHzmyqKPxQxL9C-j2slRF987QtsbjP', 'https://drive.google.com/thumbnail?id=1gBK6dMl6zy2FDrlGpTCF7jYcQIJJEOev   https://drive.google.com/thumbnail?id=1PRsdiUThyEgmodgx-7JCsc5ekO_QBzN9   https://drive.google.com/thumbnail?id=1qTG0P-BdBNRBZAWb6F87CRjx5Qw5K9B-   https://drive.google.com/thumbnail?id=1DOzjEqaateLLhMtqK4M7m_rnfCAoojrk', 'Won Filmfare Best Comedian in Telugu( https://drive.google.com/thumbnail?id=1datIlv7p2uGS9xobmEUwwOrivXrgWFLg ), Nominated for Filmfare Best Film in Telugu, Filmfare Best Director ( https://drive.google.com/thumbnail?id=1N5qHzmyqKPxQxL9C-j2slRF987QtsbjP ), Filmfare Best Actor ( https://drive.google.com/thumbnail?id=1gBK6dMl6zy2FDrlGpTCF7jYcQIJJEOev ). Filmfare Best Music Director (Sandeep Chowta), Filmfare Best Actress (Sandhya)'], ['2004', 'Mass', 'https://drive.google.com/thumbnail?id=1ZtWNxv3VBdBdp5KFfXNewZemW_M1btgj', 'https://drive.google.com/thumbnail?id=1gBK6dMl6zy2FDrlGpTCF7jYcQIJJEOev   https://drive.google.com/thumbnail?id=17xbolbvq1qfC3JGdut8d0Pr9XkIIgDo2   https://drive.google.com/thumbnail?id=15ShCKrICIng-jUBPlbG5uHdFvEFBlxce', 'Won CineMAA Award for Best Actor ( https://drive.google.com/thumbnail?id=1gBK6dMl6zy2FDrlGpTCF7jYcQIJJEOev ), Santosham Best Actress Award ( https://drive.google.com/thumbnail?id=17xbolbvq1qfC3JGdut8d0Pr9XkIIgDo2 )'], ['2003', 'https://drive.google.com/thumbnail?id=1YXob90hbL4m7MM9IrhnfRlcZRqd9ZRtq', 'Surya Kiran', "Sumanth Genelia D'Souza", ''], ['2002', 'https://drive.google.com/thumbnail?id=1SqIIvIdGuhYVqrMmDiXSE5nqVE1evk7u', 'K. Vijaya Bhaskar', 'https://drive.google.com/thumbnail?id=1gBK6dMl6zy2FDrlGpTCF7jYcQIJJEOev   https://drive.google.com/thumbnail?id=1UXTPunvERynkzy2-on6YTnwL4RdDcwBR', 'Won Nandi Award for Best Feature Film (Gold)'], ['1999', 'https://drive.google.com/thumbnail?id=1cfI_cAT_4NuGQyuAqnsHKQYMKUDhPsiq', 'https://drive.google.com/thumbnail?id=1cLbIQxlsnFJ6mu2ndRbXKK3v4a6vg280', 'Sumanth Antara Mali', 'Won Nandi Award for Best Feature Film (Bronze), Nandi Award for Best Director ( https://drive.google.com/thumbnail?id=1cLbIQxlsnFJ6mu2ndRbXKK3v4a6vg280 ), Nandi Award for Best Supporting Actress ( https://drive.google.com/thumbnail?id=1VJ9Yu6IcXopPDWhSwjQdCIR5c5YmPYWU ), Nandi Award for Best Male Dubbing Artist (P.Shankar)'], ['1999', 'Seetharama Raju', 'https://drive.google.com/thumbnail?id=1VUNp0J0qr5rvMwbLWO-MbpDFQuICE4ac', 'https://drive.google.com/thumbnail?id=1H0mIpixHmKkrBKM3wlV9kDc3YKfFeu48   https://drive.google.com/thumbnail?id=1UdlwESUtWOc3Bg53-ofEX7QsngBfTS7_   https://drive.google.com/thumbnail?id=1z4-b3J9YK-zCQhk_zi1xtCmpvz7k6ymp  Sanghavi', 'Co-produced with D.Siva Prasad Reddy'], ['1998', 'Aaha', 'https://drive.google.com/thumbnail?id=1VUNp0J0qr5rvMwbLWO-MbpDFQuICE4ac', 'Jagapathi Babu Sanghavi', ''], ['1998', 'https://drive.google.com/thumbnail?id=1dqV-hpwEausorZNlfn6AtiSk8V0x7vrE', 'Krishna Vamsi', 'https://drive.google.com/thumbnail?id=1H0mIpixHmKkrBKM3wlV9kDc3YKfFeu48   https://drive.google.com/thumbnail?id=1IXpVujjx4_uLKVqm62m-taZSD7L1Xw1f   https://drive.google.com/thumbnail?id=1PCV5-WFCzSmd2a3cZeOP9zhQGXqidysk', 'Co-produced with V.Ram Prasad'], ['1996', 'Ninne Pelladutha', 'Krishna Vamsi', 'Nagarjuna Akkineni Tabu', 'Won National Film Award for Best Feature Film in Telugu'], ['1995', 'https://drive.google.com/thumbnail?id=1xvbj80ZsmZM1JFgLJoxMVwiUl4w-iJrm', 'Shiva Nageswara Rao', 'Akhil Akkineni  https://drive.google.com/thumbnail?id=1H0mIpixHmKkrBKM3wlV9kDc3YKfFeu48', ''], ['1993', 'Theerpu', '', '', ''], ['1993', 'Rakshana', 'Uppala Pati Narayana Rao R. R. Shinde', 'https://drive.google.com/thumbnail?id=1H0mIpixHmKkrBKM3wlV9kDc3YKfFeu48   https://drive.google.com/thumbnail?id=1GKPLj71dClLsSGeyUlIPN2BTiqk1aCuc', ''], ['1990', 'Iddaru Iddare', 'https://drive.google.com/thumbnail?id=1Whlz57EnDQihYIoRBBGFY7Xc6buOibGL', 'Akkineni Nageswara Rao Nagarjuna Akkineni Ramya Krishnan', ''], ['1989', 'https://drive.google.com/thumbnail?id=1ut6rBy4l0kk4QryY5drmmVYdzRt3dPBs', 'https://drive.google.com/thumbnail?id=1LLmJv39sFeTwwMZA2ZYHXo8z947gMvMC', 'https://drive.google.com/thumbnail?id=1gBK6dMl6zy2FDrlGpTCF7jYcQIJJEOev  Amala', 'Produced in association with S.S.Creations Won Nandi Award for Best Director ( https://drive.google.com/thumbnail?id=1cLbIQxlsnFJ6mu2ndRbXKK3v4a6vg280 ) Released in Hindi in 1990'], ['1987', 'https://drive.google.com/thumbnail?id=1919s-VAIBAwy3cvV3DCszs1Ykeg-SyQY', 'https://drive.google.com/thumbnail?id=1A5XsBc8VTYhg-vMCnUBrNpoFSc7DW_PY', 'https://drive.google.com/thumbnail?id=1H0mIpixHmKkrBKM3wlV9kDc3YKfFeu48   https://drive.google.com/thumbnail?id=1ZS0ZZWeUaDFSxsRuwXC8wgZxifhT0lRl  Sarada  https://drive.google.com/thumbnail?id=11RzHBKZkXEI8pUDXrW8jWAp4xMLySRC4', 'First film starring two generations of the Akkineni family'], ['1986', 'https://drive.google.com/thumbnail?id=1Rw53DJGvpRsyHvlyI0cX5WB2mSP7vryT', 'https://drive.google.com/thumbnail?id=1k7QrtsBho915dU-8LOzYfHge87RdngdN', 'https://drive.google.com/thumbnail?id=1gBK6dMl6zy2FDrlGpTCF7jYcQIJJEOev   https://drive.google.com/thumbnail?id=1GKPLj71dClLsSGeyUlIPN2BTiqk1aCuc', 'Debut Film of Superstar  https://drive.google.com/thumbnail?id=1gBK6dMl6zy2FDrlGpTCF7jYcQIJJEOev'], ['1983', 'Sri Ranga Neethulu', 'https://drive.google.com/thumbnail?id=1Whlz57EnDQihYIoRBBGFY7Xc6buOibGL', 'https://drive.google.com/thumbnail?id=1ZS0ZZWeUaDFSxsRuwXC8wgZxifhT0lRl   https://drive.google.com/thumbnail?id=1UJ_BDYFB_JsyRgmLa1UWl5WJsQXoWThH', ''], ['1982', 'Yuvaraju', 'https://drive.google.com/thumbnail?id=1oXEiNcDXQs8IkxlaRn6HsqnSvcd5QIjx', 'https://drive.google.com/thumbnail?id=1ZS0ZZWeUaDFSxsRuwXC8wgZxifhT0lRl  Sujatha Jayasudha', ''], ['1981', 'Prema Kaanuka', 'https://drive.google.com/thumbnail?id=1A5XsBc8VTYhg-vMCnUBrNpoFSc7DW_PY', 'https://drive.google.com/thumbnail?id=1ZS0ZZWeUaDFSxsRuwXC8wgZxifhT0lRl   https://drive.google.com/thumbnail?id=1UJ_BDYFB_JsyRgmLa1UWl5WJsQXoWThH   https://drive.google.com/thumbnail?id=1JpM7EnEDF6wIeZnKRFwLmFe8H8thHtdX', ''], ['1980', 'https://drive.google.com/thumbnail?id=12AotVlXoJ9IN5xHLNo4cRoGRJdUyql9a', 'https://drive.google.com/thumbnail?id=1oXEiNcDXQs8IkxlaRn6HsqnSvcd5QIjx', 'https://drive.google.com/thumbnail?id=1ZS0ZZWeUaDFSxsRuwXC8wgZxifhT0lRl   https://drive.google.com/thumbnail?id=1UJ_BDYFB_JsyRgmLa1UWl5WJsQXoWThH  Jayasudha', 'The film has completed 100 days in 30 centres'], ['1980', 'Pilla Zameendar', 'https://drive.google.com/thumbnail?id=1AYdrmfCZoGhyv0GV4HgMNR9-nb85BfT_', 'https://drive.google.com/thumbnail?id=1ZS0ZZWeUaDFSxsRuwXC8wgZxifhT0lRl  Jayasudha  https://drive.google.com/thumbnail?id=1JpM7EnEDF6wIeZnKRFwLmFe8H8thHtdX', ''], ['1980', 'Butchi Babu', 'https://drive.google.com/thumbnail?id=1oXEiNcDXQs8IkxlaRn6HsqnSvcd5QIjx', 'https://drive.google.com/thumbnail?id=1ZS0ZZWeUaDFSxsRuwXC8wgZxifhT0lRl   https://drive.google.com/thumbnail?id=13Hq_njfwCU3SJHryZ2WZWsMNsp5ssosJ', ''], ['1979', 'Kalyani', 'https://drive.google.com/thumbnail?id=1oXEiNcDXQs8IkxlaRn6HsqnSvcd5QIjx', 'Murali Mohan Kaikala Satyanarayana Jayasudha', ''], ['1978', 'https://drive.google.com/thumbnail?id=1CXUCajvHT0cpl9d-axCz6oaG0tn3hHHx', 'https://drive.google.com/thumbnail?id=1KJR6Z8HsMTQJA_v64fT8KV6BxHECew0o', 'https://drive.google.com/thumbnail?id=1BjKGF8yhbieNC8AJG3u1rAn275qeTEzE   https://drive.google.com/thumbnail?id=1IplUK4VAI-PneGjAHiHsmgjSQ-hvZlo2   https://drive.google.com/thumbnail?id=1xkjSgfZieiYBN9KeL39n1zh1gD-652tk', ''], ['1970', 'Maro Prapancham', 'https://drive.google.com/thumbnail?id=1KJR6Z8HsMTQJA_v64fT8KV6BxHECew0o', 'Akkineni Nageswara Rao Savitri', ''], ['1968', 'https://drive.google.com/thumbnail?id=1CkPYgPt-4wQwmbAZKFxmL9_XY0CW_rjF', 'https://drive.google.com/thumbnail?id=1KJR6Z8HsMTQJA_v64fT8KV6BxHECew0o', 'https://drive.google.com/thumbnail?id=1ZS0ZZWeUaDFSxsRuwXC8wgZxifhT0lRl , Sandhya Rani', 'Won National Film Award for Best Feature Film in Telugu Nandi Award for Best Feature Film Filmfare Best Film Award (Telugu)'], ['1955', 'Donga Ramudu', 'https://drive.google.com/thumbnail?id=12YfW9deY8RGL41dmFe6PqntugufpSmXe', 'https://drive.google.com/thumbnail?id=1ZS0ZZWeUaDFSxsRuwXC8wgZxifhT0lRl   https://drive.google.com/thumbnail?id=1XMBIy6-W4Ph_13cosyNVVPKMDiAIJcZy   https://drive.google.com/thumbnail?id=1IplUK4VAI-PneGjAHiHsmgjSQ-hvZlo2', '']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

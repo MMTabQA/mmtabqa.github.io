@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Ambassadors of List of Ambassadors of Russia to Austria
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: did dmitry mikhailovich golitsyn or andrey kirillovich razumovsky serve as ambassador longer?
+            </div>
+            <div>
+                Answer: Dmitry Mikhailovich Golitsyn
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Name', 'Title', 'Date from', 'Date until', 'Russian state', 'Austrian state'], ['https://drive.google.com/thumbnail?id=1jdnCxJjiQjraiqxMSf1xOkY7tnWdTB_E', 'Ambassador', 'October 1761', 'April 1792', 'https://drive.google.com/thumbnail?id=14WvG9SFr5fEuwNgG8Hwy3mOjfgDxVW-E', 'https://drive.google.com/thumbnail?id=15E-cvBzBlzNCRcxmcYghXPEo5ZyeH5Dj'], ['https://drive.google.com/thumbnail?id=1nj418INC7xC_9zW7SuyOU9Q-1XKlHeLL', 'Ambassador', '5 October 1801', '7 September 1806', 'https://drive.google.com/thumbnail?id=14WvG9SFr5fEuwNgG8Hwy3mOjfgDxVW-E', 'https://drive.google.com/thumbnail?id=15E-cvBzBlzNCRcxmcYghXPEo5ZyeH5Dj / https://drive.google.com/thumbnail?id=1a8lWl8yIo6XmmpSj4zxx8LsvbZBK7d20'], ['https://drive.google.com/thumbnail?id=1sk1Cdak-CFcprR7L_jbI9CNleNGg5AHj', 'Ambassador', '14 May 1810', '9 November 1818', 'Russian Empire', 'Austrian Empire'], ['https://drive.google.com/thumbnail?id=1erEkHIeabz4xwG4rumr4JDntZGvOn9wP', 'Envoy', '9 November 1818', '16 September 1822', 'https://drive.google.com/thumbnail?id=14WvG9SFr5fEuwNgG8Hwy3mOjfgDxVW-E', 'https://drive.google.com/thumbnail?id=1a8lWl8yIo6XmmpSj4zxx8LsvbZBK7d20'], ['https://drive.google.com/thumbnail?id=1J_k5bT8lMCafskTSYbmoBVkKBsMv93R_', 'Ambassador', '22 August 1826', '11 September 1841', 'Russian Empire', 'https://drive.google.com/thumbnail?id=1a8lWl8yIo6XmmpSj4zxx8LsvbZBK7d20'], ['Pavel Ivanovich Medem', 'Envoy', '24 December 1848', '31 August 1850', 'https://drive.google.com/thumbnail?id=14WvG9SFr5fEuwNgG8Hwy3mOjfgDxVW-E', 'https://drive.google.com/thumbnail?id=1a8lWl8yIo6XmmpSj4zxx8LsvbZBK7d20'], ['Peter von Meyendorff', 'Envoy', '31 August 1850', '7 January 1854', 'Russian Empire', 'https://drive.google.com/thumbnail?id=1a8lWl8yIo6XmmpSj4zxx8LsvbZBK7d20'], ['https://drive.google.com/thumbnail?id=16hfg8xPeDMHEXQ8GV1iD3jaWaayP-SEN', 'Envoy Extraordinary and Minister Plenipotentiary', '6 May 1854', '15 April 1856', 'https://drive.google.com/thumbnail?id=14WvG9SFr5fEuwNgG8Hwy3mOjfgDxVW-E', 'https://drive.google.com/thumbnail?id=1a8lWl8yIo6XmmpSj4zxx8LsvbZBK7d20'], ['https://drive.google.com/thumbnail?id=1E1aJFtS26LMLseAMqd6atiHUlDir40ku', 'Envoy', '22 July 1864', '12 August 1864', 'Russian Empire', 'Austrian Empire'], ['https://drive.google.com/thumbnail?id=1MBI9EX9U8rK3MLL6HSYj4oOBCUbnM_xA', 'Envoy', '3 August 1864', '25 April 1868', 'https://drive.google.com/thumbnail?id=14WvG9SFr5fEuwNgG8Hwy3mOjfgDxVW-E', 'https://drive.google.com/thumbnail?id=1a8lWl8yIo6XmmpSj4zxx8LsvbZBK7d20 / https://drive.google.com/thumbnail?id=1xZNOrOz9axJgq2wmBstpNeiW-NUuuLqQ'], ['https://drive.google.com/thumbnail?id=1f_vy9R05sq6dqW_cDw1siBO_EJoLBUVx', 'Envoy', '13 December 1869', '2 May 1870', 'https://drive.google.com/thumbnail?id=14WvG9SFr5fEuwNgG8Hwy3mOjfgDxVW-E', 'Austria-Hungary'], ['Yevgeny Petrovich Novikov', 'Ambassador', '2 March 1874', '22 December 1879', 'https://drive.google.com/thumbnail?id=14WvG9SFr5fEuwNgG8Hwy3mOjfgDxVW-E', 'https://drive.google.com/thumbnail?id=1xZNOrOz9axJgq2wmBstpNeiW-NUuuLqQ'], ['https://drive.google.com/thumbnail?id=1eQIoKVHIVl6nCfThqo3_9o4ZDeGnBBpN', 'Ambassador', '22 December 1879', '1 June 1882', 'https://drive.google.com/thumbnail?id=14WvG9SFr5fEuwNgG8Hwy3mOjfgDxVW-E', 'Austria-Hungary'], ['Aleksey Borisovich Lobanov-Rostovsky', 'Ambassador', '13 July 1882', '6 January 1895', 'https://drive.google.com/thumbnail?id=14WvG9SFr5fEuwNgG8Hwy3mOjfgDxVW-E', 'Austria-Hungary'], ['https://drive.google.com/thumbnail?id=1i4KrCd_VdmYjJA6gD-G3Ua3IBtQhhi7C', 'Ambassador', '9 April 1895', '1904', 'Russian Empire', 'Austria-Hungary'], ['Lev Pavlovich Urusov', 'Ambassador', '1905', '1910', 'Russian Empire', 'https://drive.google.com/thumbnail?id=1xZNOrOz9axJgq2wmBstpNeiW-NUuuLqQ'], ['Voldemar Khristianovich Aussem', 'Plenipotentiary Representative', '21 May 1924', '10 December 1924', 'Soviet Union', 'Federal State of Austria'], ['https://drive.google.com/thumbnail?id=1UCE0KM1KcIYw9IRVPcdv0Ya5ksg4mTBq', 'Plenipotentiary Representative', '12 December 1924', '19 June 1925', 'Soviet Union', 'https://drive.google.com/thumbnail?id=1-nwC0MV4Ha4pqW9d0WhUF5SdCdbIv4yN'], ['Yan Antonovich Berzin', 'Plenipotentiary', '19 June 1925', '7 September 1927', 'Soviet Union', 'https://drive.google.com/thumbnail?id=1-nwC0MV4Ha4pqW9d0WhUF5SdCdbIv4yN'], ['https://drive.google.com/thumbnail?id=19QtRh9MOVqouk-N8t4i08tihbNEGVqtg', 'Plenipotentiary', '1 October 1927', '24 January 1933', 'https://drive.google.com/thumbnail?id=1QNBOWfO-Ql7DDzB4U5-e-gEOsvLTUTeh', 'https://drive.google.com/thumbnail?id=1-nwC0MV4Ha4pqW9d0WhUF5SdCdbIv4yN'], ['https://drive.google.com/thumbnail?id=1XUGhajVtHa9pxOmUvUvuwKwhZNQTpkHy', 'Plenipotentiary', '1 April 1933', '10 November 1934', 'https://drive.google.com/thumbnail?id=1QNBOWfO-Ql7DDzB4U5-e-gEOsvLTUTeh', 'https://drive.google.com/thumbnail?id=1-nwC0MV4Ha4pqW9d0WhUF5SdCdbIv4yN'], ['https://drive.google.com/thumbnail?id=1zUzxalxZHCnXIpcDJ4s7zKhqNClbrpAt', 'Plenipotentiary', '17 March 1935', '31 September 1938', 'https://drive.google.com/thumbnail?id=1QNBOWfO-Ql7DDzB4U5-e-gEOsvLTUTeh', 'https://drive.google.com/thumbnail?id=1-nwC0MV4Ha4pqW9d0WhUF5SdCdbIv4yN'], ['https://drive.google.com/thumbnail?id=1LLxKJ8KBx-An3yTKeJnAZEb1_RVF04S4', 'Supreme Commissar of the USSR/Ambassador Extraordinary and Plenipotentiary', '13 June 1953', '31 March 1956', 'https://drive.google.com/thumbnail?id=1QNBOWfO-Ql7DDzB4U5-e-gEOsvLTUTeh', 'https://drive.google.com/thumbnail?id=1RyHghAxTgxfucI8Lk01mLgndHXBvOg-4'], ['Andrey Andreyevich Smirnov', 'Ambassador Extraordinary and Plenipotentiary', '31 March 1956', '14 October 1956', 'https://drive.google.com/thumbnail?id=1QNBOWfO-Ql7DDzB4U5-e-gEOsvLTUTeh', 'https://drive.google.com/thumbnail?id=1RyHghAxTgxfucI8Lk01mLgndHXBvOg-4'], ['https://drive.google.com/thumbnail?id=15sF8yqfD-Pd8CYdRWxGdv0clN3rnzZCY', 'Ambassador Extraordinary and Plenipotentiary', '19 October 1956', '16 June 1960', 'https://drive.google.com/thumbnail?id=1QNBOWfO-Ql7DDzB4U5-e-gEOsvLTUTeh', 'Republic of Austria'], ['https://drive.google.com/thumbnail?id=1nh7wtX2vi3_og3nafMK_LbyC0sscAiAq', 'Ambassador Extraordinary and Plenipotentiary', '16 June 1960', '13 June 1965', 'https://drive.google.com/thumbnail?id=1QNBOWfO-Ql7DDzB4U5-e-gEOsvLTUTeh', 'https://drive.google.com/thumbnail?id=1RyHghAxTgxfucI8Lk01mLgndHXBvOg-4'], ['https://drive.google.com/thumbnail?id=1Xte1guAWMTVcYTPu581JZ9AEKr4KNSsI', 'Ambassador Extraordinary and Plenipotentiary', '30 June 1965', '20 September 1971', 'https://drive.google.com/thumbnail?id=1QNBOWfO-Ql7DDzB4U5-e-gEOsvLTUTeh', 'https://drive.google.com/thumbnail?id=1RyHghAxTgxfucI8Lk01mLgndHXBvOg-4'], ['https://drive.google.com/thumbnail?id=1IePpNXrqyNAFEVp0oZC6dtJWM48Zhs8V', 'Ambassador Extraordinary and Plenipotentiary', '20 September 1971', '11 July 1973', 'https://drive.google.com/thumbnail?id=1QNBOWfO-Ql7DDzB4U5-e-gEOsvLTUTeh', 'https://drive.google.com/thumbnail?id=1RyHghAxTgxfucI8Lk01mLgndHXBvOg-4'], ['https://drive.google.com/thumbnail?id=1mrvSYEs4HVCC57imQzBqn0tyfXZbaZyK', 'Ambassador Extraordinary and Plenipotentiary', '10 March 1975', '24 October 1986', 'https://drive.google.com/thumbnail?id=1QNBOWfO-Ql7DDzB4U5-e-gEOsvLTUTeh', 'https://drive.google.com/thumbnail?id=1RyHghAxTgxfucI8Lk01mLgndHXBvOg-4'], ['https://drive.google.com/thumbnail?id=1RWJ8W-iyUpO0r6OIMmBdTFfjkHsY24fq', 'Ambassador Extraordinary and Plenipotentiary', '24 October 1986', '24 May 1990', 'https://drive.google.com/thumbnail?id=1QNBOWfO-Ql7DDzB4U5-e-gEOsvLTUTeh', 'https://drive.google.com/thumbnail?id=1RyHghAxTgxfucI8Lk01mLgndHXBvOg-4'], ['Valery Nikolayevich Popov', 'Ambassador Extraordinary and Plenipotentiary', '24 May 1990', '30 August 1996', 'https://drive.google.com/thumbnail?id=1QNBOWfO-Ql7DDzB4U5-e-gEOsvLTUTeh / https://drive.google.com/thumbnail?id=10TN9GGH-yTxp8o-bYJgjL8xJ90QnBQ8r', 'https://drive.google.com/thumbnail?id=1RyHghAxTgxfucI8Lk01mLgndHXBvOg-4'], ['https://drive.google.com/thumbnail?id=1E9ccjKIFF2FVTUSxJVu9zxjyO_Nh85l5', 'Ambassador Extraordinary and Plenipotentiary', '30 August 1996', '29 April 2000', 'https://drive.google.com/thumbnail?id=10TN9GGH-yTxp8o-bYJgjL8xJ90QnBQ8r', 'Republic of Austria'], ['https://drive.google.com/thumbnail?id=1VZnVk4x37Vfcb_4Kf2XI12ZvAKCWUvNl', 'Ambassador Extraordinary and Plenipotentiary', '4 August 2000', '6 August 2004', 'https://drive.google.com/thumbnail?id=10TN9GGH-yTxp8o-bYJgjL8xJ90QnBQ8r', 'https://drive.google.com/thumbnail?id=1RyHghAxTgxfucI8Lk01mLgndHXBvOg-4'], ['https://drive.google.com/thumbnail?id=1_oGeHuqPdBZ1Jv0ggLlgchJJYiEHDSGU', 'Ambassador Extraordinary and Plenipotentiary', '14 September 2004', 'Present', 'https://drive.google.com/thumbnail?id=10TN9GGH-yTxp8o-bYJgjL8xJ90QnBQ8r', 'https://drive.google.com/thumbnail?id=1RyHghAxTgxfucI8Lk01mLgndHXBvOg-4']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

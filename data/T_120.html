@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Clubs of 2012–13 ASB Premiership
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: what stadium has the least capacity?
+            </div>
+            <div>
+                Answer: Fred Taylor Park
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Team', 'Location', 'Stadium', 'Capacity', 'Manager', 'Captain', 'Kit manufacturer', 'Shirt sponsor'], ['Auckland City FC', 'https://drive.google.com/thumbnail?id=1mf_FmvMss2UCM3mIwigETRmU_e6N-0mG', 'https://drive.google.com/thumbnail?id=1OulWxHgpbFwea-ZJqUXNqDiOpnAMPMFi', '3,500', 'Ramon Tribulietx', 'https://drive.google.com/thumbnail?id=11xeuowlB40N1OvRXgWCVz_LT90fw1KqD', 'https://drive.google.com/thumbnail?id=1pRcqoXrrTzG745Tii3pStdSG53rMuLoe', 'Trillian Trust Inc.'], ['Canterbury United', 'https://drive.google.com/thumbnail?id=151AbWho-8rxyfoh9dog3jVhb8nlKG1Es', 'ASB Football Park', '9,000', 'Keith Braithwaite', 'Dan Terris', 'Samurai', "Robbie's Bar and Bistro"], ['https://drive.google.com/thumbnail?id=13nJ_w1Xz6tS9t-F95tOK_5k3oj2K4Io_', 'Napier', 'Bluewater Stadium', '5,000', 'Chris Greatholder', 'Bill Robertson', 'Samurai', 'Kinetic Electrical'], ['https://drive.google.com/thumbnail?id=1liXb4IEPLPq4B1N7kcdLh3DwDm3qIe5P', 'https://drive.google.com/thumbnail?id=1Ix0cUGwxqz--1msZ39D7HYkqTY3AHvZC', 'https://drive.google.com/thumbnail?id=11hrtsvGskuTOnDf1siqK1ys7zZhcq4HA', '30,500', 'Richard Murray', 'Tristan Prattley', 'https://drive.google.com/thumbnail?id=1IfVIEfMehBRAoY3nlH6T0fgrKXmr-yWI', "Gran's Remedy"], ['https://drive.google.com/thumbnail?id=1Vw_dDB1fX4m9UGe2GHlXNgL2Qd5cwukD', 'https://drive.google.com/thumbnail?id=18sjNxLHc0gsY2KZK33V7-9xJKRQEmSkU', 'David Farrington Park', '3,000', 'Matt Calcott', 'Karl Whalen', 'https://drive.google.com/thumbnail?id=1-Iuy2p8UsF7HvRds85npRvH7YSg1zoTs', 'Exodus Health & Fitness Club'], ['https://drive.google.com/thumbnail?id=15loqmbTs5WIOgbkIdVGded_5L1CIaQY2', 'Hamilton', 'Porritt Stadium', '2,700', 'Mark Cossey', 'Adam Thomas', 'https://drive.google.com/thumbnail?id=1pRcqoXrrTzG745Tii3pStdSG53rMuLoe', 'The Soccer Shop'], ['https://drive.google.com/thumbnail?id=1kg9oaU6eKy5AcdLNUN4ytVNlNkof6c1I', 'https://drive.google.com/thumbnail?id=15f9yPmFJfW3fwLaSG52OiAUW8_I_RAm7', 'https://drive.google.com/thumbnail?id=1L-rCWiaZTF4SBPzFh6Ui82RAPovdpohm', '2,500', 'Paul Marshall', 'Jake Butler', 'https://drive.google.com/thumbnail?id=1E8kwyhm8cyO3nG9zb9jO6Ym1M1cfHaoI', 'Cuesports Foundation'], ['https://drive.google.com/thumbnail?id=1QFcBU7JX0c-O_U1GdxkW--dM_SRP2iuc', 'https://drive.google.com/thumbnail?id=1pZMsZyQkxRPjC27MvCEQTOhHaE2pJXdO', 'https://drive.google.com/thumbnail?id=1JulA8DzELy8iVBss-hutZDM67BvDORJS', '8,000', 'Stu Jacobs', 'Nathan Cooksley', 'https://drive.google.com/thumbnail?id=1pRcqoXrrTzG745Tii3pStdSG53rMuLoe', 'New Zealand Pharmaceuticals']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to WTA tour and ITF circuit finals|Doubles: 11 (6–5) of Jane O'Donoghue
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: how many tournaments has jane o'donoghue competed in?
+            </div>
+            <div>
+                Answer: 11
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Outcome', 'Date', 'Tournament', 'Surface', 'Partnering', 'Opponent in the final', 'Score in the final'], ['Winner', '29 Apr 2002', '$10,000 Bournemouth, Great Britain', 'Clay', 'Anna Hawkins', 'İpek Şenoğlu Christina Zachariadou', '6–0, 6–0'], ['Runner-up', '14 May 2002', '$10,000 Hatfield, Great Britain', 'Clay', 'Anna Hawkins', 'Irina Bulykina Ekaterina Sysoeva', '6–4, 4–6, 6–7(8–10)'], ['Runner-up', '25 Nov 2002', '$25,000 Mount Gambier, Australia', 'Hard', 'https://drive.google.com/thumbnail?id=1gkCL0w7XWOa41-p346gp3Z4ZnAIWq0lN', 'Daniella Dominikovic Evie Dominikovic', 'w/o'], ['Winner', '12 Oct 2004', '$25,000 Sunderland, Great Britain', 'Hard', 'https://drive.google.com/thumbnail?id=1mUCD0BeHj1JQS75GzVP-44ZntPisCuLv', 'Eva Fislová Stanislava Hrozenská', '6–1, 4–6, 6–2'], ['Winner', '18 Jan 2005', '$10,000 Tipton, Great Britain', 'Hard', 'Surina De Beer', 'https://drive.google.com/thumbnail?id=1gOem6KLouiU5u0YBPn_XH6AX3Q0_wSz7   https://drive.google.com/thumbnail?id=1eY3ODdmgO-kkDhw-52qgtfufcc0XvpxW', '6–2, 6–4'], ['Runner-up', '10 Jul 2006', '$25,000 Felixstowe, Great Britain', 'Grass', 'https://drive.google.com/thumbnail?id=1rlXCobIzJ2DVDUkzCMQKRJNF-eloxuxu', 'Trudi Musgrave Christina Wheeler', '2–6, 4–6'], ['Winner', '17 Jul 2006', '$10,000 Frinton, Great Britain', 'Grass', 'https://drive.google.com/thumbnail?id=1BpHCVjXyrqrlegGntP2iCnAq4SGzOXdk', 'Danielle Brown Ana Četnik', '6–4, 4–6, 6–2'], ['Runner-up', '7 Aug 2006', '$10,000 Wrexham, Great Britain', 'Hard', 'Karen Paterson', 'Lindsay Cox Anna Hawkins', '3–6, 3–6'], ['Winner', '22 Aug 2006', '$10,000 Cumberland (London), Great Britain', 'Hard', 'Karen Paterson', 'Laura Peterzen  https://drive.google.com/thumbnail?id=1HFEzg8j-A1nbj5Cnbh41Gh1ZRtZFflbw', '6–3, 6–3'], ['Runner-up', '28 Aug 2006', '$10,000 Mollerusa, Spain', 'Hard', 'Karen Paterson', 'Michaela Johansson Nadja Roma', '3–6, 6–2, 3–6'], ['Winner', '14 Mar 2007', '$10,000 Sunderland, Great Britain', 'Hard', 'Anna Hawkins', 'Ria Doernemann  https://drive.google.com/thumbnail?id=1HFEzg8j-A1nbj5Cnbh41Gh1ZRtZFflbw', '6–4, 6–7(5–7), 6–3']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

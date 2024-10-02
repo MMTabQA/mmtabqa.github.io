@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to List of works|Salome of Music based on the works of Oscar Wilde
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: what is the number of works titled "salome?"
+            </div>
+            <div>
+                Answer: 11
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Composer', 'Title', 'Genre', 'Date', 'Notes'], ['Flor Alpaerts', 'Salome', 'incidental\xa0music', '', ''], ['https://drive.google.com/thumbnail?id=1z2b0VI_9072QJVZxwolKF5BtGANJwms_', 'Dance of the Seven Veils', 'incidental music', '1918', 'staged London, 1918'], ['https://drive.google.com/thumbnail?id=1KaJFuD87KhY9DWo_eYQ7W5xmXiLIIPid', 'Salome', 'incidental music', '1955', 'chamber orchestra with 8 players and vocal soloists; withdrawn'], ['https://drive.google.com/thumbnail?id=173dmoIGYObLzsKMmItCPmv1bxMQTOKM7', 'Salome', 'ballet', '1978', 'premiered Copenhagen, 10 November 1978; Danish Radio Concert Orchestra, conducted by János Fürst; scenario and choreography by Flemming Flindt'], ['https://drive.google.com/thumbnail?id=1xyaXyqjHDdZaszYPNMoOUks2D4EdnL3Q', 'Salome', 'popular music', '2009', 'appears on his album Grace/Wastelands'], ['https://drive.google.com/thumbnail?id=16wzvoNz7B_gtYJ037tShuobAG_Z0xppb', 'Introduction and Dance, Op. 90', 'incidental music', '1908', ''], ['https://drive.google.com/thumbnail?id=1j7KlEf6GVn20QiOvsI9kjrrqwYaVahoq', 'Salome, Op. 55', 'symphonic poem', '1905', "this was written after Hadley had seen a production of Oscar Wilde's play, and was a favourite among his own compositions"], ['https://drive.google.com/thumbnail?id=1Pc6u8tlZeezOuYH_hsyNon3Yv2x_og-C', 'Salome, Op. 19', 'symphonic poem', '1929', ''], ['https://drive.google.com/thumbnail?id=1W_GVxEBR0aAROBMWpWrQHSR-Ht6ijBd2', 'Salome', 'incidental music', '1929', 'clarinet, cello, trumpet, percussion; written for a performance staged in Cambridge by Terence Gray, with choreography by Ninette de Valois; staged again November 1931; a suite was arranged by Giles Easterbrook in 1998 and recorded in 2000'], ['Antoine Mariotte', 'https://drive.google.com/thumbnail?id=1rta7toMJ23xfiU8s8hpK5nNf7pC_7apk', 'https://drive.google.com/thumbnail?id=1kuFJCMx25BdJuPjGgRDsCh_bPbFrJXlX', '1905', "premiered 1908; he was involved in a debate with Richard Strauss to prove that his music was written earlier than Strauss's version, also written in 1905"], ['Emil Petrovics', 'Salome', 'ballet', '1978', 'flute, trumpet, harp and percussion'], ['Richard Strauss', 'https://drive.google.com/thumbnail?id=1xcqEsS16K3UvJnubp9Jq9yJQhOchpYlx , Op. 54', 'opera', '1905', 'trans. Hedwig Lachmann; premiered Dresden 1905. This opera is by far the best known musical adaptation of a work of Oscar Wilde.'], ['https://drive.google.com/thumbnail?id=1178_QicXbP84TOtAXjbNh6xr5SAxJ4Hv', 'Salome', 'incidental music', '', '']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

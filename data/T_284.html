@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Record of Spain national rugby union team
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: hame a country against which spain has neither won nor drawn.
+            </div>
+            <div>
+                Answer: Australia Emerging
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Against', 'Played', 'Won', 'Drawn', 'Lost', 'Win\xa0%'], ['https://drive.google.com/thumbnail?id=1LUp8FSWxFe2LDA8p_awYBHGT25V9LPQN', '3', '3', '0', '0', '100%'], ['Argentina', '4', '0', '0', '4', '0%'], ['https://drive.google.com/thumbnail?id=1mFSPigizqp1Xob6WbJMJ-uiIJuVoYsoK', '1', '0', '0', '1', '0%'], ['https://drive.google.com/thumbnail?id=1mFSPigizqp1Xob6WbJMJ-uiIJuVoYsoK', '1', '0', '1', '0', '0%'], ['https://drive.google.com/thumbnail?id=1W5r5Ja4JySmPsJMoE1_EQt8OnvlrUOEE', '14', '12', '1', '1', '85.71%'], ['https://drive.google.com/thumbnail?id=11otLwvIphmDFq7Z8iDBPsoTpFdwSuBnd', '1', '0', '0', '1', '0%'], ['https://drive.google.com/thumbnail?id=120E9H2cRPtdi5NCXUSblIGvSri7WZJNv', '1', '0', '0', '1', '0%'], ['https://drive.google.com/thumbnail?id=1ls4ZTM4FHDCS55XDfvUzYrZT6p_QVf9_', '4', '2', '0', '2', '50%'], ['https://drive.google.com/thumbnail?id=1QbtVhwXRZGBgRbHOMoHkswzHgonyriAo', '2', '1', '1', '0', '50%'], ['https://drive.google.com/thumbnail?id=1RP5UMWNjsCnvzD6aaHsaz4NAvtzMbJVn', '1', '1', '0', '0', '100%'], ['England A', '7', '0', '0', '7', '0%'], ['https://drive.google.com/thumbnail?id=1kxTlMMNfa6P8sSUW12oKe2HNjGz0mZhu', '1', '0', '0', '1', '0%'], ['Royal Air Force rugby team', '4', '0', '2', '2', '0%'], ['https://drive.google.com/thumbnail?id=1KaO8NK3XzfEOTe0ByXzzCNIAx8jvaDPQ', '1', '0', '0', '1', '0%'], ['https://drive.google.com/thumbnail?id=1cpkiP9Es6sk2R_8Tye7A8OFdApXtShfC', '24', '0', '0', '24', '0%'], ['https://drive.google.com/thumbnail?id=1cpkiP9Es6sk2R_8Tye7A8OFdApXtShfC', '2', '0', '0', '2', '0%'], ['https://drive.google.com/thumbnail?id=1cpkiP9Es6sk2R_8Tye7A8OFdApXtShfC', '2', '1', '0', '1', '50%'], ['French protectorate of Morocco', '4', '1', '1', '2', '25%'], ['https://drive.google.com/thumbnail?id=1IGrE7mcAKXxUzfagKtF-PY2HB2zZpC-g', '12', '3', '1', '8', '25%'], ['https://drive.google.com/thumbnail?id=1tVMEYKsdnKEIQhRZCIHvQQ81tdEzuGp4', '7', '6', '0', '1', '85.71%'], ['https://drive.google.com/thumbnail?id=1HZJLh1u5mwtEuUpSFQqoSxHOIwJ40MQ-', '1', '1', '0', '0', '100%'], ['https://drive.google.com/thumbnail?id=1-CK6K7ZDqMOVhyugWeeBD8-S4L7kGK1w', '27', '3', '1', '23', '11.11%'], ['https://drive.google.com/thumbnail?id=1bxPMhmwQtu7bFk8GA9Lc6hPQ81WoscJn', '3', '0', '0', '3', '0%'], ['Moldova', '1', '1', '0', '0', '100%'], ['https://drive.google.com/thumbnail?id=1OEyX27id_9uOzUO2PFQyy5iZIUzyov4G', '17', '10', '1', '6', '58.82%'], ['https://drive.google.com/thumbnail?id=1uc4g-Q_RqMnZJ-D_MfWgsHznn4op87sK', '2', '2', '0', '0', '100%'], ['https://drive.google.com/thumbnail?id=1rdnN-yPhxxeOWDWgkiJSrVu2OUzA2Ymv', '13', '12', '1', '0', '92.31%'], ['New Zealand Services', '2', '0', '0', '2', '0%'], ['https://drive.google.com/thumbnail?id=17WhlCN12aF0D4FhNnQRPDHxtTgM_xy8n', '16', '10', '0', '6', '62.50%'], ['https://drive.google.com/thumbnail?id=1TwXS_vtBLfljOlvBA59ic1tEQpM-yxCZ', '33', '21', '2', '10', '63.63%'], ['https://drive.google.com/thumbnail?id=1cuuteCIlp4QIfIalw1LCjY2t1uI6DPb4', '8', '2', '0', '6', '75%'], ['Czechoslovakia', '5', '2', '1', '2', '40%'], ['https://drive.google.com/thumbnail?id=1IWMKIc3aQgXEUAGCMEq650GWOHBg2Nas', '29', '2', '0', '27', '6.90%'], ['https://drive.google.com/thumbnail?id=1zFby3NMgQm_3t90kf4BcGxW40hKurZx3', '16', '2', '0', '14', '12.50%'], ['https://drive.google.com/thumbnail?id=193_QOXWZo6bPUxGTeUslZx7PnHw5kYLM', '8', '0', '0', '8', '0%'], ['Slovenia', '1', '1', '0', '0', '100%'], ['https://drive.google.com/thumbnail?id=1W-OMH9AwtWg4lWYz8Lo-s49g5_m9fgII', '1', '0', '0', '1', '0%'], ['https://drive.google.com/thumbnail?id=1NnRXfXdzCFL5ex2uAFN-ufc9vRMhMDSl', '1', '0', '0', '1', '0%'], ['Soviet Union', '7', '0', '0', '7', '0%'], ['Sweden', '2', '2', '0', '0', '100%'], ['https://drive.google.com/thumbnail?id=1i2F4eEt8ftryvjrUxOQktd_VPWFHC7Xl', '1', '1', '0', '0', '100%'], ['https://drive.google.com/thumbnail?id=1FsGnvNYUBeP8QELcDjnVZ2fqWg9zuj6M', '6', '1', '0', '5', '83.33%'], ['https://drive.google.com/thumbnail?id=1vgyXC5LCXsuXdwBZp870nX9xd55dfpGs', '2', '2', '0', '0', '100%'], ['https://drive.google.com/thumbnail?id=1G0XEVpomaXymfd4ZimDSRNVb9Ag7QkOM', '7', '3', '0', '4', '42.86%'], ['https://drive.google.com/thumbnail?id=1Q4OJ7nRAyGz640LI-xfyPjENZnny3H4h', '3', '0', '0', '3', '0%'], ['https://drive.google.com/thumbnail?id=12FTAg6neL9PbXoX9rEupp4gwn2svQ-_l', '1', '0', '0', '1', '0%'], ['Wales A', '3', '0', '0', '3', '0%'], ['https://drive.google.com/thumbnail?id=1tVMEYKsdnKEIQhRZCIHvQQ81tdEzuGp4', '12', '7', '1', '4', '33.33%'], ['Yugoslavia', '4', '4', '0', '0', '100%'], ['https://drive.google.com/thumbnail?id=15fOUi3eruG9RoXmtbwEXKyISZEaKwdfu', '7', '5', '0', '2', '71.43%'], ['Total', '336', '126', '14', '197', '37.50%']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

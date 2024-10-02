@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Results|Ladies of 1971 World Figure Skating Championships
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: name the only woman from japan to compete in the 1971 world figure skating championships.
+            </div>
+            <div>
+                Answer: Kazumi Yamashita
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Rank', 'Name', 'Nation', 'CP', 'FP', 'Points', 'Placings'], ['1', 'https://drive.google.com/thumbnail?id=1mih-iOvk5PEId60_79LvbsgPUdV4Hr2_', 'https://drive.google.com/thumbnail?id=1RyHghAxTgxfucI8Lk01mLgndHXBvOg-4', '1', '7', '2763.0', '10'], ['2', 'Julie Lynn Holmes', 'https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', '2', '5', '2697.3', '24.5'], ['3', 'https://drive.google.com/thumbnail?id=1MQTPsVGaGIPSdtAoGTGtZXbBxovNMnCv', 'https://drive.google.com/thumbnail?id=1ZD1mhLK4dah7mOLGTRyKjZfPN_CBpNQR', '4', '2', '2697.7', '27'], ['4', 'https://drive.google.com/thumbnail?id=1oQHJObDZ31dXZ5b4JFPGvJt4LNV_PW-q', 'https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', '5', '1', '2680.0', '34'], ['5', 'https://drive.google.com/thumbnail?id=1nw2mHsz1mvc-7c0hfmJNVhI5pWQFuWM8', 'Italy', '3', '8', '2623.6', '47.5'], ['6', 'https://drive.google.com/thumbnail?id=1WnRh2dTM05Et4qqw1gv6zbpjji0p809j', 'https://drive.google.com/thumbnail?id=1l9uZI-TPUfLorOdcMe0qqfxqIw86fjJS', '9', '3', '2606.6', '52'], ['7', 'https://drive.google.com/thumbnail?id=1RiuRpV_jE66AI_BpLd7ZpKruii3VxBcG', 'https://drive.google.com/thumbnail?id=1iBSWoLq4NNRUZ21tZ-uo1kw9Eu5Eqefu', '6', '4', '2599.9', '57'], ['8', 'Charlotte Walter', 'https://drive.google.com/thumbnail?id=1-oWdlHAxYR9wE6Z2F1gf4_ljGZeLWjX7', '8', '14', '2480.7', '86'], ['9', 'https://drive.google.com/thumbnail?id=1F6KsAlmrWHc5dP7jSlUIPp6hYZQPUFpW', 'https://drive.google.com/thumbnail?id=1l9uZI-TPUfLorOdcMe0qqfxqIw86fjJS', '13', '6', '2493.5', '83'], ['10', 'Suna Murray', 'https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', '14', '9', '2475.0', '91'], ['11', 'Elena Alexandrova', 'https://drive.google.com/thumbnail?id=1QNBOWfO-Ql7DDzB4U5-e-gEOsvLTUTeh', '10', '13', '2450.5', '103'], ['12', 'Patricia Ann Dodd', 'https://drive.google.com/thumbnail?id=1dnpKxXI__kxYdH_QWViSrNV9CIcLXSoA', '7', '16', '', '100'], ['13', 'Kazumi Yamashita', 'https://drive.google.com/thumbnail?id=1mu3dfqkZXcRoC-nC0Ddrumuigq-zpnJ7', '12', '11', '', '116'], ['14', 'Ludmila Bezáková', 'Czechoslovakia', '11', '15', '', '122'], ['15', 'Jean Scott', 'https://drive.google.com/thumbnail?id=1dnpKxXI__kxYdH_QWViSrNV9CIcLXSoA', '15', '10', '', '132'], ['16', 'Diane Hall', 'Canada', '19', '12', '', '132'], ['17', 'https://drive.google.com/thumbnail?id=1CmHm9DhqfCpAb2putyYIvJOUhV8OkV-9', 'Sweden', '16', '18', '', '145'], ['18', 'Judith Bayer', 'West Germany', '20', '17', '', '159'], ['19', 'Ruth Hutchinson', 'Canada', '17', '20', '', '168'], ['20', 'Sonja Balun', 'https://drive.google.com/thumbnail?id=1RyHghAxTgxfucI8Lk01mLgndHXBvOg-4', '22', '19', '', '177'], ['21', 'Joëlle Cartaux', 'https://drive.google.com/thumbnail?id=1Am0swQyQjY77puLR3yDT2-thl7_I8i5S', '18', '22', '', '188'], ['22', 'Cinzia Frosio', 'https://drive.google.com/thumbnail?id=1WIoYHbvl5wvvQph9bRjlVlbg3lIio0rd', '21', '21', '', '197']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Winter Olympics|2010 Winter Olympics of List of United States women's national ice hockey team rosters
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: what is the total number of wisconsin badgers on the american roster for women's ice hockey in the 2010 winter olympics?
+            </div>
+            <div>
+                Answer: 7
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Position', 'Name', 'Height', 'Weight', 'Birthdate', 'Birthplace', '2009–10 team'], ['G', 'https://drive.google.com/thumbnail?id=1rU4FU7c1w368ueC-bgbZ5RE3IJhBaJ4V', '174\xa0cm (5\xa0ft 9\xa0in)', '59\xa0kg (130\xa0lb)', 'June 20, 1987', 'Sheffield, Ohio', 'Robert Morris Colonials'], ['G', 'https://drive.google.com/thumbnail?id=1VNX1kWG3oAkAI6ITc5isEA2kbUk4jeY9', '174\xa0cm (5\xa0ft 9\xa0in)', '67\xa0kg (148\xa0lb)', 'July 29, 1988', 'https://drive.google.com/thumbnail?id=1aLDIibdSMNH-zYWvgW976JNjNAcevqvy', 'https://drive.google.com/thumbnail?id=1hSfM532SQJlCau01Dsr2rUkoPwFQv8Mk'], ['G', 'https://drive.google.com/thumbnail?id=16pYUvBrPP51C2-A92-dqvveHmHwcl2wO', '174\xa0cm (5\xa0ft 9\xa0in)', '77\xa0kg (170\xa0lb)', 'December 19, 1985', 'Cottage Grove, Wisconsin', 'https://drive.google.com/thumbnail?id=1Uc3DK7LIdFP47GUTHB4vC-Rj9CincQII'], ['D', 'https://drive.google.com/thumbnail?id=1QnyDv2DibJumauk6e3Ne8RtsP5cacZXI', '174\xa0cm (5\xa0ft 9\xa0in)', '65\xa0kg (143\xa0lb)', 'April 22, 1987', 'https://drive.google.com/thumbnail?id=1iCNSEvja_pnrDpyFi-IesyL8OoUh4eXQ', 'https://drive.google.com/thumbnail?id=11J49yM2aLymfOzmOZe96h11iJ7l2qfXn'], ['D', 'https://drive.google.com/thumbnail?id=15dhQe9s-Y4dccPDoeVUHx4e1_Pd7xS3S', '163\xa0cm (5\xa0ft 4\xa0in)', '71\xa0kg (157\xa0lb)', 'May 20, 1985', 'https://drive.google.com/thumbnail?id=1Y-JgHbmKNsjTZqeXZRXpz0Mp6ZQxfCAj', 'Harvard Crimson'], ['D', 'https://drive.google.com/thumbnail?id=1bS__NerPtWMqHo1_YXKYVcpFQZdJiy7J', '169\xa0cm (5\xa0ft 7\xa0in)', '69\xa0kg (152\xa0lb)', 'August 18, 1986', 'Plainfield, Illinois', 'https://drive.google.com/thumbnail?id=1WcBAhU5Owfkzy3kqqXG9HUyy4kCEIURj'], ['D', 'Molly Engstrom', '175\xa0cm (5\xa0ft 9\xa0in)', '81\xa0kg (179\xa0lb)', 'March 1, 1983', 'Siren, Wisconsin', 'https://drive.google.com/thumbnail?id=1Uc3DK7LIdFP47GUTHB4vC-Rj9CincQII'], ['D', 'https://drive.google.com/thumbnail?id=1Ykz6pNN7EkF-sxNrmu1oGyMkntvht_Q4  – A', '175\xa0cm (5\xa0ft 9\xa0in)', '87\xa0kg (192\xa0lb)', 'January 3, 1980', 'https://drive.google.com/thumbnail?id=1NjlyCCxKIiwMYp2U4vAAhXRuOHvc25Dh ,  https://drive.google.com/thumbnail?id=1piPmgf4Vay24TTsqmbpMRz_HC4Y9Mje2', 'https://drive.google.com/thumbnail?id=11GPRkN9564h9F0fPBr1KAoIi_FACwj4r'], ['D', 'https://drive.google.com/thumbnail?id=1njCRYV3LYYZoTalNFwkYvFqUguPuSXfw', '163\xa0cm (5\xa0ft 4\xa0in)', '64\xa0kg (141\xa0lb)', 'October 18, 1980', 'Palmer, Alaska', 'https://drive.google.com/thumbnail?id=1Uc3DK7LIdFP47GUTHB4vC-Rj9CincQII'], ['F', 'Julie Chu – A', '174\xa0cm (5\xa0ft 9\xa0in)', '67\xa0kg (148\xa0lb)', 'March 13, 1982', 'https://drive.google.com/thumbnail?id=1s48hfUyQ0u3qGRlaooWEvkNoRvQfEBI2', 'https://drive.google.com/thumbnail?id=11GPRkN9564h9F0fPBr1KAoIi_FACwj4r'], ['F', 'https://drive.google.com/thumbnail?id=1NyMvb55MhpT14jCdD3Eal_2XeG0K3wVN  – C', '160\xa0cm (5\xa0ft 3\xa0in)', '62\xa0kg (137\xa0lb)', 'October 13, 1983', 'https://drive.google.com/thumbnail?id=1Fcc7AghxVwI59-C4jkHHNZ87Ta5D9kgs', 'Minnesota Golden Gophers'], ['F', 'https://drive.google.com/thumbnail?id=1i0EVvJX67tVS60-3U7a6G9NvVSlAxP_-', '175\xa0cm (5\xa0ft 9\xa0in)', '74\xa0kg (163\xa0lb)', 'September 3, 1987', 'https://drive.google.com/thumbnail?id=1SCcJUAwrCuIG4KDXXpI0NO_W1Pm5pxnd', 'https://drive.google.com/thumbnail?id=1Uc3DK7LIdFP47GUTHB4vC-Rj9CincQII'], ['F', 'https://drive.google.com/thumbnail?id=1e6LmJdhe8HArY0S3LscsB0DtqBlMYglH', '178\xa0cm (5\xa0ft 10\xa0in)', '78\xa0kg (172\xa0lb)', 'July 12, 1989', 'Hanover, New Hampshire', 'https://drive.google.com/thumbnail?id=1Uc3DK7LIdFP47GUTHB4vC-Rj9CincQII'], ['F', 'Jocelyne Lamoureux', '168\xa0cm (5\xa0ft 6\xa0in)', '70\xa0kg (150\xa0lb)', 'July 3, 1989', 'Grand Forks, North Dakota', 'https://drive.google.com/thumbnail?id=1M5D27RI4hL2Uf3seiBbVjVgwj53yMsOd'], ['F', 'Monique Lamoureux', '168\xa0cm (5\xa0ft 6\xa0in)', '71\xa0kg (157\xa0lb)', 'July 3, 1989', 'Grand Forks, North Dakota', 'North Dakota Fighting Sioux'], ['F', 'https://drive.google.com/thumbnail?id=1jabA6oS2Yj7ks4VfexeTC988xYOSngPz', '152\xa0cm (5\xa0ft 0\xa0in)', '59\xa0kg (130\xa0lb)', 'February 5, 1987', 'https://drive.google.com/thumbnail?id=1PrIWyIVp3grA183v6OXPeoJUtRMbwqE_', 'https://drive.google.com/thumbnail?id=1Uc3DK7LIdFP47GUTHB4vC-Rj9CincQII'], ['F', 'https://drive.google.com/thumbnail?id=1McfZlsIqG_HpWHzN8Krcv1LLJfp5pbWG', '174\xa0cm (5\xa0ft 9\xa0in)', '75\xa0kg (165\xa0lb)', 'March 7, 1987', 'Warroad, Minnesota', 'Minnesota Golden Gophers'], ['F', 'https://drive.google.com/thumbnail?id=17gEZvalBP-RUVdjq8iGRoRBuUWH_rLTv  – A', '163\xa0cm (5\xa0ft 4\xa0in)', '66\xa0kg (146\xa0lb)', 'January 12, 1979', 'https://drive.google.com/thumbnail?id=1DMD7YAwwG1fgFSb3UEXe9xCh-EJ-G6_W', 'Minnesota Golden Gophers'], ['F', 'https://drive.google.com/thumbnail?id=1c1rXqE6hjNAXShplrwLQPrylCvn_4XEZ', '165\xa0cm (5\xa0ft 5\xa0in)', '59\xa0kg (130\xa0lb)', 'January 13, 1988', 'Brooklyn Heights, Ohio', 'https://drive.google.com/thumbnail?id=1hSfM532SQJlCau01Dsr2rUkoPwFQv8Mk'], ['F', 'Karen Thatcher', '174\xa0cm (5\xa0ft 9\xa0in)', '74\xa0kg (163\xa0lb)', 'February 29, 1984', 'https://drive.google.com/thumbnail?id=1SsU1xLq2jLDXRWIhHKJ-tJzomiOFKnMY', 'https://drive.google.com/thumbnail?id=1MdpHkPU-lVz-F_noUlq2zbgTS6k-1KyA'], ['F', 'Jinelle Zaugg-Siergiej', '183\xa0cm (6\xa0ft 0\xa0in)', '82\xa0kg (181\xa0lb)', 'March 27, 1986', 'Eagle River, Wisconsin', 'https://drive.google.com/thumbnail?id=1Uc3DK7LIdFP47GUTHB4vC-Rj9CincQII']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

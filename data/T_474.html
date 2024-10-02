@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to 2002 Team Chart of 2002 NASCAR Craftsman Truck Series
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: what is the difference in tom power's number and jon wood's number?
+            </div>
+            <div>
+                Answer: 5
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Team', 'Truck(s)', '#', 'Driver(s)', 'Primary Sponsor(s)', 'Listed Owner(s)', 'Crew Chief'], ['Addington Racing', 'https://drive.google.com/thumbnail?id=1aM6bjXAIVIjfZcNwimNsCRDkQLcyWT-H', '60', 'https://drive.google.com/thumbnail?id=12cw6i_VLqZhu20CqWpOIYXFZgQa_nVET', 'CAT Rental Stores', 'Mike Addington', 'Rick Ren'], ['Bobby Hamilton Racing', 'https://drive.google.com/thumbnail?id=1NfC_WI4-tGZTvXlnHjMsYQfrCOeUfnKh', '4', 'Brian Rose', 'Perry Connection', 'Debbie Hamilton', 'Danny Rollins'], ['Bobby Hamilton Racing', 'https://drive.google.com/thumbnail?id=1NfC_WI4-tGZTvXlnHjMsYQfrCOeUfnKh', '8', 'https://drive.google.com/thumbnail?id=1lsIIpWKM6qoNbvGgTxcTubHKPAOPnrhk  (R)', 'Dodge Dealers', 'https://drive.google.com/thumbnail?id=1jlGNwRpyVYEQdNp1x1Tdamno_UDUqYCL', 'Kip McCord'], ['Bobby Hamilton Racing', 'https://drive.google.com/thumbnail?id=1NfC_WI4-tGZTvXlnHjMsYQfrCOeUfnKh', '18', 'https://drive.google.com/thumbnail?id=1SeXkSUVDxwxoJVutOG1K22uc43IZRXbm', 'n/a', 'https://drive.google.com/thumbnail?id=1jlGNwRpyVYEQdNp1x1Tdamno_UDUqYCL', 'Danny Gill'], ['Circle Bar Racing', 'Ford F-150', '14', 'Rick Crawford', 'Circle Bar Motel & RV Park', 'Tom Mitchell', 'Ray Stonkus'], ['Countryman Motorsports', 'Ford F-150', '15', 'https://drive.google.com/thumbnail?id=1QS_va9CiP_kCZflLEkEfDQBUq_Cg5WZL', 'https://drive.google.com/thumbnail?id=1aEwUeA-XPCN4n9wytSZnzwWmtdUteRmu', 'Billy Ballew', 'Craig Osbourne'], ['Green Light Racing', 'https://drive.google.com/thumbnail?id=1aM6bjXAIVIjfZcNwimNsCRDkQLcyWT-H', '07', 'Jason Small (R)', 'Sunbelt Rentals', 'Gene Christensen', 'Dennis Fiebel'], ['Green Light Racing', 'Chevrolet Silverado', '08', 'Bobby Dotter', 'People Against Drugs', 'Gene Christensen', 'Doug Howe'], ['Joe Gibbs Racing', 'https://drive.google.com/thumbnail?id=1aM6bjXAIVIjfZcNwimNsCRDkQLcyWT-H', '20', 'Coy Gibbs', 'https://drive.google.com/thumbnail?id=17eIgKmMHrI1cCL5l0Of-goenJRJRQ7pN', 'https://drive.google.com/thumbnail?id=1E_WAUXgvXkHZedLlqX2riuWql4qHoIEP', 'Doug Hewitt'], ['K Automotive Racing', 'Ford F-150', '29', 'Terry Cook', 'Power Stroke Diesel', 'Kay Keselowski', 'https://drive.google.com/thumbnail?id=1D1erhn1gzopx0QJ5c64zGAjXwRYmC8dC'], ['L&R Racing', 'https://drive.google.com/thumbnail?id=1aM6bjXAIVIjfZcNwimNsCRDkQLcyWT-H', '90', 'https://drive.google.com/thumbnail?id=12crj4dVxQIqLLRQbzA2Ezvj-LEW9sLYV', 'Express Personnel Services', 'Ron Norick', 'Gary Showalter'], ['MacDonald Motorsports', 'https://drive.google.com/thumbnail?id=1aM6bjXAIVIjfZcNwimNsCRDkQLcyWT-H', '72', 'Randy MacDonald', 'Greenfield Truck Center', 'Marrill MacDonald', 'Steve Bird'], ['Morgan-Dollar Motorsports', 'https://drive.google.com/thumbnail?id=1aM6bjXAIVIjfZcNwimNsCRDkQLcyWT-H', '46', 'https://drive.google.com/thumbnail?id=1CC-xJDbkj60NkElln5YTrUfgMHaoMeTi', 'https://drive.google.com/thumbnail?id=1WdcuiZQkQzcryxsnXYCtd_jN8J6CJO3Y / https://drive.google.com/thumbnail?id=1iTlhsGeuwJRlM5mQLp3_tmeC5Nz1ZVzD', 'David Dollar', 'John Monsam'], ['Orleans Racing', 'https://drive.google.com/thumbnail?id=1NfC_WI4-tGZTvXlnHjMsYQfrCOeUfnKh', '62', 'https://drive.google.com/thumbnail?id=1BX4NCE6jf8hplfC1W_5i2Gj1FIdSmzQ9  (R)', 'NAPA Auto Parts', 'Michael Gaughan', 'https://drive.google.com/thumbnail?id=1ZGZ_QNP7ErYzgTta1hRlCo43nHuvhurJ'], ['Petty Enterprises', 'https://drive.google.com/thumbnail?id=1NfC_WI4-tGZTvXlnHjMsYQfrCOeUfnKh', '43', 'https://drive.google.com/thumbnail?id=1aJJAnIP0ZoGNbGwKxjb6gHjmLOXrOQt2', 'https://drive.google.com/thumbnail?id=1IYqh6ZhrD3xnCYytXSKpH0ERM0Qj0upe', 'https://drive.google.com/thumbnail?id=1bQjJ30AbrvRxqSwKlGG-JUUJh8WW5cqh', 'Howard Comstock'], ['Portenga Motorsports', 'Chevrolet Silverado', '39', 'Steve Portenga', 'Roto-rooter', 'Steve Portenga', 'George Church'], ['Powers Motorsports', 'https://drive.google.com/thumbnail?id=1NfC_WI4-tGZTvXlnHjMsYQfrCOeUfnKh', '55', 'Tom Powers', 'https://drive.google.com/thumbnail?id=1Ub_yQ3RqIbOtyc0-JR0UprYTHol83re7', 'Sherri Powers', 'Bryan Berry'], ['R&J Racing', 'https://drive.google.com/thumbnail?id=1NfC_WI4-tGZTvXlnHjMsYQfrCOeUfnKh', '68', 'Rodney Sawyers (R)', 'n/a', 'Wendy Sawyers', 'Jeff Sawyers'], ['RDS Motorsports', 'https://drive.google.com/thumbnail?id=1NfC_WI4-tGZTvXlnHjMsYQfrCOeUfnKh', '79', 'Jerry Hill', 'RDS Racing Engines', 'R. D. Smith', 'Ralph Wingfield Jr.'], ['Roush Racing', 'Ford F-150', '50', 'https://drive.google.com/thumbnail?id=1su-9vVSjPTw0IxogYE8DFSYt7ArVf0as', 'https://drive.google.com/thumbnail?id=1NrJA6yOoVksTAiu6GHsMlWdqnQ9MwqS-', 'https://drive.google.com/thumbnail?id=1w96FtX9wwdKAAJ12vxrpBRRYprcBane-', 'Dan Binks'], ['SealMaster Racing', 'https://drive.google.com/thumbnail?id=1aM6bjXAIVIjfZcNwimNsCRDkQLcyWT-H', '88', 'https://drive.google.com/thumbnail?id=1OTd0zJmYKLQmc4SlAlesYP9ghkFw_13n', 'Sealmaster', 'Duke Thorson', 'Jerry Cook'], ['Shepherd Racing', 'Ford F-150', '21', 'https://drive.google.com/thumbnail?id=1gYiV92-qBL67UhWFaJCxm_wEvyBMvKcP', 'n/a', 'Cindy Shepherd', 'Ted Jackson'], ['Spears Motorsports', 'https://drive.google.com/thumbnail?id=1aM6bjXAIVIjfZcNwimNsCRDkQLcyWT-H', '75', 'David Starr', 'Spears Manufacturing', 'Wayne Spears', 'Dave McCarty'], ['Tagsby Racing', 'https://drive.google.com/thumbnail?id=1aM6bjXAIVIjfZcNwimNsCRDkQLcyWT-H', '73', 'Loni Richardson (R)', 'Intensitee/ https://drive.google.com/thumbnail?id=18UQJZh1176pJB_McqbsxwtWj9zuKE34W', 'Joey Sonntag', 'Joey Sonntag'], ['Team Racing', 'https://drive.google.com/thumbnail?id=1aM6bjXAIVIjfZcNwimNsCRDkQLcyWT-H', '86', 'Dana White (R)', 'Red Line Oil/Coverall Carports', 'Phil Bonifield', 'Bernie Taft'], ['Troxell Racing', 'https://drive.google.com/thumbnail?id=1aM6bjXAIVIjfZcNwimNsCRDkQLcyWT-H', '93', 'Jerry Allec, Jr.', 'n/a', 'Lonnie Troxell', 'Lonnie Troxell'], ['Ultra Motorsports', 'https://drive.google.com/thumbnail?id=1NfC_WI4-tGZTvXlnHjMsYQfrCOeUfnKh', '1', 'https://drive.google.com/thumbnail?id=1qH4ZsmG3Ydf9ggGRDWsdegSz40WhNyqh', 'https://drive.google.com/thumbnail?id=15gNc8vJHxitp6S7TUq5kybiD9CZD_Jy2', 'Jim Smith', 'Gene Nead'], ['Ultra Motorsports', 'https://drive.google.com/thumbnail?id=1NfC_WI4-tGZTvXlnHjMsYQfrCOeUfnKh', '2', 'https://drive.google.com/thumbnail?id=1PIMu5NTkh04FimbMZoAP4yax6n9raCQS', 'https://drive.google.com/thumbnail?id=1awlkbhApqsM4YdxLUTsmY-cArvjCHzVe', 'Marlene Smith', 'Tim Kohuth'], ['Ware Racing Enterprises', 'Dodge Ram', '5', 'https://drive.google.com/thumbnail?id=1Y0RywiJ9K7Pt-ulRS1MQfsYcK_Ls6BF7', 'Diamond Cut Jeans/Blair5.com', 'https://drive.google.com/thumbnail?id=1Hhv1WPs7rf5wj7GrtWmeNhEugoEK4NoE', 'Cal Northrop'], ['Ware Racing Enterprises', 'https://drive.google.com/thumbnail?id=1NfC_WI4-tGZTvXlnHjMsYQfrCOeUfnKh', '51', 'https://drive.google.com/thumbnail?id=1Cso1amJspBk97WpG6DAbfg8ZeMmbogSe', 'OOIDA', 'https://drive.google.com/thumbnail?id=1Hhv1WPs7rf5wj7GrtWmeNhEugoEK4NoE', 'Ken Glen'], ['Ware Racing Enterprises', 'https://drive.google.com/thumbnail?id=1NfC_WI4-tGZTvXlnHjMsYQfrCOeUfnKh', '81', 'Angie Wilson (R)', 'TotalRaceBabe.com', 'https://drive.google.com/thumbnail?id=1Hhv1WPs7rf5wj7GrtWmeNhEugoEK4NoE', 'Calvin Humphries'], ['Xpress Motorsports', 'https://drive.google.com/thumbnail?id=1aM6bjXAIVIjfZcNwimNsCRDkQLcyWT-H', '16', 'https://drive.google.com/thumbnail?id=1kXBxVFdE2rdGgKX5PGt7Gn5cPHfiksWS', 'IWX Motor Freight/Knights Inn', 'Steve Coulter', 'Travis Holt']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

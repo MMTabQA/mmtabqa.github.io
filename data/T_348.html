@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Records 1951–1976 of Men's 200 metres world record progression
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: in what year was bobby morrow's only win?
+            </div>
+            <div>
+                Answer: 1956
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Time', 'Wind', 'Auto', 'Athlete', 'Nationality', 'Location of race', 'Date'], ['20.6y', '', '', 'Andy Stanfield', 'https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'https://drive.google.com/thumbnail?id=1aUonpZ5e4nItZRDfpymBQvXPtIL-C4dp ,  https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'May 26, 1951'], ['20.6', '', '', 'Andy Stanfield', 'United States', 'https://drive.google.com/thumbnail?id=1NjlyCCxKIiwMYp2U4vAAhXRuOHvc25Dh ,  https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'June 28, 1952'], ['20.6', '0.0', '', 'Thane Baker', 'https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'https://drive.google.com/thumbnail?id=1FlFggyz-W_5ynE7NGWqzUSNwkptkOa3E ,  https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'June 23, 1956'], ['20.6', '', '20.75', 'https://drive.google.com/thumbnail?id=1kxaPKayduYnxDE3NWKTeUAJ5jfI0TBE0', 'https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'Melbourne, Australia', 'November 27, 1956'], ['20.6', '', '', 'https://drive.google.com/thumbnail?id=1trIH6fZW0vorHqYLisXAP0jbmpaIUFsq', 'West Germany', 'https://drive.google.com/thumbnail?id=1F572bX5j92iYBZH5P1UU1LQca0HdbrmV ,  https://drive.google.com/thumbnail?id=1YL7Rs3jJaWkxhXtkvgydw69g3uORU09n', 'October 1, 1958'], ['20.6y', '−1.6', '', 'https://drive.google.com/thumbnail?id=1HEjcVrwuCLYvO4H50JKzVhXkjt5ynxos', 'https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'Berkeley, United States', 'March 19, 1960'], ['20.6', '', '', 'Ray Norton', 'https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'Philadelphia, United States', 'April 30, 1960'], ['20.5y', '', '', 'https://drive.google.com/thumbnail?id=1uEdX3lVWCL0mYtwJZ3ncC0k6dcFvlbGW', 'United Kingdom', 'https://drive.google.com/thumbnail?id=1pDN-zuv4R1pxm7L_UT0JURHyt41Jw2mk ,  https://drive.google.com/thumbnail?id=1dnpKxXI__kxYdH_QWViSrNV9CIcLXSoA', 'May 28, 1960'], ['20.5', '0.0', '20.75', 'https://drive.google.com/thumbnail?id=14q1zL-3opT3r13rRcuGHnPndd8uqxVFH', 'United States', 'https://drive.google.com/thumbnail?id=1H9MlN5M5l4htUHsgd_oIHRZoxcj-N2V8 ,  https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'July 2, 1960'], ['20.5', '0.0', '', 'https://drive.google.com/thumbnail?id=1HEjcVrwuCLYvO4H50JKzVhXkjt5ynxos', 'https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'https://drive.google.com/thumbnail?id=1H9MlN5M5l4htUHsgd_oIHRZoxcj-N2V8 ,  https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'July 2, 1960'], ['20.5', '', '20.65', 'https://drive.google.com/thumbnail?id=1zr9gvK8Pj0FHbycWnbGuuh2RSOzPL6KA', 'https://drive.google.com/thumbnail?id=1WIoYHbvl5wvvQph9bRjlVlbg3lIio0rd', 'https://drive.google.com/thumbnail?id=1Hn8tj7Uge0mQ8_aKcT--HfwKCZz97xQS ,  https://drive.google.com/thumbnail?id=1WIoYHbvl5wvvQph9bRjlVlbg3lIio0rd', 'September 3, 1960'], ['20.5', '', '20.62', 'https://drive.google.com/thumbnail?id=1zr9gvK8Pj0FHbycWnbGuuh2RSOzPL6KA', 'Italy', 'https://drive.google.com/thumbnail?id=1Hn8tj7Uge0mQ8_aKcT--HfwKCZz97xQS ,  https://drive.google.com/thumbnail?id=1WIoYHbvl5wvvQph9bRjlVlbg3lIio0rd', 'September 3, 1960'], ['20.5y', '−1.1', '20.67', 'https://drive.google.com/thumbnail?id=1TW3PZNumLfAa22Vl6H9X0Q1q_O7hwmsY', 'https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'Walnut,  https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'June 23, 1962'], ['20.3y', '−0.1', '', 'https://drive.google.com/thumbnail?id=1Ab6oqZDNY9QVO80uEAoPyvNyzUmkVF8f', 'https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'https://drive.google.com/thumbnail?id=18uZ70uZg-pnfjocIh_m70ZrNXYnys8Aj ,  https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'March 23, 1963'], ['20.2y', '0.5', '', 'https://drive.google.com/thumbnail?id=1Ab6oqZDNY9QVO80uEAoPyvNyzUmkVF8f', 'https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'Tempe, United States', 'April 4, 1964'], ['20.0y', '0.0', '', 'https://drive.google.com/thumbnail?id=1NH4O1wU09Dd3sUFV8v3Q8je8QmqMsrae', 'https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'https://drive.google.com/thumbnail?id=1py3b3z6pIwwFWoZhqKCPCYpmsGyW2YhC ,  https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'June 11, 1968'], ['19.8A', '0.9', '19.83A', 'Tommie Smith', 'https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'Mexico City, Mexico', 'October 16, 1968'], ['19.8A', '0.9', '19.86A', 'https://drive.google.com/thumbnail?id=1TQ-4QNRZEGYFEzrS_6TQDCSF3BotCDY5', 'https://drive.google.com/thumbnail?id=1b0PylvZ2D62mGCQ6NbyQlka9tl5a9QNC', 'https://drive.google.com/thumbnail?id=1nIHjBfk6zF3Dw8gm1ZmNUAV1CR_JqEbT ,  https://drive.google.com/thumbnail?id=1mYZfbXoO4pCl-m0kk6QOYQ0nGQpSYzpy', 'August 3, 1971'], ['19.8+', '1.3', '', 'https://drive.google.com/thumbnail?id=1TQ-4QNRZEGYFEzrS_6TQDCSF3BotCDY5', 'https://drive.google.com/thumbnail?id=1b0PylvZ2D62mGCQ6NbyQlka9tl5a9QNC', 'https://drive.google.com/thumbnail?id=1HVEfNu1O-NrL_etpV5tCTYrqLnJyDxM- ,  https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'June 7, 1975']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

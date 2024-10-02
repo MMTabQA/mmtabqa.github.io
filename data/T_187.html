@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Results|Round 1 of Athletics at the 2004 Summer Olympics – Men's 4 × 400 metres relay
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: which nation placed above russia?
+            </div>
+            <div>
+                Answer: Botswana
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Rank', 'Heat', 'Nation', 'Competitors', 'Time', 'Notes'], ['1', '2', 'https://drive.google.com/thumbnail?id=1PL4txqefuHckFtY_HAWrK4dN-jUYUHdd', 'https://drive.google.com/thumbnail?id=1HyKLu_GTVnVprKTXts10gpAJgKamvVWz ,  https://drive.google.com/thumbnail?id=1n2UD8bNiwquVOqZzdLjAbUavduY5DTiN , Andrew Rock, Darold Williamson', '2:59.30', 'Q'], ['2', '2', 'https://drive.google.com/thumbnail?id=15_BGLHgI9UYxuNNm_1qQbKAzG_ll4NEM', 'James Godday, Musa Audu, Saul Weigopwa, Enefiok Udo-Obong', '3:01.60', 'Q, SB'], ['3', '2', 'https://drive.google.com/thumbnail?id=13coolVe3DUXE3qEFzMAK5ljfjI36yrHm', 'Andrae Williams, Dennis Darling, Nathaniel McKinney,  https://drive.google.com/thumbnail?id=1MXxS9Jq-LATg_2KjF7vWur4-4-i5W6Kd', '3:01.74', 'Q, SB'], ['4', '1', 'https://drive.google.com/thumbnail?id=164gbDf01cNIhIhvA8tn9BZqI5OuhYWiG', 'Timothy Benjamin, Sean Baldock,  https://drive.google.com/thumbnail?id=1DXQBjO6_3tnPw_XOTHmDesPmPEhlzXWY , Matthew Elias', '3:02.40', 'Q, SB'], ['5', '1', 'Japan', 'Yuki Yamaguchi, Jun Osakada, Tomohiro Ito, Mitsuhiro Sato', '3:02.71', 'Q'], ['6', '1', 'https://drive.google.com/thumbnail?id=1BrS3aZgdS1TD1HzasgRhdtkE77QJUm7S', 'https://drive.google.com/thumbnail?id=1owXuY_VIE1Dr3MUK_zapYVSVGjgQ9qDK ,  https://drive.google.com/thumbnail?id=1dro9k0iViYyoI4hcKyZK6UTrbNGNtwP5 ,  https://drive.google.com/thumbnail?id=1-AkUqxhSeEYTjGVcwR9e4yOnEQYFqUU3 ,  https://drive.google.com/thumbnail?id=12Rv9P03Qxl7S6gspiyUhhpEheosqjGRo', '3:02.77', 'Q'], ['7', '1', 'Australia', 'https://drive.google.com/thumbnail?id=19k-FFHIB426piAmlkdFJIg8f_6Nveh4H , Clinton Hill,  https://drive.google.com/thumbnail?id=1wm5Guape5YTC67f00Q-BHThYYGqGsgtt , Mark Ormrod', '3:03.06', 'q'], ['8', '1', 'https://drive.google.com/thumbnail?id=1yhKWvWXP5_FIkZE-ACH6cwSHa5FQ6fHP', 'Oganeditse Moseki, Johnson Kubisa, California Molefe, Kagiso Kilego', '3:03.32', 'q, SB'], ['9', '2', 'https://drive.google.com/thumbnail?id=1BkRzpKAIgzNqdaMH63xVEYWY6mTZdo8P', 'Aleksandr Larin, Andrey Rudnitskiy, Oleg Mishukov, Ruslan Mashchenko', '3:03.35', ''], ['10', '2', 'Poland', 'https://drive.google.com/thumbnail?id=1Ek210Y_c4aYcznuJ0mkxqu3SDFzdsJ-m , Piotr Klimczak, Marcin Marciniszyn,  https://drive.google.com/thumbnail?id=1_MVOs44EMVUXuuZDTrkVnIEI5r00xs-L', '3:03.69', ''], ['11', '2', 'https://drive.google.com/thumbnail?id=1rB9Q4NYvwXo-q8BiyOuZfZavwEH4Awon', 'Volodymyr Demchenko, Yevgeniy Zyukov, Myhaylo Knysh,  https://drive.google.com/thumbnail?id=1ZYTX_F1CdAhe8tBLiZqNEiOA3JMVvuny', '3:04.01', ''], ['12', '1', 'https://drive.google.com/thumbnail?id=1F8Kt1cxMlSpTECzDX2oBOaNw5QSf_7le', 'Stilianos Dimotsios,  https://drive.google.com/thumbnail?id=1qCIay_uMGkeqo8SdycdRxA9sTRGgouKx ,  https://drive.google.com/thumbnail?id=1Om9EfM5Aj7d3PS7vhcx7IdjaUXWi6faD ,  https://drive.google.com/thumbnail?id=1f6uyx1Xjuoa_ONxb-ZbuY5hYguogExnN', '3:04.27', 'SB'], ['13', '1', 'https://drive.google.com/thumbnail?id=1RhohS16mPmiRRgYMChdMzPM0jYdeE8kk', 'https://drive.google.com/thumbnail?id=1vSXL5tzDFq4rPpuLD3_f56nIzE0Nhdvt , Ibrahima Wade, Abderrahim El Haouzy,  https://drive.google.com/thumbnail?id=1EdkcjP8AXHYiy21EZqyAlCESNCu8qEZs', '3:04.39', ''], ['14', '2', 'https://drive.google.com/thumbnail?id=1PNvxM6uB2e3mJnZIxzM2bsoOWY9w1Nns', 'https://drive.google.com/thumbnail?id=1zvzYe9lYD4NOp4VomZh2ISUzeRPrC634 , David Canal, Luis Flores,  https://drive.google.com/thumbnail?id=1xaJlmRMtf_5BMMPiMAGNCQWjUNN8sm_-', '3:05.03', 'SB'], ['', '2', 'https://drive.google.com/thumbnail?id=1WZOIEDT3ZSkGzq-Uzd8nZXPTWOusXRuE', 'Marcus la Grange,  https://drive.google.com/thumbnail?id=1wolhShIT14akTBPHviHkknuNRfyUUnEH , Ockert Cilliers, Arnaud Malherbe', 'DNF', ''], ['', '1', 'Jamaica', 'Michael Campbell, Michael Blackwood,  https://drive.google.com/thumbnail?id=1JRMERLOsF1cUJI2FgWCJlqHXKOWDI0aF , Davian Clarke', 'DSQ', '']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

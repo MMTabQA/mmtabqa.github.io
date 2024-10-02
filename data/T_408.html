@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Past winners of Great South Run
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: who is the male winner listed before gert thys?
+            </div>
+            <div>
+                Answer: Simon Kasimili
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Edition', 'Year', "Men's winner", 'Time (m:s)', "Women's winner", 'Time (m:s)'], ['1st', '1990', 'https://drive.google.com/thumbnail?id=1TekxaQ4XqdwR61r9sbUR2U3GU7vL1ACc \xa0(NED)', '47:52', 'Alison Gooderham\xa0(GBR)', '56:09'], ['2nd', '1991', 'Thomas Naali\xa0(TAN)', '47:11', 'Olga Bondarenko\xa0(URS)', '53:16'], ['3rd', '1992', 'Boay Akonay\xa0(TAN)', '47:04', 'Iulia Negura\xa0(ROM)', '53:19'], ['4th', '1993', 'Gary Staines\xa0(GBR)', '46:11', 'Iulia Negura\xa0(ROM)', '53:01'], ['5th', '1994', 'Gary Staines\xa0(GBR)', '47:00', 'Gitte Karlshøj\xa0(DEN)', '54:49'], ['6th', '1995', 'Benson Masya\xa0(KEN)', '45:56', 'Liz McColgan\xa0(GBR)', '53:12'], ['7th', '1996', 'Gary Staines\xa0(GBR)', '46:57', 'https://drive.google.com/thumbnail?id=1K5wVCH3inNhL-PiAdsP0TI8x6s6XpKX7 \xa0(ETH)', '52:39'], ['8th', '1997', 'Christopher Kelong\xa0(KEN)', '46:53', 'Liz McColgan\xa0(GBR)', '52:00'], ['9th', '1998', 'Stéphane Franke\xa0(GER)', '47:40', 'Marian Sutton\xa0(GBR)', '54:17'], ['10th', '1999', 'Simon Kasimili\xa0(KEN)', '47:42', 'Esther Kiplagat\xa0(KEN)', '54:42'], ['11th', '2000', 'https://drive.google.com/thumbnail?id=11an5kRvOXDEpWkNdzEEohXG66GoWY7fF \xa0(RSA)', '48:26', 'Restituta Joseph\xa0(TAN)', '55:10'], ['12th', '2001', 'https://drive.google.com/thumbnail?id=1MrteqaTI7ZPvFOwgriiTYI58zceXD3DN \xa0(MAR)', '46:17', 'Restituta Joseph\xa0(TAN)', '52:36'], ['13th', '2002', 'Simon Kasimili\xa0(KEN)', '47:27', 'https://drive.google.com/thumbnail?id=1NOAJv6h5j1oR0SPchpChhRihBuLl9cY4 \xa0(IRL)', '51:00'], ['14th', '2003', 'John Yuda\xa0(TAN)', '46:35', 'https://drive.google.com/thumbnail?id=1NOAJv6h5j1oR0SPchpChhRihBuLl9cY4 \xa0(IRL)', '53:26'], ['15th', '2004', 'https://drive.google.com/thumbnail?id=1GoUQVJYva7EyF3Y9tTaFACZrhtEJW143 \xa0(RSA)', '47:14', 'https://drive.google.com/thumbnail?id=1ysefQ3R-_9prV65PsKg5On5w84BYEsKV \xa0(AUS)', '52:32'], ['16th', '2005', 'John Yuda\xa0(TAN)', '46:45', 'https://drive.google.com/thumbnail?id=1K5wVCH3inNhL-PiAdsP0TI8x6s6XpKX7 \xa0(ETH)', '51:27'], ['17th', '2006', 'Simon Arusei\xa0(KEN)', '47:17', 'https://drive.google.com/thumbnail?id=1o_MrbFXdlVyN_Vk71H3UdSrG7uS56BR7 \xa0(GBR)', '52:46'], ['18th', '2007', 'https://drive.google.com/thumbnail?id=1sjwS5zEVvrjMq3gVQHUOo6aPPrZMMa9M \xa0(KEN)', '47:31', 'Rose Cheruiyot\xa0(KEN)', '53:44'], ['19th', '2008', 'https://drive.google.com/thumbnail?id=14pn9MufV-pQDikviUWsBzECxdiy5mA1a \xa0(KEN)', '46:42', 'https://drive.google.com/thumbnail?id=1sp_CbT_XtpXegwyviQi7uV0ja2gnybyo \xa0(GBR)', '51:11'], ['20th', '2009', 'https://drive.google.com/thumbnail?id=1zDpgyl9PFkkPY8Vk0_ZtNHzTslKCATKe \xa0(GBR)', '46:25', 'https://drive.google.com/thumbnail?id=1M4vesX0Xef6AUHTFHvwWw9q2ZFMzwtJI \xa0(POR)', '52:32'], ['21st', '2010', 'https://drive.google.com/thumbnail?id=13e1aLmVMaXg9ATS0sqTjm-qptHxdFBhe \xa0(KEN)', '45:15', 'https://drive.google.com/thumbnail?id=1KZ4-I6vF_9iYa2k_P67V6QXmoofD4Nmz \xa0(KEN)', '52:03'], ['22nd', '2011', 'https://drive.google.com/thumbnail?id=1NUeI-bEJTr-A4GUNQj5hqD0yzUjoYvk4 \xa0(KEN)', '46:18', 'https://drive.google.com/thumbnail?id=1K2Haik-VIIg_cPvoIppW2dZReIBWywDa \xa0(ETH)', '52:55'], ['23rd', '2012', 'https://drive.google.com/thumbnail?id=13yef7F6QVdayEM464YNIR1fyRBk0Bzyo \xa0(RSA)', '46:40', 'https://drive.google.com/thumbnail?id=1o_MrbFXdlVyN_Vk71H3UdSrG7uS56BR7 \xa0(GRB)', '53:01'], ['24th', '2013', 'https://drive.google.com/thumbnail?id=1F-_V4qzpJAmDUPEN0GYcSeHrs7BCXX0X \xa0(KEN)', '48:03', 'https://drive.google.com/thumbnail?id=1MyqKjisZDp03Q5GNyLMebe8B7NT16UnO \xa0(KEN)', '53:53']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

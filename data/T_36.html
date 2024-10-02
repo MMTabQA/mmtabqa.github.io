@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Comparison with contemporary frigates of Destroyer escort
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: which of the boats listed is the fastest?
+            </div>
+            <div>
+                Answer: Alvand-class frigate
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Name', 'Date', 'Nation', 'Displacement', 'Speed', 'Number', 'Notes'], ['https://drive.google.com/thumbnail?id=1dVyHxuhxSoEEFGBpFxAooUM6hZ3DimDC', '1942', 'UK', '1,370 tons', '20 knots', '151', ''], ['https://drive.google.com/thumbnail?id=1No550i0ayJHkuUp8OvNWxYXJZRJcQrUW', '1943', 'Japan', '870 tons', '19 knots', '18', ''], ['FMR-class', '1943', 'US', '1,200 tons', '21 knots', '85', ''], ['GMT-class', '1943', 'US', '1,140 tons', '21 knots', '72', ''], ['TE-class', '1943', 'US', '1,400 tons', '23 knots', '102', ''], ['DET-class', '1943', 'US', '1,240 tons', '21 knots', '72', ''], ['https://drive.google.com/thumbnail?id=1GgBdzV8cr4mW8CTVlKB70LD9QHDqdzjU', '1943', 'US', '1,430 tons', '20 knots', '96', ''], ['https://drive.google.com/thumbnail?id=1xRDRdKSX3gb3HsXiFDVarCqFNew8fdxk', '1943', 'Japan', '940 tons', '19 knots', '37', ''], ['https://drive.google.com/thumbnail?id=1biGKJQKc3zMJm0jZdHq0i9Sxc8PtoSzw', '1944', 'UK', '1,435 tons', '20 knots', '30', ''], ['WGT-class', '1944', 'US', '1,350 tons', '24 knots', '87', ''], ['TEV-class', '1944', 'US', '1,450 tons', '24 knots', '22', ''], ['https://drive.google.com/thumbnail?id=1bfhB0H-JSppZdOUve8vuGQ58A3sQdtll', '1945', 'UK', '1,580 tons', '20 knots', '26', 'anti-aircraft'], ['Dealey-class', '1954', 'US', '1,450 tons', '25 knots', '13', ''], ['https://drive.google.com/thumbnail?id=1EBdazZlGjyCnO_gG0B3cqEzcN2xWf0r9', '1955', 'France', '1,290 tons', '28 knots', '4', 'fast'], ['https://drive.google.com/thumbnail?id=1HaPKMBd5iJlj8PnNIpk7cSm984RIACRb', '1955', 'UK', '1,180 tons', '24 knots', '8', 'anti-submarine'], ['https://drive.google.com/thumbnail?id=1MNkor7CbgVuOonLH3E70nxSUvBs-BoZD', '1955', 'Canada', '2,263 tons', '28 knots', '7', 'anti-submarine'], ['Type B', '1956', 'Japan', '1,070 tons', '25 knots', '2', 'diesel'], ['https://drive.google.com/thumbnail?id=1lz-lUql_BS-B3KAUTlioFzP2O9Pl2Z_t', '1956', 'UK', '2,150 tons', '31 knots', '6', 'anti-submarine'], ['https://drive.google.com/thumbnail?id=1JwNtAwjho8TFby20BCBXOp48phNIMhYg', '1956', 'France', '1,295 tons', '28 knots', '14', 'fast'], ['https://drive.google.com/thumbnail?id=13dJgzj3FPFaWSETlkORhaJOjANiSp7rG', '1956', 'Venezuela', '1,300 tons', '32 knots', '6', 'fast'], ['https://drive.google.com/thumbnail?id=1mzqy0zQGUEyW0yZyUbdM3cab5TpHRmfV', '1957', 'UK', '2,170 tons', '24 knots', '4', 'aircraft direction'], ['Canopo-class frigate', '1957', 'Italy', '1,807 tons', '26 knots', '4', ''], ['https://drive.google.com/thumbnail?id=1-wuG3hv3LdqKQOLbHTwHNxKcLpqoSMTH', '1957', 'UK', '2,300 tons', '24 knots', '4', 'anti-aircraft'], ['Azopardo-class frigate', '1957', 'Argentina', '1,160 tons', '20 knots', '2', ''], ['https://drive.google.com/thumbnail?id=1aG5wE-L-kS_rp0OlxZNlzZjns1rjfAIr', '1958', 'Canada', '2,366 tons', '28 knots', '7', 'anti-submarine'], ['Claud Jones-class', '1959', 'US', '1,450 tons', '22 knots', '4', ''], ['https://drive.google.com/thumbnail?id=1DiKSk8NAGp0AWMcClDnfQmSRwQ3L6j0J', '1960', 'UK', '2,380 tons', '30 knots', '12', 'anti-submarine'], ['https://drive.google.com/thumbnail?id=1sZntrx1s0A3u66hjOI7-gUUVkIS1KQr8', '1961', 'Germany', '2,100 tons', '30 knots', '6', 'fast'], ['https://drive.google.com/thumbnail?id=12lavuSefuHbXkUBXck6yRma8ADjtwTyJ', '1961', 'Australia', '2,100 tons', '30 knots', '6', ''], ['https://drive.google.com/thumbnail?id=14o1ePv7N9B3OClY3_F9cqt38IKTOH2Y3', '1961', 'Japan', '1,490 tons', '25 knots', '4', ''], ['https://drive.google.com/thumbnail?id=1LNkDxAJ1K9tDyG59SBmnqBimorwS8GXM', '1961', 'UK', '2,300 tons', '28 knots', '7', 'general purpose'], ['https://drive.google.com/thumbnail?id=1Q93gxnGDaYtngjft9GimQEGN66VmVs2E', '1961', 'Italy', '1,410 tons', '26 knots', '4', ''], ['https://drive.google.com/thumbnail?id=1fdvqODHlEGgMkx-rx9PI38_mMiNkXVRf', '1962', 'France', '1,750 tons', '25 knots', '13', 'dual purpose'], ['https://drive.google.com/thumbnail?id=1ngg6u2MbvbRzfcw0XfaDiPE2Dvv19caz', '1962', 'Canada', '2,366 tons', '28 knots', '4', 'anti-submarine'], ['Hvidbjørnen-class frigate', '1962', 'Denmark', '1,345 tons', '18 knots', '4', 'fishery protection'], ['https://drive.google.com/thumbnail?id=1Q28zx7PdjmYgpTsq5KUzZDwq9FDobgVj', '1963', 'UK', '2,450 tons', '30 knots', '26', 'general purpose'], ['Bronstein-class', '1963', 'US', '2,360 tons', '26 knots', '2', ''], ['Garcia-class', '1964', 'US', '2,620 tons', '27 knots', '10', ''], ['https://drive.google.com/thumbnail?id=1bSCvCdox1iSzZUCFkmklObGnwy_JmTLq', '1966', 'Norway', '1,450 tons', '25 knots', '5', ''], ['Brooke-class', '1966', 'US', '2,640 tons', '27 knots', '6', 'guided missile'], ['https://drive.google.com/thumbnail?id=1ww3SboXUav2m4olkTtN8WYem0Ll7hXbo', '1966', 'Denmark', '2,030 tons', '28 knots', '2', 'fast'], ['https://drive.google.com/thumbnail?id=1ykJE3Ht0YpQAcdS48Rej7tpVX-oMOAmE', '1967', 'Netherlands', '2,200 tons', '28 knots', '6', ''], ['https://drive.google.com/thumbnail?id=14P4Z9_8kLu0Aq6FU3i0Z-7KAu3cUmA_C', '1968', 'Italy', '2,000 tons', '28 knots', '2', ''], ['https://drive.google.com/thumbnail?id=1NZIlnTKQihlcGh19gSeZBtV1DVvhspBT', '1968', 'Iran', '1,110 tons', '40 knots', '4', ''], ['Knox-class', '1969', 'US', '3,011 tons', '27 knots', '46', ''], ['https://drive.google.com/thumbnail?id=1GlmOegxJGeyQ1INRRD-vJqKumKPoTLAv', '1971', 'Japan', '1,470 tons', '25 knots', '11', '']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

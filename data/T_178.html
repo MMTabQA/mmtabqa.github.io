@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to ITF finals (30–25)|Singles (11–10) of Andrea Koch Benvenuto
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: what was the last tournament she won?
+            </div>
+            <div>
+                Answer: Bogotá, Colombia
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Outcome', 'No.', 'Date', 'Tournament', 'Surface', 'Opponent', 'Score'], ['Runner-up', '1.', '23 August 2004', 'https://drive.google.com/thumbnail?id=1jBj_8zFEPjhFPaY4R-CGGIQz-7HD5GQS , Bolivia', 'Clay', 'Jenifer Widjaja', '6–3, 4–6, 0–6'], ['Runner-up', '2.', '6 June 2005', 'Santa Tecla, El Salvador', 'Clay', 'Andrea Benítez', '3–6, 0–6'], ['Runner-up', '2.', '22 August 2005', 'https://drive.google.com/thumbnail?id=1URdFotdJiSkNWEiMkk37m_CtMZLeVrds , Colombia', 'Clay', 'Carla Tiene', '4–6, 0–6'], ['Runner-up', '4.', '15 May 2006', 'Ciudad Obregón, Mexico', 'Hard', 'Ellah Nze', '6–4, 3–6, 3–6'], ['Winner', '1.', '5 June 2006', 'https://drive.google.com/thumbnail?id=1rDlhMxs6jztnEiVZQJuvYVff4LDbO_SN , Mexico', 'Hard', 'https://drive.google.com/thumbnail?id=1fWEMkgurQjY7Q_DfFT0WD4x3OFwDykp1', '6–1, 3–6, 6–4'], ['Winner', '2.', '7 September 2009', 'https://drive.google.com/thumbnail?id=1jWtErjau_zy32zw_OIpJolIE0yCtjvBC , Mexico', 'Hard', 'Fernanda Hermenegildo', '6–1, 6–2'], ['Winner', '3.', '2 November 2009', 'https://drive.google.com/thumbnail?id=1URdFotdJiSkNWEiMkk37m_CtMZLeVrds , Colombia', 'Clay', 'Yuliana Lizarazo', '7–6(7–5), 6–4'], ['Runner-up', '5.', '16 November 2009', 'Asunción, Paraguay', 'Clay', 'https://drive.google.com/thumbnail?id=1Kcr6Ah8EbpwQtQzF_aNqCuAtHVSnbrys', '6–4, 4–6, 2–6'], ['Winner', '4.', '8 November 2010', 'https://drive.google.com/thumbnail?id=1URdFotdJiSkNWEiMkk37m_CtMZLeVrds , Colombia', 'Clay', 'Patricia Kú Flores', '6–1, 7–5'], ['Winner', '5.', '29 November 2010', 'https://drive.google.com/thumbnail?id=1iqwMb_tp9fwEA8fPEkIb6IOEFspAH4gZ , Chile', 'Clay', 'https://drive.google.com/thumbnail?id=1Q5VZS-Fv1h14p5h3USrHdPLXkaym7DWe', '6–2, 6–2'], ['Winner', '6.', '18 July 2011', 'Ribeirão Preto, Brazil', 'Clay', 'Vivian Segnini', '6–2, 6–2'], ['Runner-up', '6.', '8 August 2011', 'https://drive.google.com/thumbnail?id=1fQegH1EuBcyxgfrYpmH6YUFmxwXSUG2o , Bolivia', 'Clay', 'https://drive.google.com/thumbnail?id=1fWEMkgurQjY7Q_DfFT0WD4x3OFwDykp1', '2–6, 3–6'], ['Winner', '7.', '15 August 2011', 'La Paz, Bolivia', 'Clay', 'https://drive.google.com/thumbnail?id=1fWEMkgurQjY7Q_DfFT0WD4x3OFwDykp1', '6–0, 7–6(7–1)'], ['Runner-up', '7.', '3 October 2011', 'https://drive.google.com/thumbnail?id=1tUxr0EAbfbizZ3h1j-NWimoFiHDJCfa_ , Armenia', 'Clay', 'https://drive.google.com/thumbnail?id=1h8oh7cVaLNHCm2SUJbBrAIA21twPhQpN', '6–7(6–8), 2–6'], ['Runner-up', '8.', '19 March 2012', 'Bangalore, India', 'Hard', 'https://drive.google.com/thumbnail?id=1F1_yMPzPDF8A2n2JCLkgFj6jQz4-mn61', '2–6, 4–6'], ['Runner-up', '9.', '8 May 2012', 'https://drive.google.com/thumbnail?id=15xenIF7EbjAnUU3fZYEQWYk738oYX0vK , Brazil', 'Clay', 'Gabriela Paz', '3–6, 3–6'], ['Winner', '8.', '19 November 2012', 'https://drive.google.com/thumbnail?id=12fIpZ2Z_aI25bbBmG6dbtv4jRHyypEU- , Colombia', 'Clay', 'Karolina Nowak', '7–6(7–4), 6–0'], ['Winner', '9.', '21 October 2013', 'https://drive.google.com/thumbnail?id=1URdFotdJiSkNWEiMkk37m_CtMZLeVrds , Colombia', 'Hard', 'Anna Katalina Alzate Esmurzaeva', '6–3, 6–3'], ['Winner', '10.', '11 November 2013', 'https://drive.google.com/thumbnail?id=14UcRaR8Q4l8wyrObcguJr7KTabNdXggg , Peru', 'Clay', 'Patricia Kú Flores', '7–5, 6–7(4–7), 6–2'], ['Winner', '11.', '25 November 2013', 'https://drive.google.com/thumbnail?id=1URdFotdJiSkNWEiMkk37m_CtMZLeVrds , Colombia', 'Clay', 'Naomi Totka', '6–1, 6–1'], ['Runner-up', '10.', '2 December 2013', 'https://drive.google.com/thumbnail?id=12fIpZ2Z_aI25bbBmG6dbtv4jRHyypEU- , Colombia', 'Clay', 'María Fernanda Herazo', '4–6, 2–6']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

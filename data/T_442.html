@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Ships of Henry J. Kaiser-class oiler
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: what is the difference in years of creation between the john ericsson and leroy grumman?
+            </div>
+            <div>
+                Answer: 2
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Ship', 'Hull No.', 'Status', 'Years Active', 'NVR Page'], ['https://drive.google.com/thumbnail?id=1TbCey1E8nxTYWa70LwRbM7GYkVUX1Yq_', 'T-AO-187', 'Active—Southern California Duty Oiler', '1986–present', 'AO187'], ['https://drive.google.com/thumbnail?id=1jWqkdyRhKphMy0WUHLOjRmhyLuVQZO3d', 'T-AO-188', 'Inactivated 1996, returned to service 2005', '1987-1996; 2005-2006; 2010-present', 'AO188'], ['https://drive.google.com/thumbnail?id=12bQglLdk8OWxjiE5ZJgnpLMhcnJIE0xb', 'T-AO-189', 'Active', '1987-1996; 1998–present', 'AO189'], ['https://drive.google.com/thumbnail?id=1AM5AncOyLeQ88QUscnITdXsTxVH55kcZ', 'T-AO-190', 'Inactivated May 1996. Sold to the  https://drive.google.com/thumbnail?id=1iP9t4qLWtWbbPiY7nlBPvV35XQwBc-4R  May 2009. Towed to Atlantic Marine Alabama shipyard,  https://drive.google.com/thumbnail?id=189gy3EiBPlQg8-sbCAsg4w9Bkq4b1bvn , September 2009 for three-month refit. Commissioned in  https://drive.google.com/thumbnail?id=1iP9t4qLWtWbbPiY7nlBPvV35XQwBc-4R  on 10 February 2010 and renamed Almirante Montt.[1]', '1987-1996 (USA); 2010–present (Chile)', 'AO190'], ['https://drive.google.com/thumbnail?id=1oC3AfdaCzl830mNnu8FiSr5sXuI5QH3H', 'T-AO-191', 'Cancelled when 95.3% complete, transferred to the Maritime Administration, laid up in the James River Reserve Fleet, scrapped in 2011', 'Launched 1988, christened 1991, never in service', 'AO191'], ['https://drive.google.com/thumbnail?id=1LYYupxY9PYF4Osjepypl7hrxRznf7LRM', 'T-AO-192', 'Cancelled when 84% complete, transferred to the Maritime Administration, laid up in the James River Reserve Fleet, scrapped in 2011', 'Launched 1989, never in service', 'AO192'], ['https://drive.google.com/thumbnail?id=1MP9yq0LEnzDpD-9oL8BL44iwhAAWvl2t', 'T-AO-193', 'Active', '1988–present', 'AO193'], ['https://drive.google.com/thumbnail?id=18mixIFW3Lm3QWuyoovs9AuAk4q4_y24q', 'T-AO-194', 'Active', '1991–present', 'AO194'], ['https://drive.google.com/thumbnail?id=1X_xFhIxYMBKiYVJhXPA6RPFh33tIeewK', 'T-AO-195', 'Active', '1989–present', 'AO195'], ['Kanawha', 'T-AO-196', 'Active', '1991–present', 'AO196'], ['https://drive.google.com/thumbnail?id=1ZMg0a7VI351H0eiQXzKf2n2qMSLgro9p', 'T-AO-197', 'Active', '1990–present', 'AO197'], ['Big Horn', 'T-AO-198', 'Active', '1992–present', 'AO198'], ['Tippecanoe', 'T-AO-199', 'Active', '1993–present', 'AO199'], ['https://drive.google.com/thumbnail?id=1-mbC1oToJvq9o3L6_Z_QfAE-C0jRNISB', 'T-AO-200', 'Active', '1992–present', 'AO200'], ['Patuxent', 'T-AO-201', 'Active', '1995–present', 'AO201'], ['Yukon', 'T-AO-202', 'Active', '1994–present', 'AO202'], ['https://drive.google.com/thumbnail?id=1Gu5UmcvIKoTM1MC_qwx-AHAA53BM99YA', 'T-AO-203', 'Active', '1996–present', 'AO203'], ['https://drive.google.com/thumbnail?id=1tx3Zwo5R3MUx934HKv1vnN3YlEi5Covn', 'T-AO-204', 'Active', '1995–present', 'AO204']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

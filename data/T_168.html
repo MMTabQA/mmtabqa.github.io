@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Non-fatal attacks of List of wolf attacks in North America
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: how many stitches were required by the park visitor who was attacked in june of 1999?
+            </div>
+            <div>
+                Answer: 50
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Victim(s)', 'Age', 'Gender', 'Date', 'Type of attack', 'Location', 'Details', 'Source(s)'], ['Daughter of a frontiersman named "Baker"', '18', '♀', 'Summer, 1881', 'Defending cows', 'Northwestern  https://drive.google.com/thumbnail?id=1p58PaqA1Kgs7G4V8CkMO7DeFENq7hJpH , USA', 'Encountered a wolf resting on a hill while on her way to bring in cows at dusk. The animal attacked her after she shouted and threw rocks to scare it away. It seized her by the shoulder, threw her to the ground, and badly bit her arms and legs before being shot by her brother.', 'https://drive.google.com/thumbnail?id=1hAj4g4RWWH9h-QlZhnQqznQGDmVcuYRc'], ['David Tobuk', 'Toddler', '♂', '1900', 'Predatory', 'Koyukuk River, Alaska, USA', 'In the 1920s, Tobuk was a  https://drive.google.com/thumbnail?id=1-Dqyhhiv6_aSAfB28defNrZe-bQZ5GId  steamboat captain who bore severe scarring as a result of a wolf attack he had suffered as a toddler. He was playing along the riverbank when a wolf appeared out of some bushes, seized Tobuk by the head, lifted and ran off with him in its jaws, but was shot by a nearby man.', ''], ['https://drive.google.com/thumbnail?id=1QmMspgK5Xa9GkBSiMi6JlayqCxZQvsKR , Arctic explorer', '', '♂', '1915, February 10', 'Agonistic', 'Coppermine River, Northwest Territories, Canada', 'Early in the morning, a female wolf entered the camp of an Arctic expedition and began fighting with the tethered sled dogs. Five men came out and tried to drive it away. The wolf charged at Diamond Jenness after he threw a rock and missed. Jenness grabbed the wolf by the back of the neck, but the wolf turned its head enough to severely bite his forearm. He choked the wolf with his other hand; it released, stepped back, and was shot by another man. The wound was treated and eventually fully healed, but Jenness never contracted rabies despite consistency of the wolf’s behavior with the early stages of the disease.', ''], ['Mike Dusiac, Railwayman', '', '♂', 'December 29, 1942', 'Possibly rabid', 'Poulin, Ontario, Canada', 'Riding a small rail vehicle called a speeder when a wolf leaped at him and bit his sleeve, knocking him down and knocking the vehicle off the track. Dusiac kept the wolf at bay for more than 25 minutes with an ax. He managed to hit the wolf repeatedly but not squarely enough. The wolf was not deterred by an approaching train which stopped to help Dusiac. Several railwaymen came running, but the wolf would not retreat. The men killed the wolf with picks and shovels. The carcass was inspected by a biologist, and it appeared healthy. However, Rutter and Pimlot reviewed the case in 1968 and concluded that it must have been rabid because of the sustained and determined nature of the attack.', ''], ['Zacarias Hugo', '14', '♂', '1943', 'Possibly rabid', 'Etivluk River, Alaska, USA', 'While hunting  https://drive.google.com/thumbnail?id=12W9jgMHE0ajP3g0GPVqtyNY5XVA1yAyY , Zacarias heard a sound, turned and saw a large black wolf coming for him. It knocked him down and bit his arm, so he could not use his rifle. It bit his legs, back, arm and neck and dragged him 18 metres before abandoning the attack and disappearing. He walked back to camp, but had lost a lot of blood, mostly from his forearm. His caribou skin Anorak protected him from greater injury or even death, but may have contributed to the attack if it caused the wolf to mistake him for a caribou. This attack had long been classified as "rabid" because it occurred during an epizootic of the disease in that area and because Zac\'s father, Inualuruk, tracked the wolf and observed to have been walking at times in the splayed manner of a sick animal. However, neither the fact that the attack was abandoned in the way it was, nor the fact that Zacarias never developed the disease is not consistent with rabies.', ''], ['Thomas Hamilton', '', '♂', '1950', 'Prey-testing agonistic charge', 'Lower Foster Lake,  https://drive.google.com/thumbnail?id=1vpz3x_RVxoOPzHMwcVAcaMjnwDMA3X4Q , Canada', 'While out hunting wolves, he laid down to aim his rifle, when the wolves arose and started running at him. He waited for a better shot, expecting the wolves to stop, but they did not. He shot the lead wolf at point blank range, prompting the rest to depart.', ''], ['Alex Lamont', '', '♂', 'Summer, 1969', 'Prey-testing agonistic charge', 'Near Wien Lake, Alaska, USA', 'Lamont saw two wolves running directly at him while walking home. He shot both after one of them bit his leg.', ''], ['Pipeline workers', '', '♂', '1971-1979', '', 'Along the right-of-way for the Trans-Alaska Pipeline, from Prudhoe Bay to Valdez, Alaska, USA', 'There were ten "bites and charges", including a seriously bitten forearm. Causes included: a lack of trapping and hunting in certain areas; lack of barriers such as fencing, unsecured attractants such as trash, human attitudes and behaviors such as intentional feeding, and mutual habituation.', ''], ['Infant', '1', '♀', 'Fall, 1975', 'Captive', 'https://drive.google.com/thumbnail?id=1xh6ij62PnJvxLK3-RNaN_W8AyVUVQl4x', 'While posing for picture with the wolf at a charity event for the  https://drive.google.com/thumbnail?id=1FF8yyKIFKgP9hOWY_y_o9XVowQAm1_9G ; it bit the side of her face ripping it open. She was hospitalized and given plastic surgery.', 'https://drive.google.com/thumbnail?id=1hRfl_lZy_TIUc2uS7lmlprH6Hifs4IvQ'], ['Dr. Bob Piorkowski, Alaska Fish and Game, and his wife', '', '♂/♀', 'October, 1975', 'Prey-testing agonistic charge', 'Tonzona River,  https://drive.google.com/thumbnail?id=1rGdDdeY-uzA6VctCk_3AFIGXKstsFQYh , USA, near  https://drive.google.com/thumbnail?id=1FwzsMgcBQGPSSS9bOuqLOX4vxvOetK5r', 'Went outside their remote house near  https://drive.google.com/thumbnail?id=1FwzsMgcBQGPSSS9bOuqLOX4vxvOetK5r  to see why their dog was barking, hoping it was a moose they could hunt. Five wolves came running straight at them, not at the dog, which was more than five meters away. Piorkowski was not ready to fire until the lead wolf was at point-blank range. He shot the next at ten meters away. Both wolves were dead, and the rest fled. Both wolves tested negative for rabies, and Piorkowski had one pelt mounted.', 'p.\xa017'], ['David Lawrence', '7', '♂', '1976, Summer', 'Prey-testing agonistic charge', 'Salcha River, Alaska, USA', 'While his father, Roy Lawrence, stood near the plane talking to the pilot, Ed Gavin, Roy saw a wolf charging focused directly at his son, David, who was crouching down to touch the water’s edge about 30m/33yards away. The moment Roy saw the wolf charging, it was 50m/55.5 yards from David and moving fast. Roy shouted for David to hide in the brush. When the wolf lost sight of him, it stopped, hopped, and stood on its hind legs trying to sight the boy again, allowing Galvin time to ready his weapon and fire. It was a young adult, underweight female, 32\xa0kg/70.5\xa0lbs.', ''], ['Dr. M. Dawson, Paleontologist', '', '♀', '1977, June 28', 'Prey-testing agonistic charge', 'Ellesmere Island, Nunavut, Canada', "Doing field work when they were approached by a pack of six wolves. They tried to drive them off by shouting, waving, and throwing clods of frozen dirt. The wolves were not deterred, and began to circle. The lead wolf leaped at Dawson's face, but Dawson pushed back with her arms and leaned backwards, pushing the wolf to the ground before it could bite her, and the wolves departed, but the strike was close enough for  https://drive.google.com/thumbnail?id=1sVq7YDI26s7g9DarjOkI6mtMPM7E0aI4  from the wolf's flews to be left on her cheek. Munthe and Hutchinson (1978) interpreted the attack as testing of unfamiliar prey, but noted they didn't know if the wolves had encountered people before. McNay notes that the attack resembled others by wolves which had been fed.", 'p.\xa016'], ['Hunter', '19', '♂', 'January, 1982', 'Predatory', 'Near  https://drive.google.com/thumbnail?id=1pQu72nFMkfoOT2dlhqYx30LlrRH-vqjz , USA', 'Attacked unseen out of thick cover. Knocked down, the pair rolled on the ground, where he was able to keep it away by grabbing its throat. He could not aim but managed to discharge his weapon, and the wolf fled at the sound. The hunter received claw wounds to the thigh.', ''], ['Biologist', '', '♂', '1984', 'Prey-testing agonistic charge', '185\xa0km southeast of  https://drive.google.com/thumbnail?id=1cz_wUYoNLaPGTD2jrurn1EeoDK1cmPt8 , Canada', 'The wolf ran directly at three biologists, ears up, straight-tail, maintaining eye contact with one in particular. At two metres, he sounded an airhorn directly at the animal, which veered to one side and ran off.', ''], ['Christopher Nimitz', '2', '♂', 'October 18, 1985', 'Captive', 'Idyllwild, California, USA', "His family's captive wolf pulled his arm into the cage and severed it. His mother saved him but was arrested for child endangerment.", 'https://drive.google.com/thumbnail?id=1mNaVlrew2fzKfndPb3vQxz_1iIP2jG56'], ['Robert Mulders, Biologist', '', '♂', 'December 13, 1985', 'Prey-testing Agonistic', 'Whale Cove, Nunavut, Canada', "Two biologists netted a  https://drive.google.com/thumbnail?id=12W9jgMHE0ajP3g0GPVqtyNY5XVA1yAyY  from a helicopter and landed to perform tests and attach a radio collar. While working near the running blades of the helicopter, Mulders saw a wolf approaching. Both men stood, shouted, and waved their arms. When mulders stepped toward the wolf, it started circling and stalking, then rushed in and bit down on Mulders' lower leg and would not let go despite repeated punches by Mulders for 10–15 seconds until the other biologist, Mark Williams, knocked the wolf unconscious with the caribou radio collar. Mulders then took the collar and struck the wolf in the head twice and stabbed it in the chest with a knife. The bite tore open his pants but left only a small wound.", ''], ['Park visitors', '', '', '1987-1998', '', 'Algonquin Provincial Park,  https://drive.google.com/thumbnail?id=12_Hjnu2-z2FhF72hc6AhH2Pih8U0fQ9Z , Canada', 'All incidents were proceeded by extensive habituation. At first, the incidents were minor. In the first incident, in 1987, a sixteen-year-old girl was only briefly bitten, with the attack being classified as "disciplinary", as the girl had been annoying the wolf. Years later, wolves began stalking children in a predatory fashion. In one of the most serious of these, a wolf grabbed and tossed a nineteen month-old boy, who was saved by his parents, but received multiple puncture wounds. In another, a wolf dragged a twelve-year-old boy in a sleeping bag. His nose was broken and face lacerated before being saved by his father. The wolf went on to attack three women in two attacks before being shot. It was a healthy male with stomach contents scavenged from camps. The boy underwent reconstructive surgery. In all, five people were bitten. In all cases, the wolves were killed, and rabies tests were negative.', ''], ['Tabitha Mullin', '', '♀', 'June, 1995', 'Agonistic', 'Ellsmere Island, Nunavut, Canada', 'A wildlife biologist, Mullin was standing about five paces outside her front door on the  https://drive.google.com/thumbnail?id=1F11F9v46m4-m6N8QGIU5oEMpbuH30bQn ’s base, observing and recording a pack of eleven wolves who approached and stopped inside 10 meters. One circled around closer, and she moved back toward the door. When she turned to open the door, the wolf grabbed and pulled her forearm. She pulled back, screamed, and her sleeves ripped; the wolf released; she got inside, closed the door, and the wolves left. She suspected photographers had been luring the wolves in with food. She was uninjured.', ''], ['Andy Greenblat, Bush pilot', '', '♂', '1997', 'Prey-testing Agonistic charge', 'Joshua Green River Alaska, USA', "Greenblat was walking back to camp on a well-worn trail when he saw a wolf angling fast for a point ahead on the trail. When the wolf hit the trail it turned and ran directly at him, maintaining eye contact, ears forward. He yelled and waved his arms, and the wolf put its ears back but kept running and eye contact. At close range Andy was able to fire his weapon. The bullet missed, but the muzzle blast pushed the wolf off line, and the wolf missed. He swung the rifle and hit the wolf's skull; staggered, it ran off. Rabies was not suspected because the animal quickly gave up and ran away.", ''], ['Park visitor', '', '♂', 'June, 1999', 'Agonistic', 'Vargas Island Provincial Park, British Columbia, Canada', 'At about 2am, a wolf began dragging a sleeping man in a sleeping bag. The wolf had moved the man several meters away from the campfire when the man awoke, sat up, and shouted. The wolf stopped, stepped back, and attacked at the midsection, still encased in the sleeping bag. He fought it with his hands and arms, and rolled back towards the fire pit. The wolf bit him on the back and head, leaving multiple lacerations and separating a part of his scalp from the skull before being chased away by a group of other campers. The attack lasted about five minutes. The man was transported to hospital in  https://drive.google.com/thumbnail?id=1oZRak0EaTG8PgLM5_3nkcWz0S-UJso3b , where his scalp flap was reattached with 50 stitches, and wounds to his hands and back were treated. Two wolves were killed the next day, tested negative for rabies, and identified as the same wolves which had been fed and played by people when they were pups. The same wolves had earlier that evening disturbed another camper, and two days earlier had menaced several nature photographers. The stomach contents showed no sign of scavenging human food.', ''], ['John Stenglein,  https://drive.google.com/thumbnail?id=1jZPqBhPKR_Cvz1z-5gsFiuWWKE3IAEM7  resident', '6', '♂', '2000, April 26,', 'Predatory', 'Icy Bay, Alaska, USA', "John and an older boy were playing near the edge of a logging camp when a wolf appeared and chased the boys, attacking John when he fell and dragging him and toward the woods. He was saved by his friend's Labrador retriever, Willie, followed by a group of people, and then John's father arrived and shot the wolf. It was neither sick nor starving, having been habituated to the presence of people. John received 19 laceration and puncture wounds on the back, legs, and buttocks.", ''], ['Noah Graham, camper', '16', '♂', '2013, August 24, 4:30AM', '', 'Near Lake Winnibigoshish,  https://drive.google.com/thumbnail?id=1rRv8gJxgmMnEL3WKlhmeTtmSNy5eHjK1 , USA', 'Awake and talking to his girlfriend when attacked from behind, biting his head. He kicked, screamed, punched, grabbed; and it disappeared. Was taken to the hospital for 17 staples to close a large head wound and to get precautionary injections. Authorities killed the wolf the next day and sent the body for rabies and DNA testing.', '']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

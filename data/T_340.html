@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to List of video games|Official games of Middle-earth in video games
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: which publisher had the most projects?
+            </div>
+            <div>
+                Answer: Electronic Arts
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Title', 'Year', 'Publisher', 'Developer', 'Platforms'], ['https://drive.google.com/thumbnail?id=1mTlF3-5-xB3ZVZ3uyLGFqPYJrIgoXeCm', '1982', 'Melbourne House', 'https://drive.google.com/thumbnail?id=1xmm6TgTg_bB7BWZpZS2p_helHq-sxP6j', 'Amstrad CPC, ZX Spectrum,  https://drive.google.com/thumbnail?id=1U_d6LO8uXotCipM41M7iL1QvJjWEbwm8 , BBC (no graphics),  https://drive.google.com/thumbnail?id=1fpe2HnYAvjm_6QYR3tjPUF-QMwH3J00U ,  https://drive.google.com/thumbnail?id=1k1tmb6mSCG-7x09uchlf5KAK5C0c3PCm ,  https://drive.google.com/thumbnail?id=1JYVIIlSwsZTgBe0eOR499G3p7VLvduLn ,  https://drive.google.com/thumbnail?id=1sRlzJIECt27z5O5Bb1BUOrbT1QY697Ms ,  https://drive.google.com/thumbnail?id=16floixD4w6hw6CQZKQQIjv7_8GsvtYM8'], ['https://drive.google.com/thumbnail?id=1le-zyDYpikUfbTgcC-XY1z0p_yg-l-LC  (AKA:  https://drive.google.com/thumbnail?id=1le-zyDYpikUfbTgcC-XY1z0p_yg-l-LC )', '1985', 'Melbourne House', 'https://drive.google.com/thumbnail?id=1xmm6TgTg_bB7BWZpZS2p_helHq-sxP6j', 'ZX Spectrum,  https://drive.google.com/thumbnail?id=1U_d6LO8uXotCipM41M7iL1QvJjWEbwm8 , BBC,  https://drive.google.com/thumbnail?id=1fpe2HnYAvjm_6QYR3tjPUF-QMwH3J00U ,  https://drive.google.com/thumbnail?id=1ExT4xsOzudhnMzvJqYrog_9CKIc24JA9 ,  https://drive.google.com/thumbnail?id=1sRlzJIECt27z5O5Bb1BUOrbT1QY697Ms ,  https://drive.google.com/thumbnail?id=16floixD4w6hw6CQZKQQIjv7_8GsvtYM8'], ['https://drive.google.com/thumbnail?id=1SErBpqLZK822QtmgUMmbtQnldndUSX7Q', '1987', 'Melbourne House', 'https://drive.google.com/thumbnail?id=1xmm6TgTg_bB7BWZpZS2p_helHq-sxP6j', 'Amstrad CPC,  https://drive.google.com/thumbnail?id=1U_d6LO8uXotCipM41M7iL1QvJjWEbwm8 , ZX Spectrum,  https://drive.google.com/thumbnail?id=1sRlzJIECt27z5O5Bb1BUOrbT1QY697Ms ,  https://drive.google.com/thumbnail?id=16floixD4w6hw6CQZKQQIjv7_8GsvtYM8'], ['https://drive.google.com/thumbnail?id=1aVKKb5D8oEb73LpORA_Ut0oTBjNhcko0', '1988', 'Melbourne House', 'Melbourne House', 'https://drive.google.com/thumbnail?id=1U_d6LO8uXotCipM41M7iL1QvJjWEbwm8 , Spectrum, Amstrad CPC,  https://drive.google.com/thumbnail?id=1VHWa6GRJOSSdLu8LKZJwxnE5uiEjl6NM , Atari ST,  https://drive.google.com/thumbnail?id=16floixD4w6hw6CQZKQQIjv7_8GsvtYM8'], ['The Crack of Doom', '1989', 'Melbourne House', 'https://drive.google.com/thumbnail?id=1xmm6TgTg_bB7BWZpZS2p_helHq-sxP6j', 'https://drive.google.com/thumbnail?id=1U_d6LO8uXotCipM41M7iL1QvJjWEbwm8 ,  https://drive.google.com/thumbnail?id=16floixD4w6hw6CQZKQQIjv7_8GsvtYM8'], ['https://drive.google.com/thumbnail?id=1B6c5A17fJ_6cAzE9GAv7ZrztmMTF5oo_', '1990', 'https://drive.google.com/thumbnail?id=1MSJdzr1bUS0ACN7boTYfKWYZo288fpJq ,  https://drive.google.com/thumbnail?id=1ya2_EBnVaKI7WABfW-iVfrq8mejFu86j', 'Interplay,  https://drive.google.com/thumbnail?id=1bmTle2bOaInkFgGn6JR99lgwz1LSriDs  ( https://drive.google.com/thumbnail?id=1pHEMC_VZgEBifk8S1NGZlKNrrJbg03lc )', 'https://drive.google.com/thumbnail?id=1pHEMC_VZgEBifk8S1NGZlKNrrJbg03lc ,  https://drive.google.com/thumbnail?id=16floixD4w6hw6CQZKQQIjv7_8GsvtYM8'], ['https://drive.google.com/thumbnail?id=1kYO1aNva6eckK7i8UXpi8eZ4XcwuRjQM', '1992', 'https://drive.google.com/thumbnail?id=1MSJdzr1bUS0ACN7boTYfKWYZo288fpJq', 'Interplay', 'https://drive.google.com/thumbnail?id=16floixD4w6hw6CQZKQQIjv7_8GsvtYM8'], ['Riders of Rohan', '1991', 'https://drive.google.com/thumbnail?id=1OzR4NwYXz_8DW82nsfC5Ogk1qx69aS0N , Mirrorsoft', 'https://drive.google.com/thumbnail?id=1xmm6TgTg_bB7BWZpZS2p_helHq-sxP6j ,  https://drive.google.com/thumbnail?id=15KWsPCfN59Qy8JxNWDTjihYC8n6PBCZf', 'https://drive.google.com/thumbnail?id=16floixD4w6hw6CQZKQQIjv7_8GsvtYM8'], ['https://drive.google.com/thumbnail?id=1fuXUY34x_pmaE5kXJvnkuwWQebpDnkUn', '1994', 'https://drive.google.com/thumbnail?id=1MSJdzr1bUS0ACN7boTYfKWYZo288fpJq', 'Interplay', 'https://drive.google.com/thumbnail?id=1ujMfKVN0ePbk_s70llK7uKZwVFfSLvTx'], ['https://drive.google.com/thumbnail?id=1aVyjU31hk-qdCxWCXVRLOfZJvsGHuCpa', '2002', 'https://drive.google.com/thumbnail?id=1FdSehH996bfWU7m9tysYkExeRhpAASbS', 'https://drive.google.com/thumbnail?id=1LMay-hj1QVPnwb2hdwlW4UDgvpcaNugP', 'MS Windows,  https://drive.google.com/thumbnail?id=13aicZsubuDDoMdjIEC7YDZYXRMt_XVvK'], ['https://drive.google.com/thumbnail?id=1aVyjU31hk-qdCxWCXVRLOfZJvsGHuCpa', '2002', 'https://drive.google.com/thumbnail?id=1FdSehH996bfWU7m9tysYkExeRhpAASbS', 'The Whole Experience', 'Xbox'], ['https://drive.google.com/thumbnail?id=1aVyjU31hk-qdCxWCXVRLOfZJvsGHuCpa', '2002', 'Vivendi Universal Games', 'Pocket Studios', 'https://drive.google.com/thumbnail?id=1bdBLgzzvsl4KfTT3BC5yki7MvAXw6An8'], ['https://drive.google.com/thumbnail?id=18bM5E8VZt7OdcosUDHPQwlIyywpj9KkZ', '2002', 'https://drive.google.com/thumbnail?id=1ya2_EBnVaKI7WABfW-iVfrq8mejFu86j', 'https://drive.google.com/thumbnail?id=14C3UTCvSwettIkloS5J2Tyr3C1OlpMsC  Hypnos Entertainment ( https://drive.google.com/thumbnail?id=1fuRETtpmHYvCTX_gi-Uy861hT_7-xOtL )', 'https://drive.google.com/thumbnail?id=13aicZsubuDDoMdjIEC7YDZYXRMt_XVvK , Xbox,  https://drive.google.com/thumbnail?id=1fuRETtpmHYvCTX_gi-Uy861hT_7-xOtL'], ['https://drive.google.com/thumbnail?id=18bM5E8VZt7OdcosUDHPQwlIyywpj9KkZ', '2002', 'https://drive.google.com/thumbnail?id=1ya2_EBnVaKI7WABfW-iVfrq8mejFu86j', 'https://drive.google.com/thumbnail?id=1vGwdo-Q0WGMH_XR1_1JZKNj7wJ_Iv1lA', 'https://drive.google.com/thumbnail?id=1bdBLgzzvsl4KfTT3BC5yki7MvAXw6An8'], ['https://drive.google.com/thumbnail?id=18u6-DTupvMnYB4B9augrGkDuwTZKNccX', '2003', 'https://drive.google.com/thumbnail?id=1ya2_EBnVaKI7WABfW-iVfrq8mejFu86j   https://drive.google.com/thumbnail?id=1KlQJ1spbTlrrCn1wjMJdDoZokcFlF-KG  ( https://drive.google.com/thumbnail?id=1cPCWykkmhdra0ucmHAAlK3D89DP3eV2j )', 'https://drive.google.com/thumbnail?id=1ya2_EBnVaKI7WABfW-iVfrq8mejFu86j ,Hypnos Entertainment ( https://drive.google.com/thumbnail?id=1fuRETtpmHYvCTX_gi-Uy861hT_7-xOtL  & Xbox)  https://drive.google.com/thumbnail?id=13VQxTrVy6r_XS5LsugZs0jd3TSzvEJcO  ( https://drive.google.com/thumbnail?id=1cPCWykkmhdra0ucmHAAlK3D89DP3eV2j )', 'MS Windows,  https://drive.google.com/thumbnail?id=13aicZsubuDDoMdjIEC7YDZYXRMt_XVvK , Xbox,  https://drive.google.com/thumbnail?id=1fuRETtpmHYvCTX_gi-Uy861hT_7-xOtL ,  https://drive.google.com/thumbnail?id=1cPCWykkmhdra0ucmHAAlK3D89DP3eV2j'], ['https://drive.google.com/thumbnail?id=18u6-DTupvMnYB4B9augrGkDuwTZKNccX', '2003', 'https://drive.google.com/thumbnail?id=1ya2_EBnVaKI7WABfW-iVfrq8mejFu86j', 'https://drive.google.com/thumbnail?id=1vGwdo-Q0WGMH_XR1_1JZKNj7wJ_Iv1lA', 'https://drive.google.com/thumbnail?id=1bdBLgzzvsl4KfTT3BC5yki7MvAXw6An8'], ['https://drive.google.com/thumbnail?id=1eC0JTseyq_15SulUJ5omweuOLx6MlArv', '2003', 'https://drive.google.com/thumbnail?id=1e97yTQ-UA-sldv9u7ravy3o7x-QtXGHP', 'https://drive.google.com/thumbnail?id=1e1qtdAMLyhIqMhNkYCef3s_VHGljFc72', 'MS Windows'], ['https://drive.google.com/thumbnail?id=1C9fpqBwgeoaCqJ_TbmyUZ_UIeSL__KEK', '2003', 'https://drive.google.com/thumbnail?id=1e97yTQ-UA-sldv9u7ravy3o7x-QtXGHP', 'Midway Austin', 'MS Windows,  https://drive.google.com/thumbnail?id=13aicZsubuDDoMdjIEC7YDZYXRMt_XVvK , Xbox,  https://drive.google.com/thumbnail?id=1fuRETtpmHYvCTX_gi-Uy861hT_7-xOtL'], ['https://drive.google.com/thumbnail?id=1C9fpqBwgeoaCqJ_TbmyUZ_UIeSL__KEK', '2003', 'Sierra', 'https://drive.google.com/thumbnail?id=1IvkIsiaCB4e2eZCQWuUXLRGhFXNb0bBJ', 'https://drive.google.com/thumbnail?id=1bdBLgzzvsl4KfTT3BC5yki7MvAXw6An8'], ['https://drive.google.com/thumbnail?id=1MOTRgQfe7jpYDqGoL6-8YdnNl_frlR5W', '2004', 'https://drive.google.com/thumbnail?id=1ya2_EBnVaKI7WABfW-iVfrq8mejFu86j', 'Electronic Arts', 'https://drive.google.com/thumbnail?id=13aicZsubuDDoMdjIEC7YDZYXRMt_XVvK , Xbox,  https://drive.google.com/thumbnail?id=1fuRETtpmHYvCTX_gi-Uy861hT_7-xOtL'], ['https://drive.google.com/thumbnail?id=159X0E5tjKVHJ44SaCU-gUg6ODuioZzG-', '2004', 'https://drive.google.com/thumbnail?id=1ya2_EBnVaKI7WABfW-iVfrq8mejFu86j', 'https://drive.google.com/thumbnail?id=1vGwdo-Q0WGMH_XR1_1JZKNj7wJ_Iv1lA', 'https://drive.google.com/thumbnail?id=1bdBLgzzvsl4KfTT3BC5yki7MvAXw6An8'], ['https://drive.google.com/thumbnail?id=1M8SoCnIXTrZGNTUDUpKhOPI0o28uPq0b', '2004', 'https://drive.google.com/thumbnail?id=1ya2_EBnVaKI7WABfW-iVfrq8mejFu86j', 'https://drive.google.com/thumbnail?id=1eDO6pXo4sneS9aGR6L2eQlDccGtQOFw5', 'MS Windows'], ['https://drive.google.com/thumbnail?id=1rLkOmz4W0_HuwAMSRR5RcEQ6RSTBslt2', '2005', 'https://drive.google.com/thumbnail?id=1ya2_EBnVaKI7WABfW-iVfrq8mejFu86j', 'https://drive.google.com/thumbnail?id=1tGU9HPJ28KgkOesxx6sh-AvN2jn84Miv', 'https://drive.google.com/thumbnail?id=1UQayUhJO3qEcja5lc3Gm1CmQYfzqwd0-'], ['https://drive.google.com/thumbnail?id=1UDb-wHLhfScXjDzXwGdY6koG_7wyoJn_', '2006', 'https://drive.google.com/thumbnail?id=1ya2_EBnVaKI7WABfW-iVfrq8mejFu86j', 'https://drive.google.com/thumbnail?id=1ya2_EBnVaKI7WABfW-iVfrq8mejFu86j', 'MS Windows,  https://drive.google.com/thumbnail?id=1kCUVMlfdJiSfuFk39JfGlaTTiTgx6b04'], ['The Lord of the Rings: The Battle for Middle-earth II: The Rise of the Witch-king', '2006', 'Electronic Arts', 'https://drive.google.com/thumbnail?id=1ya2_EBnVaKI7WABfW-iVfrq8mejFu86j', 'MS Windows'], ['https://drive.google.com/thumbnail?id=1JPNT-RaKpq3hvqxtMHIIJT3aKIxEQ1dJ', '2007', 'https://drive.google.com/thumbnail?id=1gNHgx-4OkPJOiqNtKMKdtCzOO2JG_xTQ ,  https://drive.google.com/thumbnail?id=1WkRY7pdUcZW-SC47rbSmN8PoGwIIwdry', 'Turbine, Inc.', 'MS Windows'], ['The Lord of the Rings Online: Mines of Moria', '2008', 'https://drive.google.com/thumbnail?id=1gNHgx-4OkPJOiqNtKMKdtCzOO2JG_xTQ ,  https://drive.google.com/thumbnail?id=1WkRY7pdUcZW-SC47rbSmN8PoGwIIwdry', 'Turbine, Inc.', 'MS Windows'], ['https://drive.google.com/thumbnail?id=1UYtZfCOI2dToMubIKhq2lt4oiq2uXmHw', '2009', 'https://drive.google.com/thumbnail?id=1ya2_EBnVaKI7WABfW-iVfrq8mejFu86j', 'https://drive.google.com/thumbnail?id=1AtJOSeSMqQ-7A-M31g2lUCME6w_0NWjt', 'https://drive.google.com/thumbnail?id=1kCUVMlfdJiSfuFk39JfGlaTTiTgx6b04 ,  https://drive.google.com/thumbnail?id=14V8SO57NAzpduj78is3Edft1Rl_D3dIL , MS Windows,  https://drive.google.com/thumbnail?id=1i0TYTnzY-RGs03KV3p93QH6sdv5zduEN'], ['The Lord of the Rings Online: Siege of Mirkwood', '2009', 'https://drive.google.com/thumbnail?id=1gNHgx-4OkPJOiqNtKMKdtCzOO2JG_xTQ', 'Turbine, Inc.', 'MS Windows'], ['https://drive.google.com/thumbnail?id=1ckodEop-SfsBgCkMA5NUJl9u-Fk2WqzX', '2010', 'https://drive.google.com/thumbnail?id=1A26M0pfjq7mMQCBarqUTF6s_e1z05RIF', 'https://drive.google.com/thumbnail?id=1JOdrBa9a4u035IVzLKPsZahH3ZvZ_iuL   https://drive.google.com/thumbnail?id=1uOSIQwSMMAnbdQ-EUJfZv0OXXz6KWpBK', 'Wii,  https://drive.google.com/thumbnail?id=1i0TYTnzY-RGs03KV3p93QH6sdv5zduEN ,  https://drive.google.com/thumbnail?id=13aicZsubuDDoMdjIEC7YDZYXRMt_XVvK ,  https://drive.google.com/thumbnail?id=1UQayUhJO3qEcja5lc3Gm1CmQYfzqwd0- ,  https://drive.google.com/thumbnail?id=14V8SO57NAzpduj78is3Edft1Rl_D3dIL'], ['https://drive.google.com/thumbnail?id=13uOTXkk_LYnQMPyVs_Fq6xopEosc_vAu', '2011', 'https://drive.google.com/thumbnail?id=1A26M0pfjq7mMQCBarqUTF6s_e1z05RIF', 'https://drive.google.com/thumbnail?id=1_9xYHs2UJ9_xalCPLcEAlrrRSOudrnr8', 'https://drive.google.com/thumbnail?id=14V8SO57NAzpduj78is3Edft1Rl_D3dIL , MS Windows,  https://drive.google.com/thumbnail?id=1kCUVMlfdJiSfuFk39JfGlaTTiTgx6b04'], ['The Lord of the Rings Online: Rise of Isengard', '2011', 'https://drive.google.com/thumbnail?id=1A26M0pfjq7mMQCBarqUTF6s_e1z05RIF', 'https://drive.google.com/thumbnail?id=1gNHgx-4OkPJOiqNtKMKdtCzOO2JG_xTQ', 'MS Windows'], ['The Lord of the Rings Online: Riders of Rohan', '2012', 'https://drive.google.com/thumbnail?id=1A26M0pfjq7mMQCBarqUTF6s_e1z05RIF', 'https://drive.google.com/thumbnail?id=1gNHgx-4OkPJOiqNtKMKdtCzOO2JG_xTQ', 'MS Windows'], ['https://drive.google.com/thumbnail?id=1at067OM3kJ_H-cCqw43n-08UJV5h3TAD', '2012', 'https://drive.google.com/thumbnail?id=1A26M0pfjq7mMQCBarqUTF6s_e1z05RIF', 'https://drive.google.com/thumbnail?id=1hgad6sR4F9BEKX59rZLTxxcel643WO4V', 'https://drive.google.com/thumbnail?id=1kCUVMlfdJiSfuFk39JfGlaTTiTgx6b04 ,  https://drive.google.com/thumbnail?id=14V8SO57NAzpduj78is3Edft1Rl_D3dIL , MS Windows'], ['https://drive.google.com/thumbnail?id=1nDiPlN2r_BTkd-x71UU9W__a21-RcD9c', '2012', 'https://drive.google.com/thumbnail?id=1A26M0pfjq7mMQCBarqUTF6s_e1z05RIF', 'https://drive.google.com/thumbnail?id=1Z4xpglRAtmeHLmcdG6xbQdd539C3Dnd8', 'MS Windows, Wii,  https://drive.google.com/thumbnail?id=142fzp0ChLR4DicqIkhpLwYV_ebzWzLyV ,  https://drive.google.com/thumbnail?id=1AIU2QpuktydPyBhBMMPx2osqW8JFZsv9 ,  https://drive.google.com/thumbnail?id=14V8SO57NAzpduj78is3Edft1Rl_D3dIL ,  https://drive.google.com/thumbnail?id=1i0TYTnzY-RGs03KV3p93QH6sdv5zduEN ,  https://drive.google.com/thumbnail?id=1kCUVMlfdJiSfuFk39JfGlaTTiTgx6b04'], ['The Hobbit: Kingdoms of Middle-earth', '2012', '', 'https://drive.google.com/thumbnail?id=1HnPQEKMQ2RnL0FlyBVzG2gPleMKV2jhd', 'Android, Apple iOS'], ['The Hobbit: Armies of the Third Age', '2013', '', 'https://drive.google.com/thumbnail?id=1HnPQEKMQ2RnL0FlyBVzG2gPleMKV2jhd', 'Browser game'], ["The Lord of the Rings Online: Helm's Deep", '2013', 'https://drive.google.com/thumbnail?id=1A26M0pfjq7mMQCBarqUTF6s_e1z05RIF', 'https://drive.google.com/thumbnail?id=1gNHgx-4OkPJOiqNtKMKdtCzOO2JG_xTQ', 'https://drive.google.com/thumbnail?id=1cPCWykkmhdra0ucmHAAlK3D89DP3eV2j , MS Windows'], ['https://drive.google.com/thumbnail?id=1WZ1DwsIPwzXQTxGEBTfmF-XNvQcufhIM', '2014', 'https://drive.google.com/thumbnail?id=1A26M0pfjq7mMQCBarqUTF6s_e1z05RIF', 'https://drive.google.com/thumbnail?id=1hgad6sR4F9BEKX59rZLTxxcel643WO4V', 'https://drive.google.com/thumbnail?id=1kCUVMlfdJiSfuFk39JfGlaTTiTgx6b04 ,  https://drive.google.com/thumbnail?id=1Fio76nKkta49oOLbgP3lpmNQWIOkdU5x ,  https://drive.google.com/thumbnail?id=14V8SO57NAzpduj78is3Edft1Rl_D3dIL ,  https://drive.google.com/thumbnail?id=18SWi-19qeX7uQYoFVLlWmaGtWEvSMmzv , MS Windows']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

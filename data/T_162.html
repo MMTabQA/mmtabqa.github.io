@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Track listing of Freedom Writers (soundtrack)
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: did will.i.am or talib kweli produce "a dream"?
+            </div>
+            <div>
+                Answer: will.i.am
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['#', 'Title', 'Songwriters', 'Producer(s)', 'Performer (s)'], ['1', 'A Dream', 'L. Lynn, W. Adams, M.L. King Jr.', 'https://drive.google.com/thumbnail?id=1sJqAzSzJN1pit2PHA564NRjuJFq5RTRr', 'https://drive.google.com/thumbnail?id=1hdSzKuShQCxzlq_tfDhYGxpMa2HW-QLF , will.i.am'], ['2', 'https://drive.google.com/thumbnail?id=1NAXKT0xvYtzU3QM_Egl4QYbeArWe0w25', 'T.K. Greene, K. Holland, F. Williams', 'Kwamé', 'https://drive.google.com/thumbnail?id=10YtfGsKBT8T4mLHFz-CGeCu_n5sumLX_'], ['3', 'https://drive.google.com/thumbnail?id=1Rsony00pvU-eCGBE31Ezz8DLAxM5riBr  [Lenky Remix]', 'J. Ortega, V. Santiago, L. Vazquez, R. Ramirez, K. Ravenell, E. Almonte', '*?*', 'https://drive.google.com/thumbnail?id=11cModiBGqlF_cV_Qbi_K9eDg2p5UbetA'], ['4', 'When the Ship Goes Down (Diamond D Remix)', 'L. Freese, L. Muggerud, L. Dickens', 'https://drive.google.com/thumbnail?id=1fE28xqr2iQj6cfR1vqM6YQbzQBlcLAo4', 'https://drive.google.com/thumbnail?id=1HR6UJ5o3THeJ11SgExWskgBMlpsyJ6RZ'], ['5', 'https://drive.google.com/thumbnail?id=1nlTcwztwBZeglz8zP0VSAqWPTKGe834B', 'V. Brown, A. Criss, K. Gist, E. Isley, Ru. Isley, Ro. Isley, O. Isley, M. Isley', 'https://drive.google.com/thumbnail?id=1qy6Q-WBZpa9FIqn12ygsMyTBx09SV_TM', 'Naughty by Nature'], ['6', 'https://drive.google.com/thumbnail?id=1YVhBupSDW2g-rNDb0EXgmYkkuUYWocHW', 'T. Shakur, D. Anderson, S. Vincent, R. Troutman', 'DJ Daryl', 'https://drive.google.com/thumbnail?id=1eFlOzI6oqqAsPMR6j6QZ8wa8NC_ZG4YP'], ['7', 'Code of the Streets', 'K. Elam, C. Martin, R. Russell', 'https://drive.google.com/thumbnail?id=1ng4nRknZ3IywhCDILaVyIqT8bc_qsQz7', 'https://drive.google.com/thumbnail?id=1x-rqz_csUH0PQlTe_vqUEpFwEnQupr6b'], ['8', 'https://drive.google.com/thumbnail?id=1KGvktHblQdAjnHL9PJ3UfSShWYJCDoxd', 'I. Butler, C. Irving, M. Vieira, J. Williams', 'https://drive.google.com/thumbnail?id=10-qPZLFGmr6IAWYO3dFe1EUAZl2RySEj', 'https://drive.google.com/thumbnail?id=10-qPZLFGmr6IAWYO3dFe1EUAZl2RySEj'], ['9', 'Officer', 'T. Hardson, J. Martinez, R. Robinson, D. Stewart, E. Wilcox', 'J-Swift', 'https://drive.google.com/thumbnail?id=1xydwA79GMLTZ9mPKtXb2ylmv_twCq6hw'], ['10', 'This Is How We Do It', 'M. Jordan, O. Pierce, R. Walters', 'https://drive.google.com/thumbnail?id=1Js2SdoTWNs2oPmOPojjEdk1yN1szeUKu , Oji Pierce', 'Montell Jordan'], ['11', 'Colors', 'W. Adams', 'will.i.am', 'will.i.am'], ['12', 'Bus Ride', 'W. Adams', 'will.i.am', 'will.i.am'], ['13', 'Riots', 'M. Isham, W. Adams', '*?*', 'Mark Isham,  https://drive.google.com/thumbnail?id=1xeDGMkGtOndAnT5EBWXBtNd8fk_cbReC , will.i.am'], ['14', "Eva's Theme", 'M. Isham', '*?*', 'Mark Isham'], ['15', 'https://drive.google.com/thumbnail?id=1dIlOfuRoNJmJAo0TA0-Fwd6aY_h0BgA7', 'M. Isham', '*?*', 'Mark Isham, Miri Ben-Ari']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

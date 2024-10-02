@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Match results of 1997 Brisbane Broncos season
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: number of opponents faced?
+            </div>
+            <div>
+                Answer: 9
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Round', 'Opponent', 'Result', 'Bro.', 'Opp.', 'Date', 'Venue', 'Crowd', 'Position'], ['1', 'https://drive.google.com/thumbnail?id=18LZBLQVjSmiuFAgVC1PPzcKH0QFZ8LEI', 'Win', '14', '2', '1 Mar', 'https://drive.google.com/thumbnail?id=1Cp3WYn5LokfEzNPJYwHkSuhRyCti2Oux', '42,361', '2/10'], ['2', 'https://drive.google.com/thumbnail?id=12D2iKKD4Kax0tUja4rO8ulkCmV6VVEcX', 'Win', '28', '12', '9 Mar', 'ANZ Stadium', '16,279', '1/10'], ['3', 'https://drive.google.com/thumbnail?id=1dTcuUCsQ8_m2EuSzfBDzMdPbMkXDzPeH', 'Win', '26', '16', '16 Mar', 'https://drive.google.com/thumbnail?id=15Jh6wo3gVQmw2Muiy66Gi4U1lq81mSgV', '11,109', '2/10'], ['4', 'https://drive.google.com/thumbnail?id=1vnlBVrkEBYopA71SkbsCaeU7cWdSpbRt', 'Win', '24', '8', '24 Mar', 'ANZ Stadium', '26,103', '2/10'], ['5', 'https://drive.google.com/thumbnail?id=1XZ0FUvtN2aTDK6I8LLEpG_4wFZXf5wRz', 'Win', '14', '12', '31 Mar', 'ANZ Stadium', '17,294', '1/10'], ['6', 'https://drive.google.com/thumbnail?id=1hmASi2VIVwXHNqx5acfUO0ctJ7mfb6yH', 'Win', '42', '16', '5 Apr', 'Stockland Stadium', '30,122', '1/10'], ['7', 'Adelaide Rams', 'Win', '20', '10', '13 Apr', 'Adelaide Oval', '17,633', '1/10'], ['8', 'https://drive.google.com/thumbnail?id=1FkzZhxLo50FdthJpFSWPuu2oMXUVPGNI', 'Loss', '26', '27', '21 Apr', 'Penrith Football Stadium', '12,648', '1/10'], ['9', 'https://drive.google.com/thumbnail?id=1tdka2J9orS1gAp6NgUasMIvGTOL0Xf73', 'Win', '34', '16', '28 Apr', 'ANZ Stadium', '17,921', '1/10'], ['10', 'Auckland Warriors', 'Win', '34', '18', '4 May', 'Mt Smart Stadium', '16,471', '1/10'], ['11', 'North Queensland Cowboys', 'Draw', '20', '20', '25 May', 'ANZ Stadium', '14,167', '1/10'], ['12', 'https://drive.google.com/thumbnail?id=18Vc_GDPZDTQyIvLWbcefwKA9mI8sXYwr', 'Loss', '6', '24', '30 May', 'Topper Stadium', '7,124', '1/10'], ['13', 'Cronulla Sharks', 'Loss', '4', '32', '30 Jun', 'Endeavour Field', '12,240', '1/10'], ['14', 'Perth Reds', 'Win', '50', '14', '6 Jul', 'ANZ Stadium', '11,806', '1/10'], ['15', 'Canberra Raiders', 'Win', '19', '4', '14 Jul', 'Bruce Stadium', '13,067', '1/10'], ['16', 'Penrith Panthers', 'Win', '54', '12', '10 Aug', 'ANZ Stadium', '13,921', '1/10'], ['17', 'Hunter Mariners', 'Win', '34', '16', '18 Aug', 'ANZ Stadium', '13,830', '1/10'], ['18', 'Canterbury Bulldogs', 'Win', '32', '24', '25 Aug', 'Belmore Oval', '9,781', '1/10'], ['Semi Final', 'Cronulla Sharks', 'Win', '34', '2', '6 Sep', 'Stockland Stadium', '26,256', ''], ['GRAND FINAL', 'Cronulla Sharks', 'Win', '26', '8', '20 Sep', 'ANZ Stadium', '58,912', '']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

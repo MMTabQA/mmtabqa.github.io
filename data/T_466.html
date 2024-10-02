@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Schedule of 1987 Grambling State Tigers football team
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: what were the number of wins in the month of october?
+            </div>
+            <div>
+                Answer: 4
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Date', 'Opponent', 'Site', 'Result'], ['September 5', 'Alcorn State', 'https://drive.google.com/thumbnail?id=1vVDApFxV4HdhlhefWJROpaSTJu5rH1cf  •  https://drive.google.com/thumbnail?id=1xLzDcaGTFl0KOLJMrxXRVrj9lZhJA6wk', 'L\xa024–28'], ['September 12', 'vs.\xa0Central State*', 'https://drive.google.com/thumbnail?id=1pD8g-fYvOCR5yV08rsNEuP3ZGKAkoXR6  •  https://drive.google.com/thumbnail?id=1QOnoWsWwaiaMI8Pl04Jf7oOrEQD-_R4x', 'L\xa021–37'], ['September 26', 'https://drive.google.com/thumbnail?id=1VQD8D_8yrCiOBEhZi9QQT4a8p7OEQDp0 *', 'Eddie Robinson Stadium • Grambling, LA', 'W\xa021–14'], ['October 3', 'vs.\xa0 https://drive.google.com/thumbnail?id=14b9UxuQX2zA72BQ2k3fvnjgXXj8Ea914', 'https://drive.google.com/thumbnail?id=1kd9QWoz1MJvOT__XPmRXbN5U3-khXvJ9  •  https://drive.google.com/thumbnail?id=1JtA4ESqJsVnrqn2O31hzuKevQlZKlSM_', 'W\xa028–7'], ['October 10', 'at\xa0 https://drive.google.com/thumbnail?id=1aJLvkWn7FQvYR8Shwy5McJAFQvtWh5MN *', 'https://drive.google.com/thumbnail?id=13cnXoW1-1PeSGm3iyeYhUlKR9YjuKFc8  •  https://drive.google.com/thumbnail?id=16SmAJ1zlEK5-6-NRp0ch_EBcUb1ydCXQ', 'W\xa051–9'], ['October 17', 'https://drive.google.com/thumbnail?id=1qi50rLnD7MklYd5WSEOWreyBf8uxGjXG', 'Eddie Robinson Stadium • Grambling, LA', 'W\xa045–14'], ['October 24', 'at\xa0 https://drive.google.com/thumbnail?id=13V2QV3TSsgs78aE9tbBXogrlpJLafJX-', 'https://drive.google.com/thumbnail?id=1-Mh8ErzKLOEvjtHIWOeW5Yck-Dy9LqJN  •  https://drive.google.com/thumbnail?id=1CbnhGJ4F9zVwM9aUBkEKxEDPDaJU9Hln', 'L\xa017–31'], ['October 31', 'https://drive.google.com/thumbnail?id=1ncRYiNkW8xmCHQ1kbesUhHoua-6aaOrX', 'Eddie Robinson Stadium • Grambling, LA', 'W\xa030–9'], ['November 7', 'at\xa0 https://drive.google.com/thumbnail?id=1A7PUT6QuVXgBQZX79zfSpMp796LiccXc', 'Cramton Bowl •  https://drive.google.com/thumbnail?id=1SdmEaUhWK82EYXEP2vHPIC_9UT-o6USl', 'L\xa07–17'], ['November 14', 'https://drive.google.com/thumbnail?id=1MlaS4-yF2xuFLQlnEvgp7vtmcPPFD7_e *', 'Eddie Robinson Stadium • Grambling, LA', 'L\xa013–15'], ['November 28', 'vs.\xa0Southern', 'https://drive.google.com/thumbnail?id=1WdPidHsNZc7GyRrI7eyfxpImLn6_iNVN  •  https://drive.google.com/thumbnail?id=1sgOpxAjjc5ErjE8hYztDSn1uvT_xvAyF  (XIV  https://drive.google.com/thumbnail?id=1WLtzAzFthWPlYpEMDih4hDuTEL-eYHIi )', 'L\xa021–27']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Classification|Race results of 2012 GoPro Indy Grand Prix of Sonoma
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: what are the total number of laps will power drove?
+            </div>
+            <div>
+                Answer: 85
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Pos', 'No.', 'Driver', 'Team', 'Engine', 'Laps', 'Time/Retired', 'Grid', 'Laps Led', 'Points'], ['1', '2', 'https://drive.google.com/thumbnail?id=1iOU957WdgNsSygPJ9AP4z_l9X9S1LeKU', 'https://drive.google.com/thumbnail?id=13nndPIRzwkCkkiRmNrHnMmqFUQBTKcxR', 'https://drive.google.com/thumbnail?id=1RSDqpiTNJCStg9fEQt1eOIQZZ0NNJI8Q', '85', '2:07:02.8248', '2', '27', '50'], ['2', '12', 'https://drive.google.com/thumbnail?id=1VvCGJKka3t4uBhwqvH2Qy-RLOmWMHSc5', 'https://drive.google.com/thumbnail?id=13nndPIRzwkCkkiRmNrHnMmqFUQBTKcxR', 'Chevrolet', '85', '+ 0.4408', '1', '57', '43'], ['3', '10', 'https://drive.google.com/thumbnail?id=1hb1Qcgo4Vgkh4DqwbZDbv-VZTbtWIBL2', 'https://drive.google.com/thumbnail?id=1IKxNS8c-g2FW4ayVo5qhq5rok4iynilj', 'https://drive.google.com/thumbnail?id=197Wx0NxY5Tnk4LuUom7wPlcVirBauvUr', '85', '+ 1.0497', '6', '0', '35'], ['4', '8', 'https://drive.google.com/thumbnail?id=1JQgKKoqnM6tjTJ7b2hsOf5qODvIk-B7r', 'KV Racing Technology', 'https://drive.google.com/thumbnail?id=1RSDqpiTNJCStg9fEQt1eOIQZZ0NNJI8Q', '85', '+ 8.8529', '11', '0', '32'], ['5', '38', 'https://drive.google.com/thumbnail?id=1gpU9lzf3mj3NDLyZbT-uvWE-gO3krMMg', 'https://drive.google.com/thumbnail?id=1IKxNS8c-g2FW4ayVo5qhq5rok4iynilj', 'https://drive.google.com/thumbnail?id=197Wx0NxY5Tnk4LuUom7wPlcVirBauvUr', '85', '+ 9.4667', '13', '0', '30'], ['6', '3', 'Hélio Castroneves', 'https://drive.google.com/thumbnail?id=13nndPIRzwkCkkiRmNrHnMmqFUQBTKcxR', 'https://drive.google.com/thumbnail?id=1RSDqpiTNJCStg9fEQt1eOIQZZ0NNJI8Q', '85', '+ 11.2575', '4', '0', '28'], ['7', '77', 'Simon Pagenaud (R)', 'Schmidt Hamilton Motorsports', 'https://drive.google.com/thumbnail?id=197Wx0NxY5Tnk4LuUom7wPlcVirBauvUr', '85', '+ 12.3087', '9', '0', '26'], ['8', '4', 'J.R. Hildebrand', 'https://drive.google.com/thumbnail?id=1AT0Je6X0gSG2Y9ejAbw-bPaUvjdqyhM1', 'Chevrolet', '85', '+ 22.8121', '15', '0', '24'], ['9', '98', 'https://drive.google.com/thumbnail?id=1aXo5bBvrtFLTFkCSSdgvINOEPLFYU3bL', 'https://drive.google.com/thumbnail?id=15vJcDxdIdMYo5NBHJOFao9_hqJhbBe6Y', 'Honda', '85', '+ 39.6868', '8', '0', '22'], ['10', '11', 'https://drive.google.com/thumbnail?id=1d4IKU309D7525MrelvFp2fN6IH1HvxRQ', 'https://drive.google.com/thumbnail?id=13Q7dkEuzAcOVLFL22a67HPJ__rY8cYTv', 'Chevrolet', '84', '+ 1 lap', '16', '0', '20'], ['11', '18', 'Justin Wilson', 'https://drive.google.com/thumbnail?id=17oELTG6qbktJpgodULOnSmpxRIvp0PyF', 'https://drive.google.com/thumbnail?id=197Wx0NxY5Tnk4LuUom7wPlcVirBauvUr', '84', '+ 1 lap', '20', '0', '19'], ['12', '19', 'https://drive.google.com/thumbnail?id=1uRTCvS5u0dJ8CPyaCyWNW3hYoQ3LZwzp', 'Dale Coyne Racing', 'https://drive.google.com/thumbnail?id=197Wx0NxY5Tnk4LuUom7wPlcVirBauvUr', '84', '+ 1 lap', '24', '0', '18'], ['13', '9', 'https://drive.google.com/thumbnail?id=1q5d9BIv22oE-8YPxr8_EFvnOfCD-bVxm', 'https://drive.google.com/thumbnail?id=1IKxNS8c-g2FW4ayVo5qhq5rok4iynilj', 'https://drive.google.com/thumbnail?id=197Wx0NxY5Tnk4LuUom7wPlcVirBauvUr', '84', '+ 1 lap', '5', '0', '17'], ['14', '14', 'https://drive.google.com/thumbnail?id=1agK6eDhq-tptmuRbGfNVOzbhCioUXTRG', 'https://drive.google.com/thumbnail?id=1vdp0iMX7tMyBdPMxyskT5rOtOS4pA96L', 'Honda', '84', '+ 1 lap', '14', '0', '16'], ['15', '17', 'https://drive.google.com/thumbnail?id=1JE6ipD5SvZud26IoNmdJzlnJx3WGNJvR', 'https://drive.google.com/thumbnail?id=1sAqUgv3WNM1qmSVOAIMGykwFfRurA2Ev', 'https://drive.google.com/thumbnail?id=1RSDqpiTNJCStg9fEQt1eOIQZZ0NNJI8Q', '84', '+ 1 lap', '23', '0', '15'], ['16', '5', 'https://drive.google.com/thumbnail?id=1bvqK83Mt8-Wya-lgeI5Zio2PNHioA3yo', 'KV Racing Technology', 'https://drive.google.com/thumbnail?id=1RSDqpiTNJCStg9fEQt1eOIQZZ0NNJI8Q', '84', '+ 1 lap', '17', '0', '14'], ['17', '78', 'https://drive.google.com/thumbnail?id=1uUjjhLU3to4BrNMp05AW2NFyZ-3E-Ew9', 'https://drive.google.com/thumbnail?id=1rARBaWqdBWpt-cKLUK7zbZCvYJvjaWXx', 'https://drive.google.com/thumbnail?id=1l1baL47dqMAzpnSE6VBvNBUqPEYXRyqk', '84', '+ 1 lap', '27', '0', '13'], ['18', '28', 'https://drive.google.com/thumbnail?id=1hROVH4tFuFPe2CgEAJTiZnYoiGmos1uZ', 'https://drive.google.com/thumbnail?id=1sAqUgv3WNM1qmSVOAIMGykwFfRurA2Ev', 'https://drive.google.com/thumbnail?id=1RSDqpiTNJCStg9fEQt1eOIQZZ0NNJI8Q', '84', '+ 1 lap', '7', '1', '12'], ['19', '22', 'Oriol Servià', 'https://drive.google.com/thumbnail?id=1jmDKUoTJL2j_QgmAOhUNLMuxHgZywHkQ', 'https://drive.google.com/thumbnail?id=1RSDqpiTNJCStg9fEQt1eOIQZZ0NNJI8Q', '84', '+ 1 lap', '18', '0', '12'], ['20', '20', 'https://drive.google.com/thumbnail?id=1b0YOK_-xLXmgIWfxuesDxh3eZNM2kgLr', 'Ed Carpenter Racing', 'Chevrolet', '84', '+ 1 lap', '25', '0', '12'], ['21', '83', 'https://drive.google.com/thumbnail?id=1o23H-sQ5kdhuR6m5hmWkHQJoCSCm-lbK', 'https://drive.google.com/thumbnail?id=1IKxNS8c-g2FW4ayVo5qhq5rok4iynilj', 'https://drive.google.com/thumbnail?id=197Wx0NxY5Tnk4LuUom7wPlcVirBauvUr', '82', '+ 3 laps', '21', '0', '12'], ['22', '7', 'https://drive.google.com/thumbnail?id=1XPJ3Vy0qochrTLLhdtJ2psCIT_sYWxk_', 'https://drive.google.com/thumbnail?id=1EmVNeJ0JwJb-R-xzhcaUEKe4I97xKqFx', 'https://drive.google.com/thumbnail?id=1RSDqpiTNJCStg9fEQt1eOIQZZ0NNJI8Q', '63', 'Contact', '3', '0', '12'], ['23', '67', 'Josef Newgarden (R)', 'https://drive.google.com/thumbnail?id=10OeJew8Hyqp4GrivS6lJwt8Ol7zby8wB', 'https://drive.google.com/thumbnail?id=197Wx0NxY5Tnk4LuUom7wPlcVirBauvUr', '62', 'Contact', '22', '0', '12'], ['24', '6', 'https://drive.google.com/thumbnail?id=10f2ulJaBRI4momHhF9_BC7jlKgiDXniA  (R)', 'https://drive.google.com/thumbnail?id=1EmVNeJ0JwJb-R-xzhcaUEKe4I97xKqFx', 'Chevrolet', '48', 'Mechanical', '19', '0', '12'], ['25', '26', 'https://drive.google.com/thumbnail?id=1PSxFNfrg2ZQOtmm5W9Ra410gRf-lsvfX', 'https://drive.google.com/thumbnail?id=1sAqUgv3WNM1qmSVOAIMGykwFfRurA2Ev', 'https://drive.google.com/thumbnail?id=1RSDqpiTNJCStg9fEQt1eOIQZZ0NNJI8Q', '46', 'Mechanical', '12', '0', '10'], ['26', '27', 'https://drive.google.com/thumbnail?id=1WnPt66lZ7fMPZscKxuZ9tUBjWErks10T', 'Andretti Autosport', 'https://drive.google.com/thumbnail?id=1RSDqpiTNJCStg9fEQt1eOIQZZ0NNJI8Q', '35', 'Mechanical', '10', '0', '10'], ['27', '15', 'Takuma Sato', 'Rahal Letterman Lanigan Racing', 'https://drive.google.com/thumbnail?id=197Wx0NxY5Tnk4LuUom7wPlcVirBauvUr', '2', 'Mechanical', '26', '0', '10']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

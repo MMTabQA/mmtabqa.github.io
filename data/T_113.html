@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Managers of List of Belgian Football League managers
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: who is older--francis bosschaerts or peter maes?
+            </div>
+            <div>
+                Answer: Francis Bosschaerts
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Name', 'Date of birth', 'Club', 'Division', 'Appointed', 'Time as manager'], ['Francis Bosschaerts', '15 October 1956', 'Heist', 'Belgian Second Division', '1 June 1999', '15\xa0years, 25\xa0days'], ['https://drive.google.com/thumbnail?id=1isNVNWooP8DjYDsDafwBErgZr6-vaZUf', '1 June 1964', 'https://drive.google.com/thumbnail?id=15HDWXPqj0xZuy5BwKsHHS25e81QO98CV', 'Belgian Pro League', '20 May 2010', '4\xa0years, 37\xa0days'], ['https://drive.google.com/thumbnail?id=1B13rysrtA8HeNhhBBT9R8ncI0uubN-mN', '16 February 1964', 'Kortrijk', 'Belgian Pro League', '6 June 2010', '4\xa0years, 20\xa0days'], ['https://drive.google.com/thumbnail?id=1b2W0SRgID0kM32m2MiBSmpgA295gMdh8', '10 October 1977', 'https://drive.google.com/thumbnail?id=14CmYnnRevZHngMmaRAN0BYAuoG5AeYDt', 'Belgian Pro League', '15 February 2011', '3\xa0years, 131\xa0days'], ['Arnauld Mercier', '4 June 1972', 'https://drive.google.com/thumbnail?id=1ABr1vPlSxqVw3BKXrVyFE1izqtpE1ftp', 'Belgian Second Division', '21 April 2011', '3\xa0years, 66\xa0days'], ['https://drive.google.com/thumbnail?id=1EC49nuUIh1ma6T0EiLvNMqrN7kYZobZe', '23 January 1974', 'https://drive.google.com/thumbnail?id=1XcCOXWiJVpyFdIoOeqrD_0TQJjm9gTwf', 'Belgian Second Division', '6 June 2011', '3\xa0years, 20\xa0days'], ['Serhiy Serebrennikov', '1 September 1976', 'https://drive.google.com/thumbnail?id=1-hcpAODBtCIV3J4VqSeTw28prwABd6hQ', 'Belgian Second Division', '30 June 2011', '2\xa0years, 361\xa0days'], ['Regi Van Acker', '25 April 1955', 'https://drive.google.com/thumbnail?id=1EJ70qxVFRg3obmuroGKdn6uRetwmPkvl', 'Belgian Second Division', '23 November 2011', '2\xa0years, 215\xa0days'], ['https://drive.google.com/thumbnail?id=1cIPiQ95VLX-_Zb_8Akwx13aXSBHdVu0g', '11 October 1957', 'https://drive.google.com/thumbnail?id=1cHHXy7J-KLc6ojyRJAftXRb8-o8vw0xF', 'Belgian Pro League', '30 December 2011', '2\xa0years, 178\xa0days'], ['Dante Brogno', '2 May 1966', 'https://drive.google.com/thumbnail?id=1EobQ5SCVQCIFnoMpylLXGgD6Jk-LA8r2', 'Belgian Second Division', '26 February 2012', '2\xa0years, 120\xa0days'], ['Eric Franken', '', 'https://drive.google.com/thumbnail?id=1ZR1XFrLpNJPqAZnZNyHOII77J5QjRnae', 'Belgian Second Division', '20 March 2012', '2\xa0years, 98\xa0days'], ['https://drive.google.com/thumbnail?id=1igMtaahBRsTIqp_2vEy26Jl2hqEUJqox', '4 October 1966', 'https://drive.google.com/thumbnail?id=1aksH9z-lJ0gimpaJNZsHqrr7qYey2hGb', 'Belgian Pro League', '30 May 2012', '2\xa0years, 27\xa0days'], ['https://drive.google.com/thumbnail?id=1f7dMKoApSCYZMiCCITX2_hlv1bAzb-yd', '7 January 1962', 'Eupen', 'Belgian Second Division', '6 July 2012', '1\xa0year, 355\xa0days'], ['Lorenzo Staelens', '30 April 1964', 'Cercle Brugge', 'Belgian Pro League', '2 April 2013', '1\xa0year, 85\xa0days'], ['Dennis van Wijk', '16 December 1962', 'https://drive.google.com/thumbnail?id=1ISV-98aicQNzXDIYcmbkbgOOpse2WhzY', 'Belgian Second Division', '29 April 2013', '1\xa0year, 58\xa0days'], ['https://drive.google.com/thumbnail?id=1Iwx3vLeRKdDf5LR6pDJInvCu71tMSLxk', '15 October 1963', 'https://drive.google.com/thumbnail?id=11co0RYzrxMCnXIP1sX0k3nXLASy2U0ON', 'Belgian Pro League', '14 May 2013', '1\xa0year, 43\xa0days'], ['Yannick Ferrera', '24 September 1980', 'Sint-Truiden', 'Belgian Second Division', '24 May 2013', '1\xa0year, 33\xa0days'], ['https://drive.google.com/thumbnail?id=124iKLGIfDpQPp9VzOWcnc8radB483FE1', '7 August 1975', 'https://drive.google.com/thumbnail?id=1vgjDGZmskDmxy3Ldzckq_HcVTIADEzyg', 'Belgian Pro League', '27 May 2013', '1\xa0year, 30\xa0days'], ['https://drive.google.com/thumbnail?id=1FCetFo2CMenfhql3AlJlbB7WJi-7aNuS', '27 March 1972', 'https://drive.google.com/thumbnail?id=1vcgEWjdrz7SHILJLmwy4UFZvSUh7FZiX', 'Belgian Second Division', '29 May 2013', '1\xa0year, 28\xa0days'], ['Philippe Médery', '', 'Visé', 'Belgian Second Division', '31 May 2013', '1\xa0year, 26\xa0days'], ['https://drive.google.com/thumbnail?id=1lhWwiiihZ6X4wBJBKixLBA8ROvKFOjcQ', '12 March 1966', 'https://drive.google.com/thumbnail?id=1ocGJEExkXhZiK3vJatxnlKMED6WJhGVH', 'Belgian Pro League', '1 June 2013', '1\xa0year, 25\xa0days'], ['https://drive.google.com/thumbnail?id=1i1bTZn2xRNDF7Gg_gC9bItU9geL6-Vci', '18 July 1973', 'https://drive.google.com/thumbnail?id=1BKxnhS80gSa7-KTlHcBI6l3gv9TjyFqg', 'Belgian Second Division', '1 June 2013', '1\xa0year, 25\xa0days'], ['https://drive.google.com/thumbnail?id=1ZBhFq6_EZBxLGDGhsCkHKXas97kXnABN', '24 January 1959', 'https://drive.google.com/thumbnail?id=1fcuoPZ_0z7e4kZrsKMsa9PSotr4qLDuG', 'Belgian Pro League', '21 September 2013', '0\xa0years, 278\xa0days'], ['Lionel Bah', '2 February 1980', 'WS Brussels', 'Belgian Second Division', '21 September 2013', '0\xa0years, 278\xa0days'], ['Guido Brepoels', '7 June 1961', 'https://drive.google.com/thumbnail?id=1XhFInlijWxwy--kgLNhM8IKLixQAjjlf', 'Belgian Second Division', '24 September 2013', '0\xa0years, 275\xa0days'], ['https://drive.google.com/thumbnail?id=1dxiU2OgLmFxgwQWrCSCLwiP4WnB9gvIv', '3 July 1961', 'Mons', 'Belgian Pro League', '27 September 2013', '0\xa0years, 272\xa0days'], ['https://drive.google.com/thumbnail?id=189vFkwRA7pVyXc7ZHXtZ-x-EhQ7_Hc1k', '9 April 1962', 'https://drive.google.com/thumbnail?id=14kmxBRr3Z24ozYD5vL_2giw-Wobh_1Ve', 'Belgian Pro League', '1 October 2013', '0\xa0years, 268\xa0days'], ['https://drive.google.com/thumbnail?id=1vVYWCmMHjzVgMx67ngIJyUf2wDDkAhNP', '10 January 1974', 'https://drive.google.com/thumbnail?id=1pibdnyd6Aen-i75bH4q9oasMZYfoFlWV', 'Belgian Pro League', '5 November 2013', '0\xa0years, 233\xa0days'], ['Rachid Chihab', '', 'https://drive.google.com/thumbnail?id=1DRtKpnUImXjVk8rwmIopmezho1TMkeQx', 'Belgian Second Division', '19 December 2013', '0\xa0years, 189\xa0days'], ['https://drive.google.com/thumbnail?id=1jhwpw9Yqsfzzn60bkNSQVbz2QeyOnJ9V', '28 October 1956', 'Mechelen', 'Belgian Pro League', '5 January 2014', '0\xa0years, 172\xa0days'], ['https://drive.google.com/thumbnail?id=1bjww5REpTonJgos-KTvsSXtskfmy-UiE', '10 August 1967', 'https://drive.google.com/thumbnail?id=1iYkAeZw42oAUaXIhHysDvBoSYxVc4jwS', 'Belgian Second Division', '30 January 2014', '0\xa0years, 147\xa0days'], ['https://drive.google.com/thumbnail?id=17ZSKfy3LREjRhlPxpasMXbEhGwrbJvvf', '14 September 1947', 'https://drive.google.com/thumbnail?id=1aZYmL3srI3JQqSpWZI3Mh7J5zCqRQtYl', 'Belgian Second Division', '5 February 2014', '0\xa0years, 141\xa0days'], ['Emilio Ferrera', '19 June 1967', 'https://drive.google.com/thumbnail?id=1jQ-roVD-siT4sa9IJvbzxqCaW-RLi930', 'Belgian Pro League', '24 February 2014', '0\xa0years, 122\xa0days'], ['https://drive.google.com/thumbnail?id=1wukQZ7m6KzEA3jL8rGVVBbIaUAIEObDR', '7 February 1978', 'https://drive.google.com/thumbnail?id=1yboL3EzItXko55hMI9n9kskSi2qQ9wP4', 'Belgian Pro League', '25 February 2014', '0\xa0years, 121\xa0days']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

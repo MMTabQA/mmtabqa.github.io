@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Championship game results of ACC Women's Basketball Tournament
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: how many consecutive wins did duke have in the championship after their first win?
+            </div>
+            <div>
+                Answer: 4
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Date', 'Winner', 'Runner-up', 'Result', 'Site', 'Attendance'], ['February 11, 1978', '#2  https://drive.google.com/thumbnail?id=1amNoQSKgDtnDAuk9iNolDVkuPtSfklts', '#1  https://drive.google.com/thumbnail?id=19N3YduwtcUkQUzwsIxfJcEXXy4OP9vud', '89–82', 'https://drive.google.com/thumbnail?id=13uRHOPUbXLSQTNM3CWkgbJo_vVGvl6_y', '1,500'], ['February 10, 1979', '#1  https://drive.google.com/thumbnail?id=1amNoQSKgDtnDAuk9iNolDVkuPtSfklts', '#2  https://drive.google.com/thumbnail?id=19N3YduwtcUkQUzwsIxfJcEXXy4OP9vud', '75–73', 'Raleigh, North Carolina', '3,500'], ['February 10, 1980', '#1  https://drive.google.com/thumbnail?id=19N3YduwtcUkQUzwsIxfJcEXXy4OP9vud', '#2  https://drive.google.com/thumbnail?id=1amNoQSKgDtnDAuk9iNolDVkuPtSfklts', '85–75', 'College Park, Maryland', 'N/A'], ['February 14, 1981', '#3  https://drive.google.com/thumbnail?id=1amNoQSKgDtnDAuk9iNolDVkuPtSfklts', '#4 NC State', '64–63', 'https://drive.google.com/thumbnail?id=1ZbSEQbvsL9Z7m6gcUMVTzIOUI622mRkl', '300'], ['February 28, 1982', '#3  https://drive.google.com/thumbnail?id=1amNoQSKgDtnDAuk9iNolDVkuPtSfklts', '#4 Clemson', '93–81', 'https://drive.google.com/thumbnail?id=1E_zXEAFlSLbhxte8S0tMXl3XeQqX5Hkj', '500'], ['March 6, 1983', '#3  https://drive.google.com/thumbnail?id=1amNoQSKgDtnDAuk9iNolDVkuPtSfklts', '#1  https://drive.google.com/thumbnail?id=19N3YduwtcUkQUzwsIxfJcEXXy4OP9vud', '84–81', 'https://drive.google.com/thumbnail?id=10gUNgyeNZp7dQ-RpWisQ9WH1KjhPzAr2', '2,134'], ['March 4, 1984', '#5  https://drive.google.com/thumbnail?id=1NfS__ea3lz9QED9sATusDBHpyRJQEb46', '#3  https://drive.google.com/thumbnail?id=19N3YduwtcUkQUzwsIxfJcEXXy4OP9vud', '99–76', 'Fayetteville, North Carolina', '3,733'], ['March 3, 1985', '#1  https://drive.google.com/thumbnail?id=19N3YduwtcUkQUzwsIxfJcEXXy4OP9vud', '#2  https://drive.google.com/thumbnail?id=1NfS__ea3lz9QED9sATusDBHpyRJQEb46', '81–80', 'Fayetteville, North Carolina', '3,907'], ['March 3, 1986', '#5  https://drive.google.com/thumbnail?id=1amNoQSKgDtnDAuk9iNolDVkuPtSfklts', '#2  https://drive.google.com/thumbnail?id=1NfS__ea3lz9QED9sATusDBHpyRJQEb46', '92–74', 'https://drive.google.com/thumbnail?id=10gUNgyeNZp7dQ-RpWisQ9WH1KjhPzAr2', '2,632'], ['March 2, 1987', '#2  https://drive.google.com/thumbnail?id=19N3YduwtcUkQUzwsIxfJcEXXy4OP9vud', '#1  https://drive.google.com/thumbnail?id=1GUuVVwy7Vc1vSMbwZ9a4SF_XV5SUQi1z', '57–56', 'https://drive.google.com/thumbnail?id=10gUNgyeNZp7dQ-RpWisQ9WH1KjhPzAr2', '2,987'], ['March 7, 1988', '#2  https://drive.google.com/thumbnail?id=1amNoQSKgDtnDAuk9iNolDVkuPtSfklts', '#1  https://drive.google.com/thumbnail?id=1GUuVVwy7Vc1vSMbwZ9a4SF_XV5SUQi1z', '76–70', 'Fayetteville, North Carolina', '1,223'], ['March 6, 1989', '#1  https://drive.google.com/thumbnail?id=1amNoQSKgDtnDAuk9iNolDVkuPtSfklts', '#2  https://drive.google.com/thumbnail?id=19N3YduwtcUkQUzwsIxfJcEXXy4OP9vud', '73–57', 'https://drive.google.com/thumbnail?id=10gUNgyeNZp7dQ-RpWisQ9WH1KjhPzAr2', '2,975'], ['March 5, 1990', '#2 Virginia', '#1  https://drive.google.com/thumbnail?id=19N3YduwtcUkQUzwsIxfJcEXXy4OP9vud', '67–64 OT', 'https://drive.google.com/thumbnail?id=10gUNgyeNZp7dQ-RpWisQ9WH1KjhPzAr2', '2,765'], ['March 4, 1991', '#3 NC State', '#4  https://drive.google.com/thumbnail?id=1PUInZ0th9opVPuOjFeabIS8jUmb1zSM4', '84–61', 'https://drive.google.com/thumbnail?id=10gUNgyeNZp7dQ-RpWisQ9WH1KjhPzAr2', '4,102'], ['March 9, 1992', '#1 Virginia', '#7  https://drive.google.com/thumbnail?id=1uPK9T2flL4t_D8KqiIl-tj6-DkC_-gaA', '70–69', 'https://drive.google.com/thumbnail?id=16b-uQbR4NnlDkvePmYSwG6I68RkvgWX3', '4,154'], ['March 8, 1993', '#1 Virginia', '#2  https://drive.google.com/thumbnail?id=1amNoQSKgDtnDAuk9iNolDVkuPtSfklts', '106–103 3OT', 'https://drive.google.com/thumbnail?id=16b-uQbR4NnlDkvePmYSwG6I68RkvgWX3', '3,716'], ['March 7, 1994', '#2 North Carolina', '#1  https://drive.google.com/thumbnail?id=1GUuVVwy7Vc1vSMbwZ9a4SF_XV5SUQi1z', '77–60', 'https://drive.google.com/thumbnail?id=16b-uQbR4NnlDkvePmYSwG6I68RkvgWX3', '4,386'], ['March 5, 1995', '#2 North Carolina', '#4  https://drive.google.com/thumbnail?id=1ZRYDze2f3EnVn7p0LpXAa3EwpYTzVHVN', '95–70', 'https://drive.google.com/thumbnail?id=16b-uQbR4NnlDkvePmYSwG6I68RkvgWX3', '5,724'], ['March 3, 1996', '#4  https://drive.google.com/thumbnail?id=1PUInZ0th9opVPuOjFeabIS8jUmb1zSM4', '#2  https://drive.google.com/thumbnail?id=1ZRYDze2f3EnVn7p0LpXAa3EwpYTzVHVN', '71–54', 'https://drive.google.com/thumbnail?id=16b-uQbR4NnlDkvePmYSwG6I68RkvgWX3', '5,067'], ['March 2, 1997', '#1  https://drive.google.com/thumbnail?id=1NfS__ea3lz9QED9sATusDBHpyRJQEb46', '#6  https://drive.google.com/thumbnail?id=1PUInZ0th9opVPuOjFeabIS8jUmb1zSM4', '62–58', 'https://drive.google.com/thumbnail?id=1bh7yHogptQg0ZauMhZ10mU0Hj-bthXTo', '5,543'], ['March 1, 1998', '#4  https://drive.google.com/thumbnail?id=1NfS__ea3lz9QED9sATusDBHpyRJQEb46', '#2  https://drive.google.com/thumbnail?id=1PUInZ0th9opVPuOjFeabIS8jUmb1zSM4', '81–50', 'https://drive.google.com/thumbnail?id=1bh7yHogptQg0ZauMhZ10mU0Hj-bthXTo', '5,534'], ['March 1, 1999', '#4  https://drive.google.com/thumbnail?id=1PUInZ0th9opVPuOjFeabIS8jUmb1zSM4', '#3  https://drive.google.com/thumbnail?id=1NfS__ea3lz9QED9sATusDBHpyRJQEb46', '87–72', 'https://drive.google.com/thumbnail?id=1bh7yHogptQg0ZauMhZ10mU0Hj-bthXTo', '6,021'], ['March 6, 2000', '#2  https://drive.google.com/thumbnail?id=1ZRYDze2f3EnVn7p0LpXAa3EwpYTzVHVN', '#5  https://drive.google.com/thumbnail?id=1NfS__ea3lz9QED9sATusDBHpyRJQEb46', '79–76', 'https://drive.google.com/thumbnail?id=1eY71CaGTjPAZSdaSAqv-IT8pay8mVSF1', '8,090'], ['March 5, 2001', '#1  https://drive.google.com/thumbnail?id=1ZRYDze2f3EnVn7p0LpXAa3EwpYTzVHVN', '#3 NC State', '57–45', 'https://drive.google.com/thumbnail?id=1eY71CaGTjPAZSdaSAqv-IT8pay8mVSF1', '8,933'], ['March 4, 2002', '#1  https://drive.google.com/thumbnail?id=1ZRYDze2f3EnVn7p0LpXAa3EwpYTzVHVN', '#2  https://drive.google.com/thumbnail?id=1NfS__ea3lz9QED9sATusDBHpyRJQEb46', '87–80', 'Greensboro, North Carolina', '9,204'], ['March 10, 2003', '#1  https://drive.google.com/thumbnail?id=1ZRYDze2f3EnVn7p0LpXAa3EwpYTzVHVN', '#2 North Carolina', '77–59', 'https://drive.google.com/thumbnail?id=1eY71CaGTjPAZSdaSAqv-IT8pay8mVSF1', '11,127'], ['March 8, 2004', '#1  https://drive.google.com/thumbnail?id=1ZRYDze2f3EnVn7p0LpXAa3EwpYTzVHVN', '#2  https://drive.google.com/thumbnail?id=1NfS__ea3lz9QED9sATusDBHpyRJQEb46', '63–47', 'Greensboro, North Carolina', '11,466'], ['March 7, 2005', '#1  https://drive.google.com/thumbnail?id=1NfS__ea3lz9QED9sATusDBHpyRJQEb46', '#2  https://drive.google.com/thumbnail?id=1ZRYDze2f3EnVn7p0LpXAa3EwpYTzVHVN', '88–67', 'Greensboro, North Carolina', '11,578 *'], ['March 5, 2006', '#1 North Carolina', '#3 Maryland', '91–80', 'https://drive.google.com/thumbnail?id=1eY71CaGTjPAZSdaSAqv-IT8pay8mVSF1', '10,746'], ['March 4, 2007', '#2 North Carolina', '#4 NC State', '60–54', 'Greensboro, North Carolina', '11,538'], ['March 9, 2008', '#1  https://drive.google.com/thumbnail?id=1T1kbELEOid1jMR-UhQfFKlL0do62tM85', '#3 Duke', '86–73', 'https://drive.google.com/thumbnail?id=1eY71CaGTjPAZSdaSAqv-IT8pay8mVSF1', '11,132'], ['March 8, 2009', '#1  https://drive.google.com/thumbnail?id=1amNoQSKgDtnDAuk9iNolDVkuPtSfklts', '#3 Duke', '92–89 OT', 'https://drive.google.com/thumbnail?id=1eY71CaGTjPAZSdaSAqv-IT8pay8mVSF1', '9,943'], ['March 7, 2010', '#1 Duke', '#6 NC State', '70–60', 'https://drive.google.com/thumbnail?id=1eY71CaGTjPAZSdaSAqv-IT8pay8mVSF1', '9,432'], ['March 6, 2011', '#1  https://drive.google.com/thumbnail?id=1ZRYDze2f3EnVn7p0LpXAa3EwpYTzVHVN', '#6 North Carolina', '81–67', 'Greensboro, North Carolina', '9,890'], ['March 4, 2012', '#3  https://drive.google.com/thumbnail?id=1amNoQSKgDtnDAuk9iNolDVkuPtSfklts', '#4  https://drive.google.com/thumbnail?id=1uPK9T2flL4t_D8KqiIl-tj6-DkC_-gaA', '68–65', 'https://drive.google.com/thumbnail?id=1eY71CaGTjPAZSdaSAqv-IT8pay8mVSF1', '9,122'], ['March 10, 2013', '#1 Duke', '#3  https://drive.google.com/thumbnail?id=1NfS__ea3lz9QED9sATusDBHpyRJQEb46', '92–73', 'https://drive.google.com/thumbnail?id=1eY71CaGTjPAZSdaSAqv-IT8pay8mVSF1', '8,166'], ['https://drive.google.com/thumbnail?id=1dNI47h2ucwTwAH92GLL4aDh1ZkBaCvKP', '#1  https://drive.google.com/thumbnail?id=1Pw4TwQuJKkRRmuzfeywkJVg33UMF6bOD', '#2  https://drive.google.com/thumbnail?id=1Gax9i6XpqQCD1_1Y7uXH5QYPen7TxpQA', '69–53', 'https://drive.google.com/thumbnail?id=1eY71CaGTjPAZSdaSAqv-IT8pay8mVSF1', '8,190']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

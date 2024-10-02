@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Full-power stations of List of television stations in Missouri
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: how many of these missouri tv stations are actually licensed in a city in illinois (il)?
+            </div>
+            <div>
+                Answer: 7
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Area served', 'City of license', 'VC', 'RF', 'Callsign', 'Network', 'Notes'], ['Cape Girardeau', '~ https://drive.google.com/thumbnail?id=1dCuso6d-YOyaKU8KZxX_3riCAUIXSR9u', '3', '34', 'https://drive.google.com/thumbnail?id=1F7QwmUClg52VBenLRyM8bEZJ9UzVcpIQ', 'https://drive.google.com/thumbnail?id=1zXEAAoEW9cWv19wE4P8l9eCwc8_ca2QP', ''], ['Cape Girardeau', '~ https://drive.google.com/thumbnail?id=1iDbOnOb94gKkDZMiDq9_5RKEDeYNvdq5', '6', '32', 'https://drive.google.com/thumbnail?id=1gXjvBXo0nkek00NBqgOzbQtStgHB6cJv', 'https://drive.google.com/thumbnail?id=1Cs_q5og3nqeevm-uImy4t3wsUh97Rh34', ''], ['Cape Girardeau', '~ https://drive.google.com/thumbnail?id=136RtWRvxU4b6zuw4Yu4OxzkBLyje6Zao', '8', '8', 'https://drive.google.com/thumbnail?id=1sweX6879WKZgbhKKF2VHncLZQNWauiv4', 'PBS', ''], ['Cape Girardeau', 'Cape Girardeau', '12', '12', 'https://drive.google.com/thumbnail?id=1mMa-VrC9meMJaZ4UyafeGC0Uy9viRakj', 'https://drive.google.com/thumbnail?id=1A4_5h_Q34NZUnZOGL717yHBwdIKYO0Lq', ''], ['Cape Girardeau', 'Cape Girardeau', '23', '22', 'https://drive.google.com/thumbnail?id=170ZZ9M7JuA3OVXylt56LI5S76DTT1fD1', 'https://drive.google.com/thumbnail?id=1h8fWfOebj99n1fqqO53T-3Xu2UBfynos', ''], ['Cape Girardeau', '~ https://drive.google.com/thumbnail?id=1okNJ9nxwJWLSSLVCQPIfDPwtWPZr2nbi', '27', '17', 'WTCT', 'Ind.', ''], ['Cape Girardeau', '~ https://drive.google.com/thumbnail?id=1iDbOnOb94gKkDZMiDq9_5RKEDeYNvdq5', '49', '49', 'https://drive.google.com/thumbnail?id=1Yc1Q58yl7OVMpxtIgIlgbBB3OQ8BPQxU', 'https://drive.google.com/thumbnail?id=1N_hRqMqCTqRIrLAHSpPOSOmwfs8LFNvy', ''], ['https://drive.google.com/thumbnail?id=1oJCk7eaHOoatpMuk7c3w4-zCQWFXXvka / https://drive.google.com/thumbnail?id=1LRLsB_MGAZGF05cJtwrOhQ2Uq1uVfb9V', 'Sedalia', '6', '15', 'https://drive.google.com/thumbnail?id=1Y-qm64eD0WJgMff5QQPHpEx-7y2-aqw2', 'https://drive.google.com/thumbnail?id=1ljrWCWJZpd8eMa4-YF3xT9pZkkPF2f0e', ''], ['https://drive.google.com/thumbnail?id=1oJCk7eaHOoatpMuk7c3w4-zCQWFXXvka / https://drive.google.com/thumbnail?id=1LRLsB_MGAZGF05cJtwrOhQ2Uq1uVfb9V', 'https://drive.google.com/thumbnail?id=1oJCk7eaHOoatpMuk7c3w4-zCQWFXXvka', '8', '8', 'KOMU-TV', 'https://drive.google.com/thumbnail?id=1Cs_q5og3nqeevm-uImy4t3wsUh97Rh34', ''], ['https://drive.google.com/thumbnail?id=1oJCk7eaHOoatpMuk7c3w4-zCQWFXXvka / https://drive.google.com/thumbnail?id=1LRLsB_MGAZGF05cJtwrOhQ2Uq1uVfb9V', 'https://drive.google.com/thumbnail?id=1LRLsB_MGAZGF05cJtwrOhQ2Uq1uVfb9V', '13', '12', 'https://drive.google.com/thumbnail?id=1B2mQyGAdFVDrWOJNEyhCUoyeFuReNcBe', 'https://drive.google.com/thumbnail?id=1A4_5h_Q34NZUnZOGL717yHBwdIKYO0Lq', ''], ['https://drive.google.com/thumbnail?id=1oJCk7eaHOoatpMuk7c3w4-zCQWFXXvka / https://drive.google.com/thumbnail?id=1LRLsB_MGAZGF05cJtwrOhQ2Uq1uVfb9V', 'Columbia', '17', '17', 'KMIZ', 'https://drive.google.com/thumbnail?id=1zXEAAoEW9cWv19wE4P8l9eCwc8_ca2QP', ''], ['https://drive.google.com/thumbnail?id=1oJCk7eaHOoatpMuk7c3w4-zCQWFXXvka / https://drive.google.com/thumbnail?id=1LRLsB_MGAZGF05cJtwrOhQ2Uq1uVfb9V', 'Jefferson City', '25', '20', 'KNLJ', 'Ind.', ''], ['Hannibal', 'Hannibal', '7', '7', 'https://drive.google.com/thumbnail?id=1rEtD2tZ4UOFO5tjuku00SJVKX5XoxZNG', 'https://drive.google.com/thumbnail?id=1A4_5h_Q34NZUnZOGL717yHBwdIKYO0Lq', 'ABC on 7.2'], ['Hannibal', '~ https://drive.google.com/thumbnail?id=1dkp7qLdZzen3XK7_fi6nAehInygiCxvf', '10', '10', 'https://drive.google.com/thumbnail?id=1JBfbXDZzt4sFPgv_iC68NZg3usQowCJK', 'https://drive.google.com/thumbnail?id=1Cs_q5og3nqeevm-uImy4t3wsUh97Rh34', ''], ['Hannibal', '~ https://drive.google.com/thumbnail?id=1dkp7qLdZzen3XK7_fi6nAehInygiCxvf', '16', '32', 'https://drive.google.com/thumbnail?id=1goUj69X58eqeAJR44QRoHxXltobSUzyT', 'Ind.', ''], ['Hannibal', '~ https://drive.google.com/thumbnail?id=1dkp7qLdZzen3XK7_fi6nAehInygiCxvf', '27', '34', 'https://drive.google.com/thumbnail?id=1CSl-FaJ9_6bRgGIFpXiyulw21vkqCIt0', 'PBS', 'satellite of WSEC ch. 14 Springfield IL'], ['https://drive.google.com/thumbnail?id=1qvYbVEtvfNFjN-h9A13Afl58iboB95qb', '~Pittsburg KS', '7', '7', 'https://drive.google.com/thumbnail?id=10L2PQRwG6UVOMfLm_xkopUninxMK435Y', 'CBS', ''], ['https://drive.google.com/thumbnail?id=1qvYbVEtvfNFjN-h9A13Afl58iboB95qb', 'https://drive.google.com/thumbnail?id=1qvYbVEtvfNFjN-h9A13Afl58iboB95qb', '12', '43', 'https://drive.google.com/thumbnail?id=1O78Etlj6vyYJtrjm79qdiC29Hxco0E2Z', 'https://drive.google.com/thumbnail?id=1zXEAAoEW9cWv19wE4P8l9eCwc8_ca2QP', ''], ['https://drive.google.com/thumbnail?id=1qvYbVEtvfNFjN-h9A13Afl58iboB95qb', '~Pittsburg KS', '14', '13', 'https://drive.google.com/thumbnail?id=1FjsYxFds2n7hWm4TPm5HquhqPKHR8ahV', 'https://drive.google.com/thumbnail?id=1h8fWfOebj99n1fqqO53T-3Xu2UBfynos', ''], ['https://drive.google.com/thumbnail?id=1qvYbVEtvfNFjN-h9A13Afl58iboB95qb', 'https://drive.google.com/thumbnail?id=1qvYbVEtvfNFjN-h9A13Afl58iboB95qb', '16', '46', 'https://drive.google.com/thumbnail?id=1srACiBQsxhAB8e4EMOL3HztxBRZ-oZBi', 'https://drive.google.com/thumbnail?id=1Cs_q5og3nqeevm-uImy4t3wsUh97Rh34', ''], ['https://drive.google.com/thumbnail?id=1qvYbVEtvfNFjN-h9A13Afl58iboB95qb', 'https://drive.google.com/thumbnail?id=1qvYbVEtvfNFjN-h9A13Afl58iboB95qb', '26', '25', 'https://drive.google.com/thumbnail?id=1Zcw14LeKC5TZQxWGA3uoj3Epj5N6BBIf', 'https://drive.google.com/thumbnail?id=1ljrWCWJZpd8eMa4-YF3xT9pZkkPF2f0e', 'satellite of KOZK ch. 21 Springfield'], ['https://drive.google.com/thumbnail?id=11PsynaIUqHsxMu9uACadLDR3-o-LAsLJ', 'https://drive.google.com/thumbnail?id=11PsynaIUqHsxMu9uACadLDR3-o-LAsLJ', '4', '34', 'https://drive.google.com/thumbnail?id=1rYHgFDtWzJHG1Qp7rDvEQWCg3nwW6JkD', 'https://drive.google.com/thumbnail?id=1h8fWfOebj99n1fqqO53T-3Xu2UBfynos', ''], ['https://drive.google.com/thumbnail?id=11PsynaIUqHsxMu9uACadLDR3-o-LAsLJ', 'https://drive.google.com/thumbnail?id=11PsynaIUqHsxMu9uACadLDR3-o-LAsLJ', '5', '24', 'https://drive.google.com/thumbnail?id=1GX1PBOi9K8irGpDAimwhj7zdYYSUEqd5', 'https://drive.google.com/thumbnail?id=1A4_5h_Q34NZUnZOGL717yHBwdIKYO0Lq', ''], ['https://drive.google.com/thumbnail?id=11PsynaIUqHsxMu9uACadLDR3-o-LAsLJ', 'https://drive.google.com/thumbnail?id=11PsynaIUqHsxMu9uACadLDR3-o-LAsLJ', '9', '29', 'https://drive.google.com/thumbnail?id=11S5w0wYqstI-aZ3BTlWWPS2GfcE52ajn', 'https://drive.google.com/thumbnail?id=1zXEAAoEW9cWv19wE4P8l9eCwc8_ca2QP', ''], ['https://drive.google.com/thumbnail?id=11PsynaIUqHsxMu9uACadLDR3-o-LAsLJ', 'St. Joseph', '16', '21', 'KTAJ-TV', 'https://drive.google.com/thumbnail?id=15-S0a8DY5XYEhADLDng8lKAkklEtGwmC', ''], ['https://drive.google.com/thumbnail?id=11PsynaIUqHsxMu9uACadLDR3-o-LAsLJ', 'https://drive.google.com/thumbnail?id=11PsynaIUqHsxMu9uACadLDR3-o-LAsLJ', '19', '18', 'https://drive.google.com/thumbnail?id=1Xu2AjwuEoDGFgeJY28KHWc2vtoHeZ2pp', 'PBS', ''], ['https://drive.google.com/thumbnail?id=11PsynaIUqHsxMu9uACadLDR3-o-LAsLJ', 'https://drive.google.com/thumbnail?id=11PsynaIUqHsxMu9uACadLDR3-o-LAsLJ', '29', '31', 'KCWE', 'https://drive.google.com/thumbnail?id=1GQVIYFHIOlUlQNzYFjMSNOgNGgH15Kh5', ''], ['https://drive.google.com/thumbnail?id=11PsynaIUqHsxMu9uACadLDR3-o-LAsLJ', '~ https://drive.google.com/thumbnail?id=1qEmbRg9qp-r7f0XcSwFhQ-1ndBXelPz6', '38', '41', 'https://drive.google.com/thumbnail?id=1wlpsKDBJkUgzaapBKeBIul-MFLBKuBhL', 'Ind.', ''], ['https://drive.google.com/thumbnail?id=11PsynaIUqHsxMu9uACadLDR3-o-LAsLJ', 'https://drive.google.com/thumbnail?id=11PsynaIUqHsxMu9uACadLDR3-o-LAsLJ', '41', '42', 'KSHB-TV', 'https://drive.google.com/thumbnail?id=1Cs_q5og3nqeevm-uImy4t3wsUh97Rh34', ''], ['https://drive.google.com/thumbnail?id=11PsynaIUqHsxMu9uACadLDR3-o-LAsLJ', 'https://drive.google.com/thumbnail?id=11PsynaIUqHsxMu9uACadLDR3-o-LAsLJ', '50', '51', 'KPXE-TV', 'https://drive.google.com/thumbnail?id=1jsvcxm_BHgd_1n6lC5gCWodbEbpgzgZE', ''], ['https://drive.google.com/thumbnail?id=11PsynaIUqHsxMu9uACadLDR3-o-LAsLJ', 'https://drive.google.com/thumbnail?id=11PsynaIUqHsxMu9uACadLDR3-o-LAsLJ', '62', '47', 'https://drive.google.com/thumbnail?id=1ZJWYZztIUTkwz077om8eNW-ED65jhazo', 'https://drive.google.com/thumbnail?id=1N_hRqMqCTqRIrLAHSpPOSOmwfs8LFNvy', ''], ['https://drive.google.com/thumbnail?id=1ho6DYLCcw0apHBfWjApt7DmPbzJVllR5', 'https://drive.google.com/thumbnail?id=1ho6DYLCcw0apHBfWjApt7DmPbzJVllR5', '3', '33', 'https://drive.google.com/thumbnail?id=18RspA_ncuRP2P0BBe4PDSog2paAc4BCo', 'https://drive.google.com/thumbnail?id=1zXEAAoEW9cWv19wE4P8l9eCwc8_ca2QP', ''], ['https://drive.google.com/thumbnail?id=1ho6DYLCcw0apHBfWjApt7DmPbzJVllR5', '~Ottumwa IA', '15', '15', 'https://drive.google.com/thumbnail?id=1jHP3OoDpDwtdeK9PN79NpG-Bu8rzziXT', 'https://drive.google.com/thumbnail?id=1h8fWfOebj99n1fqqO53T-3Xu2UBfynos', ''], ['Poplar Bluff', 'Poplar Bluff', '15', '15', 'https://drive.google.com/thumbnail?id=1F7QwmUClg52VBenLRyM8bEZJ9UzVcpIQ', 'https://drive.google.com/thumbnail?id=1zXEAAoEW9cWv19wE4P8l9eCwc8_ca2QP', 'satellite of WSIL-TV ch. 3 Harrisburg IL'], ['St. Joseph', 'St. Joseph', '2', '7', 'https://drive.google.com/thumbnail?id=1TeuSii_Rxoy0BflYUU7ibP_Iqd2xm22E', 'https://drive.google.com/thumbnail?id=1zXEAAoEW9cWv19wE4P8l9eCwc8_ca2QP', ''], ['https://drive.google.com/thumbnail?id=1kj_QDyv8IapOt0F2WWH1mOz3btLH-t1c', 'https://drive.google.com/thumbnail?id=1kj_QDyv8IapOt0F2WWH1mOz3btLH-t1c', '2', '43', 'https://drive.google.com/thumbnail?id=1v-o4WGBCRVzmQefy8F3M4YR4AbCkPlf7', 'https://drive.google.com/thumbnail?id=1h8fWfOebj99n1fqqO53T-3Xu2UBfynos', 'ABC (1955-1995), Fox O&O (c.1995-2008)'], ['https://drive.google.com/thumbnail?id=1kj_QDyv8IapOt0F2WWH1mOz3btLH-t1c', 'https://drive.google.com/thumbnail?id=1kj_QDyv8IapOt0F2WWH1mOz3btLH-t1c', '4', '24', 'https://drive.google.com/thumbnail?id=1GzCXcQI56h3XYWqBj55gH1PgarkL-R0z', 'https://drive.google.com/thumbnail?id=1A4_5h_Q34NZUnZOGL717yHBwdIKYO0Lq', 'CBS O&O (1958-1986 as KMOX-TV)'], ['https://drive.google.com/thumbnail?id=1kj_QDyv8IapOt0F2WWH1mOz3btLH-t1c', 'https://drive.google.com/thumbnail?id=1kj_QDyv8IapOt0F2WWH1mOz3btLH-t1c', '5', '35', 'https://drive.google.com/thumbnail?id=1_6Zkvxd-9Wywv9AgL2LBk2P2bampQ07m', 'NBC', ''], ['https://drive.google.com/thumbnail?id=1kj_QDyv8IapOt0F2WWH1mOz3btLH-t1c', 'https://drive.google.com/thumbnail?id=1kj_QDyv8IapOt0F2WWH1mOz3btLH-t1c', '9', '39', 'https://drive.google.com/thumbnail?id=1CzXHyxBBcYTF8G7JNz9ChCpAfOWfIEHU', 'https://drive.google.com/thumbnail?id=1ljrWCWJZpd8eMa4-YF3xT9pZkkPF2f0e', ''], ['https://drive.google.com/thumbnail?id=1kj_QDyv8IapOt0F2WWH1mOz3btLH-t1c', 'https://drive.google.com/thumbnail?id=1kj_QDyv8IapOt0F2WWH1mOz3btLH-t1c', '11', '26', 'https://drive.google.com/thumbnail?id=1ic6TRqyn_zUGfkj_7C6kKPz3XQbLo4Jq', 'https://drive.google.com/thumbnail?id=1GQVIYFHIOlUlQNzYFjMSNOgNGgH15Kh5', ''], ['https://drive.google.com/thumbnail?id=1kj_QDyv8IapOt0F2WWH1mOz3btLH-t1c', 'https://drive.google.com/thumbnail?id=1kj_QDyv8IapOt0F2WWH1mOz3btLH-t1c', '24', '14', 'https://drive.google.com/thumbnail?id=1rN0xJTvMP2sDAOvmNoYt0oevK2VgvRDZ', 'Ind.', ''], ['https://drive.google.com/thumbnail?id=1kj_QDyv8IapOt0F2WWH1mOz3btLH-t1c', 'https://drive.google.com/thumbnail?id=1kj_QDyv8IapOt0F2WWH1mOz3btLH-t1c', '30', '31', 'https://drive.google.com/thumbnail?id=1buAcJu31H3BVv9pfJBnEPwwJKkNM4gas', 'https://drive.google.com/thumbnail?id=1zXEAAoEW9cWv19wE4P8l9eCwc8_ca2QP', 'Independent (1969-1986); Fox (1986-1995)'], ['https://drive.google.com/thumbnail?id=1kj_QDyv8IapOt0F2WWH1mOz3btLH-t1c', '~ https://drive.google.com/thumbnail?id=1HXz9bYUNbCc0tuO8uiJ1LgxFSX32s9xi', '46', '47', 'WRBU', 'https://drive.google.com/thumbnail?id=1N_hRqMqCTqRIrLAHSpPOSOmwfs8LFNvy', ''], ['https://drive.google.com/thumbnail?id=1-vIBLMKpYtR5NElrE3BTXcZ57DCpl7c3', 'https://drive.google.com/thumbnail?id=1-vIBLMKpYtR5NElrE3BTXcZ57DCpl7c3', '3', '44', 'KYTV', 'https://drive.google.com/thumbnail?id=1Cs_q5og3nqeevm-uImy4t3wsUh97Rh34', ''], ['https://drive.google.com/thumbnail?id=1-vIBLMKpYtR5NElrE3BTXcZ57DCpl7c3', 'https://drive.google.com/thumbnail?id=1-vIBLMKpYtR5NElrE3BTXcZ57DCpl7c3', '10', '10', 'https://drive.google.com/thumbnail?id=1syrD7Jrqtky4g7Bf_3DFEGs3Mo4RkPZs', 'https://drive.google.com/thumbnail?id=1A4_5h_Q34NZUnZOGL717yHBwdIKYO0Lq', ''], ['https://drive.google.com/thumbnail?id=1-vIBLMKpYtR5NElrE3BTXcZ57DCpl7c3', 'https://drive.google.com/thumbnail?id=1-vIBLMKpYtR5NElrE3BTXcZ57DCpl7c3', '21', '23', 'https://drive.google.com/thumbnail?id=1Zcw14LeKC5TZQxWGA3uoj3Epj5N6BBIf', 'https://drive.google.com/thumbnail?id=1ljrWCWJZpd8eMa4-YF3xT9pZkkPF2f0e', ''], ['https://drive.google.com/thumbnail?id=1-vIBLMKpYtR5NElrE3BTXcZ57DCpl7c3', 'https://drive.google.com/thumbnail?id=1-vIBLMKpYtR5NElrE3BTXcZ57DCpl7c3', '27', '28', 'https://drive.google.com/thumbnail?id=1TN_jsw_HDc0GjHZ-WdpQgli09I34ALLM', 'Ind.', ''], ['https://drive.google.com/thumbnail?id=1-vIBLMKpYtR5NElrE3BTXcZ57DCpl7c3', '~ https://drive.google.com/thumbnail?id=1pjqnjXTEPoK7msC1GArmsoe6Hesyub3h', '31', '31', 'KWBM', 'Ind.', ''], ['https://drive.google.com/thumbnail?id=1-vIBLMKpYtR5NElrE3BTXcZ57DCpl7c3', 'https://drive.google.com/thumbnail?id=1-vIBLMKpYtR5NElrE3BTXcZ57DCpl7c3', '33', '19', 'KSPR', 'https://drive.google.com/thumbnail?id=1zXEAAoEW9cWv19wE4P8l9eCwc8_ca2QP', 'K15CZ (CW) on 33.2'], ['https://drive.google.com/thumbnail?id=1-vIBLMKpYtR5NElrE3BTXcZ57DCpl7c3', 'Osage Beach', '49', '49', 'https://drive.google.com/thumbnail?id=1135zMG2Eqc8_-MavT3oGKYYwyKzCneZr', 'Fox', ''], ['https://drive.google.com/thumbnail?id=1-vIBLMKpYtR5NElrE3BTXcZ57DCpl7c3', 'https://drive.google.com/thumbnail?id=1-vIBLMKpYtR5NElrE3BTXcZ57DCpl7c3', '8', '8', 'KRFT-LD', 'https://drive.google.com/thumbnail?id=1hfpTOEHv6xVhct5561lp2fMixI3mB8Mx', 'TNN on 8.2, My Family TV on 8.3']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

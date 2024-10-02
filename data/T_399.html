@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Biggest opening weekends in U.S. and Canada of List of highest-grossing openings for films
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: which film had the least opening weekend?
+            </div>
+            <div>
+                Answer: Indiana Jones and the Kingdom of the Crystal Skull
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Rank', 'Film', 'Year', 'Opening Weekend (three day)', 'Inflation-adjusted (2014 USD)'], ['1', 'https://drive.google.com/thumbnail?id=1N8PESzQFevKSNug6_oLjYtqRuhnpBN2a', '2012', '$207,438,708', '$213,091,480'], ['2', 'https://drive.google.com/thumbnail?id=1sjNeomB0-e45Xz9QUFFqZ84Tgb1l4ptR', '2013', '$174,144,585', '$176,308,953'], ['3', 'https://drive.google.com/thumbnail?id=1ZoToYlNF7wh6q94mgE6b6BQI5hTbzAgd', '2011', '$169,189,427', '$177,373,590'], ['4', 'https://drive.google.com/thumbnail?id=1AMCDKyWasHmq9UkkUgoLmjzVGs-1Jegj', '2012', '$160,887,295', '$165,271,526'], ['5', 'https://drive.google.com/thumbnail?id=11RENtsuYkAUt6D8UFffMbQjZ3PwBChXp', '2008', '$158,411,483', '$173,518,111'], ['6', 'The Hunger Games: Catching Fire', '2013', '$158,074,286', '$160,038,924'], ['7', 'https://drive.google.com/thumbnail?id=1KK5GK3ywZsgfsefy-SkYeYyVeKHkoF2R', '2012', '$152,535,747', '$156,692,396'], ['8', 'Spider-Man 3', '2007', '$151,116,516', '$171,876,545'], ['9', 'https://drive.google.com/thumbnail?id=1WaiLYKSFhNYFZqmJgPcNo0H7r9DC-YuE', '2009', '$142,839,137', '$157,018,918'], ['10', 'https://drive.google.com/thumbnail?id=1X45tZT5C7HqNddY8AN0MVDrZ63JEhbyX', '2012', '$141,067,634', '$144,911,773'], ['11', 'https://drive.google.com/thumbnail?id=15FheaHC67_AfbvV8Lq7xpCtkDxG0v0mV', '2011', '$138,122,261', '$144,803,619'], ['12', 'https://drive.google.com/thumbnail?id=1aNsVQII10UkJTHniHApPlRtSfXzr6wXN', '2006', '$135,634,554', '$158,673,173'], ['13', 'Iron Man 2', '2010', '$128,122,480', '$138,563,103'], ['14', 'https://drive.google.com/thumbnail?id=1bFH9l7TelOv4_X6sS-sRw4JCe0lPxL_R', '2010', '$125,017,372', '$135,204,962'], ['15', 'Shrek the Third', '2007', '$121,629,270', '$138,338,411'], ['16', 'https://drive.google.com/thumbnail?id=1qCfqe14QFkYISDGskVtHPFI4-oxxFknC', '2013', '$116,619,362', '$118,068,774'], ['17', 'https://drive.google.com/thumbnail?id=1PbgQgaylr-FTCxaG3HoJXTIQLY3wReMl', '2010', '$116,101,023', '$125,562,025'], ['18', 'Spider-Man', '2002', '$114,844,116', '$150,582,840'], ['19', 'https://drive.google.com/thumbnail?id=13JD4e4AIjHpC3EzmD2A_XnmFtLOX6D7K', '2007', '$114,732,820', '$130,494,543'], ['20', 'https://drive.google.com/thumbnail?id=1JwfdiRKVWgEq2WMMHDTMtj9jrUW4M5xZ', '2010', '$110,307,189', '$119,296,055'], ['21', 'https://drive.google.com/thumbnail?id=16nLFWiLacnSw6JP-EYOiH42xExwExQuR', '2009', '$108,966,307', '$119,783,499'], ['22', 'https://drive.google.com/thumbnail?id=1BkUdoDUdqJPWyT42FGQD1So9d5UA9qWW', '2005', '$108,435,841', '$130,939,650'], ['23', 'Shrek 2', '2004', '$108,037,878', '$134,895,074'], ['24', 'https://drive.google.com/thumbnail?id=1DrjQ6x2pbT4FGO5aoRW9jzhdGyZos_Y5', '2006', '$102,750,665', '$120,203,691'], ['25', 'Harry Potter and the Goblet of Fire', '2005', '$102,685,961', '$123,996,491'], ['26', 'https://drive.google.com/thumbnail?id=1piVIQHK00dOewzCWoKbzxDM6WV3rcxVr', '2008', '$100,137,835', '$109,687,301']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

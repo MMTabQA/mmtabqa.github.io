@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Historical Election Results of Iowa's 1st congressional district
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: who was the first democrat to win an election?
+            </div>
+            <div>
+                Answer: Edward C. Eicher
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Year', 'Party Affiliation', 'Winner', 'Number of Votes', 'Party Affiliation', 'Loser', 'Number of Votes', 'Percentage of Votes'], ['1920', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'https://drive.google.com/thumbnail?id=1fiiA39ld9BG1YFMRikQ8-9CpBtf6rIm5', '38,100', 'Democrat', 'E.W. McManus', '20,977', '64% - 36%'], ['1922', 'Republican', 'https://drive.google.com/thumbnail?id=1fiiA39ld9BG1YFMRikQ8-9CpBtf6rIm5', '26,651', 'Democrat', 'John M. Lindley', '14,056', '65% - 34%'], ['1924', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'https://drive.google.com/thumbnail?id=1fiiA39ld9BG1YFMRikQ8-9CpBtf6rIm5', '42,711', 'https://drive.google.com/thumbnail?id=1YMplswPNxNvzaE_Mknq5TsqJN9I7Sd1d', 'James M. Bell', '17,110', '71% - 29%'], ['1926', 'Republican', 'https://drive.google.com/thumbnail?id=1fiiA39ld9BG1YFMRikQ8-9CpBtf6rIm5', '27,358', 'https://drive.google.com/thumbnail?id=1YMplswPNxNvzaE_Mknq5TsqJN9I7Sd1d', 'James M. Bell', '11,408', '71% - 29%'], ['1928', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'https://drive.google.com/thumbnail?id=1fiiA39ld9BG1YFMRikQ8-9CpBtf6rIm5', '45,806', 'N/A', 'No Opponent', 'N/A', '100% - 0%'], ['1930', 'Republican', 'https://drive.google.com/thumbnail?id=1fiiA39ld9BG1YFMRikQ8-9CpBtf6rIm5', '27,053', 'Democrat', 'Max A. Conrad', '15,538', '63% - 36%'], ['1932', 'https://drive.google.com/thumbnail?id=1YMplswPNxNvzaE_Mknq5TsqJN9I7Sd1d', 'https://drive.google.com/thumbnail?id=105Zf500qkcacq9tmeQZuxv7CiZTE1dF0', '55,378', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'https://drive.google.com/thumbnail?id=1fiiA39ld9BG1YFMRikQ8-9CpBtf6rIm5', '46,738', '54% - 46%'], ['1934', 'Democrat', 'https://drive.google.com/thumbnail?id=105Zf500qkcacq9tmeQZuxv7CiZTE1dF0', '48,544', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'E. R. Hicklin', '39,047', '55% - 44%'], ['1936', 'https://drive.google.com/thumbnail?id=1YMplswPNxNvzaE_Mknq5TsqJN9I7Sd1d', 'https://drive.google.com/thumbnail?id=105Zf500qkcacq9tmeQZuxv7CiZTE1dF0', '55,721', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'John N. Calhoun', '53,474', '51% - 49%'], ['1938', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'https://drive.google.com/thumbnail?id=1ylRwxvbKpOPiSGCSAr8IDakSOSVDM2GL', '46,636', 'https://drive.google.com/thumbnail?id=1YMplswPNxNvzaE_Mknq5TsqJN9I7Sd1d', 'James P. Gaffney', '33,765', '58% - 42%'], ['1940', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'https://drive.google.com/thumbnail?id=1ylRwxvbKpOPiSGCSAr8IDakSOSVDM2GL', '70,120', 'https://drive.google.com/thumbnail?id=1YMplswPNxNvzaE_Mknq5TsqJN9I7Sd1d', 'Mrs. Zoe S. Nabers', '46,040', '60% - 40%'], ['1942', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'https://drive.google.com/thumbnail?id=1ylRwxvbKpOPiSGCSAr8IDakSOSVDM2GL', '55,139', 'https://drive.google.com/thumbnail?id=1YMplswPNxNvzaE_Mknq5TsqJN9I7Sd1d', 'Vern W. Nall', '32,893', '61% - 37%'], ['1944', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'https://drive.google.com/thumbnail?id=1ylRwxvbKpOPiSGCSAr8IDakSOSVDM2GL', '72,729', 'https://drive.google.com/thumbnail?id=1YMplswPNxNvzaE_Mknq5TsqJN9I7Sd1d', 'Clair A. Williams', '60,048', '55% - 45%'], ['1946', 'Republican', 'https://drive.google.com/thumbnail?id=1ylRwxvbKpOPiSGCSAr8IDakSOSVDM2GL', '52,488', 'Democrat', 'Clair A. Williams', '32,849', '62% - 38%'], ['1948', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'https://drive.google.com/thumbnail?id=1ylRwxvbKpOPiSGCSAr8IDakSOSVDM2GL', '70,959', 'Democrat', 'James D. France', '60,860', '53% - 46%'], ['1950', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'https://drive.google.com/thumbnail?id=1ylRwxvbKpOPiSGCSAr8IDakSOSVDM2GL', '70,058', 'Democrat', 'James D. France', '43,140', '62% - 38%'], ['1952', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'https://drive.google.com/thumbnail?id=1ylRwxvbKpOPiSGCSAr8IDakSOSVDM2GL', '105,526', 'https://drive.google.com/thumbnail?id=1YMplswPNxNvzaE_Mknq5TsqJN9I7Sd1d', 'Clair A. Williams', '62,011', '63% - 37%'], ['1954', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'Fred Schwengel', '67,128', 'https://drive.google.com/thumbnail?id=1YMplswPNxNvzaE_Mknq5TsqJN9I7Sd1d', "John O'Connor", '50,577', '57% - 43%'], ['1956', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'Fred Schwengel', '94,223', 'https://drive.google.com/thumbnail?id=1YMplswPNxNvzaE_Mknq5TsqJN9I7Sd1d', 'Ronald O. Bramhall', '68,287', '58% - 42%'], ['1958', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'Fred Schwengel', '59,577', 'https://drive.google.com/thumbnail?id=1YMplswPNxNvzaE_Mknq5TsqJN9I7Sd1d', 'Thomas J. Dailey', '51,996', '53% - 47%'], ['1960', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'Fred Schwengel', '104,737', 'https://drive.google.com/thumbnail?id=1YMplswPNxNvzaE_Mknq5TsqJN9I7Sd1d', 'Walter J. Guenther', '67,287', '61% - 39%'], ['1962', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'https://drive.google.com/thumbnail?id=1t_QQp2drv0p_2qqMUnTVAMOArsKpvuhQ', '65,975', 'https://drive.google.com/thumbnail?id=1YMplswPNxNvzaE_Mknq5TsqJN9I7Sd1d', 'Harold Stephens', '42,000', '61% - 39%'], ['1964', 'https://drive.google.com/thumbnail?id=1YMplswPNxNvzaE_Mknq5TsqJN9I7Sd1d', 'John R. Schmidhauser', '84,042', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'https://drive.google.com/thumbnail?id=1t_QQp2drv0p_2qqMUnTVAMOArsKpvuhQ', '80,697', '51% - 49%'], ['1966', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'Fred Schwengel', '64,795', 'https://drive.google.com/thumbnail?id=1YMplswPNxNvzaE_Mknq5TsqJN9I7Sd1d', 'https://drive.google.com/thumbnail?id=1y0EOb4Lretf6H2fKjpAc810Mgvb0Nlwe', '60,534', '51% - 48%'], ['1968', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'https://drive.google.com/thumbnail?id=1t_QQp2drv0p_2qqMUnTVAMOArsKpvuhQ', '91,419', 'https://drive.google.com/thumbnail?id=1YMplswPNxNvzaE_Mknq5TsqJN9I7Sd1d', 'https://drive.google.com/thumbnail?id=1y0EOb4Lretf6H2fKjpAc810Mgvb0Nlwe', '81,049', '53% - 47%'], ['1970', 'Republican', 'https://drive.google.com/thumbnail?id=1t_QQp2drv0p_2qqMUnTVAMOArsKpvuhQ', '60,270', 'Democrat', 'https://drive.google.com/thumbnail?id=1qwxno2njUfsQrkFeNrvH7k4Aid9p5Lte', '59,505', '50% - 49%'], ['1972', 'https://drive.google.com/thumbnail?id=1YMplswPNxNvzaE_Mknq5TsqJN9I7Sd1d', 'https://drive.google.com/thumbnail?id=1qwxno2njUfsQrkFeNrvH7k4Aid9p5Lte', '107,099', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'https://drive.google.com/thumbnail?id=1t_QQp2drv0p_2qqMUnTVAMOArsKpvuhQ', '91,609', '53% - 46%'], ['1974', 'https://drive.google.com/thumbnail?id=1YMplswPNxNvzaE_Mknq5TsqJN9I7Sd1d', 'https://drive.google.com/thumbnail?id=1qwxno2njUfsQrkFeNrvH7k4Aid9p5Lte', '75,687', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'https://drive.google.com/thumbnail?id=1itgBiNWASKU1KmNA6OXDEFjeFr6ugQNL', '63,540', '54% - 46%'], ['1976', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'https://drive.google.com/thumbnail?id=1itgBiNWASKU1KmNA6OXDEFjeFr6ugQNL', '109,694', 'https://drive.google.com/thumbnail?id=1YMplswPNxNvzaE_Mknq5TsqJN9I7Sd1d', 'https://drive.google.com/thumbnail?id=1qwxno2njUfsQrkFeNrvH7k4Aid9p5Lte', '101,024', '52% - 48%'], ['1978', 'Republican', 'https://drive.google.com/thumbnail?id=1itgBiNWASKU1KmNA6OXDEFjeFr6ugQNL', '79,940', 'https://drive.google.com/thumbnail?id=1YMplswPNxNvzaE_Mknq5TsqJN9I7Sd1d', 'Richard E. Meyers', '45,037', '63% - 36%'], ['1980', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'https://drive.google.com/thumbnail?id=1itgBiNWASKU1KmNA6OXDEFjeFr6ugQNL', '133,349', 'https://drive.google.com/thumbnail?id=1YMplswPNxNvzaE_Mknq5TsqJN9I7Sd1d', 'Jim Larew', '72,602', '64% - 35%'], ['1982', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'https://drive.google.com/thumbnail?id=1itgBiNWASKU1KmNA6OXDEFjeFr6ugQNL', '89,595', 'https://drive.google.com/thumbnail?id=1YMplswPNxNvzaE_Mknq5TsqJN9I7Sd1d', 'https://drive.google.com/thumbnail?id=1eHOckju8BwhFB7ep760xnY1t19brmpQM', '61,734', '59% - 41%'], ['1984', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'https://drive.google.com/thumbnail?id=1itgBiNWASKU1KmNA6OXDEFjeFr6ugQNL', '131,182', 'https://drive.google.com/thumbnail?id=1YMplswPNxNvzaE_Mknq5TsqJN9I7Sd1d', 'Kevin Ready', '65,293', '68% - 33%'], ['1986', 'Republican', 'https://drive.google.com/thumbnail?id=1itgBiNWASKU1KmNA6OXDEFjeFr6ugQNL', '86,834', 'https://drive.google.com/thumbnail?id=1YMplswPNxNvzaE_Mknq5TsqJN9I7Sd1d', 'https://drive.google.com/thumbnail?id=15o3GL1rOZ1-Rf8vLEZ2617U577S_1IBc', '43,985', '66% - 34%'], ['1988', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'https://drive.google.com/thumbnail?id=1itgBiNWASKU1KmNA6OXDEFjeFr6ugQNL', '112,746', 'https://drive.google.com/thumbnail?id=1YMplswPNxNvzaE_Mknq5TsqJN9I7Sd1d', 'https://drive.google.com/thumbnail?id=1eHOckju8BwhFB7ep760xnY1t19brmpQM', '71,280', '61% - 38%'], ['1990', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'James A. Leach', '90,042', 'Scattering', 'Scattering', '151', '99% - 1%'], ['1992', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'James A. Leach', '178,042', 'https://drive.google.com/thumbnail?id=1YMplswPNxNvzaE_Mknq5TsqJN9I7Sd1d', 'Jan J. Zonneveld', '81,600', '68% - 31%'], ['1994', 'Republican', 'James A. Leach', '110,448', 'Democrat', 'Glen Winekauf', '69,461', '60% - 38%'], ['1996', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'https://drive.google.com/thumbnail?id=1itgBiNWASKU1KmNA6OXDEFjeFr6ugQNL', '129,242', 'Democrat', 'Bob Rush', '111,595', '53% - 46%'], ['1998', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'https://drive.google.com/thumbnail?id=1itgBiNWASKU1KmNA6OXDEFjeFr6ugQNL', '106,419', 'https://drive.google.com/thumbnail?id=1YMplswPNxNvzaE_Mknq5TsqJN9I7Sd1d', 'Bob Rush', '79,529', '57% - 42%'], ['2000', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'https://drive.google.com/thumbnail?id=1itgBiNWASKU1KmNA6OXDEFjeFr6ugQNL', '164,972', 'https://drive.google.com/thumbnail?id=1YMplswPNxNvzaE_Mknq5TsqJN9I7Sd1d', 'Bob Simpson', '96,283', '62% - 36%'], ['2002', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'Jim Nussle', '112,280', 'https://drive.google.com/thumbnail?id=1YMplswPNxNvzaE_Mknq5TsqJN9I7Sd1d', 'https://drive.google.com/thumbnail?id=1z-g2h8eJkmOXIo9IJhi_fi0ql-eci7sa', '83,779', '57% - 43%'], ['2004', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'https://drive.google.com/thumbnail?id=1-HMVThU89MmI-_DWtR7PZI4i99wWi4Ws', '159,993', 'Democrat', 'https://drive.google.com/thumbnail?id=1eHOckju8BwhFB7ep760xnY1t19brmpQM', '125,490', '55% - 44%'], ['2006', 'Democrat', 'Bruce Braley', '113,724', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'Mike Whalen', '89,471', '56% - 44%'], ['2008', 'Democrat', 'https://drive.google.com/thumbnail?id=1lDQKVtNtFkkbYq1UL2RsZ-Uwt3Lx25qo', '178,229', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'https://drive.google.com/thumbnail?id=195Z2bgQ_KUn0AvVsvJWW6393UQ8iCh8T', '99,447', '64% - 35%'], ['2010', 'Democrat', 'Bruce Braley', '103,931', 'https://drive.google.com/thumbnail?id=1VmoPRFX3q1eyBjmMibjqVyrWNLxKwBar', 'Ben Lange', '99,976', '49% - 48%']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

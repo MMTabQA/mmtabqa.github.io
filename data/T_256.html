@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to nan of National Hockey League all-time results
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: how many total points has the lost angeles kings scored?
+            </div>
+            <div>
+                Answer: 3,373
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Team', 'Seasons', 'Games', 'Wins', 'Ties', 'Losses', 'Goals For', 'Goals Against', 'Goal Diff', 'Points'], ['https://drive.google.com/thumbnail?id=1Wf3hAh9xI7T4zAxMyKsrr-n3nrAXAu3H', '94', '6,120', '3,135', '837', '2,148', '19,929', '16,416', '3,513', '7,203'], ['https://drive.google.com/thumbnail?id=1rFmHPquFc5sING01Dvi02n7DJbpeCX7O', '87', '5,960', '2,856', '791', '2,313', '19,109', '17,459', '1,650', '6,609'], ['https://drive.google.com/thumbnail?id=1T3JtxCsf7ErwMHhbrDfebpyJjKVp-ji0  ( https://drive.google.com/thumbnail?id=1EV45Pu_n8J_kny51XqEsPRLrj3GSTDlD  (1926–1930)  https://drive.google.com/thumbnail?id=1T3JtxCsf7ErwMHhbrDfebpyJjKVp-ji0  (1930–1932))', '85', '5,894', '2,711', '815', '2,368', '18,385', '17,470', '915', '6,321'], ['https://drive.google.com/thumbnail?id=1ZDrNoG3R0-0H633c7h0oCLwiEXiexMbi  ( https://drive.google.com/thumbnail?id=1T-WpfkW-qc_a76idHLC0g9DUfVvSCJZ_  (1917–18)  https://drive.google.com/thumbnail?id=1k-5UBSxnOgMB-JID3S2v6bvEIlZ0l-U-  (1918–19)  https://drive.google.com/thumbnail?id=1Si9D0a4eZhmIh79h5p1zzoehzDvlmv3h  (1919–27))', '94', '6,120', '2,671', '783', '2,666', '18,853', '18,925', '-72', '6,221'], ['https://drive.google.com/thumbnail?id=1C171dpgZsXzJkfYE6CsTqZVrPFWI1FFr', '85', '5,894', '2,535', '808', '2,551', '18,080', '18,167', '-87', '5,965'], ['https://drive.google.com/thumbnail?id=1eoOrkkJ71ww6QMbcUjQrvJD9NUiLQcx1', '85', '5,894', '2,460', '814', '2,620', '17,535', '17,802', '-267', '5,826'], ['https://drive.google.com/thumbnail?id=10f_xnfk7wYDqI1TOP7kR5JIS5C1h70Wq', '44', '3,506', '1,756', '457', '1,293', '11,783', '10,270', '1,513', '4,060'], ['https://drive.google.com/thumbnail?id=1Vp7S6iYI_Scv7sqpNPUUAgBytkNl031_', '41', '3,280', '1,569', '409', '1,302', '10,868', '9,875', '993', '3,630'], ['https://drive.google.com/thumbnail?id=1oN8kK9K0on6MbqxZ-bhP_okn7SCQfSI0', '44', '3,506', '1,544', '432', '1,530', '10,876', '10,954', '-78', '3,621'], ['https://drive.google.com/thumbnail?id=1C7nH3mkSIn9lN6GLCsdYx4ZMw30Bo-sN  ( https://drive.google.com/thumbnail?id=1pRQGO1OCJ_ReDThLhzx37-SPgNscdobM  (1967–1993))', '44', '3,506', '1,510', '459', '1,537', '10,813', '11,102', '-289', '3,559'], ['https://drive.google.com/thumbnail?id=1VUdFiEulkODLIaDAo_Qf9GeR4Br7ar6x', '44', '3,506', '1,507', '383', '1,616', '11,747', '12,233', '-486', '3,483'], ['https://drive.google.com/thumbnail?id=1BOYImp1CGcVELFhWEg7UUwOgbmeDRM68', '44', '3,506', '1,428', '424', '1,654', '11,306', '12,016', '-710', '3,373'], ['Calgary Flames (Atlanta Flames (1972–1980))', '39', '3,124', '1,437', '379', '1,308', '10,406', '9,885', '521', '3,347'], ['https://drive.google.com/thumbnail?id=1v63F9tPSfY4wGE8THp9a4ertBpWEykEe', '41', '3,280', '1,353', '391', '1,536', '10,378', '1,1024', '-646', '3,179'], ['New York Islanders', '39', '3,124', '1,347', '347', '1,430', '10,116', '10,000', '116', '3,126'], ['https://drive.google.com/thumbnail?id=1e8SbGlai_haZlGXIebxq9XU04Gtb9IxW', '37', '2,968', '1,305', '303', '1,360', '9,407', '9,739', '-332', '3,004'], ['https://drive.google.com/thumbnail?id=1FQgJzXsDY0w_CSdjKSVST3tHLA9glqRB  ( https://drive.google.com/thumbnail?id=1HwS1YvIkKaUvi78-a4taI_MeCVkOdAcb  (1974–1976)  https://drive.google.com/thumbnail?id=1357z3pRobqMLHcrfDKcs0S4sL5ULg5xt  (1976–1982))', '37', '2,968', '1,260', '328', '1380', '8,931', '9,590', '-659', '2,915'], ['https://drive.google.com/thumbnail?id=1-gu7bNlcwHs20daCHMWq7OxlMtA9KsOq', '32', '2,568', '1,176', '262', '1,130', '8,926', '8,581', '345', '2,708'], ['https://drive.google.com/thumbnail?id=1yxrdmPDYYqUNtMKw8Z6cMggI_T1psOrW  ( https://drive.google.com/thumbnail?id=1x5HjOXFOpYAcdzquLX4CBo1nnzS_PTIL  (1979–1995))', '32', '2,568', '1,174', '261', '1,133', '8,564', '8,417', '147', '2,681'], ['https://drive.google.com/thumbnail?id=1-wP3-KRbljx_IRSJCVin66dxW15ITrr-  ( https://drive.google.com/thumbnail?id=1HeugDCvWYlD23TKINuNuRijfriBSix6h  (1979–1996))', '32', '2,568', '1,063', '266', '1,239', '8,058', '8,809', '-756', '2,473'], ['Carolina Hurricanes (Hartford Whalers (1979–1997))', '32', '2,568', '1,049', '263', '1,256', '7,808', '8,599', '-791', '2,447'], ['https://drive.google.com/thumbnail?id=11TcaYZciDHiXV38dqOicHjA6W8dTx4iq', '20', '1,608', '721', '121', '766', '4,553', '4,744', '-191', '1,657'], ['Ottawa Senators', '19', '1,528', '679', '115', '734', '4,401', '4,506', '-105', '1,556'], ['https://drive.google.com/thumbnail?id=1SYiVlnm59WjO12uAONDMXMjVznFqjH-5', '18', '1,444', '638', '107', '699', '3,863', '4,021', '-158', '1,477'], ['Florida Panthers', '18', '1,444', '573', '142', '729', '3,767', '4,113', '-346', '1,412'], ['Tampa Bay Lightning', '19', '1,528', '588', '112', '828', '4,058', '4,842', '-784', '1,384'], ['Nashville Predators', '13', '1,066', '503', '60', '503', '2,825', '2,884', '-59', '1,145'], ['https://drive.google.com/thumbnail?id=1nVs5yst7fgWdCIcfsCXKe4wuYMWeYyZW', '11', '902', '405', '55', '442', '2,259', '2,338', '-79', '945'], ['https://drive.google.com/thumbnail?id=1HeugDCvWYlD23TKINuNuRijfriBSix6h  ( https://drive.google.com/thumbnail?id=1L3s1fwMnyoQqnyNMHAw3sGio6Kf7ok2Z  (1999–2011))', '12', '984', '379', '45', '550', '2,690', '3,260', '-570', '891'], ['https://drive.google.com/thumbnail?id=1nOpMnS8HIT32pyd8VH6GI6IldUf0cXtZ', '11', '902', '342', '33', '527', '2,220', '2,744', '-524', '803'], ['New York Americans (1925–1941) Brooklyn Americans (1941–1942)', '17', '784', '255', '127', '402', '1,643', '2,182', '-539', '637'], ['Montreal Maroons', '14', '622', '271', '91', '260', '1,474', '1,405', '69', '633'], ['https://drive.google.com/thumbnail?id=1CuuhP29Z6dfSoCjVL5TxZpHBYlWL4T2Z  (1917–1934)  https://drive.google.com/thumbnail?id=1rAZtXgSkQesj0lS9WGAPUktOK_lfjxw4  (1934–1935)', '17', '590', '269', '69', '252', '1,544', '1,478', '66', '607'], ['Oakland Seals (1967–1970) California Golden Seals (1970–1976) Cleveland Barons (1976–1978)', '11', '858', '229', '141', '488', '2296', '3197', '-901', '599'], ['https://drive.google.com/thumbnail?id=13OquKSqmyn1yRIlqAjLVkiWR9bBsjNcX  (1925–1930)  https://drive.google.com/thumbnail?id=1drvNo_lf-zzxcDSnPov6MkQgV-utFoVO  (1930–1931)', '6', '256', '71', '27', '158', '452', '703', '-251', '169'], ['https://drive.google.com/thumbnail?id=16vgR67hdAfsVVG99oPgiEYYGSn568sd-  (1919–1920)  https://drive.google.com/thumbnail?id=1dd50ViE4t9iMtKTH2Sohr5-jXHOUFc-v  (1920–1925)', '6', '150', '51', '1', '98', '505', '652', '-147', '103'], ['https://drive.google.com/thumbnail?id=1bRp577j_yUtMlxwU6zjuIrNIvMxY_hCB', '1', '6', '1', '0', '5', '17', '35', '-18', '2']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

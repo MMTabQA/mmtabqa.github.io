@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Districts of Lima of List of districts of Lima
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: what is the total number of districts of lima?
+            </div>
+            <div>
+                Answer: 43
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Districts', 'UBIGEO', 'Area (km²)', 'Population', 'Population density (/km²)', 'Created', 'Postal code'], ['Ancón', '150102', '299.22', '29,419', '98.3', '29 October 1874', '02'], ['https://drive.google.com/thumbnail?id=1jTujmECbijp41A5CCuIfkV-9e3nXHNZb', '150103', '77.72', '419,663', '5,399.7', '2 January 1857', '03'], ['https://drive.google.com/thumbnail?id=1bQQ0ZTWHaEncFU7InhIpgnPFyprKMdqc', '150104', '3.33', '45,922', '13,790.4', '26 October 1874', '04'], ['Breña', '150105', '3.22', '94,808', '29,443.5', '15 July 1949', '05'], ['https://drive.google.com/thumbnail?id=1tPpwNzTAx67177CpVph2yK12iDzxMgNd', '150106', '346.88', '188,764', '544.2', '4 August 1821', '06'], ['https://drive.google.com/thumbnail?id=1FO62IXw6lwRKKGHMUkhq1xBHOgQK0-0Z', '150107', '39.5', '39,686', '1,004.7', '24 April 1940', '08'], ['https://drive.google.com/thumbnail?id=13ZxndxU23AkIHSR4SGK_3WHtDNT4SIsD', '150108', '38.94', '262,595', '6,743.6', '2 January 1857', '09'], ['https://drive.google.com/thumbnail?id=1LMzo72QZWkGqpawVwvI0sZ1fz6V-5cCV', '150109', '240.33', '15,784', '65.7', '3 March 1970', '40'], ['Comas', '150110', '48.75', '464,745', '9,533.2', '12 December 1961', '07'], ['https://drive.google.com/thumbnail?id=1tm77mvvuxw8BWUpxXL7_WQhl3JbmrTCP', '150111', '12.54', '165,425', '13,191.8', '6 January 1965', '10'], ['https://drive.google.com/thumbnail?id=1SCZwGsLhFv_2lj5cav967xU4W1C2qafY', '150112', '14.56', '197,308', '13,551.4', '16 March 1964', '28'], ['https://drive.google.com/thumbnail?id=1jlca_BgianpGXJSii8615wm8lEbBOYQk', '150113', '4.57', '58,588', '12,820.1', '13 December 1963', '11'], ['https://drive.google.com/thumbnail?id=1X2iswMiGKpB_llVs3lOW4JfHhIRKAR97', '150114', '65.75', '124,468', '1,893.0', '6 February 1962', '12'], ['La Victoria', '150115', '8.74', '190,218', '21,764.1', '16 August 1921', '13'], ['https://drive.google.com/thumbnail?id=1uXG1_FsTUNgNUy7zC4xAcKW9hai8Y4wp', '150101', '21.88', '278,804', '13,187.2', '2 January 1857', '01'], ['https://drive.google.com/thumbnail?id=1hwgZUyFzXMQTw4RuMFjmZ5MzPzD92z6L', '150116', '3.03', '52,123', '17,202.3', '20 May 1936', '14'], ['https://drive.google.com/thumbnail?id=1V0D9cn0nJwZd5P2f57hA4Fsla5irm5m0', '150117', '18.25', '286,549', '15,701.3', '7 April 1989', '39'], ['https://drive.google.com/thumbnail?id=1Y3wy5WSzhttLdyz45vzkOxFvPKWnBa8J', '150118', '236.47', '90,594', '383.1', '2 January 1857', '15'], ['https://drive.google.com/thumbnail?id=1zeaDOZLFlf6eomEeAxpIcGSYpkVB3Bba', '150119', '181.12', '55,953', '308.9', '2 January 1857', '16'], ['https://drive.google.com/thumbnail?id=1UaEHFMO8ebFp8trWiXdFbEzckaSIEZOW', '150120', '3.61', '48,445', '13,419.7', '10 May 1920', '17'], ['Miraflores', '150122', '9.62', '92,815', '9,648.1', '2 January 1857', '18'], ['https://drive.google.com/thumbnail?id=1L0ANWIeHr720I-sJQkYygD94okIPoYGy', '150123', '160.23', '54,763', '341.8', '2 January 1857', '19'], ['Pucusana', '150124', '37.83', '9,231', '244.0', '22 January 1943', '20'], ['https://drive.google.com/thumbnail?id=1nLfFnYx0gWAUcPhe9RQNeA5zZo8MdgqO', '150121', '4.38', '71,892', '16,413.7', '2 January 1857', '21'], ['https://drive.google.com/thumbnail?id=1SMXZdKP0LGMeifmNyd0JjzG_oprv8dDh', '150125', '71.18', '203,473', '2,858.6', '14 February 1927', '22'], ['https://drive.google.com/thumbnail?id=1Xx2crpOu7IKI4HzGGfd9D5DDS4CT-7Ks', '150126', '119.5', '4,676', '39.1', '7 April 1954', '24'], ['Punta Negra', '150127', '130.5', '4,473', '34.3', '7 April 1954', '23'], ['https://drive.google.com/thumbnail?id=1AEa30zwg6fect7RCBG2SfFFXE8uHcJjS', '150128', '11.87', '175,793', '14,809.9', '16 August 1921', '25'], ['San Bartolo', '150129', '45.01', '5,733', '127.4', '5 May 1946', '26'], ['https://drive.google.com/thumbnail?id=1YT-CMVy85lQeLCM73p0bD0i4TvbxSkDA', '150130', '9.96', '102,762', '10,317.5', '1 June 1983', '41'], ['https://drive.google.com/thumbnail?id=11z3HtWCp2x2ErHLZUey8z6RG1rvLNYFp', '150131', '11.1', '55,309', '6,165.6', '24 April 1931', '27'], ['https://drive.google.com/thumbnail?id=1uFRWLQhH0icADb52gIfonjm4mYXvPaBW', '150132', '131.25', '812,656', '6,191.7', '13 January 1967', '36'], ['https://drive.google.com/thumbnail?id=1iHUYtpCOgPXHDHChaZB6YKNzYAW6rmuZ', '150133', '23.98', '335,237', '13,979.9', '12 January 1965', '29'], ['https://drive.google.com/thumbnail?id=1k07NKntmmGyMgkoLcKtTU5xDbamp5PFV', '150134', '3.49', '46,258', '13,254.4', '30 May 1968', '30'], ['San Martín de Porres', '150135', '36.91', '525,155', '14,228.0', '22 May 1950', '31'], ['https://drive.google.com/thumbnail?id=1McL2ZF7BL94xhxn5IrLpW7qoBeKNqKzh', '150136', '10.72', '124,904', '11,651.5', '10 May 1920', '32'], ['https://drive.google.com/thumbnail?id=18zG3TUgVHaFocnh0s9hw_EFRcltYYXW3', '150137', '10.69', '160,777', '15,039.9', '26 October 1989', '43'], ['Santa María del Mar District', '150138', '9.81', '88', '9.0', '16 January 1962', '37'], ['https://drive.google.com/thumbnail?id=1oZ_1uSXbkfMdakcxUMrdUZwGjL8x1ZYM', '150139', '21.5', '9,379', '436.2', '7 February 1962', '38'], ['https://drive.google.com/thumbnail?id=1dj_zcfxtvUUcZ_inrL1mD1hKJMtuBZyW', '150140', '34.75', '272,690', '7,847.2', '16 December 1929', '33'], ['https://drive.google.com/thumbnail?id=1vd_QFadvMiOVB35KrpAYTgyShKaSbEgN', '150141', '3.46', '84,202', '24,335.8', '15 July 1949', '34'], ['Villa El Salvador', '150142', '35.46', '367,436', '10,362.0', '1 June 1983', '42'], ['https://drive.google.com/thumbnail?id=1NwarK1ifz27fJtpZ3I9oWyfytvligl9k', '150143', '70.57', '355,761', '5,041.2', '28 December 1961', '35']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

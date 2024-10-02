@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to 250cc classification of 1996 Italian motorcycle Grand Prix
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: does olivier jacque have the same time as tetsuya harada?
+            </div>
+            <div>
+                Answer: No
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Pos', 'Rider', 'Manufacturer', 'Time/Retired', 'Points'], ['1', 'https://drive.google.com/thumbnail?id=1uxCFYPigmCT2RQOlq2LTrSoTjPNPdyDY', 'https://drive.google.com/thumbnail?id=1MhXL5BJzgUx3scjFwmsi7Xmoqz4seR5H', '40:36.299', '25'], ['2', 'Marcellino Lucchi', 'https://drive.google.com/thumbnail?id=1MhXL5BJzgUx3scjFwmsi7Xmoqz4seR5H', '+6.914', '20'], ['3', 'https://drive.google.com/thumbnail?id=1-4Qq6xjXHG-G7LlupPiBSOq9YolmUTiD', 'https://drive.google.com/thumbnail?id=197Wx0NxY5Tnk4LuUom7wPlcVirBauvUr', '+18.294', '16'], ['4', 'https://drive.google.com/thumbnail?id=1PP14_hPSwcWdzWHjMRDPOBlDamx18Ygk', 'https://drive.google.com/thumbnail?id=197Wx0NxY5Tnk4LuUom7wPlcVirBauvUr', '+18.607', '13'], ['5', 'https://drive.google.com/thumbnail?id=1BixM01bvn5w50FnQAf7m6u_hDtiUYybU', 'https://drive.google.com/thumbnail?id=197Wx0NxY5Tnk4LuUom7wPlcVirBauvUr', '+31.617', '11'], ['6', 'https://drive.google.com/thumbnail?id=1kYdsrXvNkkfbTU77FRicMk4J689is8_i', 'Yamaha', '+31.649', '10'], ['7', 'https://drive.google.com/thumbnail?id=1M7FwGOpLsG5aywdx-Ni_y2CPhwaJrqfK', 'https://drive.google.com/thumbnail?id=197Wx0NxY5Tnk4LuUom7wPlcVirBauvUr', '+31.683', '9'], ['8', 'https://drive.google.com/thumbnail?id=14h8Z22e9dxVwhVxBhEGbP95fnp8bWUaK', 'https://drive.google.com/thumbnail?id=197Wx0NxY5Tnk4LuUom7wPlcVirBauvUr', '+47.701', '8'], ['9', 'https://drive.google.com/thumbnail?id=1CeD2kLJzMgvG_YLRbU5J2HdppI495xlt', 'https://drive.google.com/thumbnail?id=197Wx0NxY5Tnk4LuUom7wPlcVirBauvUr', '+51.186', '7'], ['10', 'Cristiano Migliorati', 'Honda', '+51.556', '6'], ['11', 'Massimo Ottobre', 'Aprilia', '+51.563', '5'], ['12', 'https://drive.google.com/thumbnail?id=1LnB-ytGcrljaJefzHpUWtCoVIZ6wgONX', 'Aprilia', '+51.613', '4'], ['13', 'Luca Boscoscuro', 'https://drive.google.com/thumbnail?id=1MhXL5BJzgUx3scjFwmsi7Xmoqz4seR5H', '+51.617', '3'], ['14', 'https://drive.google.com/thumbnail?id=1a5q8KwOK4DEToOD_3xFUENQdueNL6l5U', 'https://drive.google.com/thumbnail?id=197Wx0NxY5Tnk4LuUom7wPlcVirBauvUr', '+52.394', '2'], ['15', 'Jurgen vd Goorbergh', 'https://drive.google.com/thumbnail?id=197Wx0NxY5Tnk4LuUom7wPlcVirBauvUr', '+52.569', '1'], ['16', 'Sebastian Porto', 'https://drive.google.com/thumbnail?id=1MhXL5BJzgUx3scjFwmsi7Xmoqz4seR5H', '+1:03.619', ''], ['17', 'Jamie Robinson', 'https://drive.google.com/thumbnail?id=1MhXL5BJzgUx3scjFwmsi7Xmoqz4seR5H', '+1:06.917', ''], ['18', 'Olivier Petrucciani', 'https://drive.google.com/thumbnail?id=1MhXL5BJzgUx3scjFwmsi7Xmoqz4seR5H', '+1:06.945', ''], ['19', 'Alessandro Antonello', 'https://drive.google.com/thumbnail?id=1MhXL5BJzgUx3scjFwmsi7Xmoqz4seR5H', '+1:07.099', ''], ['20', 'Osamu Miyazaki', 'https://drive.google.com/thumbnail?id=1MhXL5BJzgUx3scjFwmsi7Xmoqz4seR5H', '+1:32.873', ''], ['21', 'Davide Bulega', 'https://drive.google.com/thumbnail?id=1MhXL5BJzgUx3scjFwmsi7Xmoqz4seR5H', '+1:32.902', ''], ['22', 'Yasumasa Hatakeyama', 'https://drive.google.com/thumbnail?id=197Wx0NxY5Tnk4LuUom7wPlcVirBauvUr', '+1:34.039', ''], ['23', 'https://drive.google.com/thumbnail?id=1y51cI5q_38kP0Fd5Lu_ZWrnPZUb_fc7r', 'Aprilia', '+1:34.363', ''], ['24', 'https://drive.google.com/thumbnail?id=1aSh163g13Q6LVGpIizLpm9_Sa8WRK-UY', 'https://drive.google.com/thumbnail?id=197Wx0NxY5Tnk4LuUom7wPlcVirBauvUr', '+1:34.931', ''], ['25', 'Christian Boudinot', 'Aprilia', '+1:41.263', ''], ['26', 'José Barresi', 'Yamaha', '+1 Lap', ''], ['27', 'https://drive.google.com/thumbnail?id=15scVZwDw0IkQLjA4qdIrt9CAbzMhQg6q', 'https://drive.google.com/thumbnail?id=1MhXL5BJzgUx3scjFwmsi7Xmoqz4seR5H', '+1 Lap', ''], ['28', 'Cristophe Cogan', 'Honda', '+1 Lap', ''], ['Ret', 'Gianluigi Scalvini', 'https://drive.google.com/thumbnail?id=197Wx0NxY5Tnk4LuUom7wPlcVirBauvUr', 'Retirement', ''], ['Ret', 'https://drive.google.com/thumbnail?id=17kGJUzHhWI5Ab7Bs81cdMQSHWKdhtWIy', 'https://drive.google.com/thumbnail?id=1MhXL5BJzgUx3scjFwmsi7Xmoqz4seR5H', 'Retirement', ''], ['Ret', 'Takeshi Tsujimura', 'https://drive.google.com/thumbnail?id=197Wx0NxY5Tnk4LuUom7wPlcVirBauvUr', 'Retirement', '']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

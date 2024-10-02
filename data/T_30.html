@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Singles titles (16) of José Higueras
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: which championship only takes place in year 1975?
+            </div>
+            <div>
+                Answer: Båstad, Sweden
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Outcome', 'No.', 'Date', 'Championship', 'Surface', 'Opponent in the final', 'Score in the final'], ['Runner-up', '1.', '1975', 'Båstad, Sweden', 'Clay', 'https://drive.google.com/thumbnail?id=1Vu4zNjTryb3i8tJlgnjTkhX9TaTTaR_M', '0–6, 3–6'], ['Runner-up', '2.', '1976', 'https://drive.google.com/thumbnail?id=1AuIdzCwdlPPglG2ZBg8lA2KL2KbSEc8- , Brazil', 'Carpet', 'https://drive.google.com/thumbnail?id=1woxAHSK58tTtgaOdttLujOyBIT0_T68A', '3–6, 0–6'], ['Winner', '1.', '1976', 'Santiago, Chile', 'Clay', 'Carlos Kirmayr', '5–7, 6–4, 6–4'], ['Winner', '2.', '1977', 'https://drive.google.com/thumbnail?id=1sawD7_SK8_-iN_s1v0eRBhhrOzUUFpou , Spain', 'Clay', 'https://drive.google.com/thumbnail?id=1IieVKfnNrHiL7sZup___D_UG13HClRQb', '6–4, 6–0, 6–3'], ['Runner-up', '3.', '1977', 'Bogotá, Colombia', 'Clay', 'https://drive.google.com/thumbnail?id=1woxAHSK58tTtgaOdttLujOyBIT0_T68A', '1–6, 2–6, 3–6'], ['Winner', '3.', '1978', 'Cairo, Egypt', 'Clay', 'Kjell Johansson', '4–6, 6–4, 6–4'], ['Winner', '4.', '1978', 'Nice, France', 'Clay', 'https://drive.google.com/thumbnail?id=1mVuFZZG6HbFBJ66wzaIQWdprV8rGDn66', '6–3, 6–4, 6–4'], ['Runner-up', '4.', '1978', 'https://drive.google.com/thumbnail?id=1TNO_aCxsngxfQ4_VNubvDjnRuACnIECO , U.S.', 'Clay', 'https://drive.google.com/thumbnail?id=1xfXGXzdOJEHVEuzGKtgdRGUuAjq-q0wG', '0–6, 3–6'], ['Winner', '5.', '1978', 'https://drive.google.com/thumbnail?id=1N_guhlqkvyMoY2bjLW_f4Sd7XYwdOTCW , England', 'Clay', 'https://drive.google.com/thumbnail?id=14xaL9HmFkohQPzSx_UN5KrZSzlnrrgFf', '6–2, 6–1, 6–3'], ['Winner', '6.', '1978', 'Madrid, Spain', 'Clay', 'Tomáš Šmíd', '6–7, 6–3, 6–3, 6–4'], ['Winner', '7.', '1979', 'Houston, U.S.', 'Clay', 'https://drive.google.com/thumbnail?id=1IcbTiGtIG-bn0Xj31BPuGlzsGw4l91Zm', '6–3, 2–6, 7–6'], ['Winner', '8.', '1979', 'https://drive.google.com/thumbnail?id=1H6MlAYXtObofPKfQH9pJmfx3lnjeen5D , Germany', 'Clay', 'Harold Solomon', '3–6, 6–1, 6–4, 6–1'], ['Runner-up', '5.', '1979', 'North Conway, U.S.', 'Clay', 'Harold Solomon', '7–5, 4–6, 6–7'], ['Winner', '9.', '1979', 'Boston, U.S.', 'Clay', 'https://drive.google.com/thumbnail?id=1RVYW6CzVOSu4-pa-aLPv505wDyry4mAJ', '6–3, 6–1'], ['Runner-up', '6.', '1979', 'Quito, Ecuador', 'Clay', 'https://drive.google.com/thumbnail?id=15uyIftsdr92heyd7GeYpoGh1vhmhhZvp', '6–2, 4–6, 2–6'], ['Runner-up', '7.', '1979', 'Santiago, Chile', 'Clay', 'https://drive.google.com/thumbnail?id=1RVYW6CzVOSu4-pa-aLPv505wDyry4mAJ', '5–7, 7–5, 4–6'], ['Runner-up', '8.', '1981', 'https://drive.google.com/thumbnail?id=1aVzVFfXPikSrvf4ogL8FB-hE2_dzCr7R , Chile', 'Clay', 'https://drive.google.com/thumbnail?id=15uyIftsdr92heyd7GeYpoGh1vhmhhZvp', '4–6, 0–6'], ['Runner-up', '9.', '1982', 'Linz, Austria', 'Clay', 'https://drive.google.com/thumbnail?id=1pq0IFX2UtaLJI01wGQQFwN_x8zbJ-7FY', '4–6, 6–4, 4–6'], ['Winner', '10.', '1982', 'https://drive.google.com/thumbnail?id=1H6MlAYXtObofPKfQH9pJmfx3lnjeen5D , Germany', 'Clay', 'https://drive.google.com/thumbnail?id=1PcyFMmr07wDy1m-f16ZMYgs-1xcFkch0', '4–6, 6–7, 7–6, 6–3, 7–6'], ['Runner-up', '10.', '1982', 'North Conway, U.S.', 'Clay', 'https://drive.google.com/thumbnail?id=1ufRDqkvhI0BMYn55DpDJhpj5CJ6fw-3D', '3–6, 2–6'], ['Winner', '11.', '1982', 'Indianapolis, U.S.', 'Clay', 'https://drive.google.com/thumbnail?id=1_6iEeCebh1UftJU4iw4LfIu37fyHvRu2', '7–5, 5–7, 6–3'], ['Winner', '12.', '1983', 'https://drive.google.com/thumbnail?id=1hsJ9wHZzTCgak07CNE-8oaW6mc0gIcmX , U.S.', 'Hard', 'Eliot Teltscher', '6–4, 6–2'], ['Winner', '13.', '1983', 'https://drive.google.com/thumbnail?id=1N_guhlqkvyMoY2bjLW_f4Sd7XYwdOTCW , England', 'Clay', 'Tomáš Šmíd', '2–6, 7–6, 7–5'], ['Runner-up', '11.', '1983', 'https://drive.google.com/thumbnail?id=1H6MlAYXtObofPKfQH9pJmfx3lnjeen5D , Germany', 'Clay', 'https://drive.google.com/thumbnail?id=1mVuFZZG6HbFBJ66wzaIQWdprV8rGDn66', '6–3, 5–7, 2–6, 0–6'], ['Runner-up', '12.', '1983', 'https://drive.google.com/thumbnail?id=1SMVQ2o5n1pT8y_2EA-auk8dL--ukrHe3 , Italy', 'Clay', 'https://drive.google.com/thumbnail?id=1_6iEeCebh1UftJU4iw4LfIu37fyHvRu2', '2–6, 7–6, 1–6, 4–6'], ['Winner', '14.', '1983', 'Stuttgart Outdoor, Germany', 'Clay', 'https://drive.google.com/thumbnail?id=1MeasN96DgwNnrR7VOH3qAKWoj830InvG', '6–1, 6–1, 7–6'], ['Winner', '15.', '1984', 'Kitzbühel, Austria', 'Clay', 'https://drive.google.com/thumbnail?id=15uyIftsdr92heyd7GeYpoGh1vhmhhZvp', '7–5, 3–6, 6–1'], ['Winner', '16.', '1984', 'Bordeaux, France', 'Clay', 'Francesco Cancellotti', '7–5, 6–1']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

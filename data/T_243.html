@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to International goals of Kasun Jayasuriya
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: who did this person play in their first friendly game?
+            </div>
+            <div>
+                Answer: Cambodia
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['#', 'Date', 'Venue', 'Opponent', 'Score', 'Result', 'Competition'], ['1.', '1 May 2000', 'Rasmee Dhandu Stadium,  https://drive.google.com/thumbnail?id=1MGsn7NaNwSK2sn5e9yG9xq5AIqo0PgMM ,  https://drive.google.com/thumbnail?id=1SyxYoAayHJHUIwb7IHmQ08nd0iBXGogq', 'https://drive.google.com/thumbnail?id=1mMn09lriYaOzn_4SEeXZ8bbCFSCO81iB', '1–1', '1–1', '2000 MFF Golden Jubilee Tournament'], ['2.', '25 August 2000', 'https://drive.google.com/thumbnail?id=171a9ZkMzWZo7JPiAaSGTnXSkDAtAcceg ,  https://drive.google.com/thumbnail?id=1qs_Xcqo7FBPalXD9vhNdgoIkVaX9vZXE', 'https://drive.google.com/thumbnail?id=1ewWof-GosPfZXxvvGVwGnxfOXjDVHH2s', '2–1', '2–2', '2000 HCM Cup'], ['3.', '28 March 2001', 'https://drive.google.com/thumbnail?id=1EeR8Qg0yrayHxldYLZlzon5whviT0IRA ,  https://drive.google.com/thumbnail?id=1zgdXDViAhTVb96TBl3AFcPGAvHe2uGGd', 'https://drive.google.com/thumbnail?id=1zO6OwmkU8IvMtU3cX3GF2SFs_J8qhBw5', '1–0', '1–0', 'Friendly'], ['4.', '17 May 2001', 'Beirut Municipal Stadium,  https://drive.google.com/thumbnail?id=1hrSJXyf5Bx6FRjiANm9mjYWlh8j5Qpxt ,  https://drive.google.com/thumbnail?id=1C1pcnxxXehlf7GblJZ_gPdDmSc8y5FEP', 'https://drive.google.com/thumbnail?id=1uEQYr5WZSnE0_osKjtbgEOic3kIjaLd9', '3–2', '3–3', '2002 FIFA World Cup qualification (AFC)'], ['5.', '30 May 2001', 'Suphachalasai Stadium,  https://drive.google.com/thumbnail?id=1ERI4YCXF8hI7niAYeaz9C0ownzJ2Lo-O ,  https://drive.google.com/thumbnail?id=1KhXK1U_496UEN6HHkSy8ehvKYwdGUaT6', 'Pakistan', '1–0', '3–1', '2002 FIFA World Cup qualification (AFC)'], ['6.', '30 May 2001', 'Supachalasai Stadium, Bangkok, Thailand', 'https://drive.google.com/thumbnail?id=1uEQYr5WZSnE0_osKjtbgEOic3kIjaLd9', '3–0', '3–1', '2002 FIFA World Cup qualification (AFC)'], ['7.', '4 April 2002', 'Sugathadasa Stadium, Colombo, Sri Lanka', 'https://drive.google.com/thumbnail?id=1mMn09lriYaOzn_4SEeXZ8bbCFSCO81iB', '1–0', '1–0', 'Friendly'], ['8.', '21 March 2003', 'Sugathadasa Stadium, Colombo, Sri Lanka', 'Timor-Leste', '1–1', '3–2', '2004 AFC Asian Cup qualification'], ['9.', '21 March 2003', 'Sugathadasa Stadium, Colombo, Sri Lanka', 'https://drive.google.com/thumbnail?id=1LshDN5KeWSbPPtINLcO0rT_pg5JhsRJf', '3–2', '3–2', '2004 AFC Asian Cup qualification'], ['10.', '3 December 2003', 'Sugathadasa Stadium, Colombo, Sri Lanka', 'https://drive.google.com/thumbnail?id=1aZQAnj5f_alr0H4QSnt9WK9MWcYat2ug', '2–0', '3–0', '2006 FIFA World Cup qualification (AFC)'], ['11.', '2 April 2006', 'MA Aziz Stadium,  https://drive.google.com/thumbnail?id=1WLh3s5lZDkUX8qHXGp5org6CH8Qrm3wp ,  https://drive.google.com/thumbnail?id=1AyZLJ6Zo_f3kHRH9O9JBJpeECJiCiCWV', 'Brunei', '2–0', '3–0', 'https://drive.google.com/thumbnail?id=11Pi939NRgUNmE8KvB0y_5gwXPOmoS9UR'], ['12.', '12 April 2006', 'MA Aziz Stadium, Chittagong, Bangladesh', 'https://drive.google.com/thumbnail?id=1MG5DmZmbhSOVAa6BLLiSChV4jvVxaktH', '1–0', '1–1', '2006 AFC Challenge Cup'], ['13.', '24 March 2007', 'Sugathadasa Stadium, Colombo, Sri Lanka', 'https://drive.google.com/thumbnail?id=1TTSbPvSa16w86VbPOsdqT02poW18iOTx', '1–4', '1–4', 'Friendly'], ['14.', '2 April 2008', 'Chungshan Stadium,  https://drive.google.com/thumbnail?id=1WQLwG8dLE6SFU_6NT9jX7SuVxKgGOKRH ,  https://drive.google.com/thumbnail?id=1I8hsJIS-Z7kaOxOQ_LT_XK1TyGxI-0yX', 'https://drive.google.com/thumbnail?id=1NOw6yUfv837PeH_acS3VaEb8ypoJk89r', '5–1', '5–1', '2008 AFC Challenge Cup qualification'], ['15.', '4 April 2008', 'Chungshan Stadium, Taipei, Taiwan', 'https://drive.google.com/thumbnail?id=1uEQYr5WZSnE0_osKjtbgEOic3kIjaLd9', '1–0', '7–1', '2008 AFC Challenge Cup qualification'], ['16.', '4 April 2008', 'Chungshan Stadium, Taipei, Taiwan', 'https://drive.google.com/thumbnail?id=1uEQYr5WZSnE0_osKjtbgEOic3kIjaLd9', '4–1', '7–1', '2008 AFC Challenge Cup qualification'], ['17.', '4 April 2008', 'Chungshan Stadium, Taipei, Taiwan', 'https://drive.google.com/thumbnail?id=1uEQYr5WZSnE0_osKjtbgEOic3kIjaLd9', '7–1', '7–1', '2008 AFC Challenge Cup qualification'], ['18.', '6 April 2008', 'Chungshan Stadium, Taipei, Taiwan', 'https://drive.google.com/thumbnail?id=1x6edJdCARcFjLGQbnGbteTu8SbNAdrJC', '2–2', '2–2', '2008 AFC Challenge Cup qualification'], ['19.', '2 August 2008', 'Gachibowli Athletic Stadium,  https://drive.google.com/thumbnail?id=1ruvY4sWQjR3FU6bEVoZGLyVv7Amos74g', 'https://drive.google.com/thumbnail?id=1I59ST2FbzDaP3iS2Y8qtbTkMIsTi3_FZ', '1–1', '1–3', 'https://drive.google.com/thumbnail?id=1ctV9B_ZoBRzfn1BZHCFUSYQaY214KOCx'], ['20.', '4 April 2009', 'Sugathadasa Stadium, Colombo, Sri Lanka', 'Brunei', '1–0', '5–1', '2010 AFC Challenge Cup qualification'], ['21.', '4 April 2009', 'Sugathadasa Stadium, Colombo, Sri Lanka', 'Brunei', '3–0', '5–1', '2010 AFC Challenge Cup qualification'], ['22.', '4 April 2009', 'Sugathadasa Stadium, Colombo, Sri Lanka', 'https://drive.google.com/thumbnail?id=11ZkdSQq4RZZcJlLCNrokpWWX5CiSMnB5', '4–0', '5–1', '2010 AFC Challenge Cup qualification'], ['23.', '4 April 2009', 'Sugathadasa Stadium, Colombo, Sri Lanka', 'https://drive.google.com/thumbnail?id=11ZkdSQq4RZZcJlLCNrokpWWX5CiSMnB5', '5–0', '5–1', '2010 AFC Challenge Cup qualification'], ['24.', '6 April 2009', 'Sugathadasa Stadium, Colombo, Sri Lanka', 'Chinese Taipei', '1–0', '2–1', '2010 AFC Challenge Cup qualification'], ['25.', '6 December 2009', 'https://drive.google.com/thumbnail?id=1IQNpX4FAApKEcdvrJUnrgkdeQeG1q-Tv ,  https://drive.google.com/thumbnail?id=1qXfjUycqvG-6N-eJmTuXRTgdhvG-j_y0 , Bangladesh', 'https://drive.google.com/thumbnail?id=1YbGdkfUaIDW9If3ptmLFoWYy5_w0079M', '3–0', '6–0', 'https://drive.google.com/thumbnail?id=1TSBWgHX2vVQMBvMY116GJisy1mLYvaza'], ['26.', '6 December 2009', 'Bangabandhu National Stadium, Dhaka, Bangladesh', 'Bhutan', '4–0', '6–0', '2009 South Asian Football Federation Cup'], ['27.', '6 December 2009', 'Bangabandhu National Stadium, Dhaka, Bangladesh', 'https://drive.google.com/thumbnail?id=1YbGdkfUaIDW9If3ptmLFoWYy5_w0079M', '5–0', '6–0', '2009 South Asian Football Federation Cup']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

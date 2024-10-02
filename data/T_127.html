@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Release|Festival circuit of Love (2011 film)
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: how many locations were there for the sitges film festival?
+            </div>
+            <div>
+                Answer: 3
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Date', 'Festival', 'Location', 'Awards', 'Link'], ['Feb 2–5, Feb 11', 'https://drive.google.com/thumbnail?id=10iPmDL6fM_Y7w4pf4h30AiY5GLgTEhZQ', 'https://drive.google.com/thumbnail?id=1nG7N8ZK_iJiDIgkwgkwDRfxHDemq3BHy  \xa0 https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'Top 11 "Best of the Fest" Selection', 'sbiff.org'], ['May 21–22, Jun 11', 'https://drive.google.com/thumbnail?id=1Yf0mtCpRrRttDoqL97TCf2tMDk0kNhsL', 'https://drive.google.com/thumbnail?id=1dzRBOZOo96Noy9ZtHG-J4twP8FhnS6e6  \xa0 https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', '', 'siff.net'], ['Jul 18, Jul 25', 'https://drive.google.com/thumbnail?id=1qLSEFzijleL0jfmeGZwXT5-xhxr9AraI', 'https://drive.google.com/thumbnail?id=1GcSWq4Nq9cEycC7sPl5sLGxiAEFUIae5 ,  https://drive.google.com/thumbnail?id=1u7lwUdXlPbVYWN7AiVXLt9wSoqkw_cY7  \xa0 https://drive.google.com/thumbnail?id=1ZD1mhLK4dah7mOLGTRyKjZfPN_CBpNQR', 'Special Mention "for the resourcefulness and unwavering determination by a director to realize his unique vision"', 'FanTasia'], ['Sep 16', 'Athens International Film Festival', 'https://drive.google.com/thumbnail?id=1tCblNFhzAedRKUMdFUEYcDs25JNmW4Nx , Attica \xa0 https://drive.google.com/thumbnail?id=1426yfqvrsxgsOe7iy39cXDR15mKCgv7N', 'Best Director', 'aiff.gr'], ['Sep 19', 'Lund International Fantastic Film Festival', 'Lund, Skåne \xa0Sweden', '', 'fff.se'], ['Sep 28', 'https://drive.google.com/thumbnail?id=1rO60u1S0GkaurdW3jvd8BJfPdb6N8WST', 'https://drive.google.com/thumbnail?id=15yWlp9NnQJy6tC467-Q33J2mnM2ZKic2  \xa0 https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', '', 'FantasticFest.com'], ['Oct 9', 'https://drive.google.com/thumbnail?id=1X98wqTxS5_hm0Ox4um0vpblIC1R0LQaS', 'London,  https://drive.google.com/thumbnail?id=1REpEO44L3YvTDe97kajtNi_vhhDN9jwV  \xa0 https://drive.google.com/thumbnail?id=1dnpKxXI__kxYdH_QWViSrNV9CIcLXSoA', 'Closing Night Film', 'Sci-Fi London'], ['Oct 9, Oct 11', 'https://drive.google.com/thumbnail?id=17Ac9AyuNwiu5U_fyXzIIEwyw5Jhf0Xo6', 'Sitges,  https://drive.google.com/thumbnail?id=1SbFIptj7oDxw7m7VXAT_8h8URvAPJ13r  \xa0 https://drive.google.com/thumbnail?id=1U2rMSB-Fj_cTfvAphP4OeqTVRtHoRXFt', '', 'Sitges Festival'], ['Oct 1, Oct 15', 'Gwacheon International SF Festival', 'Gwacheon, Gyeonggi-do \xa0 https://drive.google.com/thumbnail?id=1uSQU8zHEPYrNlPZYKmjNAEDRYFdMOHEe', '', 'gisf.org'], ['Oct 17, Oct 20', 'Icon TLV', 'Tel Aviv, Central \xa0Israel', '', 'icon.org.il'], ['Oct 23', 'https://drive.google.com/thumbnail?id=1DiE6Zgzz1c9JncCIETZx_yhW9z8t5nvJ', 'Toronto, Ontario \xa0Canada', 'Best Special Effects Best Musical Score', 'torontoafterdark.com'], ['Nov 11', 'Les Utopiales', 'Nantes, Pays de la Loire \xa0France', '', 'utopiales.org'], ['Nov 12, Nov 18', 'Indonesia Fantastic Film Festival', 'Jakarta, Bandung \xa0 https://drive.google.com/thumbnail?id=1fR9IorjdTs6khw7FfndmgY7FAKJrhhIv', '', 'inaff.com'], ['Nov 16–18', 'AFF', 'Wrocław, Lower Silesia \xa0 https://drive.google.com/thumbnail?id=1vzYrBicJMV0g12l_CuDbQRvpMMR3QDCg', '', 'AFF Poland']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

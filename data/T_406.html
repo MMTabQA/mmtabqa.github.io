@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Winners and nominees of NAACP Image Award for Outstanding Supporting Actor in a Motion Picture
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: which actor has the most naacp image awards?
+            </div>
+            <div>
+                Answer: Morgan Freeman
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Year', 'Supporting Actor', 'Motion Picture', 'Nominees'], ['1969', 'NOT AWARDED', '-', ''], ['1970', 'https://drive.google.com/thumbnail?id=10NBa0jHRETijJdfjw1urWO3kANpD19uM', 'https://drive.google.com/thumbnail?id=1T4hpp4mvkbn8OEofrRWPeXAEdbf8zKbZ', ''], ['1971', 'NOT AWARDED', '-', ''], ['1972', 'NOT AWARDED', '-', ''], ['1973', 'NOT AWARDED', '-', ''], ['1974', 'NOT AWARDED', '-', ''], ['1975', 'NOT AWARDED', '-', ''], ['1976', 'NOT AWARDED', '-', ''], ['1977', 'NOT AWARDED', '-', ''], ['1978', 'NOT AWARDED', '-', ''], ['1979', 'NOT AWARDED', '-', ''], ['1980', 'NOT AWARDED', '-', ''], ['1981', 'NOT AWARDED', '-', ''], ['1982', 'https://drive.google.com/thumbnail?id=1HjqBycLg93lt-uPgVsBqzOE23KRvKaj_', 'Ragtime', ''], ['1983', 'NOT AWARDED', '-', ''], ['1984', 'NOT AWARDED', '-', ''], ['1985', 'NOT AWARDED', '-', ''], ['1986', 'NOT AWARDED', '-', ''], ['1987', 'NOT AWARDED', '-', ''], ['1988', 'https://drive.google.com/thumbnail?id=15-GjGXeSN6-i2c3bszJ2QuG4FztbKIsm', 'https://drive.google.com/thumbnail?id=1dJeQbf3Aq4NyBkEVZ-OYJI0FVwOclec7', ''], ['1989', 'https://drive.google.com/thumbnail?id=1oW5PQllcCsd7A7is9JKQfY1H_0JHBbns', 'https://drive.google.com/thumbnail?id=1K5Zy_uG5Fjyo05Lb6y2zJmwO3c5-RZTU', ''], ['1990', 'https://drive.google.com/thumbnail?id=1JzLsCezpOeKgvOIs5ARYEtwDu6EvF-8E', 'https://drive.google.com/thumbnail?id=1LjTtK8IRGCIDqgD4_DU-ioXJ84JclHsX', ''], ['1991', 'https://drive.google.com/thumbnail?id=17hQRijoX61CXS5BMYRvto9WRj3O4m0hG', 'https://drive.google.com/thumbnail?id=1pWNyt7Xo6YqB9E8Yz0f0RpIGSVtPkGUW', ''], ['1992', 'Denzel Washington', 'Glory', ''], ['1993', 'NOT AWARDED', '-', ''], ['1994', 'NOT AWARDED', '-', ''], ['1995', 'https://drive.google.com/thumbnail?id=1l0se7PbINdNAXH_mvCdwRztdoDjvpvMh', 'Malcolm X', 'https://drive.google.com/thumbnail?id=1OVVFLYLIfM7zkI7rQf-a0C6N-T2HD52s - Malcolm X  https://drive.google.com/thumbnail?id=15-GjGXeSN6-i2c3bszJ2QuG4FztbKIsm -  https://drive.google.com/thumbnail?id=1SqGs3FdblE-qCt4rKQK_sGW5YMD_Q0s3   https://drive.google.com/thumbnail?id=1904BCNWTS_3UBA8aDYYLlkzw1XrSza7N -  https://drive.google.com/thumbnail?id=1pvAp3rtWpl7kMLCLBNaWSd8b7_npDNCP  Wolfgang Bodison-  https://drive.google.com/thumbnail?id=15r4jYrre8IH5vv2yLdzXDJtdB6IHvV1Z'], ['1996', 'https://drive.google.com/thumbnail?id=1XJpRDAGJcuK0wwKK5mSa4u4Ct-GxO2Fk', 'https://drive.google.com/thumbnail?id=1wrRT186PU7fkp4BGMpTctXTZZUlkj3To', 'https://drive.google.com/thumbnail?id=1cyE3H6azyr9nQmLewEATzNHEK4GNjsDO -  https://drive.google.com/thumbnail?id=1EW6ZSpYFXJaOSkenWCSqVJ5Hkyl9zMXd   https://drive.google.com/thumbnail?id=1fCnlyOEViLfKo23Q30930UeL4jk7yv94 -  https://drive.google.com/thumbnail?id=1tkfnJ_lCPLAsFfowadBJMarw6L9m8yWi   https://drive.google.com/thumbnail?id=1TRWBaI7_3w9IVB5PDDv_cqlq-V_GEzvH - Higher Learning  https://drive.google.com/thumbnail?id=1rAUgQzZ3zaluWQsef0wBZcHRfTE3G4P0 -  https://drive.google.com/thumbnail?id=1ylCCNJzea3HA7sJlKnxqvswYsqmxaACW'], ['1997', 'https://drive.google.com/thumbnail?id=1Jus2Dvq7l8KA5_CSn2DZ4XlLfvd6s06d', 'A Time to Kill', 'https://drive.google.com/thumbnail?id=1cdLVLyctm5a4QTYTzaIWqaQMgMSAMIPs - Set it Off  https://drive.google.com/thumbnail?id=1cyE3H6azyr9nQmLewEATzNHEK4GNjsDO - A Time to Kill  https://drive.google.com/thumbnail?id=1OVVFLYLIfM7zkI7rQf-a0C6N-T2HD52s -  https://drive.google.com/thumbnail?id=1ZGNREjtW-TyMPIWvaMaIOafGjLDLMEeX   https://drive.google.com/thumbnail?id=1904BCNWTS_3UBA8aDYYLlkzw1XrSza7N -  https://drive.google.com/thumbnail?id=1Pv0HJAPg-0sPJz7-G_pSQ9PQsi9Pl4Aj'], ['1998', 'https://drive.google.com/thumbnail?id=14rkJQLx3WbVojksYtJrfY1gEy3VxIclb', 'https://drive.google.com/thumbnail?id=1z1EdBrtrDrVS2jsIjnACF93oxDANKkMi', 'https://drive.google.com/thumbnail?id=1vxE0T2nJcvVvZTmbxgxaebgwmbWEN3bk -  https://drive.google.com/thumbnail?id=1uEYSIDEYXQ7ri6qpnl4jRDS6CmNyp6Y0   https://drive.google.com/thumbnail?id=1Fts5izuOSa_cbDC2Qj-VWBjcLLf4bjEI -  https://drive.google.com/thumbnail?id=1qc_hAHJly_muUZ4ZyLH1pXBnThSZRF9g   https://drive.google.com/thumbnail?id=1fCnlyOEViLfKo23Q30930UeL4jk7yv94 -  https://drive.google.com/thumbnail?id=1YrvZrDtlOvYXX0DcdFhLdRj3njABjcXk   https://drive.google.com/thumbnail?id=1WwJMw0nKLqEVEy1xPuUfMBAD4x2bLcZp -  https://drive.google.com/thumbnail?id=1_9qHKaknnDXynyZ_0i6Ftl2oazXJCuDS'], ['1999', 'Morgan Freeman', 'https://drive.google.com/thumbnail?id=1hrhTtNrhVAeefYaFe04awji3bVbGhv5h', 'https://drive.google.com/thumbnail?id=1dktuwzUq7pbGtn8vjV-yo7vuKlFhz8m7 -  https://drive.google.com/thumbnail?id=1O2IFB0h5Vn62bwZrnfBnOpEhQy_TUifV   https://drive.google.com/thumbnail?id=11SfLyUbvHaUgDvGdMMKqrbY2290qHbpA -  https://drive.google.com/thumbnail?id=1UQSvZ63iJn_0Ttd8XtMvoJuhmBCCs1Gb   https://drive.google.com/thumbnail?id=1rAUgQzZ3zaluWQsef0wBZcHRfTE3G4P0 -  https://drive.google.com/thumbnail?id=1x1pMWeOL9xvzuRYr39KxA8vaunkb5ueB   https://drive.google.com/thumbnail?id=1fCnlyOEViLfKo23Q30930UeL4jk7yv94 -  https://drive.google.com/thumbnail?id=1VsxZz0uQ_sZBihpl-ggQ-PR3E0q4VSCh'], ['2000', 'https://drive.google.com/thumbnail?id=1gItUHjlBhFUgVTOQIB2qiZ8DxnUoyUPM', 'https://drive.google.com/thumbnail?id=1FymgzEphMhAKogKLSUINXo-pkKf_5SI6', 'https://drive.google.com/thumbnail?id=1cyE3H6azyr9nQmLewEATzNHEK4GNjsDO -  https://drive.google.com/thumbnail?id=1VGNMbF0y0z113AwOtuaMN7h7s_ebdscu   https://drive.google.com/thumbnail?id=1vxE0T2nJcvVvZTmbxgxaebgwmbWEN3bk -  https://drive.google.com/thumbnail?id=1Zc5hw1v7VLDESxO6F831KBV-cxg4lviT   https://drive.google.com/thumbnail?id=1lB9dwOyfNZjYisWxi-mB-Q0U3jLkJgvR - The Best Man  https://drive.google.com/thumbnail?id=1Mx21GuVV0w9cnpf1yWdSzo108tlgyLzt -  https://drive.google.com/thumbnail?id=1maZUmneCivbYV2cvNopL0oZgfOIYNe0x'], ['2001', 'https://drive.google.com/thumbnail?id=1cdLVLyctm5a4QTYTzaIWqaQMgMSAMIPs', 'https://drive.google.com/thumbnail?id=1rWWTseLvbL4odDIzGjYTf3J8nPbi-cnD', 'https://drive.google.com/thumbnail?id=1PrUe3yAEJFovxanoa6VA0JFJxe6SBha- -  https://drive.google.com/thumbnail?id=1lUgyETlGq7aCnrfkCYpocr0BPENhkHgy   https://drive.google.com/thumbnail?id=14rkJQLx3WbVojksYtJrfY1gEy3VxIclb -  https://drive.google.com/thumbnail?id=1tAJ7n2Z8fl0Ficmcolxha5njz3_rEgPC   https://drive.google.com/thumbnail?id=1ItMC9QRISDMED_Bs8hc_DpsGdfI8xK6_ -  https://drive.google.com/thumbnail?id=1ebebI9qFyNQDRy3dnOOmfaf7cPVODhL5   https://drive.google.com/thumbnail?id=18_jC2ygxHDnyckkNJflQwL7CbaGSsZ64 -  https://drive.google.com/thumbnail?id=1nxZa_lO1zxn5VvqMdAIKTTcbEI0xN6VX'], ['2002', 'https://drive.google.com/thumbnail?id=1EJbQgFuEp0kmcKu2yE5WTXGHucxqjmTq', 'https://drive.google.com/thumbnail?id=14ALaA5RF5d4asEyMspzmb8fDvMeZV4Sp', 'https://drive.google.com/thumbnail?id=1oW5PQllcCsd7A7is9JKQfY1H_0JHBbns - Ali  https://drive.google.com/thumbnail?id=1PrUe3yAEJFovxanoa6VA0JFJxe6SBha- -  https://drive.google.com/thumbnail?id=1zT0HEeTJRN1WZQeayjdhSyBj33WAjca3   https://drive.google.com/thumbnail?id=1-vZqOoQpXU8OBjP4WEcGL6I78wCdzxbt -  https://drive.google.com/thumbnail?id=1U5ILWFCBX_w9Yg4pVhmGtPPxoDw3WRBT   https://drive.google.com/thumbnail?id=1awioVtg5OyF92s-plTcLqj2PPe0BT75V -Two Can Play That Game'], ['2003', 'Denzel Washington', 'https://drive.google.com/thumbnail?id=1bSqSEgkwe2_jfm2UHbQgkC10k8Im5Ygd', 'https://drive.google.com/thumbnail?id=1FG0JLuw0Yy5rrqqMe-IUinoO69XkoMwD -Brown Sugar  https://drive.google.com/thumbnail?id=1swCods2v9ygQbnFWwmeyFdhMTmNvnuf9 -Brown Sugar  https://drive.google.com/thumbnail?id=1-vZqOoQpXU8OBjP4WEcGL6I78wCdzxbt -Barbershop  https://drive.google.com/thumbnail?id=1awioVtg5OyF92s-plTcLqj2PPe0BT75V -Barbershop'], ['2004', 'Morgan Freeman', 'https://drive.google.com/thumbnail?id=1KsBzG-cfcy-jTFTofVuozDGIJmXTPDbF', 'https://drive.google.com/thumbnail?id=1WJYB1JwAuIlrr3qC2ir7BKQB-SfmFSbc -In America  https://drive.google.com/thumbnail?id=1904BCNWTS_3UBA8aDYYLlkzw1XrSza7N -Phone Booth  https://drive.google.com/thumbnail?id=1472bmn5BJO5BgxHtSwkGQdgQQb6D4x56 -Head of State  https://drive.google.com/thumbnail?id=1cyE3H6azyr9nQmLewEATzNHEK4GNjsDO -Gothika'], ['2005', 'Morgan Freeman', 'https://drive.google.com/thumbnail?id=13UXmmxNAVjf42wdMLCfaQKEBLGUCyzu8', "https://drive.google.com/thumbnail?id=1EJbQgFuEp0kmcKu2yE5WTXGHucxqjmTq -Collateral C.J. Sanders-Ray  https://drive.google.com/thumbnail?id=1bb9ZtiAaNmJQB7aLARUREEDwb4WmQekZ -Ray  https://drive.google.com/thumbnail?id=1fCnlyOEViLfKo23Q30930UeL4jk7yv94 -Ocean's Twelve"], ['2006', 'Terrence Howard', 'https://drive.google.com/thumbnail?id=1TbTp2Z9jrEpwe8nxFnxNs0abtS9bnBn6', 'https://drive.google.com/thumbnail?id=11A_1i0an4b8l-M6oVIBsvmdpn8iZamnQ -Crash Larenz Tate-Crash  https://drive.google.com/thumbnail?id=1fCnlyOEViLfKo23Q30930UeL4jk7yv94 -Crash  https://drive.google.com/thumbnail?id=1awioVtg5OyF92s-plTcLqj2PPe0BT75V -Hustle & Flow'], ['2007', 'https://drive.google.com/thumbnail?id=1WJYB1JwAuIlrr3qC2ir7BKQB-SfmFSbc', 'https://drive.google.com/thumbnail?id=1Z1DSkcnLu1fNHHeyD17VB6lK67v2gs2n', 'https://drive.google.com/thumbnail?id=18cbN0lX4vTlYD2eSXL1idIFofDbHK2L8 -Dreamgirls  https://drive.google.com/thumbnail?id=1Fts5izuOSa_cbDC2Qj-VWBjcLLf4bjEI -Dreamgirls  https://drive.google.com/thumbnail?id=10Olzr6loOT3eUPEilYIyriwmu5rWJV9m -Bobby  https://drive.google.com/thumbnail?id=1Uin42kp3lgqCiYuhhHSTL56sHBY0q2de -The Pursuit of Happyness'], ['2008', 'https://drive.google.com/thumbnail?id=1QEbA4Ebq1_zOxbOlakn5KBEJ1EuIQ2ua', 'https://drive.google.com/thumbnail?id=1EFw1TE-gJR7WjerWD_LprifkJPWrdyjz', 'https://drive.google.com/thumbnail?id=1ipPSxgAO4Bz0lfiuxp-sEZy7EN33Hjvg -The Great Debaters  https://drive.google.com/thumbnail?id=1JIMcoQxqsEOauIk-o-SP_sdiDRtc22JB -Talk to Me  https://drive.google.com/thumbnail?id=1-aytCTqeS8GBCwsBsclc1SdAix21ouyb -Why Did I Get Married?  https://drive.google.com/thumbnail?id=1904BCNWTS_3UBA8aDYYLlkzw1XrSza7N -The Great Debaters'], ['2009', 'https://drive.google.com/thumbnail?id=1TtditCbe9Kotrznxt-SxzTZKZTCjUN3i', 'https://drive.google.com/thumbnail?id=1ihLe0P8B3bZMhcXxN7XwVWmccdx8MGTd', 'https://drive.google.com/thumbnail?id=1skGg_a8lcwsl5M1bIM8z9iWY3od4AG9_ -Slumdog Millionaire  https://drive.google.com/thumbnail?id=1ipPSxgAO4Bz0lfiuxp-sEZy7EN33Hjvg -The Secret Life of Bees  https://drive.google.com/thumbnail?id=1-vZqOoQpXU8OBjP4WEcGL6I78wCdzxbt -Cadillac Records  https://drive.google.com/thumbnail?id=1swCods2v9ygQbnFWwmeyFdhMTmNvnuf9 -Cadillac Records'], ['2010', 'https://drive.google.com/thumbnail?id=1bHTsXpTpxmbFu-ise4AncDMuzKyBWjmj', 'https://drive.google.com/thumbnail?id=1wCdpIhMPGDbC83ErYS0ybb1-kVAeaDhX', 'https://drive.google.com/thumbnail?id=1CaN7qafMucODGDTiXDtOa3GNU6JsOxrf -The Hurt Locker Chiwetel Ejiofor-2012 Danny Glover-2012  https://drive.google.com/thumbnail?id=1vIN74zksEbpe8-Zl0NEHs_s4Gn1F0e8L -Precious'], ['2011', 'https://drive.google.com/thumbnail?id=1Jus2Dvq7l8KA5_CSn2DZ4XlLfvd6s06d', 'Mother and Child', "https://drive.google.com/thumbnail?id=12PVMR5TM2ajwDHcMMouqSo6TChiwpmWr -Takers Don Cheadle-Brooklyn's Finest  https://drive.google.com/thumbnail?id=1LHRQpIdCIlZb-bmjemzBsbkewTGsukgI -For Colored Girls  https://drive.google.com/thumbnail?id=10Qbz3VGxqZ3zGQNUf4TBGqaX0a801PhS -The Social Network"], ['2012', 'https://drive.google.com/thumbnail?id=1BOF6CUza7kfNIW0W-7P0b8NVpx9wEHsu', 'https://drive.google.com/thumbnail?id=1muWx2hv11NjHcw117Rh47bN0LYssQua0', 'https://drive.google.com/thumbnail?id=1CaN7qafMucODGDTiXDtOa3GNU6JsOxrf  –  https://drive.google.com/thumbnail?id=1-vcvAU_nLaGzeUBXD78wnZZ2VB79Pi57   https://drive.google.com/thumbnail?id=1yHeDflO85v26stBYsCSwjKwugDmSpqY1  –  https://drive.google.com/thumbnail?id=1UFIQSCd0goGaaz3Q9csPk6YW0Czp7r86   https://drive.google.com/thumbnail?id=1fCnlyOEViLfKo23Q30930UeL4jk7yv94  –  https://drive.google.com/thumbnail?id=1dViqA0anJ7qoUZuKBmAn7L1RMkGfj7J8   https://drive.google.com/thumbnail?id=1jGFTgvsvXgnKg9ZRyD0BuijYIjCBJhST  –  https://drive.google.com/thumbnail?id=1Iipx2UfSRElyGl5aur7BR4pai-lUGy5a'], ['2013', 'Samuel L. Jackson', 'https://drive.google.com/thumbnail?id=1E-6QKueQvTgSpQCJ08hIl-57BYUT8Hsb', 'https://drive.google.com/thumbnail?id=1vIN74zksEbpe8-Zl0NEHs_s4Gn1F0e8L  –  https://drive.google.com/thumbnail?id=1KK5GK3ywZsgfsefy-SkYeYyVeKHkoF2R   https://drive.google.com/thumbnail?id=1fCnlyOEViLfKo23Q30930UeL4jk7yv94  –  https://drive.google.com/thumbnail?id=1VLbzivdlEVqGKWPKx7as6y-SGMgSPdeS   https://drive.google.com/thumbnail?id=17ZJeh00rRtTZEm1pcLX07cB-q70ve6Ny  –  https://drive.google.com/thumbnail?id=1QFh8lTIRcl5to8OaoPz9vDnD8L_lQ02G  Dwight Henry- https://drive.google.com/thumbnail?id=17P9QUGjzgvYj2Cb-xujwhfMUQckNDW86'], ['2014', 'https://drive.google.com/thumbnail?id=17ZJeh00rRtTZEm1pcLX07cB-q70ve6Ny', 'https://drive.google.com/thumbnail?id=1RuKF4AAtmA9-_-z8utuUgvYi6goihRaC', "https://drive.google.com/thumbnail?id=1gItUHjlBhFUgVTOQIB2qiZ8DxnUoyUPM  - Lee Daniels' The Butler  https://drive.google.com/thumbnail?id=1rAUgQzZ3zaluWQsef0wBZcHRfTE3G4P0  - Lee Daniels' The Butler Terrence Howard -  https://drive.google.com/thumbnail?id=1UiuSyvBB9-QuZ9wzdgdecnWxTk1-GXkk   https://drive.google.com/thumbnail?id=1C4229z2dOGr87OH4XTckxchgx816PAlC  - The Best Man Holiday"]]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to nan of United States Ambassador to Honduras
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: which minister resident had the shortest appointment?
+            </div>
+            <div>
+                Answer: Henry C. Hall
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Representative', 'Title', 'Presentation of Credentials', 'Termination of Mission', 'Appointed by'], ['https://drive.google.com/thumbnail?id=1cLCloxjSIhxMRADZSR4eoP6zdI0cdsyY', 'Envoy Extraordinary and Minister Plenipotentiary', '', 'April 17, 1854', 'https://drive.google.com/thumbnail?id=1PZ-yLrrYZsF0yZKwxy7ucloFa-rPZ-Of'], ['https://drive.google.com/thumbnail?id=1riWwdpvJlwBoO6sUPFRkzceDt_TCGebE', 'Minister Resident', 'August 10, 1858', 'March 17, 1860', 'James Buchanan'], ['James R. Partridge', 'Minister Resident', 'April 25, 1862', 'November 14, 1862', 'Abraham Lincoln'], ['Thomas H. Clay', 'Minister Resident', 'April 5, 1864', 'August 10, 1866', 'Abraham Lincoln'], ['Richard H. Rousseau', 'Minister Resident', 'October 10, 1866', 'August 10, 1869', 'Andrew Johnson'], ['https://drive.google.com/thumbnail?id=1qryeOq8Z6osJRfohjOp07lIx1bFqyvv-', 'Minister Resident', 'August 10, 1869', 'June 30, 1873', 'Ulysses S. Grant'], ['George Williamson', 'Minister Resident', 'February 19, 1874', 'January 31, 1879', 'Ulysses S. Grant'], ['Cornelius A. Logan', 'Minister Resident', 'October 10, 1879', 'April 15, 1882', 'Rutherford B. Hayes'], ['https://drive.google.com/thumbnail?id=1dCaMvD7asVcCS2Uyz9dAM0NZQUD7lh1R', 'Minister Resident', 'April 21, 1882', 'September 26, 1882', 'Chester A. Arthur'], ['https://drive.google.com/thumbnail?id=1dCaMvD7asVcCS2Uyz9dAM0NZQUD7lh1R', 'Envoy Extraordinary and Minister Plenipotentiary', 'September 26, 1882', 'May 16, 1889', 'Chester A. Arthur'], ['https://drive.google.com/thumbnail?id=1ohqpeiL_gTRFq_dMaynKaYW_X2oS9uIE', 'Envoy Extraordinary and Minister Plenipotentiary', 'March 30, 1889', 'December 31, 1890', 'https://drive.google.com/thumbnail?id=1pByCSCxsaC24Z8eTZAHeALFkpNju638K'], ['https://drive.google.com/thumbnail?id=1nI58y-ZpPTf1FBfiGNhSVZZYUsn-Wqtl', 'Envoy Extraordinary and Minister Plenipotentiary', 'April 17, 1891', 'June 12, 1893', 'Benjamin Harrison'], ['https://drive.google.com/thumbnail?id=1IP4BozjUZ_0qBASck6QlmqHmvLvJaUw5', 'Envoy Extraordinary and Minister Plenipotentiary', 'November 12, 1893', 'May 23, 1896', 'Grover Cleveland'], ['Macgrane Coxe', 'Envoy Extraordinary and Minister Plenipotentiary', '', 'June 30, 1897', 'Grover Cleveland'], ['https://drive.google.com/thumbnail?id=1r5gSZ4mIOB0eyeX5EgI28CRj14wjYoqN', 'Envoy Extraordinary and Minister Plenipotentiary', 'January 19, 1899', 'February 2, 1903', 'https://drive.google.com/thumbnail?id=1DW1FPiIspwZU5f8KiTFjWhQM9xPCB-41'], ['Leslie Combs', 'Envoy Extraordinary and Minister Plenipotentiary', 'May 22, 1903', 'February 27, 1907', 'https://drive.google.com/thumbnail?id=1HVF_b2a8BVy0BO0HWr0VmdPg37LOFvsG'], ['Joseph W. J. Lee', 'Envoy Extraordinary and Minister Plenipotentiary', '', 'July 1, 1907', 'https://drive.google.com/thumbnail?id=1HVF_b2a8BVy0BO0HWr0VmdPg37LOFvsG'], ['https://drive.google.com/thumbnail?id=11WesdW43zQL1gFOlcljj9StO3xxdnNmT', 'Envoy Extraordinary and Minister Plenipotentiary', 'June 17, 1908', 'February 6, 1909', 'https://drive.google.com/thumbnail?id=1HVF_b2a8BVy0BO0HWr0VmdPg37LOFvsG'], ['https://drive.google.com/thumbnail?id=1jJiC2IFIHxY4rdrd1Jalca1lRjMmAPDT', 'Envoy Extraordinary and Minister Plenipotentiary', 'February 21, 1909', 'February 26, 1910', 'https://drive.google.com/thumbnail?id=1HVF_b2a8BVy0BO0HWr0VmdPg37LOFvsG'], ['Fenton R. McCreery', 'Envoy Extraordinary and Minister Plenipotentiary', 'March 10, 1910', 'July 2, 1911', 'https://drive.google.com/thumbnail?id=1dw5G1HaNkXka1CseNjNwvHvyQHWzjxSB'], ['Charles Dunning White', 'Envoy Extraordinary and Minister Plenipotentiary', 'September 9, 1911', 'November 4, 1913', 'https://drive.google.com/thumbnail?id=1dw5G1HaNkXka1CseNjNwvHvyQHWzjxSB'], ['John Ewing', 'Envoy Extraordinary and Minister Plenipotentiary', 'December 26, 1913', 'January 18, 1918', 'https://drive.google.com/thumbnail?id=1Y71_zyIuGg8itnG44-747B57DXppgfJT'], ['T. Sambola Jones', 'Envoy Extraordinary and Minister Plenipotentiary', 'October 2, 1918', 'October 17, 1919', 'https://drive.google.com/thumbnail?id=1Y71_zyIuGg8itnG44-747B57DXppgfJT'], ['https://drive.google.com/thumbnail?id=1f3l6gLDsDFCRoSB0Xt0BPpbyQ3jnR_sM', 'Envoy Extraordinary and Minister Plenipotentiary', 'January 18, 1922', 'March 2, 1925', 'https://drive.google.com/thumbnail?id=1YTegRwrIQ2anfeghXvJWf4RPcuWPTOLo'], ['https://drive.google.com/thumbnail?id=1IanpzDReTzAj4YMRrOyKDJrJevIdHiij', 'Envoy Extraordinary and Minister Plenipotentiary', 'November 21, 1925', 'December 17, 1929', 'https://drive.google.com/thumbnail?id=1q8gMV8jRqKqHU-vwrMoIpKqAEnNTdCIO'], ['Julius G. Lay', 'Envoy Extraordinary and Minister Plenipotentiary', 'May 31, 1930', 'March 17, 1935', 'Herbert Hoover'], ['https://drive.google.com/thumbnail?id=1qqLClC8FsF0j2j87X-5B75fA_7ebvzYT', 'Envoy Extraordinary and Minister Plenipotentiary', 'July 19, 1935', 'May 1, 1937', 'https://drive.google.com/thumbnail?id=1m1cakgvErOcdY0hppRIsRH9-Q_4syN6z'], ['John Draper Erwin', 'Envoy Extraordinary and Minister Plenipotentiary', 'September 8, 1937', 'April 27, 1943', 'https://drive.google.com/thumbnail?id=1m1cakgvErOcdY0hppRIsRH9-Q_4syN6z'], ['John Draper Erwin', 'https://drive.google.com/thumbnail?id=1M1Czk8WKgd4NbiDb2RajMgB9dWgnYrJT', 'April 27, 1943', 'April 16, 1947', 'https://drive.google.com/thumbnail?id=1m1cakgvErOcdY0hppRIsRH9-Q_4syN6z'], ['Paul C. Daniels', 'Ambassador Extraordinary and Plenipotentiary', 'June 23, 1947', 'October 30, 1947', 'https://drive.google.com/thumbnail?id=1ecpv4a2ujdrqm6m_iBZ99qpiZvvXknrm'], ['Herbert S. Bursley', 'Ambassador Extraordinary and Plenipotentiary', 'May 15, 1948', 'December 12, 1950', 'https://drive.google.com/thumbnail?id=1ecpv4a2ujdrqm6m_iBZ99qpiZvvXknrm'], ['John Draper Erwin', 'Ambassador Extraordinary and Plenipotentiary', 'March 14, 1951', 'February 28, 1954', 'https://drive.google.com/thumbnail?id=1ecpv4a2ujdrqm6m_iBZ99qpiZvvXknrm'], ['Whiting Willauer', 'Ambassador Extraordinary and Plenipotentiary', 'March 5, 1954', 'March 24, 1958', 'https://drive.google.com/thumbnail?id=1MM0dwmk1igzxGxFknVyo5gVprBrNLhbx'], ['Robert Newbegin', 'Ambassador Extraordinary and Plenipotentiary', 'April 30, 1958', 'August 3, 1960', 'https://drive.google.com/thumbnail?id=1MM0dwmk1igzxGxFknVyo5gVprBrNLhbx'], ['Charles R. Burrows', 'Ambassador Extraordinary and Plenipotentiary', 'November 3, 1960', 'June 28, 1965', 'https://drive.google.com/thumbnail?id=1MM0dwmk1igzxGxFknVyo5gVprBrNLhbx'], ['Joseph J. Jova', 'Ambassador Extraordinary and Plenipotentiary', 'July 12, 1965', 'June 21, 1969', 'https://drive.google.com/thumbnail?id=13Wm4lwgOm0EV7zsIR2xYBKlIA8PyGQlg'], ['Hewson A. Ryan', 'Ambassador Extraordinary and Plenipotentiary', 'November 5, 1969', 'May 30, 1973', 'https://drive.google.com/thumbnail?id=1swYV8JSX3gpyABQsX8fD1SCOoRpNTby-'], ['Phillip V. Sanchez', 'Ambassador Extraordinary and Plenipotentiary', 'June 15, 1973', 'July 17, 1976', 'https://drive.google.com/thumbnail?id=1swYV8JSX3gpyABQsX8fD1SCOoRpNTby-'], ['Ralph E. Becker', 'Ambassador Extraordinary and Plenipotentiary', 'October 27, 1976', 'August 1, 1977', 'https://drive.google.com/thumbnail?id=12jF7bmRziHewK8Ud0v21Xv43vJh1Qf-T'], ['https://drive.google.com/thumbnail?id=168EzSWHlGeGS2YScsmbvY6i4TmINEsz7', 'Ambassador Extraordinary and Plenipotentiary', 'October 27, 1977', 'September 19, 1980', 'https://drive.google.com/thumbnail?id=1o13Do5nqKmpnq6ManUHKvmESgumTOBH6'], ['https://drive.google.com/thumbnail?id=1DXMhj06QdDneiO5go-xp4xQZTuPaQyg3', 'Ambassador Extraordinary and Plenipotentiary', 'October 10, 1980', 'October 31, 1981', 'https://drive.google.com/thumbnail?id=1o13Do5nqKmpnq6ManUHKvmESgumTOBH6'], ['https://drive.google.com/thumbnail?id=19tHVCdWFA5opYazVBe0w6CRU8DRY7WI0', 'Ambassador Extraordinary and Plenipotentiary', 'November 11, 1981', 'May 30, 1985', 'https://drive.google.com/thumbnail?id=15Sl7lB5w1jY-8i_2-a2VE0ksUxSttUkI'], ['https://drive.google.com/thumbnail?id=1OXNDafLISnLPWX7-PGWlEpMt02awSOnV', 'Ambassador Extraordinary and Plenipotentiary', 'August 22, 1985', 'July 9, 1986', 'https://drive.google.com/thumbnail?id=15Sl7lB5w1jY-8i_2-a2VE0ksUxSttUkI'], ['Everett Ellis Briggs', 'Ambassador Extraordinary and Plenipotentiary', 'November 4, 1986', 'June 15, 1989', 'https://drive.google.com/thumbnail?id=15Sl7lB5w1jY-8i_2-a2VE0ksUxSttUkI'], ['Cresencio S. Arcos, Jr.', 'Ambassador Extraordinary and Plenipotentiary', 'January 29, 1990', 'July 1, 1993', 'https://drive.google.com/thumbnail?id=1ETx5JWhKBqNXLw8vbb7dtJFWV7eLswbu'], ['William Thornton Pryce', 'Ambassador Extraordinary and Plenipotentiary', 'July 21, 1993', 'August 15, 1996', 'https://drive.google.com/thumbnail?id=1RDr8q7W_Ob8RqKGZhmZpDlGSUt6gemqw'], ['James F. Creagan', 'Ambassador Extraordinary and Plenipotentiary', 'August 29, 1996', 'July 20, 1999', 'https://drive.google.com/thumbnail?id=1RDr8q7W_Ob8RqKGZhmZpDlGSUt6gemqw'], ['Frank Almaguer', 'Ambassador Extraordinary and Plenipotentiary', 'August 25, 1999', 'September 5, 2002', 'https://drive.google.com/thumbnail?id=1RDr8q7W_Ob8RqKGZhmZpDlGSUt6gemqw'], ['https://drive.google.com/thumbnail?id=18KoFBtZQnrVoYVm3r-eTe3GDSYLdWOWq', 'Ambassador Extraordinary and Plenipotentiary', 'October 8, 2002', 'May 7, 2005', 'https://drive.google.com/thumbnail?id=1EbnAGjLEzWPLoGgSu57c2cWAahlzUFtg'], ['https://drive.google.com/thumbnail?id=1Ii-vcbT8GHLGexQ0VMvK2afUZb2iQg25', 'Ambassador Extraordinary and Plenipotentiary', 'November 8, 2005', 'ca. April 2008', 'https://drive.google.com/thumbnail?id=1EbnAGjLEzWPLoGgSu57c2cWAahlzUFtg'], ['https://drive.google.com/thumbnail?id=1gC8-e6aWNqovqNcAP7tpd7vwrPWmuszE', 'Ambassador Extraordinary and Plenipotentiary', 'September 19, 2008', 'ca. July 2011', 'https://drive.google.com/thumbnail?id=1EbnAGjLEzWPLoGgSu57c2cWAahlzUFtg'], ['https://drive.google.com/thumbnail?id=1l9A4Vo8FH8Fp1bU-kJnJcAvfsWjUX0Pg', 'Ambassador Extraordinary and Plenipotentiary', 'July 26, 2011', 'Incumbent', 'https://drive.google.com/thumbnail?id=1aT4rlSASeUpVo-lustEvbpACMCXNYC5x']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

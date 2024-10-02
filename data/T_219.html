@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to International goals of Elvir Baljić
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: what was the number of goals that elvir balji&#263; scored against lithuania in 1998?
+            </div>
+            <div>
+                Answer: 2
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Goal', 'Date', 'Venue', 'Opponent', 'Score', 'Result', 'Competition'], ['1.', '12 August 1998', 'https://drive.google.com/thumbnail?id=1xwg57AvEgw4urhMSU0lo7ZwFQJvDhr4M ,  https://drive.google.com/thumbnail?id=1WL3Bk-PLKleioRkZFYC2hKDhtBhs6LyZ', 'Faroe Islands', '1–0', '1–0', 'UEFA Euro 2000 qualifying'], ['2.', '14 October 1998', 'https://drive.google.com/thumbnail?id=1Mf7-oCz9VT9CyZuJFUrl8RB6-7Hi9bXo , Vilnius', 'https://drive.google.com/thumbnail?id=1Hx2d8pnrevp7VDbWUeDWJwXS9zcAbZth', '2–2', '2–4', 'UEFA Euro 2000 qualifying'], ['3.', '9 October 1999', 'https://drive.google.com/thumbnail?id=1aihuoo0Z1uS_p1De2CNmylF6zBs8_vxL ,  https://drive.google.com/thumbnail?id=1aRatjT8OZqftrM15T1q_PE3pQYu0YifR', 'https://drive.google.com/thumbnail?id=1_3Y1LRbNlu6e709Giewp6dXMUOSZCKaB', '1–1', '4–1', 'UEFA Euro 2000 qualifying'], ['4.', '9 October 1999', 'Kadriorg Stadium, Tallinn', 'https://drive.google.com/thumbnail?id=1_3Y1LRbNlu6e709Giewp6dXMUOSZCKaB', '2–1', '4–1', 'UEFA Euro 2000 qualifying'], ['5.', '9 October 1999', 'Kadriorg Stadium, Tallinn', 'https://drive.google.com/thumbnail?id=1_3Y1LRbNlu6e709Giewp6dXMUOSZCKaB', '3–1', '4–1', 'UEFA Euro 2000 qualifying'], ['6.', '9 October 1999', 'Kadriorg Stadium, Tallinn', 'https://drive.google.com/thumbnail?id=1_3Y1LRbNlu6e709Giewp6dXMUOSZCKaB', '4–1', '4–1', 'UEFA Euro 2000 qualifying'], ['7.', '2 September 2000', 'Asim Ferhatović Hase Stadium, Sarajevo', 'Spain', '1-1', '1–2', '2002 FIFA World Cup qualification'], ['8.', '15 August 2001', 'Asim Ferhatović Hase Stadium, Sarajevo', 'Malta', '1–0', '2–0', 'Friendly match'], ['9.', '15 August 2001', 'Asim Ferhatović Hase Stadium, Sarajevo', 'Malta', '2–0', '2–0', 'Friendly match'], ['10.', '7 October 2001', 'Asim Ferhatović Hase Stadium, Sarajevo', 'https://drive.google.com/thumbnail?id=1oxLgz19v37gEXqO0op7tFAVUbfoZap9F', '2–0', '5–0', '2002 FIFA World Cup qualification'], ['11.', '7 October 2001', 'Asim Ferhatović Hase Stadium, Sarajevo', 'https://drive.google.com/thumbnail?id=1oxLgz19v37gEXqO0op7tFAVUbfoZap9F', '4–0', '5–0', '2002 FIFA World Cup qualification'], ['12.', '11 October 2002', 'Asim Ferhatović Hase Stadium, Sarajevo', 'https://drive.google.com/thumbnail?id=1-IgN1G7b3VJmspkPXHmHIFeR65rzyLq4', '1–0', '1–1', 'Friendly match'], ['13.', '13 February 2003', 'https://drive.google.com/thumbnail?id=1tYIymxj-ZKRZufspBaiayp9V21RyR5Yy ,  https://drive.google.com/thumbnail?id=1db-UwMXL-a0xPtv6yWuW0Om8_plDW53d', 'https://drive.google.com/thumbnail?id=1Sd1IVKFlDXKbUTW3qTEMHUC7B_aEbpw2', '1–0', '2–2', 'Friendly match'], ['14.', '2 April 2003', 'https://drive.google.com/thumbnail?id=1S-e5erNep27pnOv5z83V5KFYz7HCbKc9 ,  https://drive.google.com/thumbnail?id=1GpP6H3AKjMbu2akW5cc4Wd70xY7lfrjE', 'https://drive.google.com/thumbnail?id=14lOYmixxEcOuKR11vhxY9hywi9KK4MhV', '2–0', '2–0', 'UEFA Euro 2004 qualifying']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

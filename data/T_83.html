@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Winners of Belgian Sportsman of the year
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: how many consecutive wins has philippe gilbert won?
+            </div>
+            <div>
+                Answer: 3
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Year', 'Men', 'Sport', 'Women', 'Sport', 'Team', 'Sport', 'Promising Talent', 'Sport', 'Paralympic', 'Sport', 'Coach', 'Sport'], ['2013', 'https://drive.google.com/thumbnail?id=1ibzOfMFKtZ0AQ4D8tHCBOuejuKOILA3z', 'triathlon', 'https://drive.google.com/thumbnail?id=1yDKxruaFyeV-6BetyV_cxc5vHxlCDOQh', 'tennis', 'https://drive.google.com/thumbnail?id=1fYNBgY4PZdjbSv660rU6mZMEj6YkxWT5', 'football', 'https://drive.google.com/thumbnail?id=1N3qOGIZjCx07-XCf3EtdTmM_ZBQt_phV', 'athletics', 'Joachim Gérard', 'tennis', 'https://drive.google.com/thumbnail?id=19_XlSE9viAUacfO2dF4s5UmRv5XT-Whe', 'football'], ['2012', 'Tom Boonen (3)', 'cycling', 'https://drive.google.com/thumbnail?id=1PF4vVUkswyOksjzVA3MF_pDmmGIa2C4f', 'sailing', 'Belgium national field hockey team', 'field hockey', 'https://drive.google.com/thumbnail?id=1yMrWaZSYnzFAspGcj6QyoL79Tre8Tv9d', 'tennis', 'Marieke Vervoort', 'handbike', 'https://drive.google.com/thumbnail?id=1aZ5ZPrUPOpIKzFKiqk4g38-K_J4XesN5  (2)', 'athletics'], ['2011', 'https://drive.google.com/thumbnail?id=1GZ92256d03naZ1tqzIkA1g3Cp0GVyXhb  (3)', 'cycling', 'https://drive.google.com/thumbnail?id=11aN9KkVKiLhxFPT0Xl4doq85jPoaDh7J  (8)', 'tennis', "Men's 4×400 metres relay (3)", 'athletics', 'https://drive.google.com/thumbnail?id=1KloaUfGPTD23WCdGCiOIzNmKqoDBgKoQ', 'athletics', 'Wim Decleir', 'handbike', 'https://drive.google.com/thumbnail?id=1aZ5ZPrUPOpIKzFKiqk4g38-K_J4XesN5', 'athletics'], ['2010', 'https://drive.google.com/thumbnail?id=1GZ92256d03naZ1tqzIkA1g3Cp0GVyXhb  (2)', 'cycling', 'https://drive.google.com/thumbnail?id=11aN9KkVKiLhxFPT0Xl4doq85jPoaDh7J  (7)', 'tennis', "Men's 4×400 metres relay (2)", 'athletics', 'https://drive.google.com/thumbnail?id=1kY5FWhj-zRo-oG3bjvjoCLHSbXgeDJXH', 'snooker', 'https://drive.google.com/thumbnail?id=1sNK21FnKG-agd6e0HgDrgBCw37Rwz99F', 'swimming', '', ''], ['2009', 'https://drive.google.com/thumbnail?id=1GZ92256d03naZ1tqzIkA1g3Cp0GVyXhb', 'cycling', 'https://drive.google.com/thumbnail?id=11aN9KkVKiLhxFPT0Xl4doq85jPoaDh7J  (6)', 'tennis', "Men's 4×400 metres relay", 'athletics', 'https://drive.google.com/thumbnail?id=1-g6LVlTM2cVDgE1VkHG1g96FFlOU31c0', 'football', '', '', '', ''], ['2008', 'https://drive.google.com/thumbnail?id=1k88T_rHU5bnZgc6B5h280Ns5nf1ghS_c', 'cyclo-cross', 'https://drive.google.com/thumbnail?id=11HghUV2iYWYVvHINEPFnxAiNKporxoDN', 'athletics', "Women's 4×100 metres relay (3)", 'athletics', 'Elise Matthysen', 'swimming', '', '', '', ''], ['2007', 'https://drive.google.com/thumbnail?id=15i4B-7805wX8vfC2lITXELsC0UC1kspW  (2)', 'cycling', 'https://drive.google.com/thumbnail?id=1Bkuc2xjZ07CrUdV8BTEcNRqOX6OacZ6W  (4)', 'tennis', "Women's 4×100 metres relay (2)", 'athletics', 'https://drive.google.com/thumbnail?id=1tamEJiJa2P1g0YPq5Gk5rhx1X2DhcGxO', 'cycling', '', '', '', ''], ['2006', 'https://drive.google.com/thumbnail?id=1gT427vwql8BpS3vSfSep_YJzcPdiVa8A  (5)', 'motorcross', 'https://drive.google.com/thumbnail?id=1Bkuc2xjZ07CrUdV8BTEcNRqOX6OacZ6W  (3)', 'tennis', 'https://drive.google.com/thumbnail?id=1ePmjcFTm1sVtT3ZSv2nkHker1m-9UgJz  (2)', 'tennis', 'https://drive.google.com/thumbnail?id=1GvTiYXN8zlbSPgkDdHMS0vRmw3GyfcaQ', 'swimming', '', '', '', ''], ['2005', 'Tom Boonen', 'cycling', 'https://drive.google.com/thumbnail?id=11aN9KkVKiLhxFPT0Xl4doq85jPoaDh7J  (5)', 'tennis', 'https://drive.google.com/thumbnail?id=1y6Dm6tt7WM3mvRA6-kP2OWelZ82x-rdq', 'football', 'https://drive.google.com/thumbnail?id=13RGcldQcH1weuWsmNW_5HDkiCiSEhp6m', 'cyclo-cross', '', '', '', ''], ['2004', 'https://drive.google.com/thumbnail?id=1gT427vwql8BpS3vSfSep_YJzcPdiVa8A  (4)', 'motorcross', 'https://drive.google.com/thumbnail?id=1Bkuc2xjZ07CrUdV8BTEcNRqOX6OacZ6W  (2)', 'tennis', "Women's 4×100 metres relay", 'athletics', 'https://drive.google.com/thumbnail?id=1QdKBFzu40u3WZV44PQ0B4C2OaKm2L1xF', 'gymnastics', '', '', '', ''], ['2003', 'https://drive.google.com/thumbnail?id=1gT427vwql8BpS3vSfSep_YJzcPdiVa8A  (3)', 'motorcross', 'https://drive.google.com/thumbnail?id=1Bkuc2xjZ07CrUdV8BTEcNRqOX6OacZ6W', 'tennis', 'Belgian Motorcross team (2)', 'motorcross', 'https://drive.google.com/thumbnail?id=1yDKxruaFyeV-6BetyV_cxc5vHxlCDOQh', 'tennis', '', '', '', ''], ['2002', 'https://drive.google.com/thumbnail?id=1gT427vwql8BpS3vSfSep_YJzcPdiVa8A  (2)', 'motorcross', 'https://drive.google.com/thumbnail?id=11aN9KkVKiLhxFPT0Xl4doq85jPoaDh7J  (4)', 'tennis', 'La Villette Charleroi', 'table tennis', 'https://drive.google.com/thumbnail?id=1aY196im57lxbdc30EsLIUZtGvMA8Fyl7', 'football', '', '', '', ''], ['2001', 'https://drive.google.com/thumbnail?id=1gT427vwql8BpS3vSfSep_YJzcPdiVa8A', 'motorcross', 'https://drive.google.com/thumbnail?id=11aN9KkVKiLhxFPT0Xl4doq85jPoaDh7J  (3)', 'tennis', 'https://drive.google.com/thumbnail?id=1ePmjcFTm1sVtT3ZSv2nkHker1m-9UgJz', 'tennis', 'https://drive.google.com/thumbnail?id=1kLa_5cKtvz2VanfW3Y0a4v9NotYf2892', 'cycling', '', '', '', ''], ['2000', 'https://drive.google.com/thumbnail?id=1XRxQ3O0dJ-8ZcFwKXjp7Jeib8j1WCfRe', 'motorcross', 'https://drive.google.com/thumbnail?id=11aN9KkVKiLhxFPT0Xl4doq85jPoaDh7J  (2)', 'tennis', 'https://drive.google.com/thumbnail?id=1aksH9z-lJ0gimpaJNZsHqrr7qYey2hGb', 'football', 'https://drive.google.com/thumbnail?id=1XE8SJKWgDT1Z4RSMZ-X_qorwR6-pcZf0', 'cyclo-cross', '', '', '', ''], ['1999', 'https://drive.google.com/thumbnail?id=1Yb3RFQeBCfvXv2OLItS5dvh9gBWS3h6A  (2)', 'triathlon', 'https://drive.google.com/thumbnail?id=11aN9KkVKiLhxFPT0Xl4doq85jPoaDh7J', 'tennis', 'https://drive.google.com/thumbnail?id=1rWWPvyZyxvqM-zkkxbTo1vEJ1NBDosCq', 'tennis', 'https://drive.google.com/thumbnail?id=16JYwF7rlswVTYJ9tN9trbSfVEz9JSvOI', 'cyclo-cross', '', '', '', ''], ['1998', 'Fred Deburghgraeve (3)', 'swimming', 'https://drive.google.com/thumbnail?id=1DuZ4_Fy03i1zZFg_I2M9KaebO8zke2EA', 'tennis', 'Belgian Motorcross team', 'motorcross', 'https://drive.google.com/thumbnail?id=11aN9KkVKiLhxFPT0Xl4doq85jPoaDh7J', 'tennis', '', '', '', ''], ['1997', 'Luc Van Lierde', 'triathlon', 'https://drive.google.com/thumbnail?id=19Osr9idNg8xsBfsYg6B1renKu5uryFl-  (2)', 'judo', 'https://drive.google.com/thumbnail?id=1k2OYrrjjFNgLWNk4173DNzp7qu4TWnM2', 'volleyball', '', '', '', '', '', ''], ['1996', 'Fred Deburghgraeve (2)', 'swimming', 'https://drive.google.com/thumbnail?id=1tRHglPyAAIs2Tejc-8KWSubwQ8UWgefx', 'judo', '', '', '', '', '', '', '', ''], ['1995', 'Fred Deburghgraeve', 'swimming', 'Brigitte Becue (2)', 'swimming', '', '', '', '', '', '', '', ''], ['1994', 'https://drive.google.com/thumbnail?id=1e5uwgFmBkH8COr94lOdEjLTyPPUgQFFM  (2)', 'table tennis', 'Brigitte Becue', 'swimming', '', '', '', '', '', '', '', ''], ['1993', 'Vincent Rousseau (2)', 'athletics', 'https://drive.google.com/thumbnail?id=19Osr9idNg8xsBfsYg6B1renKu5uryFl-', 'judo', '', '', '', '', '', '', '', ''], ['1992', 'https://drive.google.com/thumbnail?id=1LSaMRi4unkrwXy5Mp9t-KLkRxuak8Az8  (2)', 'motorcross', 'Annelies Bredael', 'rowing', '', '', '', '', '', '', '', ''], ['1991', 'https://drive.google.com/thumbnail?id=1e5uwgFmBkH8COr94lOdEjLTyPPUgQFFM', 'table tennis', 'https://drive.google.com/thumbnail?id=1SpE_dWpoAqpSWqe8s1AhBWenyJ9b6o4w  (2)', 'tennis', '', '', '', '', '', '', '', ''], ['1990', 'Rudy Dhaenens', 'cycling', 'https://drive.google.com/thumbnail?id=1SpE_dWpoAqpSWqe8s1AhBWenyJ9b6o4w', 'tennis', '', '', '', '', '', '', '', ''], ['1989', 'https://drive.google.com/thumbnail?id=116iQgFdqZqmCx3RWrAMEsgV3JayMMvHn', 'motorsport', 'https://drive.google.com/thumbnail?id=1GbkVWJWwOCvzOdHNyUfzwK8vtqObkXVx  (8)', 'judo', '', '', '', '', '', '', '', ''], ['1988', 'Eric Geboers', 'motorcross', 'https://drive.google.com/thumbnail?id=1GbkVWJWwOCvzOdHNyUfzwK8vtqObkXVx  (7)', 'judo', '', '', '', '', '', '', '', ''], ['1987', 'https://drive.google.com/thumbnail?id=1LSaMRi4unkrwXy5Mp9t-KLkRxuak8Az8', 'motorcross', 'Ingrid Lempereur', 'swimming', '', '', '', '', '', '', '', ''], ['1986', 'William Van Dijck', 'athletics', 'https://drive.google.com/thumbnail?id=1GbkVWJWwOCvzOdHNyUfzwK8vtqObkXVx  (6)', 'judo', '', '', '', '', '', '', '', ''], ['1985', 'https://drive.google.com/thumbnail?id=17XaM44M3Xvno0p4z9P_a7rL4tdWPcpGl  Vincent Rousseau', 'motorcross athletics', 'https://drive.google.com/thumbnail?id=1GbkVWJWwOCvzOdHNyUfzwK8vtqObkXVx  (5)', 'judo', '', '', '', '', '', '', '', ''], ['1984', 'https://drive.google.com/thumbnail?id=1mvygypM3Ia-MDRGfXdNwmJ0dGODjae26', 'cycling', 'https://drive.google.com/thumbnail?id=1GbkVWJWwOCvzOdHNyUfzwK8vtqObkXVx  (4)', 'judo', '', '', '', '', '', '', '', ''], ['1983', 'Eddy Annys', 'athletics', 'https://drive.google.com/thumbnail?id=1GbkVWJWwOCvzOdHNyUfzwK8vtqObkXVx  (3)', 'judo', '', '', '', '', '', '', '', ''], ['1982', 'https://drive.google.com/thumbnail?id=1b480X-4sYVtqXMMae4RPXs5R-xY1tajm', 'motorsport', 'https://drive.google.com/thumbnail?id=1GbkVWJWwOCvzOdHNyUfzwK8vtqObkXVx  (2)', 'judo', '', '', '', '', '', '', '', ''], ['1981', 'https://drive.google.com/thumbnail?id=1hIwPiOl3uE1Pr2Y_TL7FuxXthaAz0Y_G', 'cycling', 'Annie Lambrechts', 'roller skating', '', '', '', '', '', '', '', ''], ['1980', 'https://drive.google.com/thumbnail?id=1fFghpdsXrvT8wXY9rXc3jLlXGJBbrcz6  (2)', 'judo', 'https://drive.google.com/thumbnail?id=1GbkVWJWwOCvzOdHNyUfzwK8vtqObkXVx', 'judo', '', '', '', '', '', '', '', ''], ['1979', 'https://drive.google.com/thumbnail?id=1fFghpdsXrvT8wXY9rXc3jLlXGJBbrcz6', 'judo', 'Carine Verbauwen (3)', 'swimming', '', '', '', '', '', '', '', ''], ['1978', 'https://drive.google.com/thumbnail?id=1JjMSJUKaGhtdfInGjFynwDFAcpkiUDuI', 'billiards', 'Carine Verbauwen (2)', 'swimming', '', '', '', '', '', '', '', ''], ['1977', 'https://drive.google.com/thumbnail?id=1kGc6IUfvJKwfEqUd3M4jugbMjDA_E8gW', 'cycling', 'Anne-Marie Pira (2)', 'athletics', '', '', '', '', '', '', '', ''], ['1976', 'https://drive.google.com/thumbnail?id=1P4S_ZJIZmzTw8UcpJtm-RC30tFLHnwj9', 'athletics', 'Anne-Marie Pira', 'athletics', '', '', '', '', '', '', '', ''], ['1975', 'Bruno Brokken', 'athletics', 'Carine Verbauwen', 'swimming', '', '', '', '', '', '', '', ''], ['1974', 'https://drive.google.com/thumbnail?id=1Qi-a5SbcCPxDz38R0IWpln9Tk1jknadZ  (6)', 'cycling', '–', '–', '', '', '', '', '', '', '', ''], ['1973', 'https://drive.google.com/thumbnail?id=1Qi-a5SbcCPxDz38R0IWpln9Tk1jknadZ  (5)', 'cycling', '–', '–', '', '', '', '', '', '', '', ''], ['1972', 'https://drive.google.com/thumbnail?id=1Qi-a5SbcCPxDz38R0IWpln9Tk1jknadZ  (4)', 'cycling', '–', '–', '', '', '', '', '', '', '', ''], ['1971', 'https://drive.google.com/thumbnail?id=1Qi-a5SbcCPxDz38R0IWpln9Tk1jknadZ  (3)', 'cycling', '–', '–', '', '', '', '', '', '', '', ''], ['1970', 'https://drive.google.com/thumbnail?id=1Qi-a5SbcCPxDz38R0IWpln9Tk1jknadZ  (2)', 'cycling', '–', '–', '', '', '', '', '', '', '', ''], ['1969', 'https://drive.google.com/thumbnail?id=1Qi-a5SbcCPxDz38R0IWpln9Tk1jknadZ', 'cycling', '–', '–', '', '', '', '', '', '', '', ''], ['1968', 'https://drive.google.com/thumbnail?id=12GwVluVP2un2J6vv9D45VIJL7inN6cEG', 'weightlifting', '–', '–', '', '', '', '', '', '', '', ''], ['1967', 'https://drive.google.com/thumbnail?id=1HfgBMm4KAftwevVrTWGusS_aQu5EdSbZ', 'cycling', '–', '–', '', '', '', '', '', '', '', '']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

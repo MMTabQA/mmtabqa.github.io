@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Trains starting/terminating at Chennai Central of List of trains at Chennai Central railway station
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: what is the name of the train listed before bangalore express?
+            </div>
+            <div>
+                Answer: Shatabdi Express
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['No.', 'Train No.', 'Origin', 'Destination', 'Train Name'], ['1.', '12615/2616', 'Chennai', 'New Delhi', 'The Grand Trunk Express'], ['2.', '12621/2622', 'Chennai', 'New Delhi', 'Tamil Nadu Express'], ['3.', '12433/2434', 'Chennai', 'H.Nizamudin', 'Rajdhani Express'], ['4.', '12611/2612', 'Chennai', 'H.Nizamudin', 'Garib Rath'], ['5.', '11028/11027', 'Chennai', 'https://drive.google.com/thumbnail?id=1EwKK7PmzwTJNTO0LDi7-1OvenLYNtKPO', 'Mumbai Mail'], ['6.', '11042/11041', 'Chennai', 'https://drive.google.com/thumbnail?id=1EwKK7PmzwTJNTO0LDi7-1OvenLYNtKPO', 'Mumbai Express'], ['7.', '12842/12841', 'Chennai', 'https://drive.google.com/thumbnail?id=1k1hCNp_yw7RFr5SRbPf4XR4PrVzrohuK', 'Coromandel Express'], ['8.', '12840/12839', 'Chennai', 'https://drive.google.com/thumbnail?id=1k1hCNp_yw7RFr5SRbPf4XR4PrVzrohuK', 'Howrah Mail'], ['9.', '12679/12680', 'Chennai', 'https://drive.google.com/thumbnail?id=1JuztI4SJ-0OTyMfLB0THGMNdNC80VNUF', 'Intercity Express'], ['10.', '12673/12674', 'Chennai', 'https://drive.google.com/thumbnail?id=1JuztI4SJ-0OTyMfLB0THGMNdNC80VNUF', 'Cheran Express'], ['11.', '12675/12676', 'Chennai', 'https://drive.google.com/thumbnail?id=1JuztI4SJ-0OTyMfLB0THGMNdNC80VNUF', 'Kovai Express'], ['12.', '12243/12244', 'Chennai', 'https://drive.google.com/thumbnail?id=1JuztI4SJ-0OTyMfLB0THGMNdNC80VNUF', 'Shatabdi Express'], ['13.', '12681/12682', 'Chennai', 'https://drive.google.com/thumbnail?id=1JuztI4SJ-0OTyMfLB0THGMNdNC80VNUF', 'Coimbatore Express'], ['14.', '12671/12672', 'Chennai', 'Mettupalayam (Coimbatore)', 'Nilgiri Express'], ['15.', '16627/16628', 'Chennai', 'Mangalore Central', 'West Coast Express'], ['16.', '12601/12602', 'Chennai', 'Mangalore Central', 'Mangalore Mail'], ['17.', '12685/12686', 'Chennai', 'Mangalore Central', 'Superfast Express'], ['18.', '12656/12655', 'Chennai', 'https://drive.google.com/thumbnail?id=1bpHvdcsakf3jfzc-fZATG90LcDRGPWRL', 'Navjivan Express'], ['19.', '12669/12670', 'Chennai', 'Chhapra', 'Ganga Kaveri Express'], ['20.', '16057/16058', 'Chennai', 'Tirupati', 'Saptagiri Express'], ['21.', '16053/16054', 'Chennai', 'Tirupati', 'Tirupati Express'], ['22.', '16203/16204', 'Chennai', 'Tirupati', 'Garudadiri Express'], ['23.', '12759/12760', 'Chennai', 'https://drive.google.com/thumbnail?id=1ruvY4sWQjR3FU6bEVoZGLyVv7Amos74g', 'Charminar Express'], ['24.', '12603/12604', 'Chennai', 'https://drive.google.com/thumbnail?id=1ruvY4sWQjR3FU6bEVoZGLyVv7Amos74g', 'Hyderabad Express'], ['25.', '16669/16670', 'Chennai', 'https://drive.google.com/thumbnail?id=1n2FuNQ2R80GVsZIVTjOWXCYv8cPvI_XM', 'Yercaud Express'], ['26.', '12639/12640', 'Chennai', 'https://drive.google.com/thumbnail?id=1ne7eq4eqGYpbKO7qXP95xRqWEZC9H0cQ', 'Brindavan Express'], ['27.', '12607/12608', 'Chennai', 'https://drive.google.com/thumbnail?id=1ne7eq4eqGYpbKO7qXP95xRqWEZC9H0cQ', 'Lal Bagh Express'], ['28.', '12657/12658', 'Chennai', 'https://drive.google.com/thumbnail?id=1ne7eq4eqGYpbKO7qXP95xRqWEZC9H0cQ', 'Bangalore Mail'], ['29.', '12027/12028', 'Chennai', 'https://drive.google.com/thumbnail?id=1ne7eq4eqGYpbKO7qXP95xRqWEZC9H0cQ', 'Shatabdi Express'], ['30.', '12609/12610', 'Chennai', 'https://drive.google.com/thumbnail?id=1ne7eq4eqGYpbKO7qXP95xRqWEZC9H0cQ', 'Bangalore Express'], ['31.', '12691/12692', 'Chennai', 'Satya Sai Prasanthi Nilayam', 'Satya Sai Prasanthi Nilayam Express'], ['32.', '12007/12008', 'Chennai', 'https://drive.google.com/thumbnail?id=1Kih-KapDTAeq73mdB13CbMi4VjOwgETB', 'Shatabdi Express'], ['33.', '16222/16221', 'Chennai', 'https://drive.google.com/thumbnail?id=1Kih-KapDTAeq73mdB13CbMi4VjOwgETB', 'Kaveri Express'], ['34.', '16041/16042', 'Chennai', 'Alapuzha', 'Alleppey Express'], ['35.', '12623/12624', 'Chennai', 'https://drive.google.com/thumbnail?id=1NN5rum1cJ6XqqZmOw3pFPjkzrIhiirkw', 'Trivandrum Mail'], ['36.', '12695/12696', 'Chennai', 'https://drive.google.com/thumbnail?id=1NN5rum1cJ6XqqZmOw3pFPjkzrIhiirkw', 'Superfast Express'], ['37.', '12697/12698', 'Chennai', 'https://drive.google.com/thumbnail?id=1NN5rum1cJ6XqqZmOw3pFPjkzrIhiirkw', 'Trivandum Express'], ['38.', '16089/16090', 'Chennai', 'Jolarpet Junction', 'Yelagiri express'], ['39.', '16031/16032', 'Chennai', 'Jammutawi', 'Andaman Express'], ['40.', '12687/12688', 'Chennai', 'https://drive.google.com/thumbnail?id=1rtf5g_v1a-2zj--7MYt_VsnTeeXg508R', 'Dehradun Express'], ['41.', '12712/12711', 'Chennai', 'https://drive.google.com/thumbnail?id=1bVZ_xmEKi0BvGD0qRiXe0mJG___fLkaK', 'Pinakini Express'], ['42.', '12077/12078', 'Chennai', 'Vijayawada', 'Jan Shatabdi Express'], ['43.', '12829/12830', 'Chennai', 'https://drive.google.com/thumbnail?id=1Mz0QNtGeCJN7Vs3Sr3KOda_ntSYCyF5X', 'Bhubaneswar Express'], ['44.', '12967/12968', 'Chennai', 'https://drive.google.com/thumbnail?id=1z_j5LLrtn6pth258XCWIr579ht967L8I', 'Jaipur Express'], ['45.', '16093/16094', 'Chennai', 'https://drive.google.com/thumbnail?id=1ZtYVtkq-SO7RaDjrl_aHNBTt7rAMv8mj', 'Lucknow Express'], ['46.', '17311/17312', 'Chennai', 'Vasco da Gama, Goa', 'Vasco Express'], ['47.', '17313/7314', 'Chennai', 'Hubli', 'Hubli Express'], ['48.', '12689/12690', 'Chennai', 'Nagercoil', 'Nagercoil Express'], ['49.', '12291/12292', 'Chennai', 'Yeswantpur', 'Yeswantpur Express'], ['50.', '12755/12756', 'Chennai', 'Haldia', 'Haldia Express'], ['51.', '12852/12851', 'Chennai', 'https://drive.google.com/thumbnail?id=1mxOpKKRyxSVwpSlMHeuiV7-W_STWk0Jz', 'Bilaspur Express']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

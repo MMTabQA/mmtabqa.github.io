@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Roll of honour of Leinster Senior Club Hurling Championship
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: who won more, the team whose logo is black and has a rabbit, or mount leinster rangers?
+            </div>
+            <div>
+                Answer: Ballyhale Shamrocks
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Year', 'Winner', 'Score', 'County', 'Opponent', 'Score', 'County'], ['2013-14', 'Mount Leinster Rangers', '0-11', 'https://drive.google.com/thumbnail?id=1Dt6xEIVVMLogVPrzMRFtaZ4DujeFDTys', 'Oulart-the-Ballagh', '0-08', 'https://drive.google.com/thumbnail?id=1STDSbI1rCyb9r7Lns77JJGlHAeFEoEh_'], ['2012-13', 'Kilcormac/Killoughey', '1-12', 'https://drive.google.com/thumbnail?id=1xfjwB_MQz4VAtWIcCUal25YElpaa-odM', 'Oulart-the-Ballagh', '0-11', 'https://drive.google.com/thumbnail?id=1STDSbI1rCyb9r7Lns77JJGlHAeFEoEh_'], ['2011-12', 'Coolderry', '1-15', 'https://drive.google.com/thumbnail?id=1xfjwB_MQz4VAtWIcCUal25YElpaa-odM', 'Oulart-the-Ballagh', '1-11', 'https://drive.google.com/thumbnail?id=1STDSbI1rCyb9r7Lns77JJGlHAeFEoEh_'], ['2010-11', 'https://drive.google.com/thumbnail?id=11GzifXt0Mk0oHUR9bhReqgLb6dCKoUN2', '0-14', 'https://drive.google.com/thumbnail?id=1Qyt_GcR7ZmNw3-621KpDsqP7qeidXEta', 'Oulart-the-Ballagh', '1-08', 'https://drive.google.com/thumbnail?id=1STDSbI1rCyb9r7Lns77JJGlHAeFEoEh_'], ['2009-10', 'https://drive.google.com/thumbnail?id=1Y_CNpXlzir1wZiA0H_j0T3riBdbG8vee', '1-16', 'https://drive.google.com/thumbnail?id=1Qyt_GcR7ZmNw3-621KpDsqP7qeidXEta', 'https://drive.google.com/thumbnail?id=1ewsZ0Ai4_0Nu5N_flU0htjHGSbTD-w1H', '1-08', 'https://drive.google.com/thumbnail?id=1xfjwB_MQz4VAtWIcCUal25YElpaa-odM'], ['2008-09', 'https://drive.google.com/thumbnail?id=1Y_CNpXlzir1wZiA0H_j0T3riBdbG8vee', '2-13', 'https://drive.google.com/thumbnail?id=1Qyt_GcR7ZmNw3-621KpDsqP7qeidXEta', 'Birr', '1-11', 'https://drive.google.com/thumbnail?id=1xfjwB_MQz4VAtWIcCUal25YElpaa-odM'], ['2007-08', 'Birr', '1-11', 'https://drive.google.com/thumbnail?id=1xfjwB_MQz4VAtWIcCUal25YElpaa-odM', 'Ballyboden St Endas', '0-13', 'https://drive.google.com/thumbnail?id=1qSoooBOLfuMLUP8abLPQvhiI_ZNg3Ooi'], ['2006-07', 'https://drive.google.com/thumbnail?id=1Y_CNpXlzir1wZiA0H_j0T3riBdbG8vee', '1-20', 'https://drive.google.com/thumbnail?id=1Qyt_GcR7ZmNw3-621KpDsqP7qeidXEta', 'Birr', '1-08', 'https://drive.google.com/thumbnail?id=1xfjwB_MQz4VAtWIcCUal25YElpaa-odM'], ['2005-06', 'James Stephens', '2-13', 'https://drive.google.com/thumbnail?id=1Qyt_GcR7ZmNw3-621KpDsqP7qeidXEta', 'https://drive.google.com/thumbnail?id=16M0sc31Vsin6ocuNtKMM378r_SfzVEhD', '1-12', 'Dublin'], ['2004-05', 'James Stephens', '1-13', 'https://drive.google.com/thumbnail?id=1Qyt_GcR7ZmNw3-621KpDsqP7qeidXEta', 'https://drive.google.com/thumbnail?id=16M0sc31Vsin6ocuNtKMM378r_SfzVEhD', '1-12', 'https://drive.google.com/thumbnail?id=1qSoooBOLfuMLUP8abLPQvhiI_ZNg3Ooi'], ['2003-04', 'https://drive.google.com/thumbnail?id=11GzifXt0Mk0oHUR9bhReqgLb6dCKoUN2', '0-15', 'https://drive.google.com/thumbnail?id=1Qyt_GcR7ZmNw3-621KpDsqP7qeidXEta', 'Birr', '0-09', 'https://drive.google.com/thumbnail?id=1xfjwB_MQz4VAtWIcCUal25YElpaa-odM'], ['2002-03', 'Birr', '2-05', 'https://drive.google.com/thumbnail?id=1xfjwB_MQz4VAtWIcCUal25YElpaa-odM', 'Gowran', '1-02', 'https://drive.google.com/thumbnail?id=1Qyt_GcR7ZmNw3-621KpDsqP7qeidXEta'], ['2001-02', 'Birr', '0-10; 2-10', 'https://drive.google.com/thumbnail?id=1xfjwB_MQz4VAtWIcCUal25YElpaa-odM', 'Castletown', '1-07; 0-05', 'Laois'], ['2000-01', 'Graigue-Ballycallan', '0-14', 'https://drive.google.com/thumbnail?id=1Qyt_GcR7ZmNw3-621KpDsqP7qeidXEta', 'https://drive.google.com/thumbnail?id=16M0sc31Vsin6ocuNtKMM378r_SfzVEhD', '1-08', 'https://drive.google.com/thumbnail?id=1qSoooBOLfuMLUP8abLPQvhiI_ZNg3Ooi'], ['1999-00', 'Birr', '1-16', 'https://drive.google.com/thumbnail?id=1xfjwB_MQz4VAtWIcCUal25YElpaa-odM', 'Castletown', '0-11', 'https://drive.google.com/thumbnail?id=1ywE2Xrvc0BzQ3sZKtw3kgMB3uDensZcy'], ['1998-99', 'Rathnure', '1-13', 'https://drive.google.com/thumbnail?id=1STDSbI1rCyb9r7Lns77JJGlHAeFEoEh_', 'Portlaoise', '1-06', 'https://drive.google.com/thumbnail?id=1ywE2Xrvc0BzQ3sZKtw3kgMB3uDensZcy'], ['1997-98', 'Birr', '0-11', 'https://drive.google.com/thumbnail?id=1xfjwB_MQz4VAtWIcCUal25YElpaa-odM', 'Castletown', '0-05', 'Laois'], ['1996-97', 'Camross', '1-12', 'https://drive.google.com/thumbnail?id=1ywE2Xrvc0BzQ3sZKtw3kgMB3uDensZcy', 'https://drive.google.com/thumbnail?id=1pfQHRsYUU-uR8QnS0RAzlGUgBWvxKe6V', '2-05', 'https://drive.google.com/thumbnail?id=1qSoooBOLfuMLUP8abLPQvhiI_ZNg3Ooi'], ['1995-96', 'Glenmore', '2-13', 'https://drive.google.com/thumbnail?id=1Qyt_GcR7ZmNw3-621KpDsqP7qeidXEta', 'Oulart-the-Ballagh', '2-10', 'https://drive.google.com/thumbnail?id=1STDSbI1rCyb9r7Lns77JJGlHAeFEoEh_'], ['1994-95', 'Birr', '3-07', 'https://drive.google.com/thumbnail?id=1xfjwB_MQz4VAtWIcCUal25YElpaa-odM', 'Oulart-the-Ballagh', '2-05', 'Wexford'], ['1993-94', "St. Rynagh's", '1-14', 'https://drive.google.com/thumbnail?id=1xfjwB_MQz4VAtWIcCUal25YElpaa-odM', 'Dicksboro', '2-10', 'Kilkenny'], ['1992-93', 'https://drive.google.com/thumbnail?id=1SDF1LPtfGkmrBBneoTmeM_L--6dJUaEL', '2-13', 'https://drive.google.com/thumbnail?id=1STDSbI1rCyb9r7Lns77JJGlHAeFEoEh_', "St. Rynagh's", '0-13', 'https://drive.google.com/thumbnail?id=1xfjwB_MQz4VAtWIcCUal25YElpaa-odM'], ['1991-92', 'Birr', '2-14', 'https://drive.google.com/thumbnail?id=1xfjwB_MQz4VAtWIcCUal25YElpaa-odM', 'https://drive.google.com/thumbnail?id=1Y_CNpXlzir1wZiA0H_j0T3riBdbG8vee', '0-03', 'https://drive.google.com/thumbnail?id=1Qyt_GcR7ZmNw3-621KpDsqP7qeidXEta'], ['1990-91', 'Glenmore', '0-15', 'Kilkenny', 'Camross', '1-09', 'https://drive.google.com/thumbnail?id=1ywE2Xrvc0BzQ3sZKtw3kgMB3uDensZcy'], ['1989-90', 'https://drive.google.com/thumbnail?id=1Y_CNpXlzir1wZiA0H_j0T3riBdbG8vee', '2-11', 'https://drive.google.com/thumbnail?id=1Qyt_GcR7ZmNw3-621KpDsqP7qeidXEta', 'https://drive.google.com/thumbnail?id=1AGO4d6M1Crkjqm1H3zP_RjqTNBJjxB7A', '0-07', 'Dublin'], ['1988-89', 'https://drive.google.com/thumbnail?id=1SDF1LPtfGkmrBBneoTmeM_L--6dJUaEL', '1-12', 'https://drive.google.com/thumbnail?id=1STDSbI1rCyb9r7Lns77JJGlHAeFEoEh_', 'https://drive.google.com/thumbnail?id=1Y_CNpXlzir1wZiA0H_j0T3riBdbG8vee', '1-09', 'Kilkenny'], ['1987-88', 'Rathnure', '3-08', 'https://drive.google.com/thumbnail?id=1STDSbI1rCyb9r7Lns77JJGlHAeFEoEh_', 'Portlaoise', '1-13', 'Laois'], ['1986-87', 'Rathnure', '2-16', 'https://drive.google.com/thumbnail?id=1STDSbI1rCyb9r7Lns77JJGlHAeFEoEh_', 'Camross', '3-09', 'https://drive.google.com/thumbnail?id=1ywE2Xrvc0BzQ3sZKtw3kgMB3uDensZcy'], ['1985-86', 'https://drive.google.com/thumbnail?id=1SDF1LPtfGkmrBBneoTmeM_L--6dJUaEL', '3-09', 'https://drive.google.com/thumbnail?id=1STDSbI1rCyb9r7Lns77JJGlHAeFEoEh_', 'Kinnitty', '0-07', 'Offaly'], ['1984-85', "St. Martin's", '2-11', 'https://drive.google.com/thumbnail?id=1Qyt_GcR7ZmNw3-621KpDsqP7qeidXEta', 'Kinnitty', '0-12', 'https://drive.google.com/thumbnail?id=1xfjwB_MQz4VAtWIcCUal25YElpaa-odM'], ['1983-84', 'https://drive.google.com/thumbnail?id=1Y_CNpXlzir1wZiA0H_j0T3riBdbG8vee', '3-06', 'Kilkenny', 'Kinnitty', '0-09', 'https://drive.google.com/thumbnail?id=1xfjwB_MQz4VAtWIcCUal25YElpaa-odM'], ['1982-83', "St. Rynagh's", '1-16', 'Offaly', 'https://drive.google.com/thumbnail?id=1SDF1LPtfGkmrBBneoTmeM_L--6dJUaEL', '2-10', 'https://drive.google.com/thumbnail?id=1STDSbI1rCyb9r7Lns77JJGlHAeFEoEh_'], ['1981-82', 'James Stephens', '0-13', 'https://drive.google.com/thumbnail?id=1Qyt_GcR7ZmNw3-621KpDsqP7qeidXEta', 'Faythe Harriers', '1-09', 'Wexford'], ['1980-81', 'https://drive.google.com/thumbnail?id=1Y_CNpXlzir1wZiA0H_j0T3riBdbG8vee', '3-10', 'Kilkenny', 'Coolderry', '1-08', 'https://drive.google.com/thumbnail?id=1xfjwB_MQz4VAtWIcCUal25YElpaa-odM'], ['1979-80', 'https://drive.google.com/thumbnail?id=1lyjXHY1BbJ_Gz6ldc4vFWycB2DlF97Gk', '3-05', 'https://drive.google.com/thumbnail?id=1qSoooBOLfuMLUP8abLPQvhiI_ZNg3Ooi', 'Camross', '0-11', 'https://drive.google.com/thumbnail?id=1ywE2Xrvc0BzQ3sZKtw3kgMB3uDensZcy'], ['1978-79', 'https://drive.google.com/thumbnail?id=1Y_CNpXlzir1wZiA0H_j0T3riBdbG8vee', '1-13', 'Kilkenny', 'https://drive.google.com/thumbnail?id=1lyjXHY1BbJ_Gz6ldc4vFWycB2DlF97Gk', '1-06', 'Dublin'], ['1977-78', 'Rathnure', '0-16', 'Wexford', 'https://drive.google.com/thumbnail?id=1I1EnxGbUASsSIpzNa4Img4dj0CL_xs-k', '1-10', 'https://drive.google.com/thumbnail?id=1Qyt_GcR7ZmNw3-621KpDsqP7qeidXEta'], ['1976-77', 'Camross', '3-09', 'https://drive.google.com/thumbnail?id=1ywE2Xrvc0BzQ3sZKtw3kgMB3uDensZcy', 'James Stephens', '1-14', 'https://drive.google.com/thumbnail?id=1Qyt_GcR7ZmNw3-621KpDsqP7qeidXEta'], ['1975-76', 'James Stephens', '1-14', 'Kilkenny', "St. Rynagh's", '2-04', 'https://drive.google.com/thumbnail?id=1xfjwB_MQz4VAtWIcCUal25YElpaa-odM'], ['1974-75', 'https://drive.google.com/thumbnail?id=1I1EnxGbUASsSIpzNa4Img4dj0CL_xs-k', '2-06', 'Kilkenny', "St. Rynagh's", '1-06', 'https://drive.google.com/thumbnail?id=1xfjwB_MQz4VAtWIcCUal25YElpaa-odM'], ['1973-74', 'Rathnure', '1-18', 'https://drive.google.com/thumbnail?id=1STDSbI1rCyb9r7Lns77JJGlHAeFEoEh_', "St. Rynagh's", '2-09', 'https://drive.google.com/thumbnail?id=1xfjwB_MQz4VAtWIcCUal25YElpaa-odM'], ['1972-73', "St. Rynagh's", '5-05', 'Offaly', 'Rathnure', '2-13', 'https://drive.google.com/thumbnail?id=1STDSbI1rCyb9r7Lns77JJGlHAeFEoEh_'], ['1971-72', 'Rathnure', '2-12', 'Wexford', 'Bennettsbridge', '1-08', 'https://drive.google.com/thumbnail?id=1Qyt_GcR7ZmNw3-621KpDsqP7qeidXEta'], ['1970-71', "St. Rynagh's", '4-10', 'Offaly', 'Rathnure', '2-09', 'https://drive.google.com/thumbnail?id=1STDSbI1rCyb9r7Lns77JJGlHAeFEoEh_']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

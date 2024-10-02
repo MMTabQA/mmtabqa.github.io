@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to International broadcasts of La Fuerza del Destino (telenovela)
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: in how many countries did the series finale air before it aired in the country whose flag features an eagle and shield with the text 'Plus Ultra'?
+            </div>
+            <div>
+                Answer: 6
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Country', 'Alternante title', 'TV Network(s)', 'Series premiere', 'Series finale'], ['https://drive.google.com/thumbnail?id=1jtxoC55Xo_q33MUJjej6_rvH-msmnYJE', 'La Fuerza del Destino', 'https://drive.google.com/thumbnail?id=1ZgIzsjFjmvYNk5EBKv_f1rjGFYXlB5yl', 'March 14, 2011', 'July 31, 2011'], ['https://drive.google.com/thumbnail?id=1mYZfbXoO4pCl-m0kk6QOYQ0nGQpSYzpy', 'La Fuerza del Destino', 'https://drive.google.com/thumbnail?id=1w39rkNDsTLjYI267-DRoohPn8yEPIJlZ', 'May 2, 2011', 'September 20, 2011'], ['https://drive.google.com/thumbnail?id=1whxiYHHwDqTmNECrDAtSUCfPDtoeo7Aw', 'La Fuerza del Destino', 'https://drive.google.com/thumbnail?id=1iircv6UyQUjJANvcUDSvA7O5RRMoOZRK', 'May 5, 2011', 'September 20, 2011'], ['https://drive.google.com/thumbnail?id=19lhIhmiKt1Ulhu8z1Y71WLwm8vSqw7O8', 'La Fuerza del Destino', 'https://drive.google.com/thumbnail?id=1Q3CEHkQwToPjykX_8k-zjmkQwrgJjW8F', 'May 23, 2011', 'November 11, 2011'], ['https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'La Fuerza del Destino', 'https://drive.google.com/thumbnail?id=13Qy8191DcfWROoGWJdiHQPTmdGe_bYuQ', 'August 2, 2011', 'December 26, 2011'], ['https://drive.google.com/thumbnail?id=1lHXzxKldrI1KOeXmd0zPo_G1K3ZakwCq', 'Forca e Fatit', 'https://drive.google.com/thumbnail?id=1UN4mN3ZkGifkWH_K_p5gmO69djmKS5mH', 'August 29, 2011', 'January 9, 2012'], ['https://drive.google.com/thumbnail?id=1vzYrBicJMV0g12l_CuDbQRvpMMR3QDCg', 'Miłość i przeznaczenie', 'https://drive.google.com/thumbnail?id=1UKEMCnZIBqQtyKRn-ZGWXfc_NINNICCd', 'September 5, 2011', 'February 7, 2012'], ['https://drive.google.com/thumbnail?id=1GF7AcMsGdumfV6rhe322FneYU76OSrT2', 'Tajna ljubav', 'https://drive.google.com/thumbnail?id=1ac6kT43N8B5zK6yfyUy9TEAIREQmT08u   https://drive.google.com/thumbnail?id=113lJYGoxgEpFHI84cDAMxb5RZ39_4zmz', 'September 12, 2011 July 3, 2013', 'April 13, 2012 October 12, 2013'], ['https://drive.google.com/thumbnail?id=1U2rMSB-Fj_cTfvAphP4OeqTVRtHoRXFt', 'La Fuerza del Destino', 'https://drive.google.com/thumbnail?id=1q_-G7lQ6CHm68OsDrjooqrKVJfXweKPC', 'September 21, 2011', 'January 25, 2012'], ['https://drive.google.com/thumbnail?id=1JBdTt2IMJ5rndKIYmote3EvPCM-CSIFe', 'Tajna ljubav', 'https://drive.google.com/thumbnail?id=1ijZ0j15PlVx2uVRQ0Y2qx9DaPUhCe2Is', 'November 22, 2011', 'May 16, 2012'], ['https://drive.google.com/thumbnail?id=1yrKu_r2Vzs-38O7vWohYtQFYhhmzKsDA', 'Tajna ljubav', 'Pink M', 'December 19, 2011', 'May 2, 2012'], ['https://drive.google.com/thumbnail?id=1IpDOLQmWxbUtvoKwWkbLBo9jh9MiX4l3', 'Likimo galia', 'https://drive.google.com/thumbnail?id=1i4SwRc5ABJgADQnmnMguRKjFdFoxcgae', 'January 4, 2012', 'May 31, 2012'], ['https://drive.google.com/thumbnail?id=1iBSWoLq4NNRUZ21tZ-uo1kw9Eu5Eqefu', 'A végzet hatalma', 'STORY4', 'January 9, 2012', 'June 1, 2012'], ['https://drive.google.com/thumbnail?id=12QjeykZyzLdHnqM2qFCvYALossOgQFDu', 'La Fuerza del Destino', 'https://drive.google.com/thumbnail?id=1xD4GKMzpIMfuQ_UibYC25KpQM97PZ8wn', 'January 16, 2012', 'May 7, 2012'], ['https://drive.google.com/thumbnail?id=1mrC1wmdGQF4_kCqqPQ_luCtEPl0u3HoG', 'La Fuerza del Destino', 'https://drive.google.com/thumbnail?id=1DDeXSKncwH7-GB9HCFYqpF9lA1WMDOZj', 'January 31, 2012', 'April 19, 2012'], ['Romania', 'Forța destinului', 'https://drive.google.com/thumbnail?id=1ZyqBYjH4QF-TYvEMUEHxP8VROP71SykI', 'March 26, 2012', 'May 28, 2012'], ['Iran', 'The Power of Destiny', 'Farsi1', 'March 10, 2012', 'July 28, 2012'], ['Israel', 'כוחו של גורל', 'Viva', 'April 19, 2012', 'September 21, 2012'], ['Croatia', 'Moć sudbine', 'HRT', 'June 5, 2012', 'October 9, 2012'], ['Slovenia', 'Moč usode', 'https://drive.google.com/thumbnail?id=1x-toKRkMjWrVFaWw6P5fVcr02yb59w3l', 'July 12, 2012', 'November 30, 2012'], ['https://drive.google.com/thumbnail?id=1X3HJ9k7bWChf55yL9vULHbDdoa7HLdn7', 'Силата на судбината', 'Pink 15', '2011', '2011'], ['Morocco', 'Al Maktoub المكتوب', 'https://drive.google.com/thumbnail?id=1ekU0bA7musY2M20IwVoSQ_lJcDEAyyD1', 'August 14, 2013', 'January 2, 2014'], ['Cyprus', 'Η εκδίκηση', 'https://drive.google.com/thumbnail?id=1BzVv17h6O8gpzNbh1ezrVyWZB97BJLvL', 'October 15, 2013', 'Present'], ['https://drive.google.com/thumbnail?id=1Am0swQyQjY77puLR3yDT2-thl7_I8i5S', 'La Force du Destin', 'https://drive.google.com/thumbnail?id=1peNhqADcbw05mu-sZkxgCvK4-6-bWcFF', 'September 23, 2013', 'December 2, 2013'], ['https://drive.google.com/thumbnail?id=14t0Gds8hloybqlqTNOMWeLa_N_tHVat9', 'La force du destin', 'Canal 2 International', 'September 23, 2013', 'December 2, 2014'], ['https://drive.google.com/thumbnail?id=1yHt7wOdPQo_nyaS7ZXnfWuJm33MZ7UCh', 'Forța destinului', 'https://drive.google.com/thumbnail?id=1ZyqBYjH4QF-TYvEMUEHxP8VROP71SykI', 'February 7, 2014', 'Present']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

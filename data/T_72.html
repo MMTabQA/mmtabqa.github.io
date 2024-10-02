@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to History|Remote stations of Smithsonian Astrophysical Observatory
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: the first opened station
+            </div>
+            <div>
+                Answer: Mount Wilson, California
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Station', 'Type', 'Latitude', 'Longitude', 'El. (m)', 'Opened', 'Closed', 'Coordinates'], ['https://drive.google.com/thumbnail?id=1JwhmCFcFMEstmlye1gqNj9UzJ7Tg2A1e', 'Solar', "34º13'N", "118º56'W", '1737', '1908', '1920', '34°13′S 118°56′W\ufeff / \ufeff34.217°S 118.933°W'], ['Hump Mountain, North Carolina', 'Solar', "36º8'N", "82º0'W", '1500', '1917', '1918', '36°8′N 82°0′W\ufeff / \ufeff36.133°N 82.000°W'], ['Calama, Chile', 'Solar', "22º28'S", "68º56'W", '2250', '1918', '1920', '22°28′S 68°56′W\ufeff / \ufeff22.467°S 68.933°W'], ['Mount Montezuma, Chile', 'Solar', "22º40'S", "68º56'W", '2711', '1920', '?', '22°40′S 68°56′W\ufeff / \ufeff22.667°S 68.933°W'], ['Mount Harquahala, Arizona', 'Solar', "33º48'N", "113º20'W", '1721', '1920', '1925', '33°48′N 113°20′W\ufeff / \ufeff33.800°N 113.333°W'], ['Table Mountain, California', 'Solar', "34º22'N", "117º41'W", '2286', '1925', '1962', '34°22′N 117°41′W\ufeff / \ufeff34.367°N 117.683°W'], ['Mount Brukkaros, Namibia', 'Solar', "25º52'S", "17º48'E", '1586', '1926', '1931', '25°52′S 17°48′E\ufeff / \ufeff25.867°S 17.800°E'], ['https://drive.google.com/thumbnail?id=1Vb2iQ-r0nNpRh6qKE40kPkA4Palmkedr', 'Solar', "28º31'N", "33º56'E", '2591', '1934', '1937', '28°31′N 33°56′E\ufeff / \ufeff28.517°N 33.933°E'], ['Burro Mountain, New Mexico', 'Solar', "32º40'N", "108º33'W", '2440', '1938', '1946', '32°40′N 108°33′W\ufeff / \ufeff32.667°N 108.550°W'], ['Organ Pass, New Mexico', 'Space Track', "32º25'N", "253º27'E", '', '', '', '32°25′N 106°33′W\ufeff / \ufeff32.417°N 106.550°W'], ['Olifantsfontein, South Africa', 'Space Track', "25º58'S", "28º15'E", '', '', '', '25°58′S 28°15′E\ufeff / \ufeff25.967°S 28.250°E'], ['Woomera, Australia', 'Space Track', "31º06'S", "136º46'E", '', '', '', '31°06′S 136°46′E\ufeff / \ufeff31.100°S 136.767°E'], ['https://drive.google.com/thumbnail?id=1TrvePI8vNVmnZePuinrFQWqXbwI-9tQr', 'Space Track', "36º28'N", "353º48'E", '', '', '', '36°28′N 6°12′W\ufeff / \ufeff36.467°N 6.200°W'], ['https://drive.google.com/thumbnail?id=1A3SNwxRDNa3VxGoAEsSulzG2tvj1D9uz', 'Space Track', "29º38'N", "52º31'E", '', '', '', '29°38′N 52°31′E\ufeff / \ufeff29.633°N 52.517°E'], ['Curaçao, Netherlands West Indies', 'Space Track', "12º05'N", "291º10'E", '', '', '', '12°05′N 68°50′W\ufeff / \ufeff12.083°N 68.833°W'], ['https://drive.google.com/thumbnail?id=1pcNBeLn7s0XljG1e8PdpTZokB9ml4Wyd', 'Space Track', "27º01'N", "279º53'E", '', '', '', '27°01′N 80°07′W\ufeff / \ufeff27.017°N 80.117°W'], ['https://drive.google.com/thumbnail?id=1aidApf70Ot8thoudmunKgk7gJXmdWY54', 'Space Track', "20º43'N", "203º45'E", '', '', '', '20°43′N 156°15′W\ufeff / \ufeff20.717°N 156.250°W'], ['Villa Dolores, Argentina', 'Space Track', "31º57'N", "294º54'E", '', '', '', '31°57′N 65°06′E\ufeff / \ufeff31.950°N 65.100°E'], ['Mitaka, Japan', 'Space Track', '', '', '', '', '', ''], ['Nani Tal, India', 'Space Track', '', '', '', '', '', ''], ['https://drive.google.com/thumbnail?id=137CoNR_xaizrzKQV-dWn9UhhnJfV8efY', 'Solar, Space Track', '', '', '', '', '', '']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Roll of Honour of Scottish Junior Football Association, East Region
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: which team has made the roll of honour more times in the east region south division: the team whose badge is shaped like a shield and has white and black colors or newtongrange star?
+            </div>
+            <div>
+                Answer: Fauldhouse United
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Season', 'East Superleague', 'East Premier League', 'East Region South Division', 'East Region Central Division', 'East Region North Division'], ['2006–07', 'Linlithgow Rose', 'https://drive.google.com/thumbnail?id=1A0zYuxVSHdWvO4tu3QIWB_bjyxJHsMIz', 'https://drive.google.com/thumbnail?id=12kXckGnF_hv-ctoRiWoM0ntuihPz2_6G', 'https://drive.google.com/thumbnail?id=18tzd0S7Uj2hE86zPCITQzGrTDPRRwk93', 'https://drive.google.com/thumbnail?id=1MwXzRzAQsIl9luq6wOW_6disEhP9AeLB'], ['2007–08', 'Lochee United', 'https://drive.google.com/thumbnail?id=1J-7V7obMOTMe-BvCIc0zCVOdthp5Z332', 'https://drive.google.com/thumbnail?id=1yNMlL-5rW4HRkqqZbFm89zJJuZi0ZIlZ', 'Ballingry Rovers', 'Blairgowrie'], ['2008–09', 'https://drive.google.com/thumbnail?id=1tR0xU0B4JQYOrWfW3P0aO90uVPfc55FQ', 'Musselburgh Athletic', 'Armadale Thistle', 'https://drive.google.com/thumbnail?id=1iO1KZxKhBid11bQw-rpfOzlIZrQwPVr5', 'https://drive.google.com/thumbnail?id=1uXranETsCI3p4XYrRd-1ymloQPlQkRm6'], ['2009–10', 'https://drive.google.com/thumbnail?id=1J-7V7obMOTMe-BvCIc0zCVOdthp5Z332', 'https://drive.google.com/thumbnail?id=1jEYRl7Mu_e55bT1B8bWxRpWPzzUdi4yo', 'https://drive.google.com/thumbnail?id=1hv-hcjHXGANPO-aH73BwC-vRxyzLU9qO', 'https://drive.google.com/thumbnail?id=1SsMz0NWUYVyiGRU2OROiuNHUM4_eFAEO', 'https://drive.google.com/thumbnail?id=1h6LoUvM3gMYEwUe0I8mg1G1sBm2sbwJZ'], ['2010–11', 'https://drive.google.com/thumbnail?id=1J-7V7obMOTMe-BvCIc0zCVOdthp5Z332', 'https://drive.google.com/thumbnail?id=1fzy4YN8jdkPr9G_UKysGU1gXxJ4yQW41', 'Sauchie Juniors', 'https://drive.google.com/thumbnail?id=1hRQC9nBsWkPWczrT6w6F2UEjfa98vhPt', 'https://drive.google.com/thumbnail?id=1QskZm1uJPtDk3Dpmnhb8wL5EAAsoJ5ke'], ['2011–12', 'https://drive.google.com/thumbnail?id=1tR0xU0B4JQYOrWfW3P0aO90uVPfc55FQ', 'https://drive.google.com/thumbnail?id=1maKkPlr5B536IAd67W4wVSowKymTYIVf', 'https://drive.google.com/thumbnail?id=1gdragH0EpS1gcqocHb7HZhjSQexqzXCy', 'Jeanfield Swifts', 'Dundee Violet'], ['2012–13', 'https://drive.google.com/thumbnail?id=1ED34N3E4aQDs-YOjTV4qWB1FmONkkt8D', 'Newtongrange Star', 'https://drive.google.com/thumbnail?id=1yNMlL-5rW4HRkqqZbFm89zJJuZi0ZIlZ', 'https://drive.google.com/thumbnail?id=1EnYBR6chB3RlzuK32Gwe10DH4APTjSfj', 'https://drive.google.com/thumbnail?id=1ziR1Mb2ancdDL8kZCB6g2_PMeHVjR0jD']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

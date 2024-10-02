@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Institutions of List of United States technological universities
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: what's the number of schools represented in the table?
+            </div>
+            <div>
+                Answer: 28
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['School', 'Location', 'Control', 'Type', 'Enrollment', 'Founded'], ['Air Force Institute of Technology', 'Wright-Patterson AFB, Ohio', 'Public', 'DRU', '719', '1919'], ['https://drive.google.com/thumbnail?id=1QvpZKLenH9bIiRHtsQfnxlGzTTn1dYsG', 'https://drive.google.com/thumbnail?id=1pvwxZpEY9zKzexVdgD7JHAPvtEEZ_Hae', 'Private', 'RU/VH', '2,231', '1891'], ['https://drive.google.com/thumbnail?id=1VXYEJ_Xzq6SJTNVI6N18-5HG-ccWGI54', 'https://drive.google.com/thumbnail?id=1aePGyl-UPu_recLlU0xt1xKbiNWFZyhr', 'Public', "Master's L", '18,762', '1901'], ['https://drive.google.com/thumbnail?id=1Tj6lzDboUoOQSyMciXb9Poh3X4HIYv8h', 'https://drive.google.com/thumbnail?id=1bLp7vbC_y3pqBUggjyPT4drAleUbDDJi', 'Public', "Master's L", '22,273', '1938'], ['https://drive.google.com/thumbnail?id=11qP_2R_F8liCyAl1PJCJOSE4K2E2OTpW', 'Potsdam, NY', 'Private', 'RU/H', '3,187', '1896'], ['https://drive.google.com/thumbnail?id=196p8ZWzUeeuwlR3Nug66zcr7R3bjL12i', 'https://drive.google.com/thumbnail?id=1XjlJi3YpU4Xp17RjdKPLzsWkDQHB2yCx', 'Public', 'RU/H', '4,296', '1874'], ['https://drive.google.com/thumbnail?id=1aJRTC85dRtcSBihhKY9CKcx68w8pVP2D', 'https://drive.google.com/thumbnail?id=1Bw9dW7E4sOTL0G9IAzT59833mkUWmgRL', 'Private', 'DRU', '30,020', '1965'], ['https://drive.google.com/thumbnail?id=10oNMInJj3-OLrL7ntUWhgutVADVDCVRn', 'https://drive.google.com/thumbnail?id=1AAGpvVGN8GkH8rDkkvWWwKLtcAZKMIQF', 'Private', 'DRU', '8,985', '1958'], ['https://drive.google.com/thumbnail?id=1x3dOBzLelJA53P4U0kxl6_3YpcxiqJ6b', 'https://drive.google.com/thumbnail?id=1GHPe0w8eA2fHgZ_lkMrD-EPGd55CLes-', 'Public', 'RU/VH', '20,487', '1885'], ['Illinois Institute of Technology', 'https://drive.google.com/thumbnail?id=1q5C6pCGynBxlJv0TkODWvs24mXBmNjZd', 'Private', 'RU/H', '7,787', '1890'], ['https://drive.google.com/thumbnail?id=1Q9N9TFfthneTPElpZEN0597gK3_PlC_h', 'https://drive.google.com/thumbnail?id=13E0j_QuzmW2RWqSxD0bcGuAuXv0p6RZo', 'Private', 'RU/VH', '10,894', '1861'], ['https://drive.google.com/thumbnail?id=1BUSMYTuKnQUMRXqrQsl90r1Gr-ybWWOz', 'https://drive.google.com/thumbnail?id=1mb84sti2EJDKULU6cnmwRu7R-hoTVTmL', 'Public', 'RU/H', '6,957', '1885'], ['https://drive.google.com/thumbnail?id=1yNHRNb5SBqNa3YM5uJt_VEyoiUrCfLi9', 'Rolla, Missouri', 'Public', 'RU/H', '7,521', '1870'], ['Montana Tech of the University of Montana', 'https://drive.google.com/thumbnail?id=1FtiKsEwVbKpEaFIiPC6fBNjIv1PCdUnt', 'Public', 'Bac/Diverse', '2,694', '1900'], ['New Jersey Institute of Technology', 'https://drive.google.com/thumbnail?id=17hzIqDsMlIGw3ivXlU793hJwrb5tJFPP', 'Private', 'RU/H', '9,558', '1881'], ['New Mexico Institute of Mining and Technology', 'Socorro, New Mexico', 'Public', "Master's M", '1,921', '1889'], ['https://drive.google.com/thumbnail?id=1rL7vn4_JCHAJImNTqt_K88xZLln7cU10', 'Klamath Falls, Oregon', 'Public', 'Bac/Diverse', '3,927', '1947'], ['Polytechnic Institute of New York University', 'Brooklyn, New York', 'Private', 'RU/H', '4,514', '1854'], ['https://drive.google.com/thumbnail?id=1KUFDKI0AJxFYxt98Cz-Zsv_f15IaL1De', 'https://drive.google.com/thumbnail?id=1Q-eTRrth8syGaeoJRP-vDjBXFjgljBXj', 'Private', 'RU/VH', '7,521', '1824'], ['https://drive.google.com/thumbnail?id=1Umz6QtqMevfKKOcBZVvHI3gCFWE1anuZ', 'Henrietta, New York', 'Private', "Master's L", '17,652', '1829'], ['https://drive.google.com/thumbnail?id=1QYY5YERX8Uy9pOKu7Sywpj3uGpLD2RJN', 'https://drive.google.com/thumbnail?id=1cpEbD4t53aPG0W4BjRGDpnHhFrGcfra6', 'Private', 'Spec/Engg', '1,970', '1874'], ['South Dakota School of Mines and Technology', 'https://drive.google.com/thumbnail?id=1Je740MoRObs-twTbW0nvplzImPtMkt0N', 'Public', 'Spec/Engg', '2,354', '1885'], ['Southern Polytechnic State University', 'https://drive.google.com/thumbnail?id=1M15ln2jGPybE5afMNWV51a84fPWnQ6CU', 'Public', "Master's M", '6,202', '1948'], ['https://drive.google.com/thumbnail?id=1xm3Ds9jtocBAuXqFJQExNWcKr7lmmmAX', 'https://drive.google.com/thumbnail?id=1lv9PywrjfYUqIBLMUe2aQjwC3qZv2oES', 'Private', 'RU/H', '5,260', '1870'], ['https://drive.google.com/thumbnail?id=100oSdDwtBdpIzQDbzriJjZKmZiiWKmSM', 'https://drive.google.com/thumbnail?id=1V06uJ3mhZrG1wjaZz_1XcHdhUBv3Hytk', 'Public', 'RU/H', '32,327', '1923'], ['https://drive.google.com/thumbnail?id=1vvGNUMWSmNwNg1dU97Bvxzmpy23fBiSP', 'Menomonie, Wisconsin', 'Public', "Master's L", '9,339', '1891'], ['https://drive.google.com/thumbnail?id=1c2hMJ0tNZFR-iz0AmkPUvvLYQxszZ0tz', 'Blacksburg, Virginia', 'Public', 'RU/VH', '30,739', '1872'], ['https://drive.google.com/thumbnail?id=1uz4PdFyZ9TYw9naJpqvg56QAOEwTvshX', 'https://drive.google.com/thumbnail?id=16EDj-lYUKrpV1bDw6ZiAmRoUtv2OtDEX', 'Private', 'DRU', '5,071', '1865']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

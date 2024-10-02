@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Notable Recordings of Gene Paul
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: what is the album listed after hold on, i'm coming?
+            </div>
+            <div>
+                Answer: Bette Midler
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Year', 'Artist', 'Album', 'Chart Position', 'Role'], ['1961', 'https://drive.google.com/thumbnail?id=1a1WoJTthCCBXGo0dYgJ2EfLN05DUTnEE', '“Exodus” (single)', '#16 R&B, #36 US', 'Remastering Engineer'], ['1968', 'https://drive.google.com/thumbnail?id=1a1WoJTthCCBXGo0dYgJ2EfLN05DUTnEE', '“It’s Crazy” (single)', '#88 US', 'Remastering Engineer'], ['1969', 'https://drive.google.com/thumbnail?id=1a1WoJTthCCBXGo0dYgJ2EfLN05DUTnEE  &  https://drive.google.com/thumbnail?id=18mRI8n3lNT0xHjzopKqojpBsbGMMEhun', 'https://drive.google.com/thumbnail?id=1amm2OJpcgMhD90iR9TNic81IlYPIkEWu', '#1 Jazz, #2 R&B, #29 US', 'Remixing & Remastering Engineer'], ['1969', 'R.B. Greaves', 'R.B. Greaves', '#24 R&B, #85 US', 'Mixing Engineer'], ['1971', 'https://drive.google.com/thumbnail?id=1a1WoJTthCCBXGo0dYgJ2EfLN05DUTnEE  &  https://drive.google.com/thumbnail?id=18mRI8n3lNT0xHjzopKqojpBsbGMMEhun', 'https://drive.google.com/thumbnail?id=1RNHVATU9aYk3eD8HeurZ7nqRIiopeA_V', '#1 Jazz, # 41 US', 'https://drive.google.com/thumbnail?id=1_bWKhl83yfY_j-4punjzpcrKnDMwKF0G  and Remastering Engineer'], ['1971', 'https://drive.google.com/thumbnail?id=18mRI8n3lNT0xHjzopKqojpBsbGMMEhun', 'Invitation to Openness', '#8 Jazz', 'Remastering Engineer'], ['1971', 'https://drive.google.com/thumbnail?id=19ZScebdURMarZkLlPncepcGm3jpv0WNV', 'https://drive.google.com/thumbnail?id=1oJLMFPcQkChAokSGONsBzpoqVy9Euccp', '#6 R&B, #89 US', 'https://drive.google.com/thumbnail?id=1_bWKhl83yfY_j-4punjzpcrKnDMwKF0G'], ['1972', 'https://drive.google.com/thumbnail?id=1m7bhoSNigWiaRZv9262IAxpeCME1zRXB  &  https://drive.google.com/thumbnail?id=19ZScebdURMarZkLlPncepcGm3jpv0WNV', 'https://drive.google.com/thumbnail?id=1YPRekpEZTucSEKt6vf9U_Asi7JVA8Nq-', '#3 US, #2 R&B, #10 Jazz', 'https://drive.google.com/thumbnail?id=1_bWKhl83yfY_j-4punjzpcrKnDMwKF0G'], ['1972', 'https://drive.google.com/thumbnail?id=1pIhNds8_Gwwxqs5X5xUqAE1CN0BddCmn', 'https://drive.google.com/thumbnail?id=1e5zNqYVF_UONLO6oC6sT4BpCv8di10aQ', '#27 US', 'Remixing Engineer'], ['1972', 'https://drive.google.com/thumbnail?id=11-HsUT6sEkqWSj0X0E00w1pnXJyMHRqS', 'Hold On, I’m Coming', '#7 Jazz', 'Mixing Engineer'], ['1973', 'https://drive.google.com/thumbnail?id=1parTzdu84tJVemsivYFqV1qdYWIE3Bv-', 'Bette Midler', '#6 US', 'https://drive.google.com/thumbnail?id=1_bWKhl83yfY_j-4punjzpcrKnDMwKF0G'], ['1973', 'https://drive.google.com/thumbnail?id=1y04w90UxjhgBMqkadvdn7PSrPYuwY5vW', 'https://drive.google.com/thumbnail?id=1zLr1QWy3WfdAtPTYHrr1P8niA-rYXalR', '#33 US', 'https://drive.google.com/thumbnail?id=1_bWKhl83yfY_j-4punjzpcrKnDMwKF0G'], ['1973', 'https://drive.google.com/thumbnail?id=1M7EOswQ51itVX888Df3Q_wfhQ7j-6aXm', 'https://drive.google.com/thumbnail?id=10f_zWEC9gX0YkmF5rspx6OMC4eH0jwuP', '#41 US', 'https://drive.google.com/thumbnail?id=1_bWKhl83yfY_j-4punjzpcrKnDMwKF0G'], ['1973', 'https://drive.google.com/thumbnail?id=18mRI8n3lNT0xHjzopKqojpBsbGMMEhun', 'Layers', '#5 Jazz', 'Remastering Engineer'], ['1973', 'https://drive.google.com/thumbnail?id=1MV1wAJqH4Sd7CMifZRUsiV3d6p-GvWjy', 'https://drive.google.com/thumbnail?id=16GDNq6jIQGcFccXXb2vFOsBaH0G2zL0k', '#34 Jazz', 'https://drive.google.com/thumbnail?id=1_bWKhl83yfY_j-4punjzpcrKnDMwKF0G  and Mixing Engineer'], ['1973', 'https://drive.google.com/thumbnail?id=19ZScebdURMarZkLlPncepcGm3jpv0WNV', 'https://drive.google.com/thumbnail?id=1bnPUgdg5e3AEkw_8vp_kW0mgAICd7DC1', '#18 R&B, #69 US', 'https://drive.google.com/thumbnail?id=1_bWKhl83yfY_j-4punjzpcrKnDMwKF0G'], ['1973', 'https://drive.google.com/thumbnail?id=1kYpTGEBgYM_NItAa9APuTKg6g1P3MoUa', 'https://drive.google.com/thumbnail?id=1D-IAwl0NBK7XdZKNeuGrpQFa54bmfcPf', '#178 US', 'https://drive.google.com/thumbnail?id=1_bWKhl83yfY_j-4punjzpcrKnDMwKF0G'], ['1974', 'https://drive.google.com/thumbnail?id=1MV1wAJqH4Sd7CMifZRUsiV3d6p-GvWjy', 'https://drive.google.com/thumbnail?id=1siEN6AazXr2NebPeXjsgRKqNXa1axrET', '#34 Jazz', 'Mixing Engineer'], ['1976', 'The Rolling Stones', 'https://drive.google.com/thumbnail?id=1LS8SjcAVxGmN8EkeLJg7AW9CpJEKD2i4', '#1 US', 'https://drive.google.com/thumbnail?id=1_bWKhl83yfY_j-4punjzpcrKnDMwKF0G'], ['1976', 'https://drive.google.com/thumbnail?id=1M7EOswQ51itVX888Df3Q_wfhQ7j-6aXm', 'https://drive.google.com/thumbnail?id=12fL8PD2_CU7XEn45vjGhZ8JgaYC1enM9', '#1 Country, #60 US', 'https://drive.google.com/thumbnail?id=1_bWKhl83yfY_j-4punjzpcrKnDMwKF0G'], ['1977', 'https://drive.google.com/thumbnail?id=1SE2ZYeZERnXMHBv4DCjZQmCCIIAeWFIw', 'Benny & Us', '#14 R&B, #33 US', 'https://drive.google.com/thumbnail?id=1_bWKhl83yfY_j-4punjzpcrKnDMwKF0G'], ['1979', 'https://drive.google.com/thumbnail?id=1parTzdu84tJVemsivYFqV1qdYWIE3Bv-', 'Thighs and Whispers', '#65 US', 'https://drive.google.com/thumbnail?id=1_bWKhl83yfY_j-4punjzpcrKnDMwKF0G'], ['1983', 'https://drive.google.com/thumbnail?id=1VX26IDqMMOh1DjG4ZMAq18lxX4ttpNsM', 'https://drive.google.com/thumbnail?id=1WuJoWXxqviyVFl0sL2qbnkv07U12fU8g', '#35 US', 'https://drive.google.com/thumbnail?id=1_bWKhl83yfY_j-4punjzpcrKnDMwKF0G'], ['1993', 'https://drive.google.com/thumbnail?id=1Kc4MURE1QJrRYNfCRMkwFqRqJ5_Nv0yH', 'Bigger & Better', '#10 Jazz, #42 R&B', 'Remastering Engineer'], ['1998', 'Various Artists', 'Jazz for the Open Road', '#1 Jazz', 'Mastering Engineer'], ['1998', 'Various Artists', 'Jazz for the Quiet Times', '#1 Jazz', 'Mastering Engineer'], ['1999', 'Various Artists', 'Jazz for When You’re Alone', '#1 Jazz', 'Mastering Engineer'], ['1999', 'Various Artists', 'Jazz for a Lazy Day', '#4 Jazz', 'Mastering Engineer'], ['2000', 'Various Artists', 'Jazz for a Rainy Afternoon', '#1 Jazz', 'Mastering Engineer'], ['2000', 'https://drive.google.com/thumbnail?id=1fW6dsDBeJtJ0Ejz4RYotTix5F7Udv0xn', 'https://drive.google.com/thumbnail?id=1MDkOAQ_q5USOk4Aq4xIKwMVXQO47MZIO', '#2 Jazz', 'Mixing & Mastering Engineer'], ['2000', 'Various Artists', 'Jazz for When You’re in Love', '#9 Jazz', 'Mastering Engineer'], ['2001', 'https://drive.google.com/thumbnail?id=1fW6dsDBeJtJ0Ejz4RYotTix5F7Udv0xn', 'Come Dream with Me', '#1 Jazz', 'Mixing & Mastering Engineer'], ['2002', 'https://drive.google.com/thumbnail?id=1fW6dsDBeJtJ0Ejz4RYotTix5F7Udv0xn', 'In the Sun', '#2 Jazz', 'https://drive.google.com/thumbnail?id=1_bWKhl83yfY_j-4punjzpcrKnDMwKF0G , Mixing & Mastering Engineer'], ['2003', 'Various Artists', 'Jazz for Those Peaceful Moments', '#4 Jazz', 'Mastering Engineer'], ['2007', 'https://drive.google.com/thumbnail?id=1tpjF0ecJe_KLm7mBpmUvBNKtyRnnd9Gg', 'Cinco de Mowo!', '#16 Electronic', 'Mastering Engineer']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

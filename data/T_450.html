@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Dress of the Year selections in chronological order of Dress of the Year
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: which designer won for a black silk design and won in 1994?
+            </div>
+            <div>
+                Answer: John Galliano
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Year', 'Designer(s)', 'Brief description', 'Selected by:', 'Associated publication'], ['1963', 'https://drive.google.com/thumbnail?id=1D102L2GKIHS7YgAf5cv7rFzXoiPXLPHQ  Reed Crawford (hat) Anello & Davide (boots)', "Grey wool 'Rex Harrison' pinafore dress & cream blouse", "Members of The Fashion Writers' Association", ''], ['1964', 'https://drive.google.com/thumbnail?id=1iq2eE5743_3L3XfblOzYCtUCuHh_TjIx  for Jane & Jane Charles Jourdan for  https://drive.google.com/thumbnail?id=1YeFhSeQ1lHUqtBY-0DGoAtfo3E5oofN5  (shoes)', 'Dress in printed Liberty silk', "Members of The Fashion Writers' Association", ''], ['1965', 'John Bates for Jean Varon Anello & Davide (shoes)', 'Printed linen dress with mesh midriff', "Members of The Fashion Writers' Association", ''], ['1966', 'Michèle Rosier of V de V (coat)  https://drive.google.com/thumbnail?id=1Z-SHG8_iwsWTVj8hoP_dMHDXamkUQwm5  (dress)  https://drive.google.com/thumbnail?id=1yRP3qmbnGbSSNXp_eHyIDydFYKtF0J25  (hat) Elliott (boots) John Bates for Echo (tights)', 'Clear plastic raincoat and boots worn with black & white rayon linen dress, white tights and white hat with red plastic visor', 'https://drive.google.com/thumbnail?id=1vVk_5TTy1V_iylnI4dpkV_SE94ExFBEw', 'The Sunday Times'], ['1967', 'David Bond for Slimma Edward Mann (hat) Saxone (shoes)', "Woman's trouser suit, hat & blouse in striped cotton", 'Felicity Green', 'https://drive.google.com/thumbnail?id=1HKZnnVq_CyVXhNTHraW4bsM8DgdsYLZQ'], ['1968', 'Jean Muir Bally (shoes)', 'Black-spotted white cotton voile dress', 'Ailsa Garland', 'Fashion Magazine'], ['1969', 'Ossie Clark for Quorum Rayne (shoes)', "Woman's silk chiffon and satin trouser suit in Celia Birtwell print", 'Prudence Glynn', 'https://drive.google.com/thumbnail?id=1uNEZONuF3vk4vxIULU2_Mek6vK7tGJSS'], ['1970', 'https://drive.google.com/thumbnail?id=1KWdAB6LtnXcJapvchGM57j5EdyflkxIS  for Baccarat Kaffe Fassett (knitwear) Chelsea Cobbler (boots)', 'Plaid wool skirt and blue and white blouse, knitted waistcoat, blue suede boots', 'Beatrix Miller', 'https://drive.google.com/thumbnail?id=1V3Hnd0AGCbttsr8RIs0kc-osZfINsE0Z'], ['1971', 'Female: Graziella Fontana for Judith Hornby Ravel (sandals) Male: Rupert Lycett Green for Blades', 'Female: Hot pants suit in checked Liberty cotton Male: Black velvet evening suit & boots', 'Serena Sinclair and  https://drive.google.com/thumbnail?id=1osXmIseLPxpticfusl7ff-MHDtbGyNTK', 'https://drive.google.com/thumbnail?id=1QqUCZdCLN60mBXDUtiu-ToGGsVBi-Ao6'], ['1972', 'Teenage girl: https://drive.google.com/thumbnail?id=16z5yuMD4UaqEBJdVJxJBNrrgylYHbD6x  Young girl: Bobby Hillson Young boy: Orange Hand for Montague Burton', 'Teenage girl: Dress, hat & boots, all in red & white spotted cotton Young girl: Checked cotton dress & pinafore Young boy: Trousers, jumper and tank top', 'Moira Keenan', 'The Sunday Times'], ['1973', 'Female:  https://drive.google.com/thumbnail?id=1KfpkiAckkxHPSv4XOmbNrt5dQJP09ivK  for Christian Dior London Male:  https://drive.google.com/thumbnail?id=1wUczQKZznAluZw3D2ckd8GA5jKnccHeT', 'Female: White wool coat & hat Male: Wool jacket, trousers & sweater', 'Alison Adburgham', 'https://drive.google.com/thumbnail?id=14IrB6NZuS11HQuzaGpNlUbpGLjy-XW5y'], ['1974', 'https://drive.google.com/thumbnail?id=18ElRivl9k12dBfTYCG_YZMYmMVf_aI0w  Pasquali (shoes)', 'Male & female ensembles in knitted wool & rayon', 'Jennifer Hocking', 'https://drive.google.com/thumbnail?id=16HT2-UuIqr8qpXEA40rMPDyVvbCtQGQS  and  https://drive.google.com/thumbnail?id=1vhEGxXLymsPi5_QxLFfhRoQOyCc3XqYE'], ['1975', 'Female: Gina Fratini Male:  https://drive.google.com/thumbnail?id=1BTX4XacW2frdG_AYuOj_wVAefg1-ke5a  Chelsea Cobbler (shoes)', "Female: Wedding dress, veil & posy basket, cream silk organza with mimosa print Male: Bridegroom's frock coat suit, eau de nil wool", 'Anna Harvey', 'Brides'], ['1976', 'Female:  https://drive.google.com/thumbnail?id=1pMKs5edoZDt8ZI6fKAu775b6ENCmeQ72  of  https://drive.google.com/thumbnail?id=1424dYME0vX2L_X_Jjf70cXyZKxE3T9Eo  Male:  https://drive.google.com/thumbnail?id=18Wk4mr9ZSdQOPqNd4_jpQeDNF3sUpaXy', 'Female: Two printed cotton ensembles with wooden jewellery Male: Hand-knitted sweater, two shirts and jeans', 'Helena Matheopoulos', 'https://drive.google.com/thumbnail?id=1BVxBcBg7WMQF8EYlj4A-oXGuSJqsw49k'], ['1977', 'Kenzo Takada of Jungle Jap', 'Shirt-dress in khaki cotton, straw hat & plimsolls', 'Ann Boyd', 'https://drive.google.com/thumbnail?id=1j48YIWdDSXXaib7a_3nBJAVlJ3zJUuW-'], ['1978', 'Female: Gordon Luke Clarke Male:  https://drive.google.com/thumbnail?id=1CPLPz7QVN1XJFw_OSSffLmQ8cLIo3h3s', 'Female: Printed cotton & polyester jersey tunic, skirt and trousers worn with black leather skirt and coat Male: Coat, jacket, waistcoat & trousers, knitted wool and wool tweed', 'Barbara Griggs', 'https://drive.google.com/thumbnail?id=1pX3GKs6_MA3t8mY-vJlQhIpRQaiW3e7q'], ['1979', 'Jean Muir  https://drive.google.com/thumbnail?id=1sOV41qYL2lYhA-nLQgEMY3nz5zEQImHE  (shoes)', 'Black rayon jersey dress & beret with black leather jacket', 'Geraldine Ranson', 'The Sunday Telegraph'], ['1980', 'https://drive.google.com/thumbnail?id=1Q_Uv0M7aQEcEQBLt8fe7yT1_O3N-IDC9   https://drive.google.com/thumbnail?id=1n7-r258bz-ttqDSpFB4Svf2pDKa_u4-S  (sandals)', 'Red & brown striped silk dress with leather belt & wooden jewellery', 'https://drive.google.com/thumbnail?id=1MNBI8vChJnt_EZoWBZbrnA9zi01Qx7iY', 'The Sunday Times'], ['1981', 'https://drive.google.com/thumbnail?id=1ibj2rufoJGmW2awsWIkwqPIaV-FbsNTs  for  https://drive.google.com/thumbnail?id=19wi1918e7O_UCoslMffNYr56UOhSCn3y  Walter Steiger (shoes) Ugo Correani (necklace)', 'Printed white silk dress', 'Vanessa de Lisle', 'https://drive.google.com/thumbnail?id=132xejBRktfkpKsLNfyYkNHR1f7xHzFmC'], ['1982', 'Margaret Howell Nigel Preston of Maxfield Parrish (leather wear)  https://drive.google.com/thumbnail?id=1PnTWHJNuJi7po1xHYJaSEDXwtldWEZw-  (belt) Manolo Blahnik for Zapata (shoes)', "Two women's ensembles, a linen skirt, shirt and waistcoat and a blue suede and fawn chamois leather skirt & jacket with cotton shirt", 'https://drive.google.com/thumbnail?id=1tNOy7MWzjwcNMIg9w2bNB_n6WSVLWCBH', 'UK Vogue'], ['1983', 'Sheridan Barnett Manolo Blahnik (shoes)', 'Linen dress and coat', 'Sally Brampton', 'The Observer'], ['1984', 'Female: BodyMap Female: Betty Jackson Brian Bolger: (scarf) Male:  https://drive.google.com/thumbnail?id=1DN0Yf9zBMlB_UeXi4O5DY7t8v3Qup0rX', 'Female: Ensemble comprising skirt, jumper, stockings, hat, waxed jacket & earrings (BodyMap) Female: Dress, cardigan & hat and scarf (Jackson & Bolger) Male: T-shirt, shirt and cotton trousers', 'Brenda Polan', 'The Guardian'], ['1985', 'Female:  https://drive.google.com/thumbnail?id=1zKYTCyNmY6s9wkvkbrD2MvxrWg2E7_fE  Charles Jourdan (shoes) Maria Buck (jewellery) Male: Scott Crolla', 'Female: Black silk & gold lamé evening dress Male: Shirt, crushed velvet trousers and ikat mules', 'https://drive.google.com/thumbnail?id=1n6FvE0eOX8x9mBYZJzISvhggJS4UnthN', 'The Times'], ['1986', 'https://drive.google.com/thumbnail?id=1rxPlQAJsixn6YIPJCMMv4pTARytWN19S', 'Female: Checked wool jacket, skirt, and black suede shoes Male: Jacket, trousers, shirt and brogues', 'https://drive.google.com/thumbnail?id=1I7Z_1bEOhKDhweaCS1U-2ljwq9SQN7AZ', 'https://drive.google.com/thumbnail?id=1yfjfOHXWNYbCTznjeP0YjhyvihCMogVg'], ['1987', 'https://drive.google.com/thumbnail?id=1kKL3BMlZmK7I0zpB97f1W72SHwMoego8   https://drive.google.com/thumbnail?id=18uwOOHX5VELPr8k4j4n2H1T1kVkFbTgn  (shoes)', 'Checked cotton coat, skirt, shirt & hat', 'Debbi Mason', 'https://drive.google.com/thumbnail?id=18gcIZ2wj6dJWyeHpQPB6Wl-WWTv76tLq'], ['1988', 'https://drive.google.com/thumbnail?id=1KYQw5hMyX0cB2oxlI9lRZIwqOcqpZLEw  for  https://drive.google.com/thumbnail?id=1DCGq6moPYnq0lKp9463pApC6z7aALSNL', 'Black denim dress, mesh T-shirt, hat, tights & shoes', 'https://drive.google.com/thumbnail?id=1loH2PFwIbFMbyFSMbtv_KIIfg5eOhPiY', 'The Clothes Show ( https://drive.google.com/thumbnail?id=1-ZsMTPqCVEIOXmUeK_zAHc_n8qVwz5Sc )'], ['1989', 'https://drive.google.com/thumbnail?id=1IXflnMHqs7w9KC8t1PFIHwUVC1fuRRsC', "Woman's embroidered velvet evening ensemble", 'Kathryn Samuel', 'The Daily Telegraph'], ['1990', 'Romeo Gigli', "Woman's dark blue velvet trouser suit with organza blouse", 'Joan Burstein', 'Browns'], ['1991', 'Karl Lagerfeld for  https://drive.google.com/thumbnail?id=1bwTiYSFdousMGF2B2M_y0f_X_OlTLRGO', 'Pink lurex & wool tweed jacket & shoes, denim skirt & hat, belt & costume jewellery', 'Elizabeth Tilberis', 'Vogue'], ['1992', 'https://drive.google.com/thumbnail?id=1tNt9K0TAMuHbnSbDSZ8dET6qZtlG7IyV', "Woman's black and white pinstripe trouser suit & shirt", 'Liz Smith', 'The Times'], ['1993', 'https://drive.google.com/thumbnail?id=10D1xsjc3ZTmFKS63eyQ1IcLEB0lEz2Ip', 'Purple wool & stretch velvet dress, hat & boots', 'https://drive.google.com/thumbnail?id=1wRWYGNMGW3kSNCDqXO7jJD2zB4ON1a7V', 'Marie Claire'], ['1994', 'John Galliano', 'Black silk strapless evening dress', 'Meredith Etherington Smith', "Harper's & Queen"], ['1995', 'Female: Catherine Rayner Emma Hope (shoes) Male: Tom Gilbey', 'Female: Beaded ivory silk satin wedding dress Male: Ivory silk frock coat, cream wool trousers and embroidered waistcoat', 'Sandra Boler', 'Brides'], ['1996', 'Female:  https://drive.google.com/thumbnail?id=10krQLNXxarI2Fc2I89Nu5KXWocCtHbWy  Male:  https://drive.google.com/thumbnail?id=1N_wWPWRJMoULDLgYRD1t423OkDtXhki3', "Female: Floral brocade top with red 'bumster' trousers Male: Bright blue two-piece suit and shirt", 'Tamsin Blanchard', 'https://drive.google.com/thumbnail?id=1VwYvtQpe_JSXTw0jDgldGnr_q6A6iMEz'], ['1997', 'Female:  https://drive.google.com/thumbnail?id=1xv9Xa6QR7ZNNkphm0Igc2i2yQ8pEzr4t  Female: Julien MacDonald Female: Lainey Keogh Female: Deborah Milner  https://drive.google.com/thumbnail?id=1UncVtCx_axNqYUV5IdGQ1hLIcrVv7Jo0  (bonnet)', "Female: Purple evening dress with sunburst bead embroidery (Chalayan) Female: 'Mermaid' evening dress, gold knitted rayon & horsehair (MacDonald) Female: Evening dress and coat, black knit with beading (Keogh) Female: Evening coat, purple velvet, with fur collar (Milner) Sculptural black bonnet", 'https://drive.google.com/thumbnail?id=1Saco5aHUTtcCjWCXLg_4X3tTYuE-AOWr', 'The Sunday Times'], ['1998', 'Female:  https://drive.google.com/thumbnail?id=1xZn3v7OtTZft437HWcjMn1zUVjr7Hupn  Male: Chris Bailey for Jigsaw Menswear', 'Female: Black knitted sweater & combat trousers, with pink marabou stole Male: Silver-grey suit, white T-shirt and ankle-length puffa jacket', 'Iain R. Webb', 'https://drive.google.com/thumbnail?id=18gcIZ2wj6dJWyeHpQPB6Wl-WWTv76tLq'], ['1999', 'Alexander McQueen', 'Cream lace dress with brown leather collar and sandals', 'Susannah Frankel', 'The Independent'], ['2000', 'https://drive.google.com/thumbnail?id=1oJBR_45WdRjXIYG-_6Gb61NoZ5m8Dpf_  for  https://drive.google.com/thumbnail?id=1bQAELxl9cxkox0h5LVyc9eM067heNoLO', 'Bamboo-print silk chiffon evening dress and jeweled mules', 'Lisa Armstrong', 'The Times'], ['2001', 'https://drive.google.com/thumbnail?id=1xbkQDS_dKlhtKib77-I-HNPfGBl_wzvr  for Yves Saint Laurent Rive Gauche', "'Peasant' ensemble of gauze top and velvet & satin skirt, with boots and velvet scarf", 'Alexandra Shulman', 'Vogue'], ['2002', 'Junya Watanabe', 'Dress, pieced together knit & jersey fabrics, with distressed cow-hide shoes', 'https://drive.google.com/thumbnail?id=1aBBbLwssZq2VyaMrKOp9TN22KMMZP4PX', 'The Daily Telegraph'], ['2003', 'Marni', 'Colorful printed dress', 'Lucinda Chambers', 'Vogue'], ['2004', 'Tom Ford for Yves Saint Laurent Rive Gauche', 'Evening dress in Chinese dragon print satin', 'Sarajane Hoare', 'https://drive.google.com/thumbnail?id=1HcR_kWwkD01AJKCPcxOvJMVC7_aOKNuu'], ['2005', 'Alber Elbaz for  https://drive.google.com/thumbnail?id=1WxwwHvEOXkS8HlwsCUvlBa7EoZFQ86Wy', 'Blue silk faille dress with full skirt', 'Charlie Porter', 'https://drive.google.com/thumbnail?id=1W3REDdn4KKHaLsvc9vLTO57tIfvv8ic7 ; The Guardian'], ['2006', 'https://drive.google.com/thumbnail?id=1ab5CmU8xVO57IzmDGZ5DwT8VFM4P1v8-', "Woman's olive green coat with fur patch pockets", 'Sarah Mower', ''], ['2007', 'https://drive.google.com/thumbnail?id=1jtDz2uHJ7jfQyhaMse6M2TUBCnPm5Psv', "Orange 'Troubadour' dress with accompanying orange scarf", 'Hywel Davies', ''], ['2008', 'Karl Lagerfeld for Chanel (trouser ensemble)  https://drive.google.com/thumbnail?id=1eLKuJngqsdNg-oMHiVNcT15uRVO13S9Y  for  https://drive.google.com/thumbnail?id=1zk-jxRisAp8YHsLSPIqhZG2mxoj-dJn2  (dress)', 'Gold star and navy blue trouser ensemble Long sleeved black dress with heart-print', 'Paula Reed', 'https://drive.google.com/thumbnail?id=1RT7kKV9tjg1IkmNLXhMpcTnqE6TSt2iN'], ['2009', 'Antonio Berardi', "White and black trompe l'oeil corset dress", 'Lucy Yeomans', "Harper's Bazaar"], ['2010', 'https://drive.google.com/thumbnail?id=1gb1fEZisOMe_qS86PRNRTPSTptXnFDSB', 'Green ribbed shot-silk deconstructed dress', 'https://drive.google.com/thumbnail?id=1QAgF1RKYu0n9sNb8GcgOgWsAXGsUXhy-', ''], ['2011', 'Sarah Burton for Alexander McQueen', 'White embroidered ivory tulle and organza ballgown', 'https://drive.google.com/thumbnail?id=1SutuU6FfBI1UfUJHTYdCV-sbQ16CJ1lb', 'Vogue'], ['2012', 'Raf Simons for Christian Dior', 'Embroidered and appliquéd silk cut-off ballgown and black cigarette pants', 'https://drive.google.com/thumbnail?id=1egT5KEhpg4kbeX-fhEk1O7I_2LWTDmsJ', 'https://drive.google.com/thumbnail?id=1xCnZVaKQabSEPAkz26beVD2lr-xnh_Kp']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

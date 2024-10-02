@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to World's tallest Ferris wheels of Ferris wheel
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: which of the following roller coasters is the oldest: star of lake tai, star of nanchang, melbourne star
+            </div>
+            <div>
+                Answer: Star of Nanchang
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Name', 'Height m (ft)', 'Completed', 'Country', 'Location', 'Coordinates', 'Remarks'], ['https://drive.google.com/thumbnail?id=1MYNYJXDZTtLBAc5ssJs901qRhlMlGCOp', '168 (551)', '2014', 'https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'https://drive.google.com/thumbnail?id=1cfU7iQfHCS5jnrjGXAqVGLlSVrQmj1fX ,  https://drive.google.com/thumbnail?id=1rrDkNvJLzY813XpH1836PW5vIB_K2kLx', '36°07′03″N 115°10′05″W\ufeff / \ufeff36.117402°N 115.168127°W', "World's tallest since 2014"], ['https://drive.google.com/thumbnail?id=15lu8e2dr4AF5ccTn5m_G9q2dOUMu3g4T', '165 (541)', '2008', 'Singapore', 'Marina Centre, Downtown Core', '1°17′22″N 103°51′48″E\ufeff / \ufeff1.289397°N 103.863231°E', "World's tallest 2008-2014"], ['Star of Nanchang', '160 (525)', '2006', 'https://drive.google.com/thumbnail?id=1PrtFJLFTnP4uOsjv0biXG6LnQWTrl1-x', 'Nanchang, Jiangxi', '28°39′34″N 115°50′44″E\ufeff / \ufeff28.659332°N 115.845568°E', "World's tallest 2006–2008"], ['https://drive.google.com/thumbnail?id=1JEGZQK7OS21QPShFGKSsumO-JKG8aeaK', '135 (443)', '2000', 'UK', 'South Bank, Lambeth,  https://drive.google.com/thumbnail?id=1BeCL4jPWAmBfEWj8yTL6J1nUy5QopkM4', '51°30′12″N 0°07′11″W\ufeff / \ufeff51.50334°N 0.1197821°W', "World's tallest 2000–2006"], ['Suzhou Ferris Wheel', '120 (394)', '2009', 'https://drive.google.com/thumbnail?id=1PrtFJLFTnP4uOsjv0biXG6LnQWTrl1-x', 'https://drive.google.com/thumbnail?id=1sC_SLkBozxGC5MLXXS-AHesc1hYW2ze- , Jiangsu', '31°18′59″N 120°42′30″E\ufeff / \ufeff31.3162939°N 120.7084501°E', ''], ['Melbourne Star', '120 (394)', '2008', 'https://drive.google.com/thumbnail?id=1AeGo524YTu5FD5C1uaXhXojiQEsBRnMJ', 'Docklands,  https://drive.google.com/thumbnail?id=17oMEY3LJKoOd504wCTPw-e4tu_qXJlYE', '37°48′40″S 144°56′13″E\ufeff / \ufeff37.8110723°S 144.9368763°E', ''], ['Tianjin Eye', '120 (394)', '2008', 'https://drive.google.com/thumbnail?id=1PrtFJLFTnP4uOsjv0biXG6LnQWTrl1-x', 'Yongle Bridge,  https://drive.google.com/thumbnail?id=1ckHBAO4RiHE6ZMy46IDwGhKmQYs2-uEK', '39°09′12″N 117°10′49″E\ufeff / \ufeff39.1533636°N 117.1802616°E', ''], ['Changsha Ferris Wheel', '120 (394)', '2004', 'https://drive.google.com/thumbnail?id=1PrtFJLFTnP4uOsjv0biXG6LnQWTrl1-x', 'Changsha, Hunan', '28°10′56″N 112°58′48″E\ufeff / \ufeff28.1821772°N 112.9800886°E', ''], ['Zhengzhou Ferris Wheel', '120 (394)', '2003', 'https://drive.google.com/thumbnail?id=1PrtFJLFTnP4uOsjv0biXG6LnQWTrl1-x', 'Century Amusement Park, Henan', '34°43′58″N 113°43′07″E\ufeff / \ufeff34.732871°N 113.718739°E', ''], ['Sky Dream Fukuoka', '120 (394)', '2002', 'https://drive.google.com/thumbnail?id=1mu3dfqkZXcRoC-nC0Ddrumuigq-zpnJ7', 'Evergreen Marinoa,  https://drive.google.com/thumbnail?id=1dKWuPgKhYUVGuY7u5Wm2aAx5hJ3H2cQ- , Kyūshū', '33°35′44″N 130°19′21″E\ufeff / \ufeff33.5956845°N 130.3225279°E', 'Closed September 2009'], ['Diamond\xa0and\xa0Flower\xa0Ferris\xa0Wheel', '117 (384)', '2001', 'https://drive.google.com/thumbnail?id=1mu3dfqkZXcRoC-nC0Ddrumuigq-zpnJ7', 'Kasai Rinkai Park,  https://drive.google.com/thumbnail?id=1tVHtOWRufCMqBgjQLlwxYnJSPc8hDAQp , Honshū', '35°38′38″N 139°51′26″E\ufeff / \ufeff35.6439052°N 139.8572257°E', ''], ['https://drive.google.com/thumbnail?id=1HsklW_XT1CAoRG4JuaJlDYFDONCfJItt \xa0[citation needed]', '115 (377)', '2008', 'China', 'Lake Tai, Wuxi, Jiangsu', '31°31′15″N 120°15′39″E\ufeff / \ufeff31.5208296°N 120.260945°E', 'Picture'], ['Daikanransha', '115 (377)', '1999', 'https://drive.google.com/thumbnail?id=1mu3dfqkZXcRoC-nC0Ddrumuigq-zpnJ7', 'Palette Town, Odaiba, Honshū', '35°37′35″N 139°46′56″E\ufeff / \ufeff35.6263915°N 139.7822902°E', "World's tallest 1999–2000"], ['Cosmo Clock 21 (2nd installation)', '112.5 (369)', '1999', 'Japan', 'Minato Mirai 21,  https://drive.google.com/thumbnail?id=1TRUvyVXbWBBh3X1GvM4RFLx-CCebnkbl , Honshū', '35°27′19″N 139°38′12″E\ufeff / \ufeff35.4553872°N 139.6367347°E', ''], ['Tempozan Ferris Wheel', '112.5 (369)', '1997', 'Japan', 'https://drive.google.com/thumbnail?id=1zUFl5EEOq36sa-hQoVfrl1_KnrcA05Mz , Honshū', '34°39′22″N 135°25′52″E\ufeff / \ufeff34.6561657°N 135.431031°E', "World's tallest 1997–1999"], ['Harbin Ferris Wheel', '110 (361)', '2003', 'China', 'https://drive.google.com/thumbnail?id=1Yi-kU74F9LTiR3YVkNC1s1pqXrMLzDIS , Heilongjiang', '45°46′40″N 126°39′48″E\ufeff / \ufeff45.7776481°N 126.6634637°E', 'Picture'], ['Shanghai Ferris Wheel', '108 (354)', '2002', 'China', 'Jinjiang Action Park,  https://drive.google.com/thumbnail?id=15SYNuAYh407826xFP5Sf31fIJ_b3iw9V', '31°08′24″N 121°24′11″E\ufeff / \ufeff31.1401286°N 121.4030752°E', ''], ['Cosmo Clock 21 (1st installation)', '107.5 (353)', '1989', 'https://drive.google.com/thumbnail?id=1mu3dfqkZXcRoC-nC0Ddrumuigq-zpnJ7', 'Minato Mirai 21,  https://drive.google.com/thumbnail?id=1TRUvyVXbWBBh3X1GvM4RFLx-CCebnkbl , Honshū', 'Unknown', "World's tallest 1989–1997"], ['Space Eye', '100 (328)', 'Unknown', 'https://drive.google.com/thumbnail?id=1mu3dfqkZXcRoC-nC0Ddrumuigq-zpnJ7', 'Space World,  https://drive.google.com/thumbnail?id=1oa7-ReoDEafCntocHqSW4lixxq_BzNhu , Kyūshū', '33°52′18″N 130°48′36″E\ufeff / \ufeff33.8716939°N 130.8099014°E', 'Picture'], ['Grande Roue de Paris', '100 (328)', '1900', 'https://drive.google.com/thumbnail?id=1Am0swQyQjY77puLR3yDT2-thl7_I8i5S', 'Champ de Mars, Paris', '48°51′08″N 2°17′57″E\ufeff / \ufeff48.852222°N 2.299167°E', "World's tallest 1900–1920"], ['Great Wheel', '94 (308)', '1895', 'https://drive.google.com/thumbnail?id=1dnpKxXI__kxYdH_QWViSrNV9CIcLXSoA', 'Earls Court,  https://drive.google.com/thumbnail?id=1BeCL4jPWAmBfEWj8yTL6J1nUy5QopkM4', '51°29′18″N 0°11′56″W\ufeff / \ufeff51.48835°N 0.19889°W', "World's tallest 1895–1900"], ['Aurora Wheel', '90 (295)', 'Unknown', 'https://drive.google.com/thumbnail?id=1mu3dfqkZXcRoC-nC0Ddrumuigq-zpnJ7', 'Nagashima Spa Land,  https://drive.google.com/thumbnail?id=1aSKfcFatNJiChc95rTb7GUEbwP3Ja6YQ , Honshū', '35°01′47″N 136°44′01″E\ufeff / \ufeff35.0298207°N 136.7336351°E', 'Picture'], ['Eurowheel', '90 (295)', '1999', 'https://drive.google.com/thumbnail?id=1WIoYHbvl5wvvQph9bRjlVlbg3lIio0rd', 'https://drive.google.com/thumbnail?id=1WZFDwS1ZjPismmtb7USWLpTpFPa7BEzW ,  https://drive.google.com/thumbnail?id=13pBoJhUFVF03JbB77gt75lMllQnP84ta', '44°20′21″N 12°15′44″E\ufeff / \ufeff44.3392161°N 12.2622228°E', ''], ['https://drive.google.com/thumbnail?id=15-TAhXpzPP8FeYmRP7t5YjG-ofUyCgHn', '88 (289)', 'Unknown', 'https://drive.google.com/thumbnail?id=1I8hsJIS-Z7kaOxOQ_LT_XK1TyGxI-0yX', 'https://drive.google.com/thumbnail?id=1AvvXz7N8hd8T0BdrIzwX3CzCPn6HeI0h , Gukeng', '23°37′13″N 120°34′35″E\ufeff / \ufeff23.6202611°N 120.5763352°E', ''], ['Technostar Technocosmos', '85 (279)', '? 1985', 'https://drive.google.com/thumbnail?id=1mu3dfqkZXcRoC-nC0Ddrumuigq-zpnJ7', "Expoland,  https://drive.google.com/thumbnail?id=1dRXvsxxiM-t1Ezb2YfgVJiYzby7Y7FpK , Honshū (?-2009) Expo '85,  https://drive.google.com/thumbnail?id=14iAUYS3p4nPs5c-TiGfW-045amNd5zpb , Honshū (1985-?)", '34°48′14″N 135°32′09″E\ufeff / \ufeff34.803772°N 135.535916°E 36°03′40″N 140°04′23″E\ufeff / \ufeff36.061203°N 140.073055°E', "Technocosmos renamed/relocated World's tallest extant 1985–1989"], ['The original Ferris Wheel', '80.4 (264)', '1893', 'https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'https://drive.google.com/thumbnail?id=1q5C6pCGynBxlJv0TkODWvs24mXBmNjZd  (1893–1903);  https://drive.google.com/thumbnail?id=1kj_QDyv8IapOt0F2WWH1mOz3btLH-t1c  (1904–06)', 'Ferris Wheel coordinates', "World's tallest 1893–1894"]]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

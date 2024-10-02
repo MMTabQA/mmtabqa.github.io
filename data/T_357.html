@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Top scorers|Single game of 1971–72 National Hurling League
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: in the 197172 national hurling league, how many players from the county with a coat of arms with hurleys and balls were ranked at least rank 15 or better?
+            </div>
+            <div>
+                Answer: 6
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Rank', 'Player', 'County', 'Tally', 'Total', 'Opposition'], ['1', 'Éamonn Flynn', 'https://drive.google.com/thumbnail?id=1qSoooBOLfuMLUP8abLPQvhiI_ZNg3Ooi', '3-5', '14', 'https://drive.google.com/thumbnail?id=1STDSbI1rCyb9r7Lns77JJGlHAeFEoEh_'], ['1', 'Charlie McCarthy', 'https://drive.google.com/thumbnail?id=1BsTHzAFV0Ob3hngcRQcHyH_AfQvd6Q42', '2-8', '14', 'https://drive.google.com/thumbnail?id=1FYYyBbUUoNxuODVnoAd7XmAUhJYBzJ-A'], ['3', 'Paddy Fahy', 'https://drive.google.com/thumbnail?id=1FYYyBbUUoNxuODVnoAd7XmAUhJYBzJ-A', '2-7', '13', 'Kildare'], ['3', 'T. Morrissey', 'Wicklow', '2-7', '13', 'Laois'], ['5', 'Charlie McCarthy', 'https://drive.google.com/thumbnail?id=1BsTHzAFV0Ob3hngcRQcHyH_AfQvd6Q42', '3-3', '12', 'https://drive.google.com/thumbnail?id=1xfjwB_MQz4VAtWIcCUal25YElpaa-odM'], ['5', 'Michael Moroney', 'https://drive.google.com/thumbnail?id=1i5ANBpxxWQdO2qb14g8HxITfOP_ZJEzn', '2-6', '12', 'https://drive.google.com/thumbnail?id=1qSoooBOLfuMLUP8abLPQvhiI_ZNg3Ooi'], ['5', 'Declan Lovett', 'Kerry', '1-9', '12', 'Galway'], ['5', 'Charlie McCarthy', 'https://drive.google.com/thumbnail?id=1BsTHzAFV0Ob3hngcRQcHyH_AfQvd6Q42', '1-9', '12', 'https://drive.google.com/thumbnail?id=1lYTCtQwhmYInadKwBChOXUaxVWuKe-TO'], ['9', 'Ger Cuddy', 'https://drive.google.com/thumbnail?id=1ywE2Xrvc0BzQ3sZKtw3kgMB3uDensZcy', '3-2', '11', 'https://drive.google.com/thumbnail?id=1F46CU5Rwf8UOzqXdtL_8ZuzfEDW7NsJ8'], ['9', 'Pat Enright', 'https://drive.google.com/thumbnail?id=1pUWU7xrLIEnqXurz0FVnxsCN4M0fJeKE', '2-5', '11', 'https://drive.google.com/thumbnail?id=1r7OqiSOHsDJBXboXI9aLLeX4K60srDaB'], ['9', 'Pat Enright', 'https://drive.google.com/thumbnail?id=1pUWU7xrLIEnqXurz0FVnxsCN4M0fJeKE', '1-8', '11', 'Laois'], ['9', 'Johnny Walsh', 'Kildare', '0-11', '11', 'Waterford'], ['9', 'Eddie Keher', 'Kilkenny', '0-11', '11', 'https://drive.google.com/thumbnail?id=1STDSbI1rCyb9r7Lns77JJGlHAeFEoEh_'], ['14', 'Brendan Cummins', 'https://drive.google.com/thumbnail?id=1BsTHzAFV0Ob3hngcRQcHyH_AfQvd6Q42', '3-1', '10', 'https://drive.google.com/thumbnail?id=1STDSbI1rCyb9r7Lns77JJGlHAeFEoEh_'], ['14', 'P. J. Molloy', 'https://drive.google.com/thumbnail?id=1FYYyBbUUoNxuODVnoAd7XmAUhJYBzJ-A', '3-1', '10', 'https://drive.google.com/thumbnail?id=1r7OqiSOHsDJBXboXI9aLLeX4K60srDaB'], ['14', 'Nick Behan', 'https://drive.google.com/thumbnail?id=10jWUkV9ZZDCwPwFWFuNXdBV6D_M1wY18', '3-1', '10', 'Kerry'], ['14', "Seánie O'Leary", 'https://drive.google.com/thumbnail?id=1BsTHzAFV0Ob3hngcRQcHyH_AfQvd6Q42', '3-1', '10', 'https://drive.google.com/thumbnail?id=1DiQGhJ-Y_0Z9Xp09S0UEE8aXqSZiwBF_'], ['14', 'Michael Keating', 'https://drive.google.com/thumbnail?id=1lYTCtQwhmYInadKwBChOXUaxVWuKe-TO', '2-4', '10', 'https://drive.google.com/thumbnail?id=1STDSbI1rCyb9r7Lns77JJGlHAeFEoEh_'], ['14', 'Séamus Richmond', 'https://drive.google.com/thumbnail?id=160Akb0dEmiEVh9zHZuZ5FrNd4Juumz3f', '2-4', '10', 'https://drive.google.com/thumbnail?id=18Hvz0aorAzf5lZxQrK9jzLzZUfXYgcHL'], ['14', 'Declan Lovett', 'https://drive.google.com/thumbnail?id=1r7OqiSOHsDJBXboXI9aLLeX4K60srDaB', '2-4', '10', 'https://drive.google.com/thumbnail?id=1pUWU7xrLIEnqXurz0FVnxsCN4M0fJeKE'], ['14', 'Michael Keating', 'https://drive.google.com/thumbnail?id=1lYTCtQwhmYInadKwBChOXUaxVWuKe-TO', '2-4', '10', 'https://drive.google.com/thumbnail?id=1qSoooBOLfuMLUP8abLPQvhiI_ZNg3Ooi'], ['14', 'Eddie Keher', 'https://drive.google.com/thumbnail?id=1Qyt_GcR7ZmNw3-621KpDsqP7qeidXEta', '2-4', '10', 'https://drive.google.com/thumbnail?id=1qSoooBOLfuMLUP8abLPQvhiI_ZNg3Ooi'], ['14', 'Mick Dwan', 'https://drive.google.com/thumbnail?id=10jWUkV9ZZDCwPwFWFuNXdBV6D_M1wY18', '2-4', '10', 'https://drive.google.com/thumbnail?id=160Akb0dEmiEVh9zHZuZ5FrNd4Juumz3f'], ['14', 'Charlie McCarthy', 'https://drive.google.com/thumbnail?id=1BsTHzAFV0Ob3hngcRQcHyH_AfQvd6Q42', '1-7', '10', 'https://drive.google.com/thumbnail?id=1Qyt_GcR7ZmNw3-621KpDsqP7qeidXEta'], ['14', 'Paddy Fahy', 'https://drive.google.com/thumbnail?id=1FYYyBbUUoNxuODVnoAd7XmAUhJYBzJ-A', '0-10', '10', 'https://drive.google.com/thumbnail?id=1r7OqiSOHsDJBXboXI9aLLeX4K60srDaB'], ['14', 'Johnny Walsh', 'https://drive.google.com/thumbnail?id=10jWUkV9ZZDCwPwFWFuNXdBV6D_M1wY18', '0-10', '10', 'https://drive.google.com/thumbnail?id=18Hvz0aorAzf5lZxQrK9jzLzZUfXYgcHL'], ['27', 'P Flynn', 'https://drive.google.com/thumbnail?id=1STDSbI1rCyb9r7Lns77JJGlHAeFEoEh_', '3-0', '9', 'https://drive.google.com/thumbnail?id=1xfjwB_MQz4VAtWIcCUal25YElpaa-odM'], ['27', 'N Casey', 'https://drive.google.com/thumbnail?id=1i5ANBpxxWQdO2qb14g8HxITfOP_ZJEzn', '3-0', '9', 'https://drive.google.com/thumbnail?id=1BsTHzAFV0Ob3hngcRQcHyH_AfQvd6Q42'], ['27', 'Willie Moore', 'https://drive.google.com/thumbnail?id=1DiQGhJ-Y_0Z9Xp09S0UEE8aXqSZiwBF_', '3-0', '9', 'Cork'], ['27', 'Ger Cuddy', 'Laois', '3-0', '9', 'https://drive.google.com/thumbnail?id=18Hvz0aorAzf5lZxQrK9jzLzZUfXYgcHL'], ['27', 'Tom Ryan', 'Galway', '3-0', '9', 'https://drive.google.com/thumbnail?id=1ywE2Xrvc0BzQ3sZKtw3kgMB3uDensZcy'], ['27', "Seánie O'Leary", 'Cork', '3-0', '9', 'Offaly'], ['27', 'P Flynn', 'Wexford', '2-3', '9', 'https://drive.google.com/thumbnail?id=1BsTHzAFV0Ob3hngcRQcHyH_AfQvd6Q42'], ['27', 'Eddie Keher', 'https://drive.google.com/thumbnail?id=1Qyt_GcR7ZmNw3-621KpDsqP7qeidXEta', '2-3', '9', 'Limerick'], ['27', 'Johnny Walsh', 'https://drive.google.com/thumbnail?id=10jWUkV9ZZDCwPwFWFuNXdBV6D_M1wY18', '1-6', '9', 'https://drive.google.com/thumbnail?id=1FYYyBbUUoNxuODVnoAd7XmAUhJYBzJ-A'], ['27', 'Francis Loughnane', 'Tipperary', '1-6', '9', 'https://drive.google.com/thumbnail?id=1BsTHzAFV0Ob3hngcRQcHyH_AfQvd6Q42'], ['27', 'Richie Bennis', 'Limerick', '1-6', '9', 'https://drive.google.com/thumbnail?id=1BsTHzAFV0Ob3hngcRQcHyH_AfQvd6Q42'], ['27', 'Pat Enright', 'https://drive.google.com/thumbnail?id=1pUWU7xrLIEnqXurz0FVnxsCN4M0fJeKE', '0-9', '9', 'https://drive.google.com/thumbnail?id=10jWUkV9ZZDCwPwFWFuNXdBV6D_M1wY18'], ['27', 'Johnny Walsh', 'https://drive.google.com/thumbnail?id=10jWUkV9ZZDCwPwFWFuNXdBV6D_M1wY18', '0-9', '9', 'Kerry']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

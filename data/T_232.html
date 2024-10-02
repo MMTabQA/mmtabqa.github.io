@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Records of TVB Anniversary Award for Most Improved Male Artiste
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: who was the youngest person to receive this award?
+            </div>
+            <div>
+                Answer: Raymond Lam
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Year', 'Name', 'Birth Date', 'Winner', 'Awarding Age', ''], ['1998', 'https://drive.google.com/thumbnail?id=1pN2xvi2QobOF3Rq6oKq7pLK1NkO1qrUP', '1967-12-02', 'Winner', '30\xa0years, 352\xa0days', ''], ['1998', 'https://drive.google.com/thumbnail?id=1DE2xbqcvLXt7v1voou6-EoOm_3TcNqhV', '1965-08-06', 'Winner', '33\xa0years, 105\xa0days', ''], ['2002', 'https://drive.google.com/thumbnail?id=1zvFHPl9AkfnFhwqr-FztdEbS2hKt1fD3', '1971-04-16', 'Winner', '31\xa0years, 217\xa0days', ''], ['2003', 'https://drive.google.com/thumbnail?id=1V1Vs3oFGZ-OQASH_ZJIhGll-0QbR_MCh', '1979-12-08', 'Winner', '23\xa0years, 346\xa0days', 'Youngest winner'], ['2004', 'https://drive.google.com/thumbnail?id=1mh20rIl03Pt_SyjXy_yxfmaafyd2PexY', '1979-09-02', 'Winner', '25\xa0years, 78\xa0days', ''], ['2005', 'Bosco Wong', '1980-12-13', 'Winner', '24\xa0years, 341\xa0days', ''], ['2006', 'https://drive.google.com/thumbnail?id=12PJ7ttV9d-crUBvU7pA9f_hAWt76vhj7', '1974-02-13', 'Winner', '32\xa0years, 270\xa0days', ''], ['2007', 'Amigo Choi', '1979-05-08', 'Winner', '28\xa0years, 193\xa0days', ''], ['2008', 'https://drive.google.com/thumbnail?id=1qtc1MsMYMuoPOUw9sSmHnlyUBZXgqE05', '1980-01-09', 'Winner', '28\xa0years, 311\xa0days', ''], ['2009', 'https://drive.google.com/thumbnail?id=1nqs3xJ1i2KUuNY0ioaBsWef9X3vS_8g4', '1976-09-26', 'Winner', '33\xa0years, 69\xa0days', ''], ['2010', 'Raymond Wong', '1976-08-25', 'Winner', '34\xa0years, 102\xa0days', 'Oldest winner'], ['2011', 'https://drive.google.com/thumbnail?id=1TCe4NbJDRhgUODNY-8iDeFFL_7Dlcwgs', '1982-06-04', 'Winner', '29\xa0years, 184\xa0days', ''], ['2012', 'Oscar Leung', '1979-03-26', 'Winner', '33\xa0years, 266\xa0days', '']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

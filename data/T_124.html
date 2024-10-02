@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Senators (2006-2010) of Senate of Chile
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: Which region is listed below the region whose seal has a deer and is coloured red and white?
+            </div>
+            <div>
+                Answer: Coquimbo
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Constituency', 'Region', 'Name', 'Party', 'Last elected'], ['1', 'https://drive.google.com/thumbnail?id=1RkhjaDAOnQvPJJjIy_tUrPLsT65yoRBK   https://drive.google.com/thumbnail?id=1zE040O5ouFtorOfKPAGP48mbUVvSSAK9', 'Fulvio Rossi', 'https://drive.google.com/thumbnail?id=1I-mppQMTN0NUTsAAeqAthDShkAQpMv3J', '2009'], ['1', 'https://drive.google.com/thumbnail?id=1RkhjaDAOnQvPJJjIy_tUrPLsT65yoRBK   https://drive.google.com/thumbnail?id=1zE040O5ouFtorOfKPAGP48mbUVvSSAK9', 'Jaime Orpis Bouchon', 'https://drive.google.com/thumbnail?id=1DA9x8C8NQORTlqwcaJU2XoJl8raScznd', '2009'], ['2', 'Antofagasta', 'Carlos Cantero Ojeda', 'Ind.', '2005'], ['2', 'https://drive.google.com/thumbnail?id=1ewem8sawMiIQDquh86S0y_bhV91fpN6W', 'https://drive.google.com/thumbnail?id=1bqWqnwqf2z7yc0HaCeVRx75ltn0HYZGv  (Vice-President, March 11, 2010–March 15, 2011; March 20, 2013-present)', 'https://drive.google.com/thumbnail?id=16FZmU9hZi8uv7n_34qmDW2EIE47W-Dzy', '2005'], ['3', 'https://drive.google.com/thumbnail?id=1nnSHJnhGpT7cqidQ0jhsgal6Y520AclQ', 'https://drive.google.com/thumbnail?id=1cG0e_hfBC5OokUBEaURwBEwbP8nbOzy2', 'https://drive.google.com/thumbnail?id=1I-mppQMTN0NUTsAAeqAthDShkAQpMv3J', '2009'], ['3', 'https://drive.google.com/thumbnail?id=1nnSHJnhGpT7cqidQ0jhsgal6Y520AclQ', 'https://drive.google.com/thumbnail?id=19qCM5vAnqUm2J9yeYMu-E5Sd8aJ0P7ca  (Vice-President, March 12, 2008-March 13, 2009)', 'https://drive.google.com/thumbnail?id=1h9eA5DG0EId_jYGxxwuFkY8SAS2_Ml15', '2009'], ['4', 'https://drive.google.com/thumbnail?id=1joCIHIP_WDsL7FToXx_jIu8jk9Pkc1cp', 'Gonzalo Uriarte', 'https://drive.google.com/thumbnail?id=1DA9x8C8NQORTlqwcaJU2XoJl8raScznd', '2005'], ['4', 'Coquimbo', 'https://drive.google.com/thumbnail?id=1DNM01z0gWVLGUZXY03HiCRXfDr2f2jfD  (President, March 11, 2010–March 15, 2011; March 20, 2013-present)', 'https://drive.google.com/thumbnail?id=1mqDc13lvQSFa92xIt_RR8UrajYr3LTEB', '2005'], ['5', 'https://drive.google.com/thumbnail?id=18P0FddyHtM0Zah-xHT89vYj-opzSY1dM', 'Ignacio Walker', 'https://drive.google.com/thumbnail?id=1mqDc13lvQSFa92xIt_RR8UrajYr3LTEB', '2009'], ['5', 'https://drive.google.com/thumbnail?id=18P0FddyHtM0Zah-xHT89vYj-opzSY1dM', 'Lily Pérez', 'https://drive.google.com/thumbnail?id=1h9eA5DG0EId_jYGxxwuFkY8SAS2_Ml15', '2009'], ['6', 'https://drive.google.com/thumbnail?id=18P0FddyHtM0Zah-xHT89vYj-opzSY1dM', 'Ricardo L. Weber', 'PPD', '2009'], ['6', 'https://drive.google.com/thumbnail?id=18P0FddyHtM0Zah-xHT89vYj-opzSY1dM', 'Francisco Chahuan', 'RN', '2009'], ['7', 'https://drive.google.com/thumbnail?id=1-pcHKOA27bwyxWvKppdoQDW5AKQUo_KC', 'https://drive.google.com/thumbnail?id=1XekysIy6Vms2ik6suEhevccjoOT-0sKX  (President, March 15, 2011–March 20, 2012)', 'PPD', '2005'], ['7', 'https://drive.google.com/thumbnail?id=1-pcHKOA27bwyxWvKppdoQDW5AKQUo_KC', 'Jovino Novoa Vásquez (President, March 13, 2009–March 11, 2010)', 'https://drive.google.com/thumbnail?id=1DA9x8C8NQORTlqwcaJU2XoJl8raScznd', '2005'], ['8', 'Santiago', 'https://drive.google.com/thumbnail?id=14z-46uXIcOXRvmmAEIkrZuEy0ZDmD4Tb', 'https://drive.google.com/thumbnail?id=1DA9x8C8NQORTlqwcaJU2XoJl8raScznd', '2005'], ['8', 'https://drive.google.com/thumbnail?id=1-pcHKOA27bwyxWvKppdoQDW5AKQUo_KC', 'https://drive.google.com/thumbnail?id=1dav9_TQE--6N-ueb2X6XbC0LxyBBn8xb', 'https://drive.google.com/thumbnail?id=1mqDc13lvQSFa92xIt_RR8UrajYr3LTEB', '2005'], ['9', "O'Higgins", 'Alejandro García-Huidobro', 'https://drive.google.com/thumbnail?id=1DA9x8C8NQORTlqwcaJU2XoJl8raScznd', '2005'], ['9', 'https://drive.google.com/thumbnail?id=1iOFS226k4rA2NyhqGTCa5P3N46NeK61X', 'Juan Pablo Letelier Morel (Vice-President, March 15, 2011–March 20, 2012)', 'https://drive.google.com/thumbnail?id=1I-mppQMTN0NUTsAAeqAthDShkAQpMv3J', '2005'], ['10', 'https://drive.google.com/thumbnail?id=1KIRCBj-n0tnnSsM35CYQHPA4aQJeV8Xk', 'https://drive.google.com/thumbnail?id=1JnY49V_FbzyMcno6IzzhTcYEDtXj0PGf', 'https://drive.google.com/thumbnail?id=1mqDc13lvQSFa92xIt_RR8UrajYr3LTEB', '2009'], ['10', 'Maule', 'Juan Antonio Coloma Correa', 'https://drive.google.com/thumbnail?id=1DA9x8C8NQORTlqwcaJU2XoJl8raScznd', '2009'], ['11', 'https://drive.google.com/thumbnail?id=1KIRCBj-n0tnnSsM35CYQHPA4aQJeV8Xk', 'https://drive.google.com/thumbnail?id=1V9rjkligCopvw03S7WNx-wWwJExWql_7', 'https://drive.google.com/thumbnail?id=1mqDc13lvQSFa92xIt_RR8UrajYr3LTEB', '2009'], ['11', 'Maule', 'https://drive.google.com/thumbnail?id=1uKypn1RP99SQV9mAmMSWV0x188AmSmQM', 'UDI', '2009'], ['12', 'https://drive.google.com/thumbnail?id=1x4-fotEGqVVEBJo88tdPYIKAiiXy-Kad', 'https://drive.google.com/thumbnail?id=13fAiUfC8VMRw3dDCaKEyxER4-mbwyb2V  (Vice-President, March 20, 2012–March 20, 2013)', 'https://drive.google.com/thumbnail?id=1XPuoymU7x3mrE4c5YKrS2kG7U2IWCw68', '2005'], ['12', 'https://drive.google.com/thumbnail?id=1x4-fotEGqVVEBJo88tdPYIKAiiXy-Kad', 'Hosain Sabag Castillo', 'PDC', '2005'], ['13', 'https://drive.google.com/thumbnail?id=1x4-fotEGqVVEBJo88tdPYIKAiiXy-Kad', 'Mariano Ruiz-Esquide Jara', 'https://drive.google.com/thumbnail?id=1mqDc13lvQSFa92xIt_RR8UrajYr3LTEB', '2005'], ['13', 'https://drive.google.com/thumbnail?id=1x4-fotEGqVVEBJo88tdPYIKAiiXy-Kad', 'Víctor Pérez Varela', 'https://drive.google.com/thumbnail?id=1DA9x8C8NQORTlqwcaJU2XoJl8raScznd', '2005'], ['14', 'https://drive.google.com/thumbnail?id=1twd_b9q4Ucbg6kABr0QMNDLpuuiRygBW', 'Jaime Quintana', 'PPD', '2009'], ['14', 'Araucanía', 'Alberto Espina Otero', 'https://drive.google.com/thumbnail?id=1h9eA5DG0EId_jYGxxwuFkY8SAS2_Ml15', '2009'], ['15', 'https://drive.google.com/thumbnail?id=1twd_b9q4Ucbg6kABr0QMNDLpuuiRygBW', 'Eugenio Tuma', 'PPD', '2009'], ['15', 'https://drive.google.com/thumbnail?id=1twd_b9q4Ucbg6kABr0QMNDLpuuiRygBW', 'José García Ruminot', 'https://drive.google.com/thumbnail?id=1h9eA5DG0EId_jYGxxwuFkY8SAS2_Ml15', '2009'], ['16', 'https://drive.google.com/thumbnail?id=1zd5dcnpxtWOAr0QJTA7FDKvvY3wCziy5  (plus District 55)', 'https://drive.google.com/thumbnail?id=1s38qkrpojS4VEy3M0Pj-zZmSdHwZSCEQ', 'https://drive.google.com/thumbnail?id=1h9eA5DG0EId_jYGxxwuFkY8SAS2_Ml15', '2005'], ['16', 'https://drive.google.com/thumbnail?id=1zd5dcnpxtWOAr0QJTA7FDKvvY3wCziy5  (plus District 55)', 'https://drive.google.com/thumbnail?id=1Gr5odLo2DLKFUdpcSsj-6_MU7qCjDD8o  (President, March 11, 2006-March 12, 2008)', 'https://drive.google.com/thumbnail?id=1mqDc13lvQSFa92xIt_RR8UrajYr3LTEB', '2005'], ['17', 'Los Lagos (minus District 55)', 'https://drive.google.com/thumbnail?id=1HQnqdr3inP4T47KaSFgrp2pjZv97Tfkr  (President, March 20, 2012–March 20, 2013)', 'PS', '2005'], ['17', 'https://drive.google.com/thumbnail?id=1ZuN5yblKMNkNDasVCOjf47pxVgW4z-ui  (minus District 55)', 'Carlos Kuschel Silva', 'https://drive.google.com/thumbnail?id=1h9eA5DG0EId_jYGxxwuFkY8SAS2_Ml15', '2005'], ['18', 'Aisén', 'Patricio Walker', 'https://drive.google.com/thumbnail?id=1mqDc13lvQSFa92xIt_RR8UrajYr3LTEB', '2009'], ['18', 'Aisén', 'Antonio Horvath Kiss', 'https://drive.google.com/thumbnail?id=1h9eA5DG0EId_jYGxxwuFkY8SAS2_Ml15', '2001'], ['19', 'https://drive.google.com/thumbnail?id=1j8iLfrOvilqSVHrJ7e8eT0scDxeOt_9V', 'Carlos Bianchi Chelech (Vice-President, March 13, 2009–March 11, 2010)', 'Ind.', '2005'], ['19', 'https://drive.google.com/thumbnail?id=1j8iLfrOvilqSVHrJ7e8eT0scDxeOt_9V', 'Pedro Muñoz Aburto', 'https://drive.google.com/thumbnail?id=1I-mppQMTN0NUTsAAeqAthDShkAQpMv3J', '2005']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

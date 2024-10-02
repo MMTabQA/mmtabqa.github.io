@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to World speed records|Conventional wheeled|Steam of Land speed record for rail vehicles
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: how many steam rail vehicles listed can exceed 180 km/h?
+            </div>
+            <div>
+                Answer: 6
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Speed', 'Date', 'Country', 'Train', 'Arr.', 'Power', 'State', 'Comments'], ['202.6\xa0km/h (126\xa0mph)', '1938-07-03', 'UK', 'LNER Class A4 No. 4468 Mallard', 'Loc', 'Steam', 'Unkn.', 'Downhill grade. Data indicates peak speed 202.6\xa0km/h (126\xa0mph), mean speed (half-mile) 201.2\xa0km/h (125\xa0mph). Mallard suffered an overheated crankpin during the run, but was repaired and returned to traffic within 9\xa0days.'], ['200.4\xa0km/h (125\xa0mph)', '1936-05-11', 'Germany', 'https://drive.google.com/thumbnail?id=13d-QSw1fLUiHi_ZUVH_Kn6F6zQHiq0XN', 'Loc', 'Steam', 'Unkn.', 'Level grade.[citation needed]'], ['185.07\xa0km/h (115\xa0mph)', '1905-06-11', 'USA', 'Pennsylvania Railroad E2 #7002', 'Loc', 'Steam', 'Unmod.', 'Claimed.[by whom?] Clocked at Crestline, Ohio at 127.1\xa0mph (205\xa0km/h) in 1905. However PRR Steam Locomotives did not carry speedometers at that time, speed was calculated by measuring time between mile markers, so this is not recognized as a speed record.[citation needed]'], ['182.4\xa0km/h (113\xa0mph)', '1972-10-11', 'Germany', 'https://drive.google.com/thumbnail?id=1xw0xojmOg81w0Yvr3RXdGHSSsq4jy1sd', 'Loc', 'Steam', 'Unkn.', 'The fastest operational steam locomotive as of 2011.[citation needed]'], ['181.1\xa0km/h (113\xa0mph)', '1935-04-05', 'USA', 'https://drive.google.com/thumbnail?id=1O-mdc8dGPzIWihR5nw__r303wVT4d_Cu  #2', 'Loc', 'Steam', 'Unkn.', 'Claimed[by whom?] to have sustained 112.5\xa0mph (181\xa0km/h) for 14 miles (23\xa0km). Average speed for 136 miles (219\xa0km) between Milwaukee and New Lisbon, Wisconsin was 74.9\xa0mph (121\xa0km/h).'], ['180.3\xa0km/h (112\xa0mph)', '1935-09-29', 'UK', 'LNER Class A4 2509 Silver Link', 'Loc', 'Steam', 'Unkn.', 'Authenticated. Some sources say 112.5\xa0mph.[citation needed]'], ['168.5\xa0km/h (105\xa0mph)', '1935-03-05', 'UK', 'https://drive.google.com/thumbnail?id=16tVNUYPCwiB1MQi7Y9QC2rZ8GWyfYmWu  No. 2750 Papyrus', 'Loc', 'Steam', 'Unmod.', 'First run at 100+\xa0mph with complete, surviving documentation.[citation needed]'], ['166.6\xa0km/h (104\xa0mph)', '1934-07-20', 'USA', 'https://drive.google.com/thumbnail?id=1FfpOeR9t1HXEreypluY5Y3_o9rpbp3qI  #6402', 'Loc', 'Steam', 'Unmod', 'A point between Oakwood, Illinois and Lake, Wisconsin. Also averaged 75.5\xa0mph (122\xa0km/h) on 85 miles (137\xa0km) from Chicago, Illinois to Milwaukee, and 89.92\xa0mph (145\xa0km/h) for a 68.9 miles (110.9\xa0km) stretch'], ['164\xa0km/h (102\xa0mph)', '1904-05-09', 'UK', 'GWR 3700 Class 3440 City of Truro', 'Loc', 'Steam', 'Unmod.', 'Claimed[by whom?] to be the first steam locomotive to reach100\xa0mph (161\xa0km/h).[citation needed]'], ['161\xa0km/h (100\xa0mph)', '1934-11-30', 'UK', 'LNER Class A3 4472 Flying Scotsman', 'Loc', 'Steam', 'Unmod.', 'In 1934, Flying Scotsman achieved the first authenticated 100\xa0mph (161\xa0km/h) by a steam locomotive.'], ['145\xa0km/h (90\xa0mph)', '1895-08-22', 'UK', 'https://drive.google.com/thumbnail?id=117-tbs5Fge4Hpk3dC8vJUL2Te5ExVRVd', 'Loc', 'Steam', 'Unmod.', 'Maximum speed claimed[by whom?], although average speed record was authenticated.[citation needed]'], ['131.6\xa0km/h (82\xa0mph)', '1854-06', 'UK', 'https://drive.google.com/thumbnail?id=1wR3Z2Q2mN1wirjoh8mOu9jLcG2qDcJwz', 'Loc', 'Steam', 'Unmod.', 'Broad gauge[citation needed]'], ['131\xa0km/h (81\xa0mph)', '1893-05-10', 'USA', 'Empire State Express No. 999', 'Loc', 'Steam', 'Unmod.', '112\xa0mph (180\xa0km/h) claimed[by whom?], which would make it the first wheeled vehicle to exceed 100\xa0mph (161\xa0km/h).'], ['125.6\xa0km/h (78\xa0mph)', '1850', 'UK', 'https://drive.google.com/thumbnail?id=1S9xmjjC68WJqF218BWrXKNlZvXV76tyu', 'Loc', 'Steam', 'Unmod.', '80\xa0mph (129\xa0km/h) claimed[by whom?][citation needed]'], ['96.6\xa0km/h (60\xa0mph)', '1848', 'USA', 'https://drive.google.com/thumbnail?id=1s5ETSyvPOM8KmfAT4QhnJIyHtMZB0G7S  Antelope', 'Loc', 'Steam', 'Unmod.', 'First authenticated 60\xa0mph (97\xa0km/h),26 miles (42\xa0km) in 26\xa0minutes.[citation needed]'], ['48\xa0km/h (30\xa0mph)', '1830', 'UK', "Stephenson's Rocket", 'Loc', 'Steam', 'Unmod.', '[citation needed]'], ['24\xa0km/h (15\xa0mph)', '1825', 'UK', 'Locomotion No. 1', 'Loc', 'Steam', 'Unmod.', '[citation needed]'], ['8\xa0km/h (5\xa0mph)', '1804-02-21', 'UK', "https://drive.google.com/thumbnail?id=1sSo3W40n30UwwxdokrMbQVoaFo9pQlN3 's world's first railway steam locomotive", 'Loc', 'Steam', 'Unmod.', '[citation needed]']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Calendar of 2009 Fujitsu V8 Supercar Series
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: where did the last round of the 2009 fujitsu v8 supercar season take place?
+            </div>
+            <div>
+                Answer: Sydney, New South Wales
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Rd.', 'Event', 'Circuit', 'Location', 'Date', 'Winner'], ['1', 'Clipsal 500', 'Adelaide Street Circuit', 'Adelaide, South Australia', '19-22 Mar', 'https://drive.google.com/thumbnail?id=1ShhfJ1prTVFaEnGslZbVONYAFR8dSxQr'], ['2', 'Winton', 'Winton Motor Raceway', 'Benalla,  https://drive.google.com/thumbnail?id=127HZCbW8G3mqjj_fGk5PaZveOFuQU-Qt', '1-3 May', 'https://drive.google.com/thumbnail?id=1YDsh9ysrly57-yvM-N-ahU4voZhQ-8ay'], ['3', 'Dunlop Townsville 400', 'Townsville Street Circuit', 'https://drive.google.com/thumbnail?id=1mQR-h6yzVVhfP_ICfKC757eG_J9bybLs ,  https://drive.google.com/thumbnail?id=1_1PnlsreKWl5PthFS9InV7niGMG365Sa', '10-12 Jul', 'James Moffat'], ['4', 'Norton 360 Sandown Challenge', 'Sandown Raceway', 'Melbourne, Victoria', '31 Jul-Aug 2', 'David Russell'], ['5', 'Queensland House & Land 300', 'Queensland Raceway', 'https://drive.google.com/thumbnail?id=1sF5RzH-XWUS8ur0A4uSq9kpOx3jrA0-B , Queensland', '21-23 Aug', 'https://drive.google.com/thumbnail?id=1YDsh9ysrly57-yvM-N-ahU4voZhQ-8ay'], ['6', 'Supercheap Auto Bathurst 1000', 'Mount Panorama Circuit', 'https://drive.google.com/thumbnail?id=1SydXWN7i5MEXQy7p4OQTDrINhfCJf5OB ,  https://drive.google.com/thumbnail?id=10KqUNDujoevu4-E_TatZOEKrb3jtgg9X', '8-11 Oct', 'https://drive.google.com/thumbnail?id=1YDsh9ysrly57-yvM-N-ahU4voZhQ-8ay'], ['7', 'Sydney Telstra 500', 'Homebush Street Circuit', 'https://drive.google.com/thumbnail?id=10A6mU8_zfFAtVCaMiSQlt_q5mayB2lZe , New South Wales', '4-6 Dec', 'https://drive.google.com/thumbnail?id=1YDsh9ysrly57-yvM-N-ahU4voZhQ-8ay']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

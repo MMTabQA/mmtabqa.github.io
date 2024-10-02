@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Results|Premier League of 2005–06 Sunderland A.F.C. season
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: what was the total number of games played at stadium of light?
+            </div>
+            <div>
+                Answer: 19
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Date', 'Opponent', 'Venue', 'Result', 'Attendance', 'Scorers'], ['13 August 2005', 'https://drive.google.com/thumbnail?id=1F1-0YSKX4n87tMmmYznS0xps3c-h4xrf', 'https://drive.google.com/thumbnail?id=1EqMEE-6YBcjxEjH5-jW6hOaPexO0Tzon', '1–3', '34,446', 'https://drive.google.com/thumbnail?id=1IbHac4qEEaRE4CcUouIQeZw7Ty0qUIt1'], ['20 August 2005', 'https://drive.google.com/thumbnail?id=1smQ_lAZJ-X48kjM3Y-W5CGdS0Pypk771', 'https://drive.google.com/thumbnail?id=11CwVLFNM8CHvk5tZzDxn5L8C0v5jSugy', '0–1', '44,913', ''], ['23 August 2005', 'Manchester City', 'https://drive.google.com/thumbnail?id=1EqMEE-6YBcjxEjH5-jW6hOaPexO0Tzon', '1–2', '33,357', 'https://drive.google.com/thumbnail?id=1Duop52v0fRsiWjA6qLEGz8Ko27d9Fvxe'], ['27 August 2005', 'https://drive.google.com/thumbnail?id=1oIqcJFikM9DgiIIHVAQ7NdAPb0H___GA', 'https://drive.google.com/thumbnail?id=1AG49a3IdTF0_x9Zs5KRnmtHUM--6AV60', '0–1', '17,223', ''], ['10 September 2005', 'https://drive.google.com/thumbnail?id=1EbTvXqZmbU4crvgUjAdtmCwMTAxuaqE1', 'https://drive.google.com/thumbnail?id=1LT5Hg67J8yoOuM2kkeSoY31LSf6qZTGk', '0–2', '41,969', ''], ['17 September 2005', 'https://drive.google.com/thumbnail?id=1rpfY_IfxPSkdMVbxdugEJlKAqSrLqEVv', 'https://drive.google.com/thumbnail?id=1EqMEE-6YBcjxEjH5-jW6hOaPexO0Tzon', '1–1', '31,657', 'Breen'], ['25 September 2005', 'https://drive.google.com/thumbnail?id=13ZRbBla9Ix6GHGeavgJS_ZgJ9aIlGryZ', 'https://drive.google.com/thumbnail?id=1YZ7b2hfhvwgymgjMvmCaX5sRyoER7Xoy', '2–0', '29,583', 'https://drive.google.com/thumbnail?id=1sRAmM_aklHq835NXkn-4j16RvNyw2TGF ,  https://drive.google.com/thumbnail?id=1-qnNsWG4ULoXsqN1KtvgwgJ3uNDpfsNH'], ['1 October 2005', 'https://drive.google.com/thumbnail?id=1H28RqP2gs4jJBzizJD-Eq5gwghj24viF', 'https://drive.google.com/thumbnail?id=1EqMEE-6YBcjxEjH5-jW6hOaPexO0Tzon', '1–1', '31,212', 'https://drive.google.com/thumbnail?id=1sRAmM_aklHq835NXkn-4j16RvNyw2TGF'], ['15 October 2005', 'https://drive.google.com/thumbnail?id=1SEeOsRzXdZ3IS2uElud6lR8rSKgny-Xb', 'https://drive.google.com/thumbnail?id=1EqMEE-6YBcjxEjH5-jW6hOaPexO0Tzon', '1–3', '39,085', 'https://drive.google.com/thumbnail?id=1xJFHOZpUtjsboG6LSzIaq7izonJ80Q0a'], ['23 October 2005', 'Newcastle United', 'https://drive.google.com/thumbnail?id=1XoMvyEIuGTlWJUSWGpM-373C67M6mdFZ', '2–3', '52,302', 'https://drive.google.com/thumbnail?id=14Hku6_wkWVUvHAErh_agf_ysuJqa4zjN ,  https://drive.google.com/thumbnail?id=1xJFHOZpUtjsboG6LSzIaq7izonJ80Q0a'], ['29 October 2005', 'https://drive.google.com/thumbnail?id=1MaajGJLAzDbBAlBqgnJvvoXb_jMQe16x', 'Stadium of Light', '1–4', '34,926', 'https://drive.google.com/thumbnail?id=1LnBnbVdn9QM8qXHtqeOliY2KBVWcHVyZ  (pen)'], ['5 November 2005', 'Arsenal', 'https://drive.google.com/thumbnail?id=1wzgJJ3wT1enUYBqytd0WR6NS0Z4Bdzf4', '1–3', '38,210', 'https://drive.google.com/thumbnail?id=1VIcIcZf9oI7jU7jtjhcupRg0Gba2WGUC'], ['19 November 2005', 'Aston Villa', 'https://drive.google.com/thumbnail?id=1EqMEE-6YBcjxEjH5-jW6hOaPexO0Tzon', '1–3', '39,707', 'https://drive.google.com/thumbnail?id=1LnBnbVdn9QM8qXHtqeOliY2KBVWcHVyZ  (pen)'], ['26 November 2005', 'Birmingham City', 'Stadium of Light', '0–1', '32,442', ''], ['30 November 2005', 'https://drive.google.com/thumbnail?id=1smQ_lAZJ-X48kjM3Y-W5CGdS0Pypk771', 'Stadium of Light', '0–2', '32,697', ''], ['3 December 2005', 'https://drive.google.com/thumbnail?id=1SibUEXlQgSy2GoiN_p4EngEJg0CY-9Y0', 'https://drive.google.com/thumbnail?id=1C65icmd21TkfVPWVYgQRHtdYFe7Gsz4e', '2–3', '36,244', 'https://drive.google.com/thumbnail?id=1LnBnbVdn9QM8qXHtqeOliY2KBVWcHVyZ ,  https://drive.google.com/thumbnail?id=1Duop52v0fRsiWjA6qLEGz8Ko27d9Fvxe'], ['10 December 2005', 'https://drive.google.com/thumbnail?id=1F1-0YSKX4n87tMmmYznS0xps3c-h4xrf', 'https://drive.google.com/thumbnail?id=1-gaLiQ_AEyeyaimjFD73-Ko92R5DdOiX', '0–2', '26,065', ''], ['26 December 2005', 'https://drive.google.com/thumbnail?id=1mBVJYnv0xWcI7LaP3KRhhg9ebyw4jAEo', 'https://drive.google.com/thumbnail?id=1EqMEE-6YBcjxEjH5-jW6hOaPexO0Tzon', '0–0', '32,232', ''], ['31 December 2005', 'https://drive.google.com/thumbnail?id=1Zrk0hdYoPKjFkXmYQ2uRzTOoEnfFoswh', 'https://drive.google.com/thumbnail?id=1EqMEE-6YBcjxEjH5-jW6hOaPexO0Tzon', '0–1', '30,567', ''], ['2 January 2006', 'https://drive.google.com/thumbnail?id=1yLL-e04JL7uY6r-WpnV8J3q9UrOACaBs', 'https://drive.google.com/thumbnail?id=1NuqZRYCGAoiHoexVlVRQ6RUQDP6CP4hI', '1–2', '19,372', 'https://drive.google.com/thumbnail?id=14Hku6_wkWVUvHAErh_agf_ysuJqa4zjN'], ['15 January 2006', 'https://drive.google.com/thumbnail?id=1EbTvXqZmbU4crvgUjAdtmCwMTAxuaqE1', 'https://drive.google.com/thumbnail?id=1EqMEE-6YBcjxEjH5-jW6hOaPexO0Tzon', '1–2', '32,420', 'https://drive.google.com/thumbnail?id=14Hku6_wkWVUvHAErh_agf_ysuJqa4zjN'], ['21 January 2006', 'https://drive.google.com/thumbnail?id=1rpfY_IfxPSkdMVbxdugEJlKAqSrLqEVv', 'The Hawthorns', '1–0', '26,464', 'https://drive.google.com/thumbnail?id=1uBJfgF1YRXvA06Lq64iih65_Fz_3QYua  (own goal)'], ['31 January 2006', 'https://drive.google.com/thumbnail?id=13ZRbBla9Ix6GHGeavgJS_ZgJ9aIlGryZ', 'https://drive.google.com/thumbnail?id=1EqMEE-6YBcjxEjH5-jW6hOaPexO0Tzon', '0–3', '31,675', ''], ['4 February 2006', 'West Ham United', 'https://drive.google.com/thumbnail?id=1TISU5rUdDD1oOO7rK1S9Pj-2o4Smao1B', '0–2', '34,745', ''], ['12 February 2006', 'https://drive.google.com/thumbnail?id=1SibUEXlQgSy2GoiN_p4EngEJg0CY-9Y0', 'https://drive.google.com/thumbnail?id=1EqMEE-6YBcjxEjH5-jW6hOaPexO0Tzon', '1–1', '34,700', 'https://drive.google.com/thumbnail?id=1Gy8PTvWMhXemLQZzwGUKd4sWRRjuf-Wp'], ['15 February 2006', 'Blackburn Rovers', 'https://drive.google.com/thumbnail?id=1eT6YXdrOUiiofFGfdoxKyXdK-V-THv7j', '0–2', '18,220', ''], ['25 February 2006', 'https://drive.google.com/thumbnail?id=1xOQ_xLcjXl5gWE-s-lZjI6M31UnC0gGm', "St. Andrew's", '0–1', '29,257', ''], ['3 March 2006', 'Manchester City', 'City of Manchester Stadium', '1–2', '42,200', 'https://drive.google.com/thumbnail?id=1lw7qzsJeNcw-kI8bk2svyXOxd1EZAfK4'], ['11 March 2006', 'Wigan Athletic', 'https://drive.google.com/thumbnail?id=1EqMEE-6YBcjxEjH5-jW6hOaPexO0Tzon', '0–1', '31,194', ''], ['18 March 2006', 'https://drive.google.com/thumbnail?id=1mBVJYnv0xWcI7LaP3KRhhg9ebyw4jAEo', 'Reebok Stadium', '0–2', '23,568', ''], ['25 March 2006', 'https://drive.google.com/thumbnail?id=1PBiNgxQxz_BTFOytCSgFkGJ-Uq6bJ0Us', 'https://drive.google.com/thumbnail?id=1EqMEE-6YBcjxEjH5-jW6hOaPexO0Tzon', '0–1', '29,593', ''], ['1 April 2006', 'https://drive.google.com/thumbnail?id=1Zrk0hdYoPKjFkXmYQ2uRzTOoEnfFoswh', 'https://drive.google.com/thumbnail?id=1h6PLno9gpXI9ANZEQ3ij4JDLvv7Q-jp-', '2–2', '38,093', 'https://drive.google.com/thumbnail?id=1xS-w4lWIVI4nvTUmMOHpyYgVlG5hZk7O ,  https://drive.google.com/thumbnail?id=1dcmc1mQTMu2L74SDBNrGnX8sm99qm8z4'], ['14 April 2006', 'https://drive.google.com/thumbnail?id=1SEeOsRzXdZ3IS2uElud6lR8rSKgny-Xb', 'Old Trafford', '0–0', '72,519', ''], ['17 April 2006', 'https://drive.google.com/thumbnail?id=1GE4xhMd_qvdGPKF2SkHF7C5RDegL1OJV', 'https://drive.google.com/thumbnail?id=1EqMEE-6YBcjxEjH5-jW6hOaPexO0Tzon', '1–4', '40,032', 'https://drive.google.com/thumbnail?id=18_O5T1C_Bw5JU3TitcZi5f9iyyrdYH1B'], ['22 April 2006', 'Portsmouth', 'Fratton Park', '1–2', '20,078', 'https://drive.google.com/thumbnail?id=1sRAmM_aklHq835NXkn-4j16RvNyw2TGF'], ['1 May 2006', 'https://drive.google.com/thumbnail?id=1671LTziHqraQ8XgSwClAXlVmsyjOlIux', 'https://drive.google.com/thumbnail?id=1EqMEE-6YBcjxEjH5-jW6hOaPexO0Tzon', '0–3', '44,003', ''], ['4 May 2006', 'https://drive.google.com/thumbnail?id=1yLL-e04JL7uY6r-WpnV8J3q9UrOACaBs', 'https://drive.google.com/thumbnail?id=1EqMEE-6YBcjxEjH5-jW6hOaPexO0Tzon', '2–1', '28,226', 'https://drive.google.com/thumbnail?id=1Duop52v0fRsiWjA6qLEGz8Ko27d9Fvxe , Brown'], ['7 May 2006', 'https://drive.google.com/thumbnail?id=12MD4IIwqGc5nD1d_teA1fy4ODOUAl4zE', 'Villa Park', '1–2', '33,820', 'D. Collins']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

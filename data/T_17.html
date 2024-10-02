@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to nan of 1982 Toronto Blue Jays season
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: what was the total attendance of the first three blue jays games of july?
+            </div>
+            <div>
+                Answer: 38098
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['#', 'Date', 'Opponent', 'Score', 'Win', 'Loss', 'Save', 'Attendance', 'Record'], ['74', 'July 1', 'Mariners', '4 - 3', 'https://drive.google.com/thumbnail?id=1VEP12BwUmJoqXaIbUtr1uWPAVNIjKDb2  (6-7)', 'Leal (5-6)', 'https://drive.google.com/thumbnail?id=1_EV577zGGftTudkiIgN-E8ma-FBKpn0k  (14)', '21,004', '33-41'], ['75', 'July 2', '@  https://drive.google.com/thumbnail?id=1-V1gmyVDBQ1ytIBQ3o5ilpBesRO54apV', '9 - 4', 'https://drive.google.com/thumbnail?id=1fmMSbGSSdAHpLdhWSwdzrLnqyQG0NBBE  (4-3)', 'Havens (3-6)', 'https://drive.google.com/thumbnail?id=1FRpXboeXWuavSGCTpmf6JsGdZTp29q_i  (3)', '7,503', '34-41'], ['76', 'July 3', '@  https://drive.google.com/thumbnail?id=1-V1gmyVDBQ1ytIBQ3o5ilpBesRO54apV', '2 - 1', 'https://drive.google.com/thumbnail?id=1-uft1NNDp_eTSL_hRePvvPaG-Kmm_aIa  (1-2)', 'https://drive.google.com/thumbnail?id=1CRN09DJRybEIuV-gpUPXA1pl_0ySSrbE  (7-5)', '', '9,591', '34-42'], ['77', 'July 4', '@ Twins', '4 - 3', 'Little (1-0)', 'https://drive.google.com/thumbnail?id=1HMbHrsRG8iYVYAW97fyQ-EGgT0qGVzkL  (6-10)', '', '6,532', '34-43'], ['78', 'July 5', '@  https://drive.google.com/thumbnail?id=1SdtUjLeXatoPPw1uvhZHc7P_WDL8rYjx', '3 - 2', 'https://drive.google.com/thumbnail?id=1dipmsJkGGbWip7Aqfw_b1MwcgoQSWqKt  (4-5)', 'Leal (5-7)', 'https://drive.google.com/thumbnail?id=1_-_jinfq5tHrEj-sZ_F_bJu8yYaTgHA1  (4)', '29,126', '34-44'], ['79', 'July 6', '@ Rangers', '4 - 3', 'https://drive.google.com/thumbnail?id=1fmMSbGSSdAHpLdhWSwdzrLnqyQG0NBBE  (5-3)', 'https://drive.google.com/thumbnail?id=1A0arUomxugSuAU6wFPCqCXx5iPdTnn8j  (4-10)', '', '9,657', '35-44'], ['80', 'July 7', '@  https://drive.google.com/thumbnail?id=1cgdgaF2KDM4M4bhxx-dNocHjp6gnwCyN', '3 - 1', 'https://drive.google.com/thumbnail?id=185MS6MF-geHnQhcUIrzXo41MNeUP7rOF  (10-4)', 'https://drive.google.com/thumbnail?id=1CRN09DJRybEIuV-gpUPXA1pl_0ySSrbE  (7-6)', '', '22,217', '35-45'], ['81', 'July 8', '@  https://drive.google.com/thumbnail?id=1cgdgaF2KDM4M4bhxx-dNocHjp6gnwCyN', '5 - 4', 'https://drive.google.com/thumbnail?id=1HMbHrsRG8iYVYAW97fyQ-EGgT0qGVzkL  (7-10)', 'https://drive.google.com/thumbnail?id=1e7fC2JTd5OOh1Dla2w24JHwoepXNenjI  (2-3)', 'https://drive.google.com/thumbnail?id=1FRpXboeXWuavSGCTpmf6JsGdZTp29q_i  (4)', '24,409', '36-45'], ['82', 'July 9', 'White Sox', '7 - 6', 'Murray (6-3)', 'https://drive.google.com/thumbnail?id=1shcagSRTWjXC8XZH4_FX_ttaYpM8ViD0  (3-10)', 'https://drive.google.com/thumbnail?id=1FRpXboeXWuavSGCTpmf6JsGdZTp29q_i  (5)', '15,131', '37-45'], ['83', 'July 10', 'https://drive.google.com/thumbnail?id=1qJWtLfe0fFwgAKF64mH7pjKavtGdJZ4c', '6 - 5', 'Escárrega (1-1)', 'https://drive.google.com/thumbnail?id=1vgU-2LhOQShQmPS8zPAddlPLuWR4WB85  (1-5)', 'https://drive.google.com/thumbnail?id=1jzqu_cycZV-KE6QSFDRpg3VqICctXeEF  (4)', '17,035', '37-46'], ['84', 'July 11', 'White Sox', '16 - 7', 'https://drive.google.com/thumbnail?id=1RY_W_rov0tPQtTlu09hYro1vqBsq2L2X  (9-4)', 'https://drive.google.com/thumbnail?id=1CRN09DJRybEIuV-gpUPXA1pl_0ySSrbE  (7-7)', '', '16,169', '37-47'], ['85', 'July 15', 'https://drive.google.com/thumbnail?id=1SdtUjLeXatoPPw1uvhZHc7P_WDL8rYjx', '5 - 1', 'https://drive.google.com/thumbnail?id=1HMbHrsRG8iYVYAW97fyQ-EGgT0qGVzkL  (8-10)', 'https://drive.google.com/thumbnail?id=19OUeCbHiythQ1YsEe6P-r2jdTZyzY6de  (4-10)', '', '14,123', '38-47'], ['86', 'July 16', 'https://drive.google.com/thumbnail?id=1SdtUjLeXatoPPw1uvhZHc7P_WDL8rYjx', '6 - 0', 'https://drive.google.com/thumbnail?id=1CRN09DJRybEIuV-gpUPXA1pl_0ySSrbE  (8-7)', 'https://drive.google.com/thumbnail?id=16MYXZdUKEpUBi5vqO97kMOQfcWASrfSW  (7-8)', '', '13,359', '39-47'], ['87', 'July 17', 'https://drive.google.com/thumbnail?id=1SdtUjLeXatoPPw1uvhZHc7P_WDL8rYjx', '11 - 3', 'Jackson (3-6)', 'https://drive.google.com/thumbnail?id=1Zu2YdjIGxF5SgaF0k8Z58qQdW46retaR  (0-1)', '', '17,080', '40-47'], ['88', 'July 18', 'https://drive.google.com/thumbnail?id=1SdtUjLeXatoPPw1uvhZHc7P_WDL8rYjx', '5 - 4 (10)', 'https://drive.google.com/thumbnail?id=1FRpXboeXWuavSGCTpmf6JsGdZTp29q_i  (8-3)', 'https://drive.google.com/thumbnail?id=1_-_jinfq5tHrEj-sZ_F_bJu8yYaTgHA1  (6-4)', '', '15,512', '41-47'], ['89', 'July 19', 'https://drive.google.com/thumbnail?id=1cgdgaF2KDM4M4bhxx-dNocHjp6gnwCyN', '4 - 2', 'Leal (6-7)', 'https://drive.google.com/thumbnail?id=1rultR_Z7w3yafk9dYeIwrpafmovyRmfV  (3-3)', '', '16,466', '42-47'], ['90', 'July 20', 'Royals', '9 - 2', 'https://drive.google.com/thumbnail?id=1HMbHrsRG8iYVYAW97fyQ-EGgT0qGVzkL  (9-10)', 'https://drive.google.com/thumbnail?id=185MS6MF-geHnQhcUIrzXo41MNeUP7rOF  (10-7)', '', '18,552', '43-47'], ['91', 'July 21', 'Royals', '9 - 7', 'https://drive.google.com/thumbnail?id=1C47Eu8tOLbjWcrCc5i531xe-yRloV3Ln  (7-7)', 'https://drive.google.com/thumbnail?id=1CRN09DJRybEIuV-gpUPXA1pl_0ySSrbE  (8-8)', 'https://drive.google.com/thumbnail?id=1yHqVRZG-BKIhQ-__7eOAn3enhqYcPYa5  (23)', '19,152', '43-48'], ['92', 'July 22', '@  https://drive.google.com/thumbnail?id=1qJWtLfe0fFwgAKF64mH7pjKavtGdJZ4c', '3 - 2', 'https://drive.google.com/thumbnail?id=1RY_W_rov0tPQtTlu09hYro1vqBsq2L2X  (10-4)', 'https://drive.google.com/thumbnail?id=1FRpXboeXWuavSGCTpmf6JsGdZTp29q_i  (8-4)', '', '21,875', '43-49'], ['93', 'July 23', '@  https://drive.google.com/thumbnail?id=1qJWtLfe0fFwgAKF64mH7pjKavtGdJZ4c', '7 - 1', 'Leal (7-7)', 'Barnes (0-2)', 'Jackson (5)', '27,770', '44-49'], ['94', 'July 24', '@  https://drive.google.com/thumbnail?id=1qJWtLfe0fFwgAKF64mH7pjKavtGdJZ4c', '8 - 1', 'https://drive.google.com/thumbnail?id=1HMbHrsRG8iYVYAW97fyQ-EGgT0qGVzkL  (10-10)', 'Lamp (7-5)', 'https://drive.google.com/thumbnail?id=1fmMSbGSSdAHpLdhWSwdzrLnqyQG0NBBE  (1)', '21,821', '45-49'], ['95', 'July 25', '@  https://drive.google.com/thumbnail?id=1qJWtLfe0fFwgAKF64mH7pjKavtGdJZ4c', '5 - 3', 'https://drive.google.com/thumbnail?id=17-m8VrkcTQ4QMgDkyQgCuioeo6T4g7Nk  (12-9)', 'https://drive.google.com/thumbnail?id=1CRN09DJRybEIuV-gpUPXA1pl_0ySSrbE  (8-9)', '', '17,452', '45-50'], ['96', 'July 26', '@  https://drive.google.com/thumbnail?id=1_NGkSoIOi82ckFOeYQ_667eZyCDprLTB', '3 - 2', 'https://drive.google.com/thumbnail?id=1gQdVb_Sd5Hk7yHnsG3cUBUMUbsz5GGyh  (11-8)', 'https://drive.google.com/thumbnail?id=1vgU-2LhOQShQmPS8zPAddlPLuWR4WB85  (1-6)', '', '22,261', '45-51'], ['97', 'July 27', '@  https://drive.google.com/thumbnail?id=1_NGkSoIOi82ckFOeYQ_667eZyCDprLTB', '3 - 1', 'Leal (8-7)', 'https://drive.google.com/thumbnail?id=1K4z7TkqBPJx0qcVTLQ2tAJ4OyUFu72GS  (6-8)', '', '27,077', '46-51'], ['98', 'July 28', '@  https://drive.google.com/thumbnail?id=1_NGkSoIOi82ckFOeYQ_667eZyCDprLTB', '9 - 7', 'https://drive.google.com/thumbnail?id=1Q07IWsmkY60vZJVYI8mmkcS7h0B9ECWV  (4-5)', 'Jackson (3-7)', 'Stanley (8)', '18,627', '46-52'], ['99', 'July 30', 'https://drive.google.com/thumbnail?id=1Ckh3-bFZPMzEfL8EmjIOD2Gqa0vDQDvW', '6 - 5 (12)', 'https://drive.google.com/thumbnail?id=1fmMSbGSSdAHpLdhWSwdzrLnqyQG0NBBE  (7-3)', 'James (0-2)', '', '18,262', '47-52'], ['100', 'July 31', 'https://drive.google.com/thumbnail?id=1Ckh3-bFZPMzEfL8EmjIOD2Gqa0vDQDvW', '1 - 0 (10)', 'https://drive.google.com/thumbnail?id=1vgU-2LhOQShQmPS8zPAddlPLuWR4WB85  (2-6)', 'https://drive.google.com/thumbnail?id=1apbTOU48THAErIbzuINClzOL8LuXDmQR  (1-1)', '', '21,007', '48-52']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

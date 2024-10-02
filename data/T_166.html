@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to MotoGP classification of 2008 Malaysian motorcycle Grand Prix
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: how many honda motorcycles completed the race?
+            </div>
+            <div>
+                Answer: 6
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Pos', 'No', 'Rider', 'Manufacturer', 'Laps', 'Time', 'Grid', 'Points'], ['1', '46', 'https://drive.google.com/thumbnail?id=1EwFOw5ySmLKhvI7nJ4kubbMcwcCiUs_v', 'https://drive.google.com/thumbnail?id=1tPTBnjz9d275-op_HUpw5381A6pOtrEj', '21', '43:06.007', '2', '25'], ['2', '2', 'https://drive.google.com/thumbnail?id=1hjBxJ20F_5uFSUbDS4MZQ27rdYHHKAw1', 'https://drive.google.com/thumbnail?id=197Wx0NxY5Tnk4LuUom7wPlcVirBauvUr', '21', '+4.008', '1', '20'], ['3', '4', 'https://drive.google.com/thumbnail?id=1uvBNT-tVeabkHt9zm84WpiwNiO47fOAv', 'https://drive.google.com/thumbnail?id=197Wx0NxY5Tnk4LuUom7wPlcVirBauvUr', '21', '+8.536', '6', '16'], ['4', '69', 'https://drive.google.com/thumbnail?id=1ZSfK92JKaHwPmA1QAy4tqjUOwyAUldP8', 'https://drive.google.com/thumbnail?id=197Wx0NxY5Tnk4LuUom7wPlcVirBauvUr', '21', '+8.858', '4', '13'], ['5', '56', 'https://drive.google.com/thumbnail?id=1fBGKtq-T76iU8PyxTEDsfa70YrfDbdvC', 'https://drive.google.com/thumbnail?id=197Wx0NxY5Tnk4LuUom7wPlcVirBauvUr', '21', '+10.583', '15', '11'], ['6', '1', 'Casey Stoner', 'https://drive.google.com/thumbnail?id=1up3zJrosb4gbEcnmGeCLLi9KNf1YV92G', '21', '+13.640', '7', '10'], ['7', '65', 'https://drive.google.com/thumbnail?id=1gKdqqZ_jqLDlCNXZ5UUdK5a0DsdAQAG3', 'https://drive.google.com/thumbnail?id=1xbGw86MUgv5f2lJKKEoPhKjunPs-P5es', '21', '+15.936', '8', '9'], ['8', '5', 'Colin Edwards', 'https://drive.google.com/thumbnail?id=1tPTBnjz9d275-op_HUpw5381A6pOtrEj', '21', '+18.802', '5', '8'], ['9', '7', 'https://drive.google.com/thumbnail?id=1WAcJ4GSeAddOtQTmZOyK6jd_1pLekuqb', 'Suzuki', '21', '+23.174', '11', '7'], ['10', '14', 'https://drive.google.com/thumbnail?id=1CTCbR3iwgXNeQYCEPasp_7Hqg8Q_R3kL', 'https://drive.google.com/thumbnail?id=197Wx0NxY5Tnk4LuUom7wPlcVirBauvUr', '21', '+25.516', '9', '6'], ['11', '21', 'https://drive.google.com/thumbnail?id=18L_fIrGZMBOMzHtDZqLdF4zzSqJ5r7do', 'https://drive.google.com/thumbnail?id=1f6e0zQ-XMz3tcFj3ijODG_v-rtRDZVVA', '21', '+27.609', '10', '5'], ['12', '13', 'Anthony West', 'Kawasaki', '21', '+41.399', '13', '4'], ['13', '50', 'https://drive.google.com/thumbnail?id=1NEvaNBvQBGkLhs55ve7JHvt9jhYufe2e', 'Ducati', '21', '+45.617', '16', '3'], ['14', '15', 'https://drive.google.com/thumbnail?id=117I7pSI-G4-SKJe1JFk0hANvYP76WwvE', 'https://drive.google.com/thumbnail?id=197Wx0NxY5Tnk4LuUom7wPlcVirBauvUr', '21', '+49.003', '17', '2'], ['15', '24', 'Toni Elias', 'https://drive.google.com/thumbnail?id=1up3zJrosb4gbEcnmGeCLLi9KNf1YV92G', '21', '+59.139', '19', '1'], ['16', '33', 'Marco Melandri', 'https://drive.google.com/thumbnail?id=1up3zJrosb4gbEcnmGeCLLi9KNf1YV92G', '21', '+1:03.328', '14', ''], ['17', '9', 'https://drive.google.com/thumbnail?id=14h8Z22e9dxVwhVxBhEGbP95fnp8bWUaK', 'Suzuki', '21', '+1:48.363', '18', ''], ['Ret', '48', 'https://drive.google.com/thumbnail?id=1r7SJwsLPEJ3GxmPnyR9ElsUekdJYOYk8', 'Yamaha', '12', 'Accident', '3', ''], ['Ret', '52', 'https://drive.google.com/thumbnail?id=10avQixyJEssP_TYTti56adT8aHS3qabD', 'https://drive.google.com/thumbnail?id=1tPTBnjz9d275-op_HUpw5381A6pOtrEj', '2', 'Accident', '12', '']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

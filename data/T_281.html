@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Schedule of 2014 NASCAR Camping World Truck Series
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: what will be the last track used during this season?
+            </div>
+            <div>
+                Answer: Homestead-Miami Speedway, Homestead
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['No.', 'Race Title', 'Track', 'Date', 'TV'], ['1', 'NextEra Energy Resources 250', 'Daytona International Speedway,  https://drive.google.com/thumbnail?id=1CBRaWXat8-PN-txYfdVH5VUnsHIa_W8c', 'February 21', 'https://drive.google.com/thumbnail?id=1qBPXK00uWsmU_Lj3C8iyMYQUo1bzEFQ5'], ['2', 'Kroger 250', 'Martinsville Speedway,  https://drive.google.com/thumbnail?id=1evF3fQKMopp25MKa3SwG0Pkg4M8dBN9K', 'March 30†', 'https://drive.google.com/thumbnail?id=1qBPXK00uWsmU_Lj3C8iyMYQUo1bzEFQ5'], ['3', 'SFP 250', 'Kansas Speedway,  https://drive.google.com/thumbnail?id=1gfaBr2KAj3zveCuuwXiPH5slTiRb-cGo', 'May 9', 'https://drive.google.com/thumbnail?id=1qBPXK00uWsmU_Lj3C8iyMYQUo1bzEFQ5'], ['4', 'North Carolina Education Lottery 200', 'Charlotte Motor Speedway,  https://drive.google.com/thumbnail?id=117kn_bBPRRtmGa0HazHmm0RCUb2sC8cw', 'May 16', 'https://drive.google.com/thumbnail?id=1qBPXK00uWsmU_Lj3C8iyMYQUo1bzEFQ5'], ['5', 'Lucas Oil 200', 'Dover International Speedway,  https://drive.google.com/thumbnail?id=1DjwdtmMyMulWqnvUzmBzxti8At4Y1rsh', 'May 30', 'https://drive.google.com/thumbnail?id=1qBPXK00uWsmU_Lj3C8iyMYQUo1bzEFQ5'], ['6', 'WinStar World Casino 400K', 'Texas Motor Speedway,  https://drive.google.com/thumbnail?id=1Bo9gg7qXM8ercOqNzzI2fmR2vV2dEePb', 'June 6', 'https://drive.google.com/thumbnail?id=1qBPXK00uWsmU_Lj3C8iyMYQUo1bzEFQ5'], ['7', 'Gateway 200', 'Gateway Motorsports Park, Madison, Illinois', 'June 14', 'https://drive.google.com/thumbnail?id=1qBPXK00uWsmU_Lj3C8iyMYQUo1bzEFQ5'], ['8', 'UNOH 225', 'Kentucky Speedway, Sparta', 'June 26', 'https://drive.google.com/thumbnail?id=1qBPXK00uWsmU_Lj3C8iyMYQUo1bzEFQ5'], ['9', 'American Ethanol 200', 'Iowa Speedway, Newton', 'July 12', 'https://drive.google.com/thumbnail?id=1qBPXK00uWsmU_Lj3C8iyMYQUo1bzEFQ5'], ['10', 'Mudsummer Classic', 'Eldora Speedway, New Weston', 'July 23', 'https://drive.google.com/thumbnail?id=1qBPXK00uWsmU_Lj3C8iyMYQUo1bzEFQ5'], ['11', 'Pocono Mountains 150', 'Pocono Raceway, Long Pond', 'August 2', 'FS1'], ['12', 'Michigan National Guard 200', 'Michigan International Speedway, Brooklyn', 'August 16', 'https://drive.google.com/thumbnail?id=1qBPXK00uWsmU_Lj3C8iyMYQUo1bzEFQ5'], ['13', 'UNOH 200', 'Bristol Motor Speedway,  https://drive.google.com/thumbnail?id=1aWknyqriLFuN6hbQZAkMO76kr4C-X-hO', 'August 20', 'https://drive.google.com/thumbnail?id=1qBPXK00uWsmU_Lj3C8iyMYQUo1bzEFQ5'], ['14', 'Chevy Silverado 250', 'Canadian Tire Motorsport Park, Bowmanville,  https://drive.google.com/thumbnail?id=12_Hjnu2-z2FhF72hc6AhH2Pih8U0fQ9Z', 'August 31', 'https://drive.google.com/thumbnail?id=1qBPXK00uWsmU_Lj3C8iyMYQUo1bzEFQ5'], ['15', 'EnjoyIllinois.com 225', 'Chicagoland Speedway,  https://drive.google.com/thumbnail?id=1EbVb7S38YRb08qnzxNDdytxbCn4V9UcK', 'September 12', 'https://drive.google.com/thumbnail?id=1qBPXK00uWsmU_Lj3C8iyMYQUo1bzEFQ5'], ['16', 'UNOH 175', 'New Hampshire Motor Speedway,  https://drive.google.com/thumbnail?id=1N-E-vm6gHHtrGI0X0qD5QUzzUd85MoEu', 'September 20', 'FS1'], ['17', "Smith's 350", 'Las Vegas Motor Speedway,  https://drive.google.com/thumbnail?id=1hukUfEFZyJarOLgx3oUOzc9yD6LW3MR0', 'September 27', 'https://drive.google.com/thumbnail?id=1qBPXK00uWsmU_Lj3C8iyMYQUo1bzEFQ5'], ['18', "Fred's 250", 'Talladega Superspeedway, Talladega', 'October 18', 'https://drive.google.com/thumbnail?id=1h8fWfOebj99n1fqqO53T-3Xu2UBfynos'], ['19', 'Kroger 200', 'Martinsville Speedway,  https://drive.google.com/thumbnail?id=1evF3fQKMopp25MKa3SwG0Pkg4M8dBN9K', 'October 25', 'FS1'], ['20', 'WinStar World Casino 350K', 'Texas Motor Speedway,  https://drive.google.com/thumbnail?id=1Bo9gg7qXM8ercOqNzzI2fmR2vV2dEePb', 'October 31', 'FS1'], ['21', 'Lucas Oil 150', 'Phoenix International Raceway,  https://drive.google.com/thumbnail?id=1YVd1shqPRMLSK08EwKqirDtvI96NFbn4', 'November 7', 'FS1'], ['22', 'Ford EcoBoost 200', 'Homestead-Miami Speedway,  https://drive.google.com/thumbnail?id=18HPJwnmbgd-HuRA1LnXQrYzqQh8CZzC4', 'November 14', 'FS1']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

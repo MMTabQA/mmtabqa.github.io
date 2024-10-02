@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to 4000 meter peaks of Highest mountain peaks of California
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: which mountain peak has the most isolation?
+            </div>
+            <div>
+                Answer: Mount Whitney
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Rank', 'Mountain Peak', 'Mountain Range', 'Elevation', 'Prominence', 'Isolation', 'Location'], ['1', 'https://drive.google.com/thumbnail?id=1hEopUHFsUsiAlYzpFKGaEuAJb3Iht5ZG', 'Sierra Nevada', '14,505\xa0ft 4421\xa0m', '10,080\xa0ft 3072\xa0m', '1,646\xa0mi 2,649\xa0km', '36°34′43″N 118°17′31″W\ufeff / \ufeff36.5786°N 118.2920°W'], ['2', 'https://drive.google.com/thumbnail?id=18hVfTELjmcnBX5yl-jyoUeV1ucPFhYzT', 'Sierra Nevada', '14,379\xa0ft 4383\xa0m', '1,677\xa0ft 511\xa0m', '5.4\xa0mi 8.7\xa0km', '36°39′21″N 118°18′40″W\ufeff / \ufeff36.6559°N 118.3111°W'], ['3', 'https://drive.google.com/thumbnail?id=13tPqreZFz54QQQsRx-5su5f11fcvuKAT', 'https://drive.google.com/thumbnail?id=1GeqZQIlQPBzNoj-rHzv6CUXqlAnV0zci', '14,252\xa0ft 4344\xa0m', '7,196\xa0ft 2193\xa0m', '67\xa0mi 109\xa0km', '37°38′03″N 118°15′21″W\ufeff / \ufeff37.6341°N 118.2557°W'], ['4', 'https://drive.google.com/thumbnail?id=1VF47ZMnOC-KAEdZp9rl35sB4gL_5Sg94', 'https://drive.google.com/thumbnail?id=1IZA7K1ahNe8I5nsc3nMkf0cP_OPzmRgC', '14,248\xa0ft 4343\xa0m', '2,894\xa0ft 882\xa0m', '32\xa0mi 52\xa0km', '37°05′39″N 118°30′52″W\ufeff / \ufeff37.0943°N 118.5145°W'], ['5', 'Mount Shasta', 'https://drive.google.com/thumbnail?id=1ZUfRLz-PbyepJQ61Tvqhs37RDgh3Yhbp', '14,179\xa0ft 4322\xa0m', '9,832\xa0ft 2997\xa0m', '335\xa0mi 539\xa0km', '41°24′33″N 122°11′42″W\ufeff / \ufeff41.4092°N 122.1949°W'], ['6', 'https://drive.google.com/thumbnail?id=1_-4ojOTYGggm4ELxft9E65xM5Gv8R99K', 'https://drive.google.com/thumbnail?id=1IZA7K1ahNe8I5nsc3nMkf0cP_OPzmRgC', '13,992\xa0ft 4265\xa0m', '2,563\xa0ft 781\xa0m', '15\xa0mi 24\xa0km', '37°16′14″N 118°40′23″W\ufeff / \ufeff37.2705°N 118.6730°W'], ['7', 'https://drive.google.com/thumbnail?id=1lrdORhEU6tEV-VVyaUKGkpmKNM5pLjNO', 'https://drive.google.com/thumbnail?id=1IZA7K1ahNe8I5nsc3nMkf0cP_OPzmRgC', '13,982\xa0ft 4262\xa0m', '1,936\xa0ft 590\xa0m', '3.1\xa0mi 5.0\xa0km', '36°42′00″N 118°20′37″W\ufeff / \ufeff36.7001°N 118.3436°W'], ['8', 'https://drive.google.com/thumbnail?id=1FIhmAXFca6VVnsArMKzHsfzfi7RMiu2I', 'https://drive.google.com/thumbnail?id=1IZA7K1ahNe8I5nsc3nMkf0cP_OPzmRgC', '13,837\xa0ft 4218\xa0m', '1,891\xa0ft 576\xa0m', '7\xa0mi 11\xa0km', '37°10′01″N 118°40′20″W\ufeff / \ufeff37.1669°N 118.6721°W'], ['9', 'https://drive.google.com/thumbnail?id=1Z25aHxH8Wj5aDqGbUhgyfx4w3neysJRe', 'https://drive.google.com/thumbnail?id=1IZA7K1ahNe8I5nsc3nMkf0cP_OPzmRgC', '13,807\xa0ft 4209\xa0m', '2,027\xa0ft 618\xa0m', '11\xa0mi 17\xa0km', '36°31′34″N 118°28′43″W\ufeff / \ufeff36.5261°N 118.4785°W'], ['10', 'https://drive.google.com/thumbnail?id=1tc6qouY1nLZHQC4dHG19IEGoQNfSS0di', 'https://drive.google.com/thumbnail?id=1IZA7K1ahNe8I5nsc3nMkf0cP_OPzmRgC', '13,758\xa0ft 4193\xa0m', '2,648\xa0ft 807\xa0m', '10\xa0mi 16\xa0km', '37°24′19″N 118°43′58″W\ufeff / \ufeff37.4053°N 118.7329°W'], ['11', 'Mount Gabb', 'https://drive.google.com/thumbnail?id=1IZA7K1ahNe8I5nsc3nMkf0cP_OPzmRgC', '13,747\xa0ft 4190\xa0m', '2,601\xa0ft 793\xa0m', '4.3\xa0mi 6.9\xa0km', '37°22′37″N 118°48′09″W\ufeff / \ufeff37.3769°N 118.8025°W'], ['12', 'https://drive.google.com/thumbnail?id=1i-v8SlRx8V_eFvD_ZrbMNs4qR8tgwAmc', 'Sierra Nevada', '13,657\xa0ft 4163\xa0m', '1,992\xa0ft 607\xa0m', '4.8\xa0mi 7.7\xa0km', '37°22′34″N 119°10′44″W\ufeff / \ufeff37.3762°N 119.1789°W'], ['13', 'Mount Dubois', 'https://drive.google.com/thumbnail?id=1GeqZQIlQPBzNoj-rHzv6CUXqlAnV0zci', '13,565\xa0ft 4135\xa0m', '2,339\xa0ft 713\xa0m', '10\xa0mi 16\xa0km', '37°47′00″N 118°20′36″W\ufeff / \ufeff37.7834°N 118.3432°W'], ['14', 'Mount Pinchot', 'Sierra Nevada', '13,500\xa0ft 4115\xa0m', '2,110\xa0ft 643\xa0m', '4.7\xa0mi 7.6\xa0km', '36°56′50″N 118°24′19″W\ufeff / \ufeff36.9473°N 118.4054°W'], ['15', 'https://drive.google.com/thumbnail?id=1lo1xL9Nx1r70xH1KPPH96alHCvJgQ6nO', 'https://drive.google.com/thumbnail?id=1IZA7K1ahNe8I5nsc3nMkf0cP_OPzmRgC', '13,162\xa0ft 4012\xa0m', '1,736\xa0ft 529\xa0m', '8\xa0mi 13\xa0km', '37°30′27″N 118°52′09″W\ufeff / \ufeff37.5075°N 118.8693°W'], ['16', 'https://drive.google.com/thumbnail?id=1UH5xR9K0NsnrbKu3-mwqi0VldV3QhsEL', 'https://drive.google.com/thumbnail?id=1IZA7K1ahNe8I5nsc3nMkf0cP_OPzmRgC', '13,149\xa0ft 4008\xa0m', '3,990\xa0ft 1216\xa0m', '22\xa0mi 35\xa0km', '37°41′21″N 119°11′59″W\ufeff / \ufeff37.6891°N 119.1996°W']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

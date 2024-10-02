@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Season results of 1984 IMSA GT Championship season
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: other than the united states how many gtp winning teams are there?
+            </div>
+            <div>
+                Answer: 3
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Rnd', 'Circuit', 'GTP Winning Team GTP Winning Drivers', 'GTO Winning Team GTO Winning Drivers', 'GTU Winning Team GTU Winning Drivers', 'Results'], ['1', 'Daytona', '#00 Kreepy Krauly Racing', '#4 Stratagraph Inc.', '#76 Malibu Grand Prix', 'Results'], ['1', 'Daytona', 'Sarel van der Merwe Graham Duxbury Tony Martin', 'https://drive.google.com/thumbnail?id=11EDZZHN_WbcHrFxoG6njfOnolhkUIS3u  Billy Hagan Gene Felton', 'Jack Baldwin Jim Cook Ira Young Bob Reed', 'Results'], ['2', 'https://drive.google.com/thumbnail?id=1tj6pR35ddf9GX9N0Esord_vjzhEnRzDf', '#04 Group 44', '#47 Dingman Bros. Racing', '#99  https://drive.google.com/thumbnail?id=1QYxAbL2ZIEjfS4f63fl-Phj_L1AsHxIn', 'Results'], ['2', 'https://drive.google.com/thumbnail?id=1tj6pR35ddf9GX9N0Esord_vjzhEnRzDf', 'Doc Bundy  https://drive.google.com/thumbnail?id=1dDohooz5Qc5otAJVCqDs_wvPBkc2mYHx', 'Walt Bohren', 'Chris Cord', 'Results'], ['3', 'Sebring', '#48 DeNarvaez Enterprises', '#4 Stratagraph Inc.', '#76 Malibu Grand Prix', 'Results'], ['3', 'Sebring', 'Mauricio DeNarvaez  https://drive.google.com/thumbnail?id=1UEUL-yr8ck6ZH_nmGElX3y9NC3qsIAKQ   https://drive.google.com/thumbnail?id=1C7GGzDI0rO3TfJLafft3YXDk-CzkTHcy', 'https://drive.google.com/thumbnail?id=11EDZZHN_WbcHrFxoG6njfOnolhkUIS3u  Billy Hagan Gene Felton', 'Jack Baldwin Bob Reed Ira Young', 'Results'], ['4', 'Road Atlanta', '#16 Marty Hinze Racing', '#4 Stratagraph Inc.', '#76 Malibu Grand Prix', 'Results'], ['4', 'Road Atlanta', 'https://drive.google.com/thumbnail?id=19-CRF-1Co7LKR40s9M-wfC31X9ofW_QN', 'Billy Hagan Gene Felton', 'Jack Baldwin Bob Reed', 'Results'], ['5', 'Riverside', '#56 Blue Thunder Racing', '#38 Mandeville Auto Tech', '#87 Performance Motorsports', 'Results'], ['5', 'Riverside', 'https://drive.google.com/thumbnail?id=19-CRF-1Co7LKR40s9M-wfC31X9ofW_QN  Randy Lanier', 'Roger Mandeville Amos Johnson', 'Elliot Forbes-Robinson John Schneider', 'Results'], ['6', 'Laguna Seca', '#56 Blue Thunder Racing', '#77 Brooks Racing', '#99  https://drive.google.com/thumbnail?id=1QYxAbL2ZIEjfS4f63fl-Phj_L1AsHxIn', 'Results'], ['6', 'Laguna Seca', 'Randy Lanier', 'John Bauer', 'Jim Adams', 'Results'], ['7', 'Charlotte', '#56 Blue Thunder Racing', '#4 Stratagraph Inc.', '#99  https://drive.google.com/thumbnail?id=1QYxAbL2ZIEjfS4f63fl-Phj_L1AsHxIn', 'Results'], ['7', 'Charlotte', 'https://drive.google.com/thumbnail?id=10JlKzTp6P1BpelojszmVJnU6gke4SypG  Randy Lanier', 'Billy Hagan Gene Felton', 'Chris Cord Jim Adams', 'Results'], ['8', 'Lime Rock', '#00 Kreepy Krauly Racing', '#38 Mandeville Auto Tech', '#76 Malibu Grand Prix', 'Results'], ['8', 'Lime Rock', 'Sarel van der Merwe', 'Roger Mandeville', 'Jack Baldwin', 'Results'], ['9', 'Mid-Ohio', '#14  https://drive.google.com/thumbnail?id=1KTK6_LdoD2vDHgpOJdV3OSF2BvH7he9w', '#91 Electrodyne', '#66 Mike Meyer Racing', 'Results'], ['9', 'Mid-Ohio', 'https://drive.google.com/thumbnail?id=1-PQjUzbD-HDy4PS2S2ABMOcOmoHJghSE   https://drive.google.com/thumbnail?id=1wO4gB_ItcTQkOTQgJpMcPkXcdDaRVB1D', 'Chester Vincentz Dave White', 'Jack Dunham Jeff Kline', 'Results'], ['10', 'Watkins Glen', '#14  https://drive.google.com/thumbnail?id=1KTK6_LdoD2vDHgpOJdV3OSF2BvH7he9w', '#91 Electrodyne', '#87 Performance Motorsports', 'Results'], ['10', 'Watkins Glen', 'https://drive.google.com/thumbnail?id=1-PQjUzbD-HDy4PS2S2ABMOcOmoHJghSE  Jim Adams  https://drive.google.com/thumbnail?id=1wO4gB_ItcTQkOTQgJpMcPkXcdDaRVB1D', 'Chester Vincentz Jim Mullen', 'Elliot Forbes-Robinson John Schneider', 'Results'], ['11', 'Portland', '#56 Blue Thunder Racing', '#51  https://drive.google.com/thumbnail?id=1ldmE141UjkWwZ9EJfQXFAeD8hRfgnVZY', '#76 Malibu Grand Prix', 'Results'], ['11', 'Portland', 'https://drive.google.com/thumbnail?id=10JlKzTp6P1BpelojszmVJnU6gke4SypG  Randy Lanier', 'David Schroeder Tom Hendrickson', 'Jack Baldwin', 'Results'], ['12', 'Sears Point', '#56 Blue Thunder Racing', '#77 Brooks Racing', '#98  https://drive.google.com/thumbnail?id=1QYxAbL2ZIEjfS4f63fl-Phj_L1AsHxIn', 'Results'], ['12', 'Sears Point', 'https://drive.google.com/thumbnail?id=10JlKzTp6P1BpelojszmVJnU6gke4SypG', 'John Bauer', 'Dennis Aase', 'Results'], ['13', 'Road America', '#14  https://drive.google.com/thumbnail?id=1KTK6_LdoD2vDHgpOJdV3OSF2BvH7he9w', '#91 Electrodyne', '#66 Mike Meyer Racing', 'Results'], ['13', 'Road America', 'https://drive.google.com/thumbnail?id=1-PQjUzbD-HDy4PS2S2ABMOcOmoHJghSE   https://drive.google.com/thumbnail?id=1wO4gB_ItcTQkOTQgJpMcPkXcdDaRVB1D', 'Chester Vincentz Jim Mullen', 'Jack Dunham Jeff Kline', 'Results'], ['14', 'Pocono', '#14  https://drive.google.com/thumbnail?id=1KTK6_LdoD2vDHgpOJdV3OSF2BvH7he9w', '#65 English Enterprises', '#87 Performance Motorsports', 'Results'], ['14', 'Pocono', 'https://drive.google.com/thumbnail?id=1-PQjUzbD-HDy4PS2S2ABMOcOmoHJghSE   https://drive.google.com/thumbnail?id=1stunVH6cSKuh6I2cV_OhXn1mWBr-A9Jj', 'Gene Felton', 'Elliot Forbes-Robinson John Schneider', 'Results'], ['15', 'Michigan', '#56 Blue Thunder Racing', '#91 Electrodyne', '#84 Dole Racing', 'Results'], ['15', 'Michigan', 'https://drive.google.com/thumbnail?id=10JlKzTp6P1BpelojszmVJnU6gke4SypG  Randy Lanier', 'Chester Vincentz Jim Mullen', 'Clay Young', 'Results'], ['16', 'Watkins Glen', '#57 Blue Thunder Racing', '#91 Electrodyne', '#84 Dole Racing', 'Results'], ['16', 'Watkins Glen', 'Dale Whittington Randy Lanier', 'Chester Vincentz Jim Mullen', 'Clay Young', 'Results'], ['17', 'Daytona', '#14  https://drive.google.com/thumbnail?id=1KTK6_LdoD2vDHgpOJdV3OSF2BvH7he9w', '#67  https://drive.google.com/thumbnail?id=1toRXOarb6dDEyzM428i6UGpATfeS4D7Q', '#87 Performance Motorsports', 'Results'], ['17', 'Daytona', 'https://drive.google.com/thumbnail?id=1-PQjUzbD-HDy4PS2S2ABMOcOmoHJghSE   https://drive.google.com/thumbnail?id=1wO4gB_ItcTQkOTQgJpMcPkXcdDaRVB1D', 'https://drive.google.com/thumbnail?id=1kEX8Xpr55B2CVsQjsEQAfoK8UR80nru9   https://drive.google.com/thumbnail?id=19R_iidFvzAzdOT5tJApnmUU-gFvYX-K6', 'Elliot Forbes-Robinson John Schneider', 'Results']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

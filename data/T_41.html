@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Filmography|Film of Mischa Barton
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: in what movie was barton also the producer?
+            </div>
+            <div>
+                Answer: A Resurrection
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Year', 'Title', 'Role', 'Notes'], ['1995', 'Polio Water', 'Diane', 'Short film'], ['1996', 'New York Crossing', 'Drummond', 'Television film'], ['1997', 'https://drive.google.com/thumbnail?id=1BTygkLuDdHyi2rKbveZN8tXjdb-ncHWU', 'Devon Stockard', ''], ['1999', 'https://drive.google.com/thumbnail?id=163sxPKW3baxuvO-AVSav9F1HMzpWNae7', 'Rocky', ''], ['1999', 'https://drive.google.com/thumbnail?id=1ac1zJv177vwyavbneXSK4jZezdjfVjgR', '12-Year-Old Actress', ''], ['1999', 'https://drive.google.com/thumbnail?id=1HLrr9mVVEajEZWSZ-rRATU1T9Iv1nDXP', 'Kyra Collins', ''], ['2000', 'https://drive.google.com/thumbnail?id=1PyO1JGb0kMUbz-k65cua0Yz48oPL3tt0', 'Theresa', ''], ['2000', 'https://drive.google.com/thumbnail?id=1JBp5wzm0HDYGxYoRHlZo3gjDyeKt6OHh', 'Maurey Pierce', ''], ['2000', 'Frankie & Hazel', "Francesca 'Frankie' Humphries", 'Television film'], ['2001', 'https://drive.google.com/thumbnail?id=1TCx3jnDZ7wTHpspQZ9bI3us0_YEy5BRq', "Mary 'Mouse' Bedford", ''], ['2001', 'Julie Johnson', 'Lisa Johnson', ''], ['2001', 'https://drive.google.com/thumbnail?id=1Yk5ut30xbZEwWtjSGN4z7X4fDrXTGx30', 'Grace Bailey', ''], ['2002', 'https://drive.google.com/thumbnail?id=1u8g_MjvrYT1oEci9zlZA2mw5y2lWygCv', 'Vicky Austin', 'Television film'], ['2003', 'https://drive.google.com/thumbnail?id=1DiMGU6WpHVHDnEVcME5mHhTFTsEw7JOJ', "Natasha 'Nat' Wilson", ''], ['2006', 'https://drive.google.com/thumbnail?id=1pVP-8H9gBylf2KWoC5UrayfWOkPC58Gt', 'Kristen Taylor', ''], ['2007', 'https://drive.google.com/thumbnail?id=1zmZa48qzhtd2ExKFhBe8RS7cILJWPxWD', 'Young Ethel Ann', ''], ['2007', 'https://drive.google.com/thumbnail?id=1Maujmy3piZCTXC4-pvtn3qa-1kOOpO0B', 'JJ French', ''], ['2007', 'https://drive.google.com/thumbnail?id=1JIG-9d4VXy6_UTJHcQiZNOyOk7ICLq8K', 'Pampinea', ''], ['2008', 'https://drive.google.com/thumbnail?id=1QLS1wA6lHaQaGTeJEp4Dw_ghyVaGJMi2', 'Francesca Fachini', ''], ['2009', 'Walled In', 'Sam Walczak', ''], ['2009', 'https://drive.google.com/thumbnail?id=1wUuwhsu876WfAuu_nQ7r8z5JmKw983gl', 'Shelby Mercer', ''], ['2010', 'https://drive.google.com/thumbnail?id=1elJF1ZehEdc1iTtqOhb_xFD1yabuYvLX', 'Kat', ''], ['2011', 'You and I', 'Lana', ''], ['2012', 'https://drive.google.com/thumbnail?id=1waW74xJ-aXKuZ4v4DD0nH42-eBW6FBWC', 'Sophia Monet', ''], ['2012', 'https://drive.google.com/thumbnail?id=1YmgZg5QCXPMWEusqWLd2C5K4WukrfXAa', 'Amy', ''], ['2012', 'https://drive.google.com/thumbnail?id=1ZZ13u06_P0tAv-e5dJ51ZYwSAPtbyawd', 'Lara Slate', ''], ['2012', 'https://drive.google.com/thumbnail?id=1Ku28WhhmyjYz8o1nX--wF-tonsYK1htU', 'Aiden Ashley', 'Television film'], ['2013', 'https://drive.google.com/thumbnail?id=19jLPOM8Rgxpt3fyQLLYdKiyzIlpSGW6R', 'Eva Gascon', ''], ['2013', 'https://drive.google.com/thumbnail?id=1XAe75po4zbYN38cKP_JKVB6tKyyC3wQm', 'Jessie', 'Also producer'], ['2013', 'L.A. Slasher', 'The Actress', ''], ['2013', 'Gutsy Frog', 'Ms. Monica', 'Television film']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

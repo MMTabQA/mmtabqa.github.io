@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Medalists of France at the 2000 Summer Olympics
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: how many medals did france win at the 2000 olympics?
+            </div>
+            <div>
+                Answer: 37
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Medal', 'Name', 'Sport', 'Event', 'Date'], ['Gold', 'https://drive.google.com/thumbnail?id=1iyGL8O3q2Y4YUPoZ84IS9swyKo4Q69tJ', 'Boxing', 'Light Flyweight', 'September 30'], ['Gold', 'https://drive.google.com/thumbnail?id=1WOQhkNNV2qR3NrOK93yB-4sZIZYtfokL', 'Canoeing', "Men's slalom C-1", 'September 18'], ['Gold', 'https://drive.google.com/thumbnail?id=1d4w9I5nTnOV8UkZiccLwzGP_tvNwiYLC', 'Cycling', "Men's Keirin", 'September 21'], ['Gold', 'https://drive.google.com/thumbnail?id=1d4w9I5nTnOV8UkZiccLwzGP_tvNwiYLC , Laurent Gané,  https://drive.google.com/thumbnail?id=1fKqWYClvN7gY0O78NF4yj3RssDJtG9f0', 'Cycling', "Men's team sprint", 'September 17'], ['Gold', 'Félicia Ballanger', 'Cycling', "Women's track time trial", 'September 16'], ['Gold', 'Félicia Ballanger', 'Cycling', "Women's sprint", 'September 17'], ['Gold', 'https://drive.google.com/thumbnail?id=1XINqQJDJDwE-iqQYbiHwZ9KMomejuxYF', 'Cycling', "Men's cross-country", 'September 24'], ['Gold', 'Jean-Noël Ferrari,  https://drive.google.com/thumbnail?id=11ufoF2HO31PGtHruCK2CeJhEzCjvTmZh , Patrice Lhotellier, Lionel Plumenail', 'Fencing', "Men's team foil", 'September 22'], ['Gold', 'https://drive.google.com/thumbnail?id=1fkdYeqc83KTCQZVsWG3XrjInPivI-Zej', 'Judo', "Men's +100 kg", 'September 22'], ['Gold', 'Séverine Vandenhende', 'Judo', "Women's 63 kg", 'September 18'], ['Gold', 'https://drive.google.com/thumbnail?id=1QxMtarQB58zX9AjXTq_slbYO9JnoM9VY', 'Shooting', "Men's 10 m air pistol", 'September 16'], ['Gold', 'Michel Andrieux,  https://drive.google.com/thumbnail?id=1kbaccbl6Wkr28s2wUQwlmHD1XB1Ukq4w', 'Rowing', "Men's coxless pair", 'September 23'], ['Gold', 'Jean-Christophe Bette, Xavier Dorfman, Yves Hocdé, Laurent Porchier', 'Rowing', "Men's coxless four", 'September 24'], ['Silver', 'https://drive.google.com/thumbnail?id=1z0M8I1CMO8r2E95LV_HfBKKFlLF9LeVx  Jim Bilba \xa0 Crawford Palmer  https://drive.google.com/thumbnail?id=18yv6lLWlNzgHn4lbuK3lNSykT2fliAhA  \xa0 Antoine Rigaudeau Makan Dioumassi \xa0  https://drive.google.com/thumbnail?id=1GyMRFUkD5B_t0XJmO8X4lkcl7i5lmZKs   https://drive.google.com/thumbnail?id=1WQ_iBQGlCiMJX8uwFvNwHaA_67fJITNZ  \xa0  https://drive.google.com/thumbnail?id=12DK6tIOL7673n4A2leiJI6bA3S4ioAnA  Thierry Gadou \xa0 Moustapha Sonko Cyril Julian \xa0  https://drive.google.com/thumbnail?id=1wfgju-5FnXYadl8FHIc90JGyu8zmOUCm', 'Basketball', "Men's competition", 'October 1'], ['Silver', 'Brigitte Guibal', 'Canoeing', "Women's slalom K-1", 'September 18'], ['Silver', 'https://drive.google.com/thumbnail?id=1d4w9I5nTnOV8UkZiccLwzGP_tvNwiYLC', 'Cycling', "Men's sprint", 'September 20'], ['Silver', 'Marion Clignet', 'Cycling', "Women's individual pursuit", 'September 18'], ['Silver', 'https://drive.google.com/thumbnail?id=10hzOaUWUBKPXXIu35N3MI80G4lEw2CP3', 'Fencing', "Men's épée", 'September 16'], ['Silver', 'Jean-François Di Martino,  https://drive.google.com/thumbnail?id=10hzOaUWUBKPXXIu35N3MI80G4lEw2CP3 ,  https://drive.google.com/thumbnail?id=17izMND5LbrGmmEnSFOeQk9fmJaHROQub', 'Fencing', "Men's team épée", 'September 18'], ['Silver', 'Mathieu Gourdain', 'Fencing', "Men's sabre", 'September 21'], ['Silver', 'Mathieu Gourdain,  https://drive.google.com/thumbnail?id=16cF8VKttwskYwlDBWpLS9e2dLt-i7J5m , Cédric Séguin, Damien Touya', 'Fencing', "Men's team sabre", 'September 24'], ['Silver', 'Éric Poujade', 'Gymnastics', "Men's pommel horse", 'September 24'], ['Silver', 'Benjamin Varonian', 'Gymnastics', "Men's horizontal bar", 'September 25'], ['Silver', 'Larbi Benboudaoud', 'Judo', "Men's 66 kg", 'September 16'], ['Silver', 'https://drive.google.com/thumbnail?id=1mO982ukNuI2j-IV0Sti3zKGAUgyCZ2O2', 'Judo', "Women's 78 kg", 'September 21'], ['Silver', 'https://drive.google.com/thumbnail?id=1dXp92o_ZPGAngmaKmSAX68_Otuyhy0fX', 'Shooting', "Women's trap", 'September 18'], ['Silver', 'https://drive.google.com/thumbnail?id=1ol8e45h65cJ5QFQcObtiVOSGsBmv22L8', 'Swimming', "Women's 200 m backstroke", 'September 22'], ['Bronze', 'Jérôme Thomas', 'Boxing', 'Flyweight', 'October 1'], ['Bronze', 'Anne-Lise Bardet', 'Canoeing', "Women's slalom K-1", 'September 18'], ['Bronze', 'https://drive.google.com/thumbnail?id=1DLAwFop60UidgHsZEAtOjoRyjE8lQiN_', 'Cycling', "Women's road time trial", 'September 30'], ['Bronze', 'https://drive.google.com/thumbnail?id=1TY1HvcyKSTzxjxmGrLsGEe2p6VIYX4Wc', 'Fencing', "Women's épée", 'September 17'], ['Bronze', 'Frédéric Demontfaucon', 'Judo', "Men's 90 kg", 'September 20'], ['Bronze', 'https://drive.google.com/thumbnail?id=1qkhGOplnqOVzVJ0uqIvekZe8lJq4Mb9z', 'Judo', "Men's 100 kg", 'September 21'], ['Bronze', 'Thibaud Chapelle, Pascal Touron', 'Rowing', "Men's lightweight double sculls", 'September 24'], ['Bronze', 'https://drive.google.com/thumbnail?id=1NxM7JvCEQejEI95GEfu3yTpUfWaQncZX , Myriam Lignot', 'Synchronized swimming', "Women's duet", 'September 26'], ['Bronze', 'https://drive.google.com/thumbnail?id=1D0Z0S5wy5jgKwu0vVI9uGlR91NMGL7hN ,  https://drive.google.com/thumbnail?id=167fv0ZaCX1aOwRSNFNlV4QJxks2bFmAn', 'Table tennis', "Men's doubles", 'September 23'], ['Bronze', 'https://drive.google.com/thumbnail?id=1mmuRAT_4nBCkqVvCB5n3tzJ0b9pmsO6Q', 'Tennis', "Men's singles", 'September 28'], ['Bronze', 'https://drive.google.com/thumbnail?id=16w7XR6rLGkfLiRGm8BRUWdvkXU6Vboo8', 'Taekwondo', "Men's +80 kg", 'September 30']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

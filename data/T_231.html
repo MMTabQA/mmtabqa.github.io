@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Laureates of List of Nobel laureates affiliated with the University of Pennsylvania
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: name of the first nobel laureates from penn.
+            </div>
+            <div>
+                Answer: Otto Fritz Meyerhof
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Year', 'Laureate', 'Relation', 'Category', 'Rationale'], ['1922', 'https://drive.google.com/thumbnail?id=103-NEYr3hsudWtF2IXYrYUCJdqR4YRQV', 'Research Professor in Physiological Chemistry, 1940–1951', 'Physiology or Medicine', 'for his discovery of the fixed relationship between the consumption of  https://drive.google.com/thumbnail?id=1qJ2X9aMXdebcSkdO3A0Yqzt1QC3PVDCL  and the metabolism of lactic acid in the muscle'], ['1938', 'https://drive.google.com/thumbnail?id=1QuLGm-psPrp3mZ3Pv4vxUHw-iZfVhZ3u', 'Visiting Research Professor for  https://drive.google.com/thumbnail?id=1HJ3cXxW_6Ea873LHWR9Mu6bjOsDJaSvG', 'Physiology or Medicine', 'for his work on carotenoids and vitamins'], ['1955', 'https://drive.google.com/thumbnail?id=1fvjsJ099AS49ToXdkbocEMrgwEbWZKow', 'Assistant in Biochemistry, Graduate School of Medicine, 1924–1925', 'Chemistry', 'for his work on  https://drive.google.com/thumbnail?id=1tqdR35GsjK3FMNXxrV0zwqWM5uyfbRY_  compounds, especially the first synthesis of a polypeptide hormone'], ['1961', 'https://drive.google.com/thumbnail?id=1U2c3XW0SWAXqz3BILDeevCT7V9DISJwc', 'Research Fellow, 1939–1940; Physics Instructor, 1940–1941', 'Physics', 'for his pioneering studies of electron scattering in atomic nuclei and for his thereby achieved discoveries concerning the structure of the nucleons'], ['1964', 'https://drive.google.com/thumbnail?id=1d5vIcvsiN4FUm50z66IFaBq7aabCmCeZ', 'Graduate Student, 1950–51', 'Nobel Peace Prize', 'for being "the first person in the Western world to have shown us that a struggle can be waged without violence."'], ['1967', 'https://drive.google.com/thumbnail?id=1ImljzfpB8kIh3sKhkGVteN_aaB6PmfX1', 'Research Fellow, 1929–1931; Sc.D., 1971', 'Physiology or Medicine', 'for their discoveries concerning the primary physiological and chemical visual processes in the  https://drive.google.com/thumbnail?id=1Jaz0CYkLtB9QFFlb4PUylOXFfE3J6InM'], ['1967', 'https://drive.google.com/thumbnail?id=1rKHk4RV9Yks3RR6Jxdel9qBiWpeikf6m', 'Research Fellow in Biophysics, 1931–1936; Assistant Professor, 1936–1942; Associate Professor, 1943–1948; Professor, 1948–1949; Sc.D., 1971', 'Physiology or Medicine', 'for their discoveries concerning the primary physiological and chemical visual processes in the eye'], ['1971', 'https://drive.google.com/thumbnail?id=1a8djq_C_mxfSbHbxwZ2qg3XA5eIhlaM7', 'Assistant Professor of Economic Statistics, 1930–1934; Associate Professor, 1934–1935; Professor, 1936–1954; Sc.D., 1956; LL.D., 1976', 'Economics', 'for his empirically founded interpretation of economic growth which has led to new and deepened insight into the economic and social structure and process of development.'], ['1972', 'https://drive.google.com/thumbnail?id=15hS6hCRytKuymbFOw_tACK8LswJgMNuw', 'M.S., 1939; Sc.D., 1973', 'Chemistry', 'for his work on ribonuclease, especially concerning the connection between the amino acid sequence and the biologically active conformation'], ['1972', 'https://drive.google.com/thumbnail?id=13stK15eK1pe7Omn5qOLhDiPPHUDnY55A', 'M.D., 1954; Sc.D., 1973', 'Physiology or Medicine', 'for their discoveries concerning the chemical structure of antibodies'], ['1972', 'https://drive.google.com/thumbnail?id=1IIuUSZFyu9DXybc-MzpBk_3HiygRHKoe', 'Professor of Physics, 1962–1980; Sc.D., 1973', 'Physics', 'for their jointly developed theory of superconductivity, usually called the BCS-theory'], ['1976', 'https://drive.google.com/thumbnail?id=1jH21tI7YDtYo1GSo1pcGwIUuX-6-UppP', 'Professor of Medicine, 1964–\xa0;Sc.D., 1990', 'Physiology or Medicine', 'for their discoveries concerning new mechanisms for the origin and dissemination of  https://drive.google.com/thumbnail?id=1ysTjfJ0mVmuaEz_BwfWTVhEzp2wPqTmm'], ['1980', 'https://drive.google.com/thumbnail?id=1GIyUbhEtcZEO4TJFLhTr1obI8UWobkbA', 'Professor of Economics, 1958–', 'Economics', 'for the creation of econometric models and the application to the analysis of economic fluctuations and economic policies.'], ['1985', 'https://drive.google.com/thumbnail?id=1mCi88TCD7rCLlGgh3ic-W_ex5hJi03VD', 'A.B., 1962; M.D., 1966; Sc.D. 1986', 'Physiology or Medicine', 'for their discoveries concerning the regulation of  https://drive.google.com/thumbnail?id=1deLBpUkr_EdcEtxHAwFhZtu03ZAyedyD  metabolism'], ['1997', 'https://drive.google.com/thumbnail?id=142SGX6KLP2b0cbTFEmRgVO1G6QQrOKZK', 'A.B., 1964; M.D., 1968', 'Physiology or Medicine', 'for his discovery of Prions - a new biological principle of infection'], ['1999', 'Ahmed Zewail', 'Ph.D., 1974; Sc.D. 1997', 'Chemistry', 'for his studies of the transition states of chemical reactions using femtosecond spectroscopy'], ['2000', 'https://drive.google.com/thumbnail?id=1nsbYhNwqM5N3KOdW0pYRMGiQBkdNEmH5', 'Laboratory for Research on the Structure of Matter, 1962–1982', 'Chemistry', 'for their discovery and development of conductive polymers'], ['2000', 'Alan MacDiarmid', 'Department of Chemistry, 1955–\xa0; Blanchard Professor of Chemistry, 1988–', 'Chemistry', 'for their discovery and development of conductive polymers'], ['2000', 'Hideki Shirakawa', 'Department of Chemistry, Post-Doctoral Researcher, 1976', 'Chemistry', 'for their discovery and development of conductive polymers'], ['2002', 'https://drive.google.com/thumbnail?id=1TMKk7-sb8H3nezzJ39A1EPIs5uceGGBP', 'Professor, 1985–2006', 'Physics', 'for pioneering contributions to astrophysics, in particular for the detection of cosmic neutrinos'], ['2004', 'https://drive.google.com/thumbnail?id=1Z_e_qLSjVrWkB8Bj0bHVqCagtCki-F1M', 'Professor of Physical Biochemistry, 1971–', 'Chemistry', 'for the discovery of ubiquitin-mediated protein degradation'], ['2004', 'Edward C. Prescott', 'Assistant Professor, 1967–1971', 'Economics', 'for their contributions to dynamic macroeconomics: the time consistency of economic policy and the driving forces behind business cycles.'], ['2006', 'https://drive.google.com/thumbnail?id=1Imtb7lKqx5Yhzef3PofaBhSTuK8lCemj', 'Professor, 1966–1971', 'Economics', 'for his analysis of intertemporal tradeoffs in macroeconomic policy.'], ['2008', 'https://drive.google.com/thumbnail?id=1I9zlAjZ41a3jFFIhnzrRruiOSsyWaynL', 'Assistant professor, 1968–1969', 'Physiology or Medicine', 'for his discovery of  https://drive.google.com/thumbnail?id=1bR3OcK8pFLLCC2x6tAzDJXaTukY6yC8r  causing  https://drive.google.com/thumbnail?id=1YJThSE2i6kybxKFdbpMHF7yZJ1yJPXGH'], ['2009', 'https://drive.google.com/thumbnail?id=1R9p6qm9b0wHH4wQjpYde4vmsOkw9R8Rl', 'B.S., 1955', 'Physics', 'for the invention of an imaging semiconductor circuit – the CCD sensor'], ['2009', 'Oliver E. Williamson', 'Professor, 1965–1983', 'Economics', 'for his analysis of economic governance, especially the boundaries of the firm'], ['2010', "Ei'ichi Negishi", 'Ph.D., 1963', 'Chemistry', 'for palladium-catalyzed cross couplings in organic synthesis'], ['2011', 'Thomas J. Sargent', 'Professor, 1970–1971', 'Economics', 'for their empirical research on cause and effect in the macroeconomy']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

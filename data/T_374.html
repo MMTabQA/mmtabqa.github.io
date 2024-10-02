@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to nan of List of Alpine peaks by prominence
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: how many peaks are taller than 4,500 m?
+            </div>
+            <div>
+                Answer: 2
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['No', 'Peak', 'Location', 'Elevation (m)', 'Prominence (m)', 'Col height (m)', 'Col location', 'Parent'], ['1', 'https://drive.google.com/thumbnail?id=1o3rNUCIHGJ1p7zBn5B22xPbj0Lh7-ymQ', 'https://drive.google.com/thumbnail?id=1Am0swQyQjY77puLR3yDT2-thl7_I8i5S /\xa0 https://drive.google.com/thumbnail?id=1WIoYHbvl5wvvQph9bRjlVlbg3lIio0rd', '4,810', '4,697', '113', 'near  https://drive.google.com/thumbnail?id=1THKLX4eRF-97LjNZDiJq6uT2IjvxOE1e', 'https://drive.google.com/thumbnail?id=1j91HGlxoqdOeHWsbSuLdnuwvX_mfFhOP'], ['2', 'https://drive.google.com/thumbnail?id=1SGxFj3JB_OiTbrJq4iC3TPfQIXGlOZzH', 'https://drive.google.com/thumbnail?id=1RyHghAxTgxfucI8Lk01mLgndHXBvOg-4', '3,798', '2,423', '1375', 'Brenner Pass', 'https://drive.google.com/thumbnail?id=1o3rNUCIHGJ1p7zBn5B22xPbj0Lh7-ymQ'], ['3', 'https://drive.google.com/thumbnail?id=1ME-HfPoEGT2Uk7g0jEAPD27f0jj_KDFH', 'https://drive.google.com/thumbnail?id=1-oWdlHAxYR9wE6Z2F1gf4_ljGZeLWjX7', '4,274', '2,280', '1994', 'near Simplon Pass', 'Mont Blanc'], ['4', 'https://drive.google.com/thumbnail?id=1b5SXk8_tRrfEAteRkknIsK2z1_s9dA7J', 'https://drive.google.com/thumbnail?id=1RyHghAxTgxfucI8Lk01mLgndHXBvOg-4', '3,768', '2,261', '1507', 'Reschen Pass', 'https://drive.google.com/thumbnail?id=1ME-HfPoEGT2Uk7g0jEAPD27f0jj_KDFH 1 /  https://drive.google.com/thumbnail?id=1o3rNUCIHGJ1p7zBn5B22xPbj0Lh7-ymQ 2'], ['5', 'https://drive.google.com/thumbnail?id=1bhH8n72cv8kCXCCRG_rCzQa8eO_-kDoC', 'https://drive.google.com/thumbnail?id=1-oWdlHAxYR9wE6Z2F1gf4_ljGZeLWjX7', '4,049', '2,234', '1815', 'Maloja Pass', 'https://drive.google.com/thumbnail?id=1ME-HfPoEGT2Uk7g0jEAPD27f0jj_KDFH 1 /  https://drive.google.com/thumbnail?id=1o3rNUCIHGJ1p7zBn5B22xPbj0Lh7-ymQ 2'], ['6', 'https://drive.google.com/thumbnail?id=1Wo36fLXjlQCSLOPBkyxbmbiwP77swn8s', 'https://drive.google.com/thumbnail?id=1RyHghAxTgxfucI8Lk01mLgndHXBvOg-4', '2,941', '2,181', '760', 'near  https://drive.google.com/thumbnail?id=1b8mn1gBTQtFLTCro2L__lh0u2mYHU0vz', 'Großglockner1 / MB2'], ['7', 'https://drive.google.com/thumbnail?id=11Z1clIZuLXo1Qx0BDvpKRWWmMe9zKrcc', 'Switzerland', '4,634', '2,165', '2469', 'Great St Bernard Pass', 'https://drive.google.com/thumbnail?id=1o3rNUCIHGJ1p7zBn5B22xPbj0Lh7-ymQ'], ['8', 'https://drive.google.com/thumbnail?id=1oVKlHjDievqLf7UMKlYoz8VUW1Ea_vt_', 'https://drive.google.com/thumbnail?id=1RyHghAxTgxfucI8Lk01mLgndHXBvOg-4', '2,995', '2,136', '859', 'https://drive.google.com/thumbnail?id=1nP-wXxNNY1oqd_q55ooL8TXQuut3mROV', 'https://drive.google.com/thumbnail?id=1SGxFj3JB_OiTbrJq4iC3TPfQIXGlOZzH 1 /  https://drive.google.com/thumbnail?id=1o3rNUCIHGJ1p7zBn5B22xPbj0Lh7-ymQ 2'], ['9', 'Marmolada', 'https://drive.google.com/thumbnail?id=1WIoYHbvl5wvvQph9bRjlVlbg3lIio0rd', '3,343', '2,131', '1212', 'https://drive.google.com/thumbnail?id=1wggcU7gyIEV-V4n7a3P7Pq74bEA9C_tk', 'https://drive.google.com/thumbnail?id=1SGxFj3JB_OiTbrJq4iC3TPfQIXGlOZzH 1 /  https://drive.google.com/thumbnail?id=1o3rNUCIHGJ1p7zBn5B22xPbj0Lh7-ymQ 2'], ['10', 'https://drive.google.com/thumbnail?id=1M32Wn83hjdf4JSj5Ayose0fTBQf4hP7M', 'https://drive.google.com/thumbnail?id=1WIoYHbvl5wvvQph9bRjlVlbg3lIio0rd', '3,841', '2,062', '1779', 'Le Mauvais Pass', 'Mont Blanc'], ['11', 'https://drive.google.com/thumbnail?id=1Z25ttkw1C3tT52hBTKqm-9ydgYXe1w7h', 'https://drive.google.com/thumbnail?id=1vX-nZ6VL5OXg2mOe7hzkVPQYwFm7nHbK', '2,864', '2,052', '812', 'Camporosso Pass', 'Marmolada1 /  https://drive.google.com/thumbnail?id=1o3rNUCIHGJ1p7zBn5B22xPbj0Lh7-ymQ 2'], ['12', 'https://drive.google.com/thumbnail?id=1hBUpDQoCXOzjcI5t3NNXWGZfiUZiFJVy', 'https://drive.google.com/thumbnail?id=1Am0swQyQjY77puLR3yDT2-thl7_I8i5S', '4,102', '2,045', '2057', 'Col du Lautaret', 'https://drive.google.com/thumbnail?id=1o3rNUCIHGJ1p7zBn5B22xPbj0Lh7-ymQ'], ['13', 'https://drive.google.com/thumbnail?id=194Eviwg8qqUkRQ-qOfSWe2JzxkRXV51O', 'https://drive.google.com/thumbnail?id=1-oWdlHAxYR9wE6Z2F1gf4_ljGZeLWjX7', '2,503', '2,021', '482', 'Heiligkreuz bei  https://drive.google.com/thumbnail?id=1fkT-nHzAHcXls5hyusZ7H2V6pu-B3UlO', 'Finsteraarhorn1 / MB2'], ['14', 'https://drive.google.com/thumbnail?id=1ndQts7VgSX-6JE-TNoE_YCjkx6Xuk8t9', 'https://drive.google.com/thumbnail?id=1WIoYHbvl5wvvQph9bRjlVlbg3lIio0rd', '3,905', '1,953', '1952', 'Fraele Pass in the Livigno Alps', 'https://drive.google.com/thumbnail?id=1bhH8n72cv8kCXCCRG_rCzQa8eO_-kDoC'], ['15', 'https://drive.google.com/thumbnail?id=1sWZOGlxsx1zpg1bz5pYqa8GX_eslsqk- /Cima Valdritta', 'https://drive.google.com/thumbnail?id=1WIoYHbvl5wvvQph9bRjlVlbg3lIio0rd', '2,218', '1,950', '268', 'near San Giovanni Pass in Nago–Torbole', 'Ortler1 / MB2'], ['16', 'https://drive.google.com/thumbnail?id=116vqxlir-afrgYYjrb4YMwFfQkpvALCK', 'https://drive.google.com/thumbnail?id=1WIoYHbvl5wvvQph9bRjlVlbg3lIio0rd', '4,061', '1,891', '2170', 'near Little St Bernard Pass', 'https://drive.google.com/thumbnail?id=1o3rNUCIHGJ1p7zBn5B22xPbj0Lh7-ymQ'], ['17', 'Pizzo di Coca', 'https://drive.google.com/thumbnail?id=1WIoYHbvl5wvvQph9bRjlVlbg3lIio0rd', '3,050', '1,878', '1172', 'Aprica', 'https://drive.google.com/thumbnail?id=1ndQts7VgSX-6JE-TNoE_YCjkx6Xuk8t9 1 /  https://drive.google.com/thumbnail?id=1o3rNUCIHGJ1p7zBn5B22xPbj0Lh7-ymQ 2'], ['18', 'Cima Dodici', 'Italy', '2,336', '1,874', '462', 'https://drive.google.com/thumbnail?id=1GuVyaEr7KGzCii6QT4tJxR6t59GhPbk-', 'Marmolada1 /  https://drive.google.com/thumbnail?id=1o3rNUCIHGJ1p7zBn5B22xPbj0Lh7-ymQ 2'], ['19', 'Dents du Midi', 'https://drive.google.com/thumbnail?id=1-oWdlHAxYR9wE6Z2F1gf4_ljGZeLWjX7', '3,257', '1,796', '1461', 'Col des Montets', 'https://drive.google.com/thumbnail?id=1o3rNUCIHGJ1p7zBn5B22xPbj0Lh7-ymQ'], ['20', 'https://drive.google.com/thumbnail?id=1UXFTFt4Vnlh08hwlxFsxpzMb8iW9XDTZ', 'https://drive.google.com/thumbnail?id=1Am0swQyQjY77puLR3yDT2-thl7_I8i5S', '2,082', '1,771', '311', 'https://drive.google.com/thumbnail?id=1n6UdBuFLRVWlunGM0YSPw1ausrKHnrsU', 'Mont Blanc'], ['21', 'https://drive.google.com/thumbnail?id=1IURMEMZzGHl4YwF8GSyr4eiUGxavDpPO', 'Germany/\xa0Austria', '2,962', '1,746', '1216', 'near Fern Pass', 'https://drive.google.com/thumbnail?id=1ME-HfPoEGT2Uk7g0jEAPD27f0jj_KDFH 1 /  https://drive.google.com/thumbnail?id=1o3rNUCIHGJ1p7zBn5B22xPbj0Lh7-ymQ 2'], ['22', 'https://drive.google.com/thumbnail?id=14Z5fEbgN8iwG_1Nkl2R0GssDdiB6oL5a', 'https://drive.google.com/thumbnail?id=1WIoYHbvl5wvvQph9bRjlVlbg3lIio0rd', '3,264', '1,735', '1529', 'Passo Cimabanche', 'Marmolada'], ['23', 'Arcalod', 'https://drive.google.com/thumbnail?id=1Am0swQyQjY77puLR3yDT2-thl7_I8i5S', '2,217', '1,713', '504', 'Viuz in  https://drive.google.com/thumbnail?id=1Fepk9_uw2emkzpmAoLP-K6z4BEeR6kPQ', 'https://drive.google.com/thumbnail?id=1o3rNUCIHGJ1p7zBn5B22xPbj0Lh7-ymQ'], ['24', 'https://drive.google.com/thumbnail?id=1r799wlUvZ2RVjnmy-DuTonKb0A--j8Ws', 'https://drive.google.com/thumbnail?id=1vX-nZ6VL5OXg2mOe7hzkVPQYwFm7nHbK', '2,558', '1,706', '852', 'Rateče', 'https://drive.google.com/thumbnail?id=1Z25ttkw1C3tT52hBTKqm-9ydgYXe1w7h'], ['25', 'https://drive.google.com/thumbnail?id=1QCuu6jHWY28uKWI09_e8HkOuTbydHDNX', 'https://drive.google.com/thumbnail?id=1RyHghAxTgxfucI8Lk01mLgndHXBvOg-4', '2,515', '1,700', '810', 'near Pichl-Kainisch', 'https://drive.google.com/thumbnail?id=1oVKlHjDievqLf7UMKlYoz8VUW1Ea_vt_ 1 /  https://drive.google.com/thumbnail?id=1o3rNUCIHGJ1p7zBn5B22xPbj0Lh7-ymQ 2'], ['26', 'Grigna Settentrionale', 'https://drive.google.com/thumbnail?id=1WIoYHbvl5wvvQph9bRjlVlbg3lIio0rd', '2,409', '1,686', '723', 'Balisio in Ballabio', 'Pizzo di Coca1 /  https://drive.google.com/thumbnail?id=1o3rNUCIHGJ1p7zBn5B22xPbj0Lh7-ymQ 2'], ['27', 'https://drive.google.com/thumbnail?id=1bNdFPkUWmfzmNAmAPosTiwroeHKEKPRV', 'https://drive.google.com/thumbnail?id=1WIoYHbvl5wvvQph9bRjlVlbg3lIio0rd', '2,180', '1,679', '501', 'near Cadine in  https://drive.google.com/thumbnail?id=1dmtDYSipoyizm6DyVldoAWWiZ71u246_', 'https://drive.google.com/thumbnail?id=1ndQts7VgSX-6JE-TNoE_YCjkx6Xuk8t9 1 /  https://drive.google.com/thumbnail?id=1o3rNUCIHGJ1p7zBn5B22xPbj0Lh7-ymQ 2'], ['28', 'https://drive.google.com/thumbnail?id=1TQOxpYa2eqpV-w4CeRef3DU09BiFRRy-', 'https://drive.google.com/thumbnail?id=1WIoYHbvl5wvvQph9bRjlVlbg3lIio0rd', '3,558', '1,676', '1882', 'Tonale Pass', 'Ortler'], ['29', 'Birnhorn', 'Austria', '2,634', '1,665', '969', 'https://drive.google.com/thumbnail?id=1fIG08XVFHK7CCkXyBrYABQSBADkt6y88', 'https://drive.google.com/thumbnail?id=1SGxFj3JB_OiTbrJq4iC3TPfQIXGlOZzH 1 /  https://drive.google.com/thumbnail?id=1o3rNUCIHGJ1p7zBn5B22xPbj0Lh7-ymQ 2'], ['30', 'Col Nudo', 'https://drive.google.com/thumbnail?id=1WIoYHbvl5wvvQph9bRjlVlbg3lIio0rd', '2,471', '1,644', '827', "Passo di Sant'Osvaldo", 'Antelao1 / MB2'], ['31', 'Pointe Percée', 'https://drive.google.com/thumbnail?id=1Am0swQyQjY77puLR3yDT2-thl7_I8i5S', '2,750', '1,643', '1107', "near Pont d'Arbon near  https://drive.google.com/thumbnail?id=1jnO4HaE7Z-ehygxTk6097vRu8RKtaV4J", 'https://drive.google.com/thumbnail?id=1o3rNUCIHGJ1p7zBn5B22xPbj0Lh7-ymQ'], ['32', 'https://drive.google.com/thumbnail?id=1y7dSG29jKhQXXfiHmC9Q7Xhqo0C2UvhJ', 'Italy', '2,753', '1,597', '1156', 'Predil Pass', 'Triglav'], ['33', 'Mölltaler Polinik', 'Austria', '2,784', '1,579', '1205', 'Iselsberg Pass', 'https://drive.google.com/thumbnail?id=1SGxFj3JB_OiTbrJq4iC3TPfQIXGlOZzH 1 / MB2'], ['34', 'https://drive.google.com/thumbnail?id=1jLSfDIyJiiNQ4ge9foCHOwoXvGb9CG6m', 'https://drive.google.com/thumbnail?id=1-oWdlHAxYR9wE6Z2F1gf4_ljGZeLWjX7', '3,614', '1,570', '2044', 'Oberalp Pass', 'https://drive.google.com/thumbnail?id=1ME-HfPoEGT2Uk7g0jEAPD27f0jj_KDFH'], ['35', 'Birkkarspitze', 'Austria', '2,749', '1,569', '1180', 'https://drive.google.com/thumbnail?id=1jLOYjX37KMLfq76cYJNEzvInkpAm5dyK', 'https://drive.google.com/thumbnail?id=1IURMEMZzGHl4YwF8GSyr4eiUGxavDpPO 1 /  https://drive.google.com/thumbnail?id=1o3rNUCIHGJ1p7zBn5B22xPbj0Lh7-ymQ 2'], ['36', 'https://drive.google.com/thumbnail?id=1YhFlw-Jt9VoVL3Tn51k5hhYU6erUV5f_', 'Austria', '2,344', '1,551', '793', 'near  https://drive.google.com/thumbnail?id=1cP9854oX5mnIRJJUHu2aKUfr9vjePrC2', 'https://drive.google.com/thumbnail?id=1SGxFj3JB_OiTbrJq4iC3TPfQIXGlOZzH 1 /  https://drive.google.com/thumbnail?id=1o3rNUCIHGJ1p7zBn5B22xPbj0Lh7-ymQ 2'], ['37', 'https://drive.google.com/thumbnail?id=1ndOR8OPwhI01p0E9Cnr06bqiJV9ft9fh', 'https://drive.google.com/thumbnail?id=1Am0swQyQjY77puLR3yDT2-thl7_I8i5S', '2,790', '1,542', '1248', 'Col Bayard', 'https://drive.google.com/thumbnail?id=1hBUpDQoCXOzjcI5t3NNXWGZfiUZiFJVy 1 /  https://drive.google.com/thumbnail?id=1o3rNUCIHGJ1p7zBn5B22xPbj0Lh7-ymQ 2'], ['38', 'https://drive.google.com/thumbnail?id=1qgB_TC_MR_NuP6QYyaSYSta1Cdjak5h1', 'https://drive.google.com/thumbnail?id=1WIoYHbvl5wvvQph9bRjlVlbg3lIio0rd', '3,173', '1,521', '1652', 'near Campo Carlo Magno', 'Presanella1 / MB2'], ['39', 'https://drive.google.com/thumbnail?id=13NSC7ainyb3Y1IAzFVszQG8yIXugQlob', 'Austria', '2,369', '1,520', '849', 'Schober Pass', 'https://drive.google.com/thumbnail?id=1SGxFj3JB_OiTbrJq4iC3TPfQIXGlOZzH 1 /  https://drive.google.com/thumbnail?id=1o3rNUCIHGJ1p7zBn5B22xPbj0Lh7-ymQ 2'], ['40', 'https://drive.google.com/thumbnail?id=1OOjtkA-L6pUED5M7y0RW-odszb72Z2x0', 'https://drive.google.com/thumbnail?id=1RyHghAxTgxfucI8Lk01mLgndHXBvOg-4', '2,351', '1,518', '833', 'near Schrödis near  https://drive.google.com/thumbnail?id=1kijqH_p28oQOmhb1psnuIzpqUAA5Su1B', 'https://drive.google.com/thumbnail?id=1QCuu6jHWY28uKWI09_e8HkOuTbydHDNX'], ['41', 'https://drive.google.com/thumbnail?id=1RawLzAcA560cVQ129mMXl7hfL2XLWky8', 'Switzerland', '4,314', '1,517', '2797', 'Fenêtre de Durand', 'https://drive.google.com/thumbnail?id=11Z1clIZuLXo1Qx0BDvpKRWWmMe9zKrcc'], ['42', 'https://drive.google.com/thumbnail?id=1zxYqLaD5Dxa_EV8VseWaYzPJDgGB-wFu', 'France', '2,351', '1,514', '837', 'Col du Marais', 'Pointe Percée1 /  https://drive.google.com/thumbnail?id=1o3rNUCIHGJ1p7zBn5B22xPbj0Lh7-ymQ 2'], ['43', 'Zirbitzkogel', 'https://drive.google.com/thumbnail?id=1RyHghAxTgxfucI8Lk01mLgndHXBvOg-4', '2,396', '1,502', '894', 'Neumarkter Sattel', 'https://drive.google.com/thumbnail?id=1SGxFj3JB_OiTbrJq4iC3TPfQIXGlOZzH 1 /  https://drive.google.com/thumbnail?id=1o3rNUCIHGJ1p7zBn5B22xPbj0Lh7-ymQ 2'], ['44', 'https://drive.google.com/thumbnail?id=1RrsHkue1rZ0-2uoXYhkDmVABY_bafck2', 'https://drive.google.com/thumbnail?id=1-oWdlHAxYR9wE6Z2F1gf4_ljGZeLWjX7', '3,418', '1,502', '1916', 'Lukmanier Pass', 'https://drive.google.com/thumbnail?id=1ME-HfPoEGT2Uk7g0jEAPD27f0jj_KDFH 1 /  https://drive.google.com/thumbnail?id=1o3rNUCIHGJ1p7zBn5B22xPbj0Lh7-ymQ 2']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

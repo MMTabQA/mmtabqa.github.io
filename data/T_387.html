@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Nova Scotia - 11 seats of New Democratic Party candidates, 2008 Canadian federal election
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: who has the most votes?
+            </div>
+            <div>
+                Answer: Sackville-Eastern Shore
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Riding', 'Candidate', 'Gender', 'Residence', 'Occupation', 'Votes', '%', 'Rank', 'Biographical notes'], ['https://drive.google.com/thumbnail?id=1pWPxVPximj5OTB3OD-_5Iap9D3swaoAw', 'Mark MacNeill', 'M', 'Inverness', 'Government and Business Policy Advisor', '7,660', '21.1', '3rd', "Served in Ottawa as a consultant with National Advisory Board on Science and Technology, with the Treasury Board Secretariat and the Solicitor General's Aboriginal Policing Secretariat."], ['https://drive.google.com/thumbnail?id=1D1zSseoU-3qx-SF_0RWT2WVq9SpOTFVq', 'Mary Louise Lorefice', 'F', 'https://drive.google.com/thumbnail?id=1qyicumf6Fc6Nqd9RASe1UE1P7WHFY7mX', 'Retired educator', '7,659', '19.6', '3rd', 'Lorefice is a retired teacher from Antigonish, who has lived in the community for 38 years.'], ['https://drive.google.com/thumbnail?id=1COHvoNp45OX2itrZMIxVOGlr5I_uvJOF', 'Karen Olsson', 'F', 'North River', 'Stay-at-home Mother', '4,874', '12.3', '2nd', ''], ['https://drive.google.com/thumbnail?id=1SIIXhTHClHAkLfjfyjztX35nKHoDDu2k', 'Brad Pye', 'M', 'https://drive.google.com/thumbnail?id=1cqAdlkEcW-aXCbublyYOs29pvA2yphGq', 'Senior Political Party Program Officer', '12,793', '31.5', '2nd', 'Pye is an international development worker and son of former Dartmouth North MLA Jerry Pye.'], ['https://drive.google.com/thumbnail?id=12wcQGiPS4R_WFbg8N44cvGEuxVMD6u0I', 'https://drive.google.com/thumbnail?id=165Ex6-xYXVfVjRcj_oRRRu_J-HQmEIJY', 'F', 'https://drive.google.com/thumbnail?id=1ksGe7TFUXmtJJaewoc-ZqDYzz7hO2Ukt', 'Community Legal Worker', '19,252', '42.7', '1st', ''], ['https://drive.google.com/thumbnail?id=1noK4ajWTUThFw1lpn2_NMakY0W4GheGw', 'Tamara Lorincz', 'F', 'Halifax', 'Director of Nova Scotia Environment Network', '12,201', '29.6', '2nd', 'An environmentalist.'], ['Kings—Hants', 'Carol E. Harris', 'F', 'https://drive.google.com/thumbnail?id=1kscp4ck9ejmGhzbqKmS8KzgSgjMA1CJP', 'University Professor', '8,291', '22.0', '3rd', "She was the NDP's candidate in the 2000 election in Esquimalt—Juan de Fuca."], ['https://drive.google.com/thumbnail?id=1_eQJzkSx76EM1EzzwLQQyjr6836BgxzY', 'https://drive.google.com/thumbnail?id=1uTT60yfXZJPbDw7EONpnu6sSTaWcIfwC', 'M', 'Windsor Junction', 'Parliamentarian', '24,279', '61.4', '1st', 'Stoffer has been the incumbent MP since 1997.'], ["South Shore—St. Margaret's", 'Gordon S. Earle', 'M', 'Upper Tantallon', 'Retired Public Servant', '13,456', '33.7', '2nd', 'Earle is the former federal MP for Halifax West (1997–2000). Has run in this riding unsuccessfully in 2004 and 2006.'], ['https://drive.google.com/thumbnail?id=1pt2e59W3XhIH_VyeCgOmrTozymq1bi1m', 'Wayne McKay', 'M', 'Sydney', 'Teacher', '8,559', '24.4', '2nd', ''], ['West Nova', 'George Barron', 'M', 'Bear River', 'Paramedic', '7,097', '16.9', '3rd', 'Barron was born near Paris, Ontario, he has been a paramedic for 22 years. He was nominated on October 28, 2007.']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

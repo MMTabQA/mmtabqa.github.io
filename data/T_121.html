@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Examples of IOPS
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: what device comes after kaminario k2?
+            </div>
+            <div>
+                Answer: NetApp FAS6240 cluster
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Device', 'Type', 'IOPS', 'Interface', 'Notes'], ['Simple SLC SSD', 'SSD', '~400 IOPS[citation needed]', 'SATA 3 Gbit/s', ''], ['https://drive.google.com/thumbnail?id=1DqYmFI6TVIl0dOhlShrHjABaoIOgKPfW  (MLC)', 'SSD', '~8,600 IOPS', 'SATA 3 Gbit/s', "Intel's data sheet claims 6,600/8,600 IOPS (80\xa0GB/160\xa0GB version) and 35,000 IOPS for random 4\xa0KB writes and reads, respectively."], ['https://drive.google.com/thumbnail?id=1DqYmFI6TVIl0dOhlShrHjABaoIOgKPfW  (SLC)', 'SSD', '~5,000 IOPS', 'SATA 3 Gbit/s', "Intel's data sheet claims 3,300 IOPS and 35,000 IOPS for writes and reads, respectively. 5,000 IOPS are measured for a mix. Intel X25-E G1 has around 3 times higher IOPS compared to the Intel X25-M G2."], ['https://drive.google.com/thumbnail?id=1Hy9iu-e9oHU8VUshAfrv1DSaHJ6KgdiB  Phoenix Pro', 'SSD', '~20,000 IOPS', 'SATA 3 Gbit/s', 'SandForce-1200 based SSD drives with enhanced firmware, states up to 50,000 IOPS, but benchmarking shows for this particular drive ~25,000 IOPS for random read and ~15,000 IOPS for random write.'], ['https://drive.google.com/thumbnail?id=1_JO-yoXirnUVucfPSvqaLXa5Oh3b0-Jo  Vertex 3', 'SSD', 'Up to 60,000 IOPS', 'SATA 6 Gbit/s', 'Random Write 4\xa0KB (Aligned)'], ['https://drive.google.com/thumbnail?id=1XZm5qvHZmNsLw-_unwRkeywUaNDyr2w4  Force Series GT', 'SSD', 'Up to 85,000 IOPS', 'SATA 6 Gbit/s', '240\xa0GB Drive, 555 MB/s sequential read & 525 MB/s sequential write, Random Write 4\xa0KB Test (Aligned)'], ['https://drive.google.com/thumbnail?id=1_JO-yoXirnUVucfPSvqaLXa5Oh3b0-Jo  Vertex 4', 'SSD', 'Up to 120,000 IOPS', 'SATA 6 Gbit/s', '256\xa0GB Drive, 560 MB/s sequential read & 510 MB/s sequential write, Random Read 4\xa0KB Test 90K IOPS, Random Write 4\xa0KB Test 85K IOPS'], ['Texas Memory Systems RamSan-20', 'SSD', '120,000+ Random Read/Write IOPS', 'PCIe', 'Includes RAM cache'], ['https://drive.google.com/thumbnail?id=1m3qAJAxOFsdkSIp0G3trTIJAcIaswxuG  ioDrive', 'SSD', '140,000 Read IOPS, 135,000 Write IOPS', 'PCIe', ''], ['https://drive.google.com/thumbnail?id=17zFFYWNb7TfrOsJs8z-JAqdUXhqPJOdr  tachIOn', 'SSD', '320,000 sustained READ IOPS using 4KB blocks and 200,000 sustained WRITE IOPS using 4KB blocks', 'PCIe', ''], ['OCZ RevoDrive 3 X2', 'SSD', '200,000 Random Write 4K IOPS', 'PCIe', ''], ['Fusion-io ioDrive Duo', 'SSD', '250,000+ IOPS', 'PCIe', ''], ['https://drive.google.com/thumbnail?id=1Q8FfSEsAUGOfaVUZ51F-0bBpoMKtyosl  Violin 3200', 'SSD', '250,000+ Random Read/Write IOPS', 'PCIe /FC/Infiniband/iSCSI', 'Flash Memory Array'], ['WHIPTAIL, ACCELA', 'SSD', '250,000/200,000+ Write/Read IOPS', 'Fibre Channel, iSCSI, Infiniband/SRP, NFS, CIFS', 'Flash Based Storage Array'], ['DDRdrive X1,', 'SSD', '300,000+ (512B Random Read IOPS) and 200,000+ (512B Random Write IOPS)', 'PCIe', ''], ['SolidFire SF3010/SF6010', 'SSD', '250,000 4KB Read/Write IOPS', 'iSCSI', 'Flash Based Storage Array (5RU)'], ['Texas Memory Systems RamSan-720 Appliance', 'SSD', '500,000 Optimal Read, 250,000 Optimal Write 4KB IOPS', 'FC / InfiniBand', ''], ['OCZ Single SuperScale Z-Drive R4 PCI-Express SSD', 'SSD', 'Up to 500,000 IOPS', 'PCIe', ''], ['WHIPTAIL, INVICTA', 'SSD', '650,000/550,000+ Read/Write IOPS', 'Fibre Channel, iSCSI, Infiniband/SRP, NFS', 'Flash Based Storage Array'], ['https://drive.google.com/thumbnail?id=1Q8FfSEsAUGOfaVUZ51F-0bBpoMKtyosl  Violin 6000', '3RU Flash Memory Array', '1,000,000+ Random Read/Write IOPS', '/FC/Infiniband/10Gb(iSCSI)/ PCIe', ''], ['Texas Memory Systems RamSan-630 Appliance', 'SSD', '1,000,000+ 4KB Random Read/Write IOPS', 'FC / InfiniBand', ''], ['Fusion-io ioDrive Octal (single PCI Express card)', 'SSD', '1,180,000+ Random Read/Write IOPS', 'PCIe', ''], ['OCZ 2x SuperScale Z-Drive R4 PCI-Express SSD', 'SSD', 'Up to 1,200,000 IOPS', 'PCIe', ''], ['Texas Memory Systems RamSan-70', 'SSD', '1,200,000 Random Read/Write IOPS', 'PCIe', 'Includes RAM cache'], ['https://drive.google.com/thumbnail?id=19otMC5922OGnJ9-C6gP4X1Or3bkYC00f  K2', 'Flash/DRAM/Hybrid SSD', 'Up to 1,200,000 IOPS SPC-1 IOPS with the K2-D (DRAM)', 'FC', ''], ['https://drive.google.com/thumbnail?id=1H4711zJyBmP2Z63_bVHiaTA0pSQoJD4U  FAS6240 cluster', 'Flash/Disk', '1,261,145 SPECsfs2008 nfsv3 IOPs using disks with virtual storage tiering.', 'NFS, CIFS, FC, FCoE, iSCSI', 'SPECsfs2008 is the latest version of the Standard Performance Evaluation Corporation benchmark suite measuring file server throughput and response time, providing a standardized method for comparing performance across different vendor platforms. http://www.spec.org/sfs2008/'], ['Fusion-io ioDrive2', 'SSD', 'Up to 9,608,000 IOPS', 'PCIe', '']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Official results|Did Not Finish of 1967 24 Hours of Le Mans
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: which team from the united states completed the most laps?
+            </div>
+            <div>
+                Answer: Shelby-American Inc.
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Pos', 'Class', 'No', 'Team', 'Drivers', 'Chassis', 'Engine', 'Laps'], ['17', 'P 5.0', '19', 'SpA  https://drive.google.com/thumbnail?id=1TprWyLu_umaWn2h5t5gULGKwiRkPVy3X  SEFAC', 'https://drive.google.com/thumbnail?id=1lbOIyCt4_7BOHibwcCCKD547KeNuV9Rv  Peter Sutcliffe', 'https://drive.google.com/thumbnail?id=1YKyAHZwtlsHBHWs0iopENMEeyTa69DDJ', 'https://drive.google.com/thumbnail?id=1TprWyLu_umaWn2h5t5gULGKwiRkPVy3X  4.0L V12', '296'], ['18', 'P +5.0', '57', 'https://drive.google.com/thumbnail?id=1SloKpmTT4MmkqW7yr4ixwcK8woKjs4kj', 'https://drive.google.com/thumbnail?id=1tUoh2ufTZvk5mUL6iJekMOJhXPw9GuY8   https://drive.google.com/thumbnail?id=1BLyvamriXixzwxzYqTv_FEA22o70vtX4', 'https://drive.google.com/thumbnail?id=1nZ14obp1AG4-7lpxfFzgQMQzaywHYVc4  Mk.IIB', 'https://drive.google.com/thumbnail?id=1I4aaHv3fnpF9EAbpL4PJb4HzlbvZbzEI  7.0L V8', '271'], ['19', 'P +5.0', '7', 'https://drive.google.com/thumbnail?id=13iMevk2EyL0nAMsGwg_z2NEiupx7A-Io  Inc.', 'https://drive.google.com/thumbnail?id=149OyxVdA2hQRy24wjNfKei5QlaajL5yi   https://drive.google.com/thumbnail?id=1tkT9C0FPyNDn2EVetJgBVuNBnF0dc93D', 'Chaparral 2F', 'https://drive.google.com/thumbnail?id=1RSDqpiTNJCStg9fEQt1eOIQZZ0NNJI8Q  7.0L V8', '225'], ['20', 'P 1.3', '47', 'Société des Automobiles  https://drive.google.com/thumbnail?id=1888gHBSJa-ANELxmj6HwQB08QEZBNGug', 'Jean-Claude Andruet Robert Bouharde', 'https://drive.google.com/thumbnail?id=1888gHBSJa-ANELxmj6HwQB08QEZBNGug  A210', 'https://drive.google.com/thumbnail?id=12qSNmcg92trpQ_lmfkPTaQlo6Y6HPEhb - https://drive.google.com/thumbnail?id=11zcJ0v6GmttWGY02mCm_oUeVW3sQtcPq  1.3L I4', '219'], ['21', 'P 5.0', '23', 'https://drive.google.com/thumbnail?id=1IV3tUS5QI-NHFO1jOulJF1LXGEGXr4kt  Concessionaires', 'https://drive.google.com/thumbnail?id=1PHZxS9ow4x-5xT5Z2k3G2gJmhMdDi6hi   https://drive.google.com/thumbnail?id=1M6aBxtZEyYhPZOuqubJCwqSh5NSTB7bY', 'Ferrari 412P', 'https://drive.google.com/thumbnail?id=1TprWyLu_umaWn2h5t5gULGKwiRkPVy3X  4.0L V12', '208'], ['22', 'P 1.15', '56', 'Ecurie Savin-Calberson', 'https://drive.google.com/thumbnail?id=1Aorrh2dbPkRM7au4L2GSDywv2uKxc5oY   https://drive.google.com/thumbnail?id=1J9fkwSlW5nnkXCDtI1n-mj3v66uFkJtO', 'Alpine A210', 'https://drive.google.com/thumbnail?id=12qSNmcg92trpQ_lmfkPTaQlo6Y6HPEhb - https://drive.google.com/thumbnail?id=11zcJ0v6GmttWGY02mCm_oUeVW3sQtcPq  1.0L I4', '204'], ['23', 'P 1.15', '55', 'https://drive.google.com/thumbnail?id=1Ip7utZ6MQkSZgCHu_7XumZSJDFc7X3wz  (NART)', 'Jean-Luc Thérier Francois Chevalier', 'https://drive.google.com/thumbnail?id=1888gHBSJa-ANELxmj6HwQB08QEZBNGug  M64', 'https://drive.google.com/thumbnail?id=12qSNmcg92trpQ_lmfkPTaQlo6Y6HPEhb - https://drive.google.com/thumbnail?id=11zcJ0v6GmttWGY02mCm_oUeVW3sQtcPq  1.0L I4', '201'], ['24', 'P +5.0', '3', 'Holman & Moody', 'https://drive.google.com/thumbnail?id=1qmtbd8zLrOrce5fxqSLiue0HNC8N7HkC   https://drive.google.com/thumbnail?id=1sQnjHNwn0BFcCDfdW35k_Y137m-h7CuO', 'Ford GT40 Mk.IV', 'https://drive.google.com/thumbnail?id=1I4aaHv3fnpF9EAbpL4PJb4HzlbvZbzEI  7.0L V8', '188'], ['25', 'P +5.0', '6', 'Holman & Moody  https://drive.google.com/thumbnail?id=1I4aaHv3fnpF9EAbpL4PJb4HzlbvZbzEI  France S.A.', 'https://drive.google.com/thumbnail?id=1gDX9cTBB2Opkd2hEYHSGACdsQZGabSPm   https://drive.google.com/thumbnail?id=1V3d0EtaX0bFwVF2rYFhtgEdZQ1iyy7j6', 'https://drive.google.com/thumbnail?id=1nZ14obp1AG4-7lpxfFzgQMQzaywHYVc4  Mk.IIB', 'https://drive.google.com/thumbnail?id=1I4aaHv3fnpF9EAbpL4PJb4HzlbvZbzEI  7.0L V8', '183'], ['26', 'S 5.0', '16', 'https://drive.google.com/thumbnail?id=1I4aaHv3fnpF9EAbpL4PJb4HzlbvZbzEI  France S.A.', 'Pierre Dumay Henri Greder', 'Ford GT40 Mk.I', 'https://drive.google.com/thumbnail?id=1I4aaHv3fnpF9EAbpL4PJb4HzlbvZbzEI  4.7L V8', '179'], ['27', 'P +5.0', '5', 'Holman & Moody', 'Roger McCluskey  https://drive.google.com/thumbnail?id=1Dg5silxmZRkiHdrHgFb0OfIDqd7AkLCI', 'https://drive.google.com/thumbnail?id=1nZ14obp1AG4-7lpxfFzgQMQzaywHYVc4  Mk.IIB', 'https://drive.google.com/thumbnail?id=1I4aaHv3fnpF9EAbpL4PJb4HzlbvZbzEI  7.0L V8', '179'], ['28', 'GT +5.0', '9', 'Dana  https://drive.google.com/thumbnail?id=1RSDqpiTNJCStg9fEQt1eOIQZZ0NNJI8Q  Inc.', 'https://drive.google.com/thumbnail?id=1gXEyNbrW8WhkMwI0XyVEQTRLs8Y_OmCs  Dick Guldstrand', 'https://drive.google.com/thumbnail?id=1xnN0jppcsOt7Rr20VruPRREFGfxNNR86', 'https://drive.google.com/thumbnail?id=1RSDqpiTNJCStg9fEQt1eOIQZZ0NNJI8Q  7.0L V8', '167'], ['29', 'P 2.0', '29', 'Equipe  https://drive.google.com/thumbnail?id=1ACX9-BEhqdCqxoyniYgsNHcDnyHdktfw  Sports', 'https://drive.google.com/thumbnail?id=1GID8lRxMaU4YNFo7KRRrYYT1cufgwtU_  Johnny Servoz-Gavin', 'https://drive.google.com/thumbnail?id=1ACX9-BEhqdCqxoyniYgsNHcDnyHdktfw  MS630', 'BRM 2.0L V8', '155'], ['30', 'P 5.0', '25', 'https://drive.google.com/thumbnail?id=1Ip7utZ6MQkSZgCHu_7XumZSJDFc7X3wz  (NART)', 'https://drive.google.com/thumbnail?id=1_QCusgybQk4VLBgjTXrZbKh1P-hskEuk   https://drive.google.com/thumbnail?id=1E3urlAVIc3jNGaZIOSwsKwoVqzOgRJIa', 'Ferrari 412P', 'https://drive.google.com/thumbnail?id=1TprWyLu_umaWn2h5t5gULGKwiRkPVy3X  4.0L V12', '144'], ['31', 'GT 2.0', '67', 'Pierre Boutin', 'Pierre Boutin Patrice Sanson', 'Porsche 911S', 'https://drive.google.com/thumbnail?id=1v8xR5DeMz0A7RUmAfoEJN-1YKrXlnPAG  2.0L Flat-6', '134'], ['32', 'GT 2.0', '60', 'Philippe Farjon', 'Philippe Farjon André Wicky', 'https://drive.google.com/thumbnail?id=1Of-p1QulWktbzg-bx-GAYW06ykQDI_zo S', 'https://drive.google.com/thumbnail?id=1v8xR5DeMz0A7RUmAfoEJN-1YKrXlnPAG  2.0L Flat-6', '126'], ['33', 'S 5.0', '18', 'Scuderia Filipinetti', 'https://drive.google.com/thumbnail?id=1EvzkzLzsyoyS1sBIuqH0nLW_t5A2S_Uu  Mario Casoni', 'Ford GT40 Mk.I', 'Ford 4.7L V8', '116'], ['34', 'P 5.0', '20', 'SpA  https://drive.google.com/thumbnail?id=1TprWyLu_umaWn2h5t5gULGKwiRkPVy3X  SEFAC', 'https://drive.google.com/thumbnail?id=1cW5TIaXlMo7SLapZ1Hm79qmWAtt1Cww1   https://drive.google.com/thumbnail?id=1Lo3EmrQbeGnVsmA3dLyU38xnlVVIt12V', 'https://drive.google.com/thumbnail?id=1YKyAHZwtlsHBHWs0iopENMEeyTa69DDJ  Spyder', 'https://drive.google.com/thumbnail?id=1TprWyLu_umaWn2h5t5gULGKwiRkPVy3X  4.0L V12', '105'], ['35', 'P 2.0', '40', 'https://drive.google.com/thumbnail?id=1v8xR5DeMz0A7RUmAfoEJN-1YKrXlnPAG  System Engineering', 'https://drive.google.com/thumbnail?id=1RiHx7q82mWQhfeEGTJDJKTEzl-u_fvE2   https://drive.google.com/thumbnail?id=1hgolKQFTimJ6pTgGZhlN7JfmI-kjtDIo', 'https://drive.google.com/thumbnail?id=16jfDOEjSMt2oGb84ME3yRQQtsnkLDWtR /6L', 'https://drive.google.com/thumbnail?id=1v8xR5DeMz0A7RUmAfoEJN-1YKrXlnPAG  2.0L Flat-6', '103'], ['36', 'P +5.0', '8', 'https://drive.google.com/thumbnail?id=13iMevk2EyL0nAMsGwg_z2NEiupx7A-Io  Inc.', 'Bob Johnson Bruce Jennings', 'https://drive.google.com/thumbnail?id=13iMevk2EyL0nAMsGwg_z2NEiupx7A-Io  2F', 'https://drive.google.com/thumbnail?id=1RSDqpiTNJCStg9fEQt1eOIQZZ0NNJI8Q  7.0L V8', '91'], ['37', 'P 5.0', '22', 'Scuderia Filipinetti', 'https://drive.google.com/thumbnail?id=1EhrXj5oe5iJsv4hlxXb1Xf1U8H6YmEAd   https://drive.google.com/thumbnail?id=1TN-joTaChZmjX1TdXZGdznYiYY_pT7HG', 'https://drive.google.com/thumbnail?id=1YKyAHZwtlsHBHWs0iopENMEeyTa69DDJ', 'https://drive.google.com/thumbnail?id=1TprWyLu_umaWn2h5t5gULGKwiRkPVy3X  4.0L V12', '88'], ['38', 'P +5.0', '4', 'Holman & Moody', 'https://drive.google.com/thumbnail?id=1QKeCwUMIHSvf7pZt-cIzTKAPcnurLi1V  Lloyd Ruby', 'https://drive.google.com/thumbnail?id=1nZ14obp1AG4-7lpxfFzgQMQzaywHYVc4  Mk.IV', 'https://drive.google.com/thumbnail?id=1I4aaHv3fnpF9EAbpL4PJb4HzlbvZbzEI  7.0L V8', '86'], ['39', 'P 2.0', '39', 'https://drive.google.com/thumbnail?id=1v8xR5DeMz0A7RUmAfoEJN-1YKrXlnPAG  System Engineering', 'https://drive.google.com/thumbnail?id=1_b00htezjdXgaAzoHrw3amwGert61jvj  Joe Buzzetta', 'https://drive.google.com/thumbnail?id=1VlEWe8JAwzfiyRN71pNlXiSLHySDdqmf /6L', 'Porsche 2.0L Flat-6', '84'], ['40', 'P 1.15', '58', 'Société des Automobiles  https://drive.google.com/thumbnail?id=1888gHBSJa-ANELxmj6HwQB08QEZBNGug', 'Philippe Vidal Leo Cella', 'https://drive.google.com/thumbnail?id=1888gHBSJa-ANELxmj6HwQB08QEZBNGug  A210', 'Renault-Gordini 1.0L I4', '67'], ['41', 'P +5.0', '14', 'John Wyer Automotive Engineering', 'David Piper Richard Thompson', 'Mirage M1 ( https://drive.google.com/thumbnail?id=1nZ14obp1AG4-7lpxfFzgQMQzaywHYVc4  Lightweight)', 'Ford 5.7L V8', '59'], ['42', 'GT 5.0', '17', 'Claude Dubois', 'Claude Dubois Chris Tuerlinckx', 'https://drive.google.com/thumbnail?id=1I4aaHv3fnpF9EAbpL4PJb4HzlbvZbzEI - https://drive.google.com/thumbnail?id=18u3E5-0a8dZo8iHg9jrqGWbVuB33erax  GT350', 'https://drive.google.com/thumbnail?id=1I4aaHv3fnpF9EAbpL4PJb4HzlbvZbzEI  4.7L V8', '58'], ['43', 'P 2.0', '30', 'Equipe  https://drive.google.com/thumbnail?id=1ACX9-BEhqdCqxoyniYgsNHcDnyHdktfw  Sports', 'https://drive.google.com/thumbnail?id=1fgqAx34VAat_t85HjPfbeUa9OUovzeCv   https://drive.google.com/thumbnail?id=1wz87EC-rIMqgK6LmsAW5YDc7e0rXLOya', 'https://drive.google.com/thumbnail?id=1ACX9-BEhqdCqxoyniYgsNHcDnyHdktfw  MS630', 'BRM 2.0L V8', '55'], ['44', 'P 1.6', '44', 'Team Elite', 'David Preston John Wagstaff', 'https://drive.google.com/thumbnail?id=1QjqJ6ghm6pgBzw1ROSqcdenF0_Lg9rYb  Mk.47', 'Ford Cosworth 1.6L I4', '42'], ['45', 'P 1.15', '53', 'S.E.C. Automobiles  https://drive.google.com/thumbnail?id=1NteDa1HFTUTDBA_M5D9n2klf_17jTdGP', 'André Guilhaudin Alain Bertaut', 'https://drive.google.com/thumbnail?id=1NteDa1HFTUTDBA_M5D9n2klf_17jTdGP  SP66C', 'https://drive.google.com/thumbnail?id=1DjC0rRGJ5RjadGCn0BpnP6GxCu2Bn0E2  1.1L I4', '35'], ['46', 'P 5.0', '26', 'https://drive.google.com/thumbnail?id=1Ip7utZ6MQkSZgCHu_7XumZSJDFc7X3wz  (NART)', 'Ricardo Rodriguez Chuck Parsons', 'https://drive.google.com/thumbnail?id=1FefTgqJoglJqcLiJ5iMTXQOyEpXxRVVd  P2', 'https://drive.google.com/thumbnail?id=1TprWyLu_umaWn2h5t5gULGKwiRkPVy3X  4.4L V12', '30'], ['47', 'P +5.0', '15', 'John Wyer Automotive Engineering', 'https://drive.google.com/thumbnail?id=1b480X-4sYVtqXMMae4RPXs5R-xY1tajm   https://drive.google.com/thumbnail?id=1WdaUPULfcvrPEWr55La2DPZmTq6Irldc', 'Mirage M1 ( https://drive.google.com/thumbnail?id=1nZ14obp1AG4-7lpxfFzgQMQzaywHYVc4  Lightweight)', 'https://drive.google.com/thumbnail?id=1I4aaHv3fnpF9EAbpL4PJb4HzlbvZbzEI  5.7L V8', '29'], ['48', 'P 1.15', '52', 'S.E.C. Automobiles  https://drive.google.com/thumbnail?id=1NteDa1HFTUTDBA_M5D9n2klf_17jTdGP', 'Dennis Dayan  https://drive.google.com/thumbnail?id=1Y23SzS5jZ7QkKS8pXGk7z81EU5r1u1bA', 'https://drive.google.com/thumbnail?id=1NteDa1HFTUTDBA_M5D9n2klf_17jTdGP  SP66C', 'https://drive.google.com/thumbnail?id=1DjC0rRGJ5RjadGCn0BpnP6GxCu2Bn0E2  1.1L I4', '25'], ['49', 'P +5.0', '12', 'https://drive.google.com/thumbnail?id=1RoBEgh6p58EJwq1xwFcpZy04tl8Hm2sS  Cars Ltd. / Team  https://drive.google.com/thumbnail?id=19P88HvNNl89MKRWsBruOdnWEH5yC1Y_J', 'Peter de Klerk  https://drive.google.com/thumbnail?id=1__sxNfBqAiyCsq1bgPF11h1oD2nXLk2U', 'https://drive.google.com/thumbnail?id=1diYLqrD9TAaXxrEtZM3QY18Y2_m33rSZ  Mk.III', 'Aston Martin 5.0L V8', '25'], ['50', 'S 5.0', '62', 'John Wyer Automotive Engineering / Viscount Downe', 'Mike Salmon  https://drive.google.com/thumbnail?id=1dDohooz5Qc5otAJVCqDs_wvPBkc2mYHx', 'https://drive.google.com/thumbnail?id=1nZ14obp1AG4-7lpxfFzgQMQzaywHYVc4  Mk.I', 'https://drive.google.com/thumbnail?id=1I4aaHv3fnpF9EAbpL4PJb4HzlbvZbzEI  4.7L V8', '20'], ['51', 'P 1.15', '54', 'Roger Nathan Racing Ltd.', 'Roger Nathan Mike Beckwith', 'Costin Nathan', 'https://drive.google.com/thumbnail?id=1ijKe3XZELAA1X0A3xvupYr8yYzMmVtKV  1.0L I4', '15'], ['52', 'P 1.3', '50', 'https://drive.google.com/thumbnail?id=1V44EwWoVjNl1J_ZSMeDnejtbL9JmMex9  Racing Ltd.', 'Chris J. Lawrence Jem Marsh', 'https://drive.google.com/thumbnail?id=1V44EwWoVjNl1J_ZSMeDnejtbL9JmMex9   https://drive.google.com/thumbnail?id=1gwg14KoHg5OSCVEvca8GLDuHaVn0M0uU  GT', 'https://drive.google.com/thumbnail?id=1Mny0Yap0zwefuXlSRAMoW8T79xYiN33c  1.3L I4', '13'], ['53', 'P +5.0', '11', 'https://drive.google.com/thumbnail?id=1RoBEgh6p58EJwq1xwFcpZy04tl8Hm2sS  Cars Ltd. / Team  https://drive.google.com/thumbnail?id=19P88HvNNl89MKRWsBruOdnWEH5yC1Y_J', 'https://drive.google.com/thumbnail?id=19P88HvNNl89MKRWsBruOdnWEH5yC1Y_J   https://drive.google.com/thumbnail?id=1s4N9RyDGij-DvrdJPqw-sZfAJ-77Vhvz', 'https://drive.google.com/thumbnail?id=1diYLqrD9TAaXxrEtZM3QY18Y2_m33rSZ  Mk.III', 'Aston Martin 5.0L V8', '3'], ['54', 'GT 2.0', '43', 'Franc', 'Jacques Dewes Anton Fischhaber', 'Porsche 911S', 'Porsche 2.0L Flat-6', '2']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

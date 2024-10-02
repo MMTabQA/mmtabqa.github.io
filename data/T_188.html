@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Speakers of Olympic Oath
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: which language was used the most number of times?
+            </div>
+            <div>
+                Answer: English
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Olympics', 'Athlete', 'Judge (Official)', 'Coach', 'Language'], ['https://drive.google.com/thumbnail?id=1ayZIoCq3Rv_uAuTqFKqDteODfNqliPdu', 'https://drive.google.com/thumbnail?id=1EZteH9G2tDfY0ZhD0ZivTwpfFoxF3GMc', '-', '-', '-'], ['https://drive.google.com/thumbnail?id=1KktCZBF6QIpO8GvXC2fD9gFpGfXdiSm5', 'https://drive.google.com/thumbnail?id=1GEinvM98NX7zRoXgl0NkRsV0aF_XiYT6', '-', '-', '-'], ['https://drive.google.com/thumbnail?id=10caAW7S5_hoYSzQUX5F33LA6uHqq9JH-', 'https://drive.google.com/thumbnail?id=1hH6XOynOmf4pTIQYlDs2ypdQEm0IByi3', '-', '-', 'https://drive.google.com/thumbnail?id=1T5EjaNY8DCE7Dot_MFcSHy6SnxyCnH3s .'], ['https://drive.google.com/thumbnail?id=1szOS5RTuc8kyyQ5Efhw2fYKQvAjHplI8', 'Hans Eidenbenz', '-', '-', '-'], ['https://drive.google.com/thumbnail?id=1IyvgbVyD_xl2HB52Wrnp096QYZZXaP_v', 'https://drive.google.com/thumbnail?id=1ukAm6uNwYQKxE4Sjh_mH_WiO91uRbPU-', '-', '-', '-'], ['1932 Winter Olympics', 'Jack Shea', '-', '-', '-'], ['https://drive.google.com/thumbnail?id=1EKBRVYHedoXWdiU0utXRI126GzhUKcHs', 'https://drive.google.com/thumbnail?id=1Hf4TWLQqQUoNeNTEX5gQD2yvDDqSqzTM', '-', '-', 'https://drive.google.com/thumbnail?id=1I3aO1gflOA0PrZplEv_PtvB9xVvPqWu_'], ['https://drive.google.com/thumbnail?id=1hwHRwfrXan-L12w4FX-N3vfdOY4iXx6M', 'https://drive.google.com/thumbnail?id=1VouKcV9eyO3sOPI0pRZkwfQeTLTKKvko', '-', '-', '-'], ['https://drive.google.com/thumbnail?id=1mGSin8M1ZwtI3tBTRl8mBvbFGxHB_bH4', 'https://drive.google.com/thumbnail?id=1Gd2M9A6LqFbsEKKhbIg6YzJi5nhsrTq4', '-', '-', '-'], ['https://drive.google.com/thumbnail?id=1aFbPRy5I2wKElmuDYatvuaey6wnk_-fA', 'https://drive.google.com/thumbnail?id=1wHYU_rZH0s--C3hRYJCd4jTD0Ih_IAeh', '-', '-', '-'], ['https://drive.google.com/thumbnail?id=1DSZQ8ac7lMhfZQoTPtf1rUcj3jcXEO88', 'https://drive.google.com/thumbnail?id=1ZWVkExP0jxnd7nS1ZEbyLedV11tQ67De', '-', '-', 'https://drive.google.com/thumbnail?id=1I3aO1gflOA0PrZplEv_PtvB9xVvPqWu_'], ['1952 Winter Olympics', 'https://drive.google.com/thumbnail?id=1z_2GJbr8AXk5lVJNi3TjJwUKXhHR6i6O', '-', '-', '-'], ['https://drive.google.com/thumbnail?id=1-cywNF7lELNa7aaXdm5aXFHRBE7l0H4Z', 'https://drive.google.com/thumbnail?id=1l8bZdScxFhaVDUjRaQUnAkOr4N_F3hSA', '-', '-', '-'], ['1956 Winter Olympics', 'https://drive.google.com/thumbnail?id=1JsRAIEN12O3o2w6zIwEhZcg49QzxWhSA', '-', '-', '-'], ['https://drive.google.com/thumbnail?id=18KOR6E4k-9NFpm3GWurgJj5sL4P2ixty', 'https://drive.google.com/thumbnail?id=1SPnc_Sg_ylwDB5LBJAZ3UDBvr9straOO  ( https://drive.google.com/thumbnail?id=17oMEY3LJKoOd504wCTPw-e4tu_qXJlYE )  https://drive.google.com/thumbnail?id=14Qm9z0h3vlta7w9WcsDStK-PeiQC5zvj  ( https://drive.google.com/thumbnail?id=1NqxDF4zHAoZryzc1SB99YSGI8wtZoq96 )', '-', '-', 'https://drive.google.com/thumbnail?id=1I3aO1gflOA0PrZplEv_PtvB9xVvPqWu_ / https://drive.google.com/thumbnail?id=1nJpnr7QDziCc5RoibV-y3rOpuQYfd8Eb'], ['https://drive.google.com/thumbnail?id=1-ujnUQmPuR9ncl2_A7nrBmLC7Co0oS0e', 'https://drive.google.com/thumbnail?id=1HGj3_eyryBjYDmw3f3M_Yy3Ze7Q1iMMA', '-', '-', '-'], ['1960 Summer Olympics', 'https://drive.google.com/thumbnail?id=1aJCN6iyZgwmFMAl5x7yua1Je3Ntz-pbp', '-', '-', '-'], ['https://drive.google.com/thumbnail?id=1aGCHw81fvtyCusp-AOXIov9WBqTokxNB', 'Paul Aste', '-', '-', 'https://drive.google.com/thumbnail?id=1jsfPFfuEdCdKAggI_314Oe6qOlRZsug5'], ['https://drive.google.com/thumbnail?id=1NpU21Qi5ffk6ifQsgp9ZhUtYuHSlBMOt', 'Takashi Ono', '-', '-', 'https://drive.google.com/thumbnail?id=1KgZi74Ej5DWnzHrxr7LlbZ9dwoGSrOdB'], ['https://drive.google.com/thumbnail?id=1-NIZlmh2Wq888HtPa3OzYKf_d2qejO_8', 'Léo Lacroix', '-', '-', 'https://drive.google.com/thumbnail?id=1T5EjaNY8DCE7Dot_MFcSHy6SnxyCnH3s'], ['https://drive.google.com/thumbnail?id=1DqoLeYt_OrDlmvzJeKRzu5WKlsn-T_Ci', 'Pablo Garrido', '-', '-', 'https://drive.google.com/thumbnail?id=1sXg72emfk8gPZh9vNiUEl8eJ7ICbCnpb'], ['1972 Winter Olympics', 'https://drive.google.com/thumbnail?id=1LIlSiswvGeoLQS-XBgPTZQ7jNIb9pzbf', 'Fumio Asaki', '-', 'https://drive.google.com/thumbnail?id=1KgZi74Ej5DWnzHrxr7LlbZ9dwoGSrOdB'], ['https://drive.google.com/thumbnail?id=1PdY1mPrC7V-kYEoi442Zi0KeSdfrgjMa', 'https://drive.google.com/thumbnail?id=1MP4zYP5wyFl-78q6TIZihEWHIqSHgV3c', 'Heinz Pollay', '-', 'https://drive.google.com/thumbnail?id=1jsfPFfuEdCdKAggI_314Oe6qOlRZsug5'], ['https://drive.google.com/thumbnail?id=19oWqO44RbiMkf1PF6LXfXVqKh4lIo3vj', 'Werner Delle Karth', 'Willy Köstinger', '-', 'https://drive.google.com/thumbnail?id=1jsfPFfuEdCdKAggI_314Oe6qOlRZsug5'], ['1976 Summer Olympics', 'Pierre St.-Jean', 'Maurice Fauget', '-', 'https://drive.google.com/thumbnail?id=1T5EjaNY8DCE7Dot_MFcSHy6SnxyCnH3s  (St.-Jean)/ https://drive.google.com/thumbnail?id=1I3aO1gflOA0PrZplEv_PtvB9xVvPqWu_  (Fauget)'], ['https://drive.google.com/thumbnail?id=19wJUIvqf6FCXF1-pSQeM8JiXCaSc0Zp6', 'https://drive.google.com/thumbnail?id=1dS8PjhXBBdqd1xUAF3_I2LymcgLULFj_', 'https://drive.google.com/thumbnail?id=1g5HrtpkUlB8hFOH3Oz-eBVcI8IJzWHHU', '-', 'https://drive.google.com/thumbnail?id=1I3aO1gflOA0PrZplEv_PtvB9xVvPqWu_'], ['1980 Summer Olympics', 'https://drive.google.com/thumbnail?id=1pLooxbgmFH4pDu7Tcha_75wUTZ4c1oan', 'https://drive.google.com/thumbnail?id=1n9rslTbns7wHK6AeqkzGPpUqq7tGhF7r', '-', 'https://drive.google.com/thumbnail?id=1r4f-jGRp8bWJa2hmWoGK3A1T36DTD-nN'], ['https://drive.google.com/thumbnail?id=1Tey_BUNe9Qjjo223oTBJmrZ9XtD5lSIo', 'https://drive.google.com/thumbnail?id=1hlOGTVvkx_WC9UdO9Q5iQUmAT6RpyFFZ', 'Dragan Perovic', '-', 'https://drive.google.com/thumbnail?id=1_ZMKU062J_ZfGiVmBy2PYAYJIBpPbLzQ'], ['https://drive.google.com/thumbnail?id=1yvqhU7X6EKraitVzMLG96jxF2rGc90-C', 'https://drive.google.com/thumbnail?id=1qY04Gk68E23AM2Soudg5ULguYIgUPglh', 'Sharon Weber', '-', 'https://drive.google.com/thumbnail?id=1I3aO1gflOA0PrZplEv_PtvB9xVvPqWu_'], ['1988 Winter Olympics', 'https://drive.google.com/thumbnail?id=16ZWrTJ53XY6CVQ9ttCi_EHehEQIw9rS9', 'https://drive.google.com/thumbnail?id=12G53phrEM9IZ106mSx7xMvYg74ihMwsB', '-', 'https://drive.google.com/thumbnail?id=1I3aO1gflOA0PrZplEv_PtvB9xVvPqWu_'], ['https://drive.google.com/thumbnail?id=1m4w0TrtTNoEKk3CANNM-FhIgfoWXD3Oa', 'https://drive.google.com/thumbnail?id=1rHU59ZC7CuS-Rbn7jHS6qlmY3h78T6s1  Shon Mi-Na', 'Lee Hak-Rae', '-', 'https://drive.google.com/thumbnail?id=1i2GCHCu3MRf2OHT7EJlOUcpZOITZ75Vg'], ['https://drive.google.com/thumbnail?id=1GmT63jk4YrKJ7Ipqx1X6cfReVjQzuVT2', 'https://drive.google.com/thumbnail?id=1tRN5N9PZwpAobQQoE1j7-jqWIwmYp67U', 'Pierre Bornat', '-', 'https://drive.google.com/thumbnail?id=1T5EjaNY8DCE7Dot_MFcSHy6SnxyCnH3s'], ['https://drive.google.com/thumbnail?id=1SBj_I5nZD6X6z-I4wiFZHtX3TN0PZIPm', 'https://drive.google.com/thumbnail?id=1jYQoFRzVnc0wM882xYAEuY6P1UIUxmS9', 'Eugeni Asensio', '-', 'https://drive.google.com/thumbnail?id=1sXg72emfk8gPZh9vNiUEl8eJ7ICbCnpb / https://drive.google.com/thumbnail?id=15dAh8-QTWAkkmP2Fy14UIi0RJ0SoafaT'], ['1994 Winter Olympics', 'https://drive.google.com/thumbnail?id=1mMJ9QgNdPq0Yjjx91d4AfxmB6NP5ORXQ', 'Kari Kåring', '-', 'https://drive.google.com/thumbnail?id=1I3aO1gflOA0PrZplEv_PtvB9xVvPqWu_  (Ulvang)/ https://drive.google.com/thumbnail?id=1eAjT1W3a_50_QR8HyVFsV7ND0D4q5SkO  (Kåring)'], ['https://drive.google.com/thumbnail?id=1zv8UNQl168_Ur73pjHkClxNI37lbCDTc', 'https://drive.google.com/thumbnail?id=1P_mls3YRvk5RZeyPyFS6JPaegk5tAj9d', 'https://drive.google.com/thumbnail?id=1bI5NhKKJ6CoC-Zn2GGfVNFH-1djHuk7B', '-', 'https://drive.google.com/thumbnail?id=1I3aO1gflOA0PrZplEv_PtvB9xVvPqWu_'], ['https://drive.google.com/thumbnail?id=1gsdpCTLQL3Dwycqn5lyBexb6d4-8JKGd', 'https://drive.google.com/thumbnail?id=14_t49kQbLpZ-Wlitw4A-Wsv9xnkkV_8r', 'https://drive.google.com/thumbnail?id=1XdG9R51tR9kvevnNilIKa8prNbjjizuv', '-', 'https://drive.google.com/thumbnail?id=1KgZi74Ej5DWnzHrxr7LlbZ9dwoGSrOdB'], ['https://drive.google.com/thumbnail?id=12PO3ogsCQpMERQTppKmL-EZZmDHLLjV_', 'Rechelle Hawkes', 'Peter Kerr', '-', 'https://drive.google.com/thumbnail?id=1I3aO1gflOA0PrZplEv_PtvB9xVvPqWu_'], ['2002 Winter Olympics', 'https://drive.google.com/thumbnail?id=1lXsbuoJVDU1sbluWICvg67tqZDKzsWiQ', 'Allen Church', '-', 'https://drive.google.com/thumbnail?id=1I3aO1gflOA0PrZplEv_PtvB9xVvPqWu_'], ['2004 Summer Olympics', 'Zoi Dimoschaki', 'Lazaros Voreadis', '-', 'https://drive.google.com/thumbnail?id=1th7O45M5DB05KOHW6wDvoSjvbgSZQN8Q'], ['https://drive.google.com/thumbnail?id=1fDa56aQF3CVRDnikUQxee85kFx_oa8Yc', 'https://drive.google.com/thumbnail?id=1_OD_eBnZNGX1tCuyIkfyC1PrmOUPh4E9', 'Fabio Bianchetti', '-', 'Italian'], ['https://drive.google.com/thumbnail?id=1bXeX_S6LLp0X0HhdeUlxUGSgSZrPWHyp', 'Zhang Yining', 'Huang Liping', '-', 'https://drive.google.com/thumbnail?id=16EitrkKkUrTigJ_g7yl--V87BGCKCRbJ'], ['https://drive.google.com/thumbnail?id=1zqFXH8wfQ20Byhueqf9BC5B_hA5o-ruk', 'https://drive.google.com/thumbnail?id=1baoBlorSuQARh11kTvsnuY9vgEAMa2fx', 'Michel Verrault', '-', 'https://drive.google.com/thumbnail?id=1I3aO1gflOA0PrZplEv_PtvB9xVvPqWu_ / https://drive.google.com/thumbnail?id=1T5EjaNY8DCE7Dot_MFcSHy6SnxyCnH3s'], ['https://drive.google.com/thumbnail?id=1YwjDTaPjwWHZB9FLBfqPPweuC3F9SDPo', 'Sarah Stevenson', 'Mik Basi', 'Eric Farrell', 'https://drive.google.com/thumbnail?id=1I3aO1gflOA0PrZplEv_PtvB9xVvPqWu_'], ['https://drive.google.com/thumbnail?id=1TruWa5bw0hNtV9AaRHn4MtsiH5Z1BOGW', 'https://drive.google.com/thumbnail?id=1Q5WKjaJHTW84NV8GEfxRcg55rH1Nsw8w', 'Vyacheslav Vedenin, Jr', 'Anastassia Popkova', 'https://drive.google.com/thumbnail?id=1r4f-jGRp8bWJa2hmWoGK3A1T36DTD-nN']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>

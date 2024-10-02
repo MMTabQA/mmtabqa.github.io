@@ -1,0 +1,158 @@
+
+<!-- saved from url=(0052)https://temptabqa.github.io/annotation-template.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta content="width=device-width,initial-scale=1" name="viewport">
+    <style type="text/css" id="mytempCss">._2_e-g9 { display: none; } ._2wQ56C._1h3i_z { opacity: 0.01; } </style></head><body data-new-gr-c-s-check-loaded="14.1172.0" data-gr-ext-installed=""><section class="container" id="SurveyLink">
+      <!-- Instructions -->
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <div class="panel panel-primary">
+            <!-- WARNING: the ids "collapseTrigger" and "instructionBody" are being used to enable expand/collapse feature -->
+            <a class="panel-heading" href="javascript:void(0);" id="collapseTrigger">
+              <strong>Question Answer GePzneration via Tables</strong>
+              <span class="collapse-text">(Read them carefully)</span>
+            </a>
+            <div class="panel-body" id="instructionBody">
+                <div id="big-text-container" style="font-size: 24px; font-weight: bold;">
+                    This is a table related to Former aircraft inventory of List of former aircraft of the Philippine Air Force
+                </div>
+            <div id="table-container"></div>
+            <div>
+                Question: how many aircraft does the united states have listed?
+            </div>
+            <div>
+                Answer: 16
+            </div>
+            <!-- <div id="annotation-container">
+                <label for="radio-0">0</label>
+                <input type="radio" id="radio-0" name="binary-choice" value="0">
+                <label for="radio-1">1</label>
+                <input type="radio" id="radio-1" name="binary-choice" value="1">
+            </div> -->
+        <script>
+            // Function to render JSON data as an HTML table
+            function renderTable(data) {
+                // Create a table element
+                const table = document.createElement('table');
+                table.border = 1;
+    
+                // Loop through the rows of the JSON data
+                data.forEach(row => {
+                    // Create a table row element
+                    const tr = document.createElement('tr');
+    
+                    // Loop through the cells in the row
+                    row.forEach(cell => {
+                        // Create a table cell element
+                        const td = document.createElement('td');
+    
+                        // Check if the cell content contains a link
+                        if (typeof cell === 'string' && cell.includes('https://')) {
+                            const parts = cell.split('https://');
+                            const textBefore = parts[0];
+                            const urlAndAfter = 'https://' + parts[1];
+                            const urlParts = urlAndAfter.split(' ');
+                            const url = urlParts[0];
+                            const textAfter = urlParts.slice(1).join(' ');
+    
+                            // Add the text before the link
+                            if (textBefore) {
+                                td.appendChild(document.createTextNode(textBefore));
+                            }
+    
+                            // Create an image element and set its source
+                            const img = document.createElement('img');
+                            img.src = url;
+                            img.alt = 'Image';
+                            img.width = 100; // Set image width to 100px
+                            img.height = 100; // Set image height to 100px
+    
+                            // Append the image to the table cell
+                            td.appendChild(img);
+    
+                            // Add the text after the link
+                            if (textAfter) {
+                                td.appendChild(document.createTextNode(' ' + textAfter));
+                            }
+                        } else {
+                            // Set the cell text content
+                            td.textContent = cell;
+                        }
+    
+                        // Append the table cell to the table row
+                        tr.appendChild(td);
+                    });
+    
+                    // Append the table row to the table
+                    table.appendChild(tr);
+                });
+    
+                // Append the table to the container element
+                document.getElementById('table-container').appendChild(table);
+            }
+    
+            // Render the table with the JSON data
+            
+            renderTable([['Model', 'Origin', 'Type', 'Versions', 'In Service', 'Notes'], ['https://drive.google.com/thumbnail?id=1hEgLdx6zWbct9CfuM9BUoei5xDrVPHmu', 'United States', 'Air superiority fighter/Interceptor aircraft', 'F-8P', '35', "Placed in open storage 1988-01-23 at Basa Air Base. They suffered irreparable damage from Mt. Pinatubo's eruption on 1991-06-15."], ['https://drive.google.com/thumbnail?id=1tLBisPs5BnD2MjXuljtCYT7p8Wo7vvp9', 'United States', 'https://drive.google.com/thumbnail?id=114jliIVDjXdA07c0-Rd7H7lMj0vfe_O3 / https://drive.google.com/thumbnail?id=1ff1NWBCJv4Z5JmNBaEC03ACI5HtEjFI6', 'F-5A F-5B', '37', 'Retired. The 10 remaining F-5s, out of a total of 37 acquired by the Philippine government from 1967 to 1998, were decommissioned in a ceremony in September 2005'], ['https://drive.google.com/thumbnail?id=11fPSY4u17KNDLP4qHhJd1eOxfZuPGD8S', 'https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'https://drive.google.com/thumbnail?id=114jliIVDjXdA07c0-Rd7H7lMj0vfe_O3 / https://drive.google.com/thumbnail?id=1ff1NWBCJv4Z5JmNBaEC03ACI5HtEjFI6', 'F-86F F-86D', '50 20', 'Replaced by the Northrop F-5A'], ['https://drive.google.com/thumbnail?id=1u-F2AEa4whB8En51KCbGwrLScTl2LmcG', 'United States', 'https://drive.google.com/thumbnail?id=114jliIVDjXdA07c0-Rd7H7lMj0vfe_O3', 'P-51D', '103', "PAF's 1950s Fighter, replaced by F-86 Sabre"], ['https://drive.google.com/thumbnail?id=1SxmA14BY_qlXhmDR-CKLxwR554m_3LUu', 'https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'Trainer/ https://drive.google.com/thumbnail?id=1VVHAjdBLuGHeakIPVjcJpLF-J57Lcjkf', 'T-28A T-28D', '20 24', 'Replaced by OV-10 Bronco'], ['https://drive.google.com/thumbnail?id=1xnw0ZqxypjzA1HCJTbVRERZ5xbdtiybX', 'https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'Trainer aircraft', '', '38', ''], ['https://drive.google.com/thumbnail?id=1P-chQEE1qnxsSXXS24tyNYUfnzr4g3Fr', 'United States', 'Trainer aircraft', '', '36', 'Replaced by the SF-260'], ['https://drive.google.com/thumbnail?id=1uJsw7pogiVi9jkdDUqn-EcJwxAdDbCh3', 'https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'Trainer aircraft', 'T-33A RT-33A', '25 2', 'Replaced by the S-211'], ['https://drive.google.com/thumbnail?id=1qxvv-4nXz-jt_9N0g0uE-0mJYYvwTymx', 'https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'Close air support aircraft', '', '11', ''], ['https://drive.google.com/thumbnail?id=16fmap3ZHQOeImJLsEyfw8muo8NOf4aZz', 'https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'Military transport aircraft', '', '?', 'Replaced by the C-130'], ['https://drive.google.com/thumbnail?id=10Z6-DmZGfq7AwYMWcjc8lVUo7mYRptmc', 'https://drive.google.com/thumbnail?id=1ZD1mhLK4dah7mOLGTRyKjZfPN_CBpNQR', 'Military transport aircraft', '', '?', 'Replaced by the C-130'], ['Grumman HU-16 Albatross', 'United States', 'Military transport aircraft', 'HU-16B', '6', ''], ['https://drive.google.com/thumbnail?id=1b3RO1mrbnoSmOLxhXIFXTmZll_L6BcOJ', 'https://drive.google.com/thumbnail?id=1mu3dfqkZXcRoC-nC0Ddrumuigq-zpnJ7', 'https://drive.google.com/thumbnail?id=1zeS_fHmCZBx3JDDaxhFmTiuV3G0F9mNU', '', '?', ''], ['Stinson L-5 Sentinel', 'https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'Liaison aircraft', '', '?', ''], ['Sikorsky S-62', 'https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_  \xa0 https://drive.google.com/thumbnail?id=1mu3dfqkZXcRoC-nC0Ddrumuigq-zpnJ7', 'Multipurpose utility helicopter Multipurpose utility helicopter  https://drive.google.com/thumbnail?id=1zeS_fHmCZBx3JDDaxhFmTiuV3G0F9mNU', 'S-62A S-62J', '1 2', ''], ['https://drive.google.com/thumbnail?id=1i8hE4U1ZC_fvuKC1BHVTgWbOyjGaJPjf', 'https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'SAR Helicopter', '', '?', ''], ['Sikorsky H-19', 'https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', '', '', '?', ''], ['Bell 212', 'https://drive.google.com/thumbnail?id=1-X-aL3KeTa5IzEJVnNTj2PPOXkoa9BV_', 'Utility helicopter', '', '1', 'A presidential aircraft that crashed in Benguet Province.'], ['https://drive.google.com/thumbnail?id=1zF_Up_Wu_lQKIO7DEb98cKZG8VSmtfW8', 'https://drive.google.com/thumbnail?id=1Am0swQyQjY77puLR3yDT2-thl7_I8i5S', 'https://drive.google.com/thumbnail?id=1S3ddvMHvHwSTXLl7i97Pal9slm-d5qZt', 'SA 330L', '2', '']]);
+    
+            // Arrays containing image links and descriptions
+            const a1 = ["PLACEHOLDER A1 ARRAY"];
+    
+            const a2 = ["PLACECHOLDER A2 ARRAY"]
+    
+            // Function to render images with descriptions and annotation options
+            
+        </script>
+            
+    
+    <!-- External CSS references -->
+    <link crossorigin="anonymous" href="./annotation-template_files/bootstrap.min.css" integrity="sha384-IS73LIqjtYesmURkDE9MXKbXqYA8rvKEp/ghicjem7Vc3mGRdQRptJSz60tvrB6+" rel="stylesheet">
+    <!-- Open internal style sheet -->
+    <style type="text/css">
+      #collapseTrigger {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+      }
+    
+      #submitButton {
+        white-space: normal;
+      }
+    
+      .image {
+        margin-bottom: 15px;
+      }
+    
+      /* CSS for breaking long words/urls */
+      .dont-break-out {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+      }
+    </style>
+    </body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+          div.grammarly-desktop-integration {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select:none;
+            user-select:none;
+          }
+    
+          div.grammarly-desktop-integration:before {
+            content: attr(data-content);
+          }
+        </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{"mode":"full","isActive":true,"isUserDisabled":false}"></div></template></grammarly-desktop-integration></html>
