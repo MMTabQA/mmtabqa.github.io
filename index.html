@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<title>MMTabQA</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="theme-color" content="#157879">
+		<meta name="theme-color" content="#157878">
 		<link rel="stylesheet" href="css/normalize.css">
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="css/cayman.css">
@@ -13,412 +13,377 @@
 		<section class="page-header">
 			<h1><img src="figures/logo.jpg" style="max-width:40%;"></h1> 
 			<a href="https://arxiv.org/pdf/2408.13860" class="btn">Paper</a>
-			<a href="https://github.com/Info-Sync/InfoSync" class="btn">Dataset</a>
+			<a href="https://github.com/MMTabQA/mmtabqa" class="btn">Dataset</a>
 			<a href="explore.html" class="btn">Explore</a>
 			<a href="https://github.com/MMTabQA/mmtabqa" class="btn">Code</a> 
-			<a href="https://github.com/MMTabQA/mmtabqa" class="btn">Video</a>
+			<a href="https://mmtabqa.github.io" class="btn">Video</a>
 			<a href="https://docs.google.com/presentation/d/1DQpaDDDMZBwy75SoBp_GwD_5vlVqkTbgIOyEWEep2qY/edit?usp=sharing" class="btn">PPT</a><br>
-			<a href="https://github.com/MMTabQA/mmtabqa" class="btn">Poster</a><br>
+			<a href="https://mmtabqa.github.io" class="btn">Poster</a><br>
 		</section>
 		<section class="main-content">
-			<h1>Information Synchronization Across Multilingual Semi-Structured Tables</h1>
-			<h2><a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>About</h2><p style="text-align: justify;"> The representation of information across languages poses significant challenges, particularly when it comes to the synchronization of semi-structured data. Wikipedia is a notable example, with the English version comprising only 11.68% of all pages despite having the greatest number of editors (75). 94% of the global population does not have access to comprehensive information in their native language. The majority of non-English Wikipedia pages are outdated and inadequately maintained. Moreover, Wikipedia translations are frequently inaccurate. An illustration of the issue is provided below.<p>
-			<p style="margin-left:10%; margin-right:10%;"><img src="figures/Slide-1.png" style="max-width:95%;"></p>
-			<p style="text-align: justify;">  Promoting inclusivity and facilitating global knowledge sharing requires ensuring accurate representation and bridging the language gap. Maintaining the consistency and integrity of Wikipedia tables across multiple languages requires meticulous attention to detail. This will pave the way for the creation of a trustworthy, comprehensive, and language-inclusive knowledge source.<p>
-			<p style="text-align: justify;"> The objective of introducing the InfoSync dataset and employing a two-step method for tabular synchronization is to provide effective solutions to this problem. <p>
+			<h1>Knowledge-Aware Reasoning over Multimodal Semi-structured Tables</h1>
+			<h2><a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>About</h2><p style="text-align: justify;"> Existing datasets for tabular question answering typically focus exclusively on text within cells. However, real-world data is inherently multimodal, often blending images such as symbols, faces, icons, patterns, and charts with textual content in tables. With the evolution of AI models capable of multimodal reasoning, it is pertinent to assess their efficacy in handling such structured data.<p>
+			<p style="margin-left:10%; margin-right:10%;"><img src="figures/iphone.png" style="max-width:95%;"></p>
+			<p style="text-align: justify;">  This study investigates whether current AI models can perform knowledge-aware reasoning on multimodal structured data. We explore their ability to reason on tables that integrate both images and text, introducing {\sc {\sc MMTabQA}}, a new dataset designed for this purpose. Our experiments highlight substantial challenges for current AI models in effectively integrating and interpreting multiple text and image inputs, understanding visual context, and comparing visual content across images. These findings establish our dataset as a robust benchmark for advancing AI's comprehension and capabilities in analyzing multimodal structured data.<p>
 
 			<h2><a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dataset Details</h2>
-			<p style="text-align: justify;">To systematically assess the challenge of information synchronization and evaluate the methodologies, we build a large-scale table synchronization dataset InfoSync based on entity-centric Wikipedia Infoboxes.</p>
-			<p style="text-align: justify;">We collected a dataset comprising approximately <strong>99,440 infoboxes and 1,078,717 rows</strong>. The dataset included information in multiple languages, namely <em>English, German, French, Spanish, Dutch, Arabic, Hindi, Chinese, Korean, Afrikaans, Cebuano, and Swedish</em>. The infoboxes covered various categories such as <em>Airport, Album, Animal, Athlete, Book, City, College, Company, Country, Diseases, Food, Medicine, Monument, Movie, Musician, Nobel, Painting, Person, Planet, Shows, and Stadium</em>. This diverse dataset serves as the foundation for our research analysis and experimentation.</p>
-
+			<p style="text-align: justify;">we create the MMTabQA dataset with 69,740 questions over 25,026 tables by augmenting existing tables from four data sources:
+				<ul>
+					<li><strong>WikiSQL Dataset</strong> to benchmark model capabilities in parsing entities accurately and answering basic SQL-based questions.</li>
+					<li><strong>WikiTableQuestions dataset</strong> to include questions which require more complex reasoning.</li>
+					<li><strong>FeTaQA dataset</strong> to include long-form answer-based questions which involve multiple row/column reasoning.</li>
+					<li><strong>HybridQA dataset</strong> which includes extra contextual passages beyond the tables, requiring hybrid complex reasoning.</li>
+				</ul>
+			</p>
+			<p style="text-align: justify;">The dataset contains questions of the following types:
+				<ul>
+					<li><strong>Explicit Questions</strong>: which mention an entity that is replaced by an image in the table.</li>
+					<li><strong>Answer-Mention Questions</strong>: whose answer contains an entity that is replaced by an image in the table, but the question does not.</li>
+					<li><strong>Implicit Questions</strong>: where an image-replaced entity is involved in intermediate reasoning but not mentioned in the answer or the question.</li>
+					<li><strong>Visual Questions</strong>: Questions that involve visual aspects of entities. These are created by synthetically augmenting the explicit questions in the dataset with visual attributes of the entity they refer to.</li>
+				</ul>
+				
 			<div>
-                             <table style="margin-left:15%;margin-right:15%;text-align: center">
-                               <col>
-                               <colgroup span="2"></colgroup>
-                               <colgroup span="2"></colgroup>
-                               <tr>
-                                 <td rowspan="2"></td>
-                                 <th colspan="2" scope="colgroup">Average Table Transfer %</th>
-                                 <th colspan="2" scope="colgroup">Language Statistics</th>
-                               </tr>
-                               <tr>
-                                 <th scope="col">C1 -> <span>&Sigma;</span> ln </th>
-                                 <th scope="col"><span>&Sigma;</span> ln -> C1</th>
-                                 <th scope="col"># Table</th>
-                                 <th scope="col">Average Rows</th>
-                               </tr>
-                               <tr>
-                                 <th scope="row">af</th>
-                                 <td>17.46</td>
-                                 <td>400.5</td>
-                                 <td>1575</td>
-                                 <td>9.91</td>
-                               </tr>
-                               <tr>
-                                 <th scope="row">ar</th>
-                                 <td>34.02</td>
-                                 <td>27.38</td>
-                                 <td>7648</td>
-                                 <td>13.01</td>
-                               </tr>
-                               <tr>
-                                 <th scope="row">ceb</th>
-                                 <td>42.87</td>
-                                 <td>134.88</td>
-                                 <td>3870</td>
-                                 <td>7.82</td>
-                               </tr>
-                               <tr>
-                                 <th scope="row">de</th>
-                                 <td>40.73</td>
-                                 <td>27.12</td>
-                                 <td>8215</td>
-                                 <td>7.88</td>
-                               </tr>
-                               <tr>
-                                 <th scope="row">en</th>
-                                 <td>45.85</td>
-                                 <td>0.32</td>
-                                 <td>12431</td>
-                                 <td>12.60</td>
-                               </tr>
-                               <tr>
-                                 <th scope="row">es</th>
-                                 <td>38.78</td>
-                                 <td>9.0</td>
-                                 <td>9950</td>
-                                 <td>12.59</td>
-                               </tr>
-                               <tr>
-                                 <th scope="row">fr</th>
-                                 <td>41.25</td>
-                                 <td>4.73</td>
-                                 <td>10858</td>
-                                 <td>10.30</td>
-                               </tr>
-                               <tr>
-                                 <th scope="row">hi</th>
-                                 <td>18.39</td>
-                                 <td>358.97</td>
-                                 <td>1724</td>
-                                 <td>10.91</td>
-                               </tr>
-                               <tr>
-                                 <th scope="row">ko</th>
-                                 <td>31.13</td>
-                                 <td>40.51</td>
-                                 <td>6601</td>
-                                 <td>9.35</td>
-                               </tr>
-                               <tr>
-                                 <th scope="row">nl</th>
-                                 <td>33.69</td>
-                                 <td>24.6</td>
-                                 <td>7837</td>
-                                 <td>10.46</td>
-                               </tr>
-                               <tr>
-                                 <th scope="row">ru</th>
-                                 <td>36.98</td>
-                                 <td>14.54</td>
-                                 <td>9066</td>
-                                 <td>11.41</td>
-                               </tr>
-                               <tr>
-                                 <th scope="row">sv</th>
-                                 <td>35.53</td>
-                                 <td>24.62</td>
-                                 <td>7985</td>
-                                 <td>9.89</td>
-                               </tr>
-                               <tr>
-                                 <th scope="row">tr</th>
-                                 <td>28.99</td>
-                                 <td>59.33</td>
-                                 <td>5599</td>
-                                 <td>10.14</td>
-                               </tr>
-                               <tr>
-                                 <th scope="row">zh</th>
-                                 <td>36.16</td>
-                                 <td>32.71</td>
-                                 <td>7140</td>
-                                 <td>12.43</td>
-                               </tr>
-                             </table>
-			     <caption>Table: <strong>Average Table Transfer</strong>:- Column 2 shows the average number of tables missing in other languages which can be transferred from C1. Column 3 shows the average number of tables missing in C1, which we can transfer from all languages to C1. Here L is the set of all languages (ln) except source or transfer language. <strong>Language Statistics</strong>:- The number of tables and average rows (AR) per table across different categories for each language.</caption>
+				<table style="margin-left:10%;margin-right:10%;text-align: center">
+					<col>
+					<colgroup span="2"></colgroup>
+					<colgroup span="2"></colgroup>
+					<tr>
+					  <th scope="col">No. of Questions</th>
+					  <th scope="col">Avg. Img per Table</th>
+					  <th scope="col">No. of Tables</th>
+					  <th scope="col">Overall</th>
+					</tr>
+					<tr>
+					  <th scope="row"><strong>WikiSQL</strong></th>
+					  <td>21,472</td>
+					  <td>13.68</td>
+					  <td>9,784</td>
+					</tr>
+					<tr>
+					  <th scope="row"><strong>WikiTable-Questions</strong></th>
+					  <td>10,052</td>
+					  <td>17.67</td>
+					  <td>1,259</td>
+					</tr>
+					<tr>
+					  <th scope="row"><strong>FeTaQA</strong></th>
+					  <td>7,476</td>
+					  <td>10.43</td>
+					  <td>5,898</td>
+					</tr>
+					<tr>
+					  <th scope="row"><strong>HybridQA</strong></th>
+					  <td>30,470</td>
+					  <td>14.64</td>
+					  <td>8,085</td>
+					</tr>
+					<tr>
+					  <th scope="row"><strong>Overall</strong></th>
+					  <td>69,740</td>
+					  <td>14.10</td>
+					  <td>25,026</td>
+					</tr>
+				  </table>
+			     <caption>Table: <strong>Primary Dataset Statistics</strong>
 			</div>
 			<div>
-				<table  style="margin-left:15%;margin-right:15%;text-align: center">
-					<thead>
-						<tr>
-							<th>Topic</th>
-							<th># Table</th>
-							<th>Average Rows</th>
-						</tr>
-					</thead>
-					<tbody align="center">
-						<tr>
-							<td>Airport</td>
-							<td>18512</td>
-							<td>9.66</td>
-						</tr>
-						<tr>
-							<td>Food</td>
-							<td>6184</td>
-							<td>7.93</td>
-						</tr>
-						<tr>
-							<td>Album</td>
-							<td>5833</td>
-							<td>7.58</td>
-						</tr>
-						<tr>
-							<td>Animal</td>
-							<td>3209</td>
-							<td>8.27</td>
-						</tr>
-					</tbody>
-					<br>
-					<!-- <caption>Number of tables and premise-hypothesis
-					pairs for each data split</caption> -->
-				</table>
-                                <caption><strong>Category Statistics: </strong>Number of tables in each category and average number of rows (AR) across different languages. Statistics on all categories present in the paper above.</caption>
+				<table style="margin-left:0%;margin-right:0%;text-align: center">
+					<col>
+					<colgroup span="4"></colgroup>
+					  <td rowspan="2"><strong>Data Source</strong></td>
+					  <th colspan="4" scope="colgroup">Question Type Statistics</th>
+					</tr>
+					<tr>
+					  <th scope="col"><strong>Explicit Ques</strong></th>
+					  <th scope="col"><strong>Implicit Ques</strong></th>
+					  <th scope="col"><strong>Visual Ques</strong></th>
+					  <th scope="col"><strong>Answer-Mention Ques</strong></th>
+					</tr>
+					<tr>
+					  <th scope="row"><strong>FeTaQA</strong></th>
+					  <td>2,499</td>
+					  <td>612</td>
+					  <td>1,185</td>
+					  <td>3,180</td>
+					</tr>
+					<tr>
+					  <th scope="row"><strong>WikiTable-Questions</strong></th>
+					  <td>3,523</td>
+					  <td>2,879</td>
+					  <td>877</td>
+					  <td>2,773</td>
+					</tr>
+					<tr>
+					  <th scope="row"><strong>WikiSQL</strong></th>
+					  <td>12,956</td>
+					  <td>315</td>
+					  <td>1,827</td>
+					  <td>6,374</td>
+					</tr>
+					<tr>
+					  <th scope="row"><strong>HybridQA</strong></th>
+					  <td>5,819</td>
+					  <td>17,647</td>
+					  <td>1,874</td>
+					  <td>5,130</td>
+					</tr>
+				  </table>
+				  
+                                <caption><strong>Question Type Statistics: </strong>Distribution of the different types of questions in the dataset.</caption>
 			</div>
-
-			<h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Test Sets</h3>
-			<p style="text-align: justify;">We created several test sets to evaluate the alignment accuracy of our pipeline for different configurations.</p>
-
-                        <ul>
-                        <li>
-			<h4><a id="user-content-header-4" class="anchor" href="#header-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Translations Based Test Set:</h4>
-			<p style="text-align: justify;">For the translation-based test sets, we employed translations (Google or cutting-edge translation models) and covered approximately 1500 tables for both <strong>English to X</strong> and <strong>X to Y</strong> alignments. Here, <strong>X</strong> and <strong>Y</strong> represent non-English languages. Annotators obtained preliminary alignments from our alignment pipeline. The goal was to evaluate and verify the veracity of these alignments, remedy any errors, and add any missing ones.</p>
-                        </li> 
-                        <li>
-			<h4><a id="user-content-header-4" class="anchor" href="#header-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Native Speaker Annotated True Test Set:</h4>
-			<p style="text-align: justify;">Similarly, we created a second test set without using translations; instead, native speakers of the language completed alignment annotations (<strong>English and Hindi</strong>, <strong>English and Chinese</strong>, roughly 200 tables in each language pair).
-</p>
-
-			<!--<p style="text-align: justify;">Through these test sets, we aimed to assess the accuracy and reliability of the alignment pipeline by comparing the alignments generated against the expected alignments. This process helped us validate the effectiveness of our alignment techniques and improve the quality of the generated alignments.</p> -->
-
-                        </li> 
-                        <li>
-			<h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Metadata</h3>
-			<p style="text-align: justify;">Human annotators also classify the types of errors present in the test data in one of the five categories 1) Disambiguation 2) Multiple alignments 3) Partial or incorrect extraction 4) Wrong_translations 5) Key Paraphrasing. This evaluation helps standardizing and comparing update methods against each other.
-
-                        </li> 
-                        </ul>
-
+			<h2><a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dataset Creation</h2>
+			<p>The figure below shows the steps followed for creating the dataset:</p>
+			<p style="margin-left:20%; margin-right:20%;"><img src="figures/dataset_diagram.png" style="max-width:95%;"></p>
 			
-			<h2><a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a> Synchronization Methodology </h2>
-			<p style="text-align: justify;">Our proposed approach for table synchronization involves two steps:
-<ul> 
-<li><strong>Information Alignment</strong>, which focuses on aligning table rows. We utilize corpus statistics from Wikipedia, considering both key and value-based similarities to align rows in multilingual tables. 
-</li> <li> <strong>Information Update</strong>, which aims to update missing or outdated rows across different language pairs to ensure consistency. <!--We employ a rule-based approach that consists of nine curated rules. These rules include row transfer, time-based updates, value trends, multikey matching, appending values, prioritizing high to low resource information, handling differences in the number of rows, and dealing with rare keys. --></li></ul> </p>
-                        <p style="text-align: justify;">  We evaluate the effectiveness of both tasks using the InfoSync dataset. Additionally, we conduct an online experiment adhering to Wikipedia editing guidelines, where we submit detected mismatches for review by Wikipedia editors. We track the number of edits approved or refused by the editors.</p>
-			<h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Information Alignment</h3>
-			<p style="text-align: justify;">The proposed method consists of five modules designed to generate additional alignments sequentially by aligning table rows with relaxed matching requirements.</h3>
-			<ol>
-			<li>
-			<p style="text-align: justify;"><b> Corpus-based:</b> Aligns rows based on the cosine similarity of their English translations, taking multiple translations into account using majority voting. Accurate key translations take into account additional context, such as key values and categories.
-			</li>
-			<li>
-			<p style="text-align: justify;"><b> Key-only:</b> Attempts to align unaligned pairs from the previous module by computing cosine similarity of their English translations, with a threshold for selecting mutually most similar keys.</p>
-			</li>
-			<li>
-			<p style="text-align: justify;"><b> Key value bidirectional:</b> Similar to the previous step, but computes similarities using the entire row (key + value) and applies a threshold for alignment.</p>
-			</li>
-			<li>
-			<p style="text-align: justify;"><b> Key value unidirectional:</b> Relaxes the bidirectional mapping constraint by considering the highest similarity in either direction, using a higher threshold to avoid spurious alignments.</p>
-			</li>
-			<li>
-			<p style="text-align: justify;"><b> Multi-key:</b> Allows for the selection of multiple keys (up to two) based on a threshold, with a soft constraint for value-combination alignment. Valid multi-key alignment occurs when the merge value-combination similarity score exceeds that of the most similar key.</p>
-			</li>
-			</ol>
-			
-			
-			
-			
-			
-			<p style="text-align: justify;">In summary, these five modules progressively relax the matching requirements, incorporating different aspects of the table rows, to generate alignments based on cosine similarity scores.</p> 
-			<!-- <p style="margin-left:10%; margin-right:10%;"><img src="figures/Figure-3.png" style="max-width:95%;"></p> -->
-			<h4><a id="user-content-header-4" class="anchor" href="#header-4" aria-hidden="true"><span class="octicon octicon-link"></span></a><b>Alignment Example And Evaluation</b></h4>
-			<!-- <p style="text-align: justify; display:inline;">Below is an update example. The infobox for Shirley Strickland de la Hunty has been updated to include information in both English and Spanish. It shows rows transfer for missing information, value substitution because "Aged 78" is absent in Died. Additionally, one medal
-				infomation (Bronze,1952, 100m) is added in to medal tally.</p> -->
-			
-            <figure> <p style="margin-left:10%; margin-right:10%;"><img src="figures/Slide5.png" style="max-width:95%;"></p> <figcaption><b>Explanation of Alignment Performance Metrics</b>: <b>T</b><sub>en</sub> and <b>T</b><sub>hi</sub> are a collection of all rows in the English and Hindi tables, respectively. <b>R</b><sub>x</sub><sup>n</sup> represents the <em>n</em><sup>th</sup> row in the language table. <b>R</b><sub>x</sub>(<b>X</b>) retrieves all rows in the language <em>x</em> using mapping  <b>X</b>. |.| represents the set's cardinality. Every alignment is saved as a tuple in form (<b>R</b><sub>x</sub><sup>m</sup>, <b>R</b><sub>y</sub><sup>n</sup>). <b>G</b> is a collection of all gold (human) alignments. <b>P</b> is a collection of predicted alignments (can see there are mistakes in the alignment.</figcaption>
-</figure>
- 
-			<h3><a id="user-content-header-3" class="anchor" href="#header-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Information Updation</h3>
-			<p style="text-align: justify;"> We proposed a rule-based heuristic approach for information updates. These rules are applied
-				sequentially according to their priority rank (P.R.).</p>
-            <ol>
-			<li>
-			<p style="text-align: justify;"><b> Row Transfer (R1): </b> Unaligned rows are transferred from one table to another.</p>
-			</li>
-			<li>
-			<p style="text-align: justify;"><b> Mutli-Match (R2): </b> Updating the table by handling multi-alignments and merging information to address cases with multiple key alignments.</p>
-			</li>
-			<li>
-			<p style="text-align: justify;"><b> Time Based (R3): </b> Updating aligned values using the latest timestamp to ensure the information reflects the most current data.</p>
-			</li>
-			<li>
-			<p style="text-align: justify;"><b> Trends positive/negative (R4):</b> Updating values based on identified monotonic patterns (increasing or decreasing) over time, particularly applicable to athlete career statistics.</p>
-			</li>
-			<li>
-			<p style="text-align: justify;"><b> Append Values (R5):</b> Appending additional value information from an up-to-date row to update outdated rows.</p>
-			</li>
-			<li>
-			<p style="text-align: justify;"><b> HR to LR (R6):</b> Transferring information from a high resource language to a low resource language to update outdated information.</p>
-			</li>
-			<li>
-			<p style="text-align: justify;"><b> #Rows (R7):</b> Transferring information from a table with a greater number of rows to a table with fewer rows.</p>
-			</li>
-			<li>
-			<p style="text-align: justify;"><b> Non Popular Keys (R8):</b> Updating information from a table where recently added non-popular keys are likely to exist in order to update outdated tables.</p> 
-			</li>
-			</ol>
-			
-			<h4><a id="user-content-header-4" class="anchor" href="#header-4" aria-hidden="true"><span class="octicon octicon-link"></span></a><b>Updation Example</b></h4>
-			<p style="text-align: justify; display:inline;">Below is an update example. The infobox for Shirley Strickland de la Hunty has been updated to include information in both English and Spanish. It shows rows transfer for missing information, value substitution because "Aged 78" is absent in Died. Additionally, one medal
-				infomation (Bronze,1952, 100m) is added in to medal tally.</p>
-			<p style="margin-left:10%; margin-right:10%;"><img src="figures/Figure-3.png" style="max-width:95%;"></p>
-
-			<!-- <h2><a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reasoning</h2>
-			<p style="text-align: justify;">To study the nature of reasoning that is involved in deciding the relationship between a table and a hypothesis, we adapted the set of reasoning categories from <a href="https://gluebenchmark.com">GLUE Benchmark</a> to table premises. All definitions and their boundaries were verified with several rounds of discussions. Following this, three graduate students (authors of the paper) independently annotated 160 pairs from the dev and alpha 3 test sets each, and edge cases were adjudicated to arrive at consensus labels.</p>
+			<h2><a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dataset Examples</h2>
 			<figure>
-				<img src="figures/reasoning.png" style="max-width:100%;">
-				<figcaption>Type and counts of reasoning in the Development and test alpha3 data splits. OOT and KCS are short forms of out-of-table and Knowledge & Common Sense, respectively.
-				</figcaption>
-			</figure> -->
-			<!-- <div>
-				<table  style="margin-left:15%;
-					margin-right:15%;">
-					<thead>
-						<tr>
-							<th>Data Split</th>
-							<th>Number of Tables</th>
-							<th>Number of Pairs</th>
-						</tr>
-					</thead>
-					<tbody align="center">
-						<tr>
-							<td>Train</td>
-							<td>1740</td>
-							<td>16538</td>
-						</tr>
-						<tr>
-							<td>Dev</td>
-							<td>200</td>
-							<td>1800</td>
-						</tr>
-						<tr>
-							<td>alpha 1</td>
-							<td>200</td>
-							<td>1800</td>
-						</tr>
-						<tr>
-							<td>alpha 2</td>
-							<td>200</td>
-							<td>1800</td>
-						</tr>
-						<tr>
-							<td>alpha 3</td>
-							<td>200</td>
-							<td>1800</td>
-						</tr>
-					</tbody>
-					<caption>Number of tables and premise-hypothesis
-					pairs for each data split</caption>
-				</table>
-			</div> -->
-			<br>
-			<!-- <div style="text-align:center;">
-				<table>
-					<thead>
-						<tr>
-							<th>Data Split</th>
-							<th>Cohen's Kappa</th>
-							<th>Human Performance</th>
-							<th>Majority Agreeement</th>
-						</tr>
-					</thead>
-					<tbody align="center">
-						<tr>
-							<td>Dev</td>
-							<td>0.78</td>
-							<td>79.78</td>
-							<td>93.53</td>
-						</tr>
-						<tr>
-							<td>alpha 1</td>
-							<td>0.80</td>
-							<td>84.04</td>
-							<td>97.48</td>
-						</tr>
-						<tr>
-							<td>alpha 2</td>
-							<td>0.80</td>
-							<td>83.88</td>
-							<td>96.77</td>
-						</tr>
-						<tr>
-							<td>alpha 3</td>
-							<td>0.74</td>
-							<td>79.33</td>
-							<td>95.58</td>
-						</tr>
-					</tbody>
-					<caption>Cohen's Kappa, human baseline and inter-annotator agreement scores</caption>
-				</table>
-			</div> -->
+				<img src="figures/ex_1.jpg">
+				<img src="figures/ex_2.jpg">
+				<img src="figures/ex_3.png">
+				<img src="figures/ex_4.png">
 
-			<h2><a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Human Assisted Wikipedia Updates</h2>
-			<p style="text-align: justify;">Information update results are given to human editors for updating Wikipedia infoboxes. Following Wikipedia's guidelines, rule set, and policies, update requests were submitted with other evidence supporting the claim. This evidence consists of the up-to-date entity page URL in the source language, the specific table rows information along with the source language, details of the proposed changes, and an additional citation provided by the editor for further validation.</p>
-			<div>
-				<table  style="margin-left:15%;
-					margin-right:15%;">
-					<thead>
-						<tr>
-							<th></th>
-							<th>Accepted</th>
-							<th>Rejected</th>
-							<th>Total</th>
-						</tr>
-					</thead>
-					<tbody align="center">
-						<tr>
-							<td>Eng => X</td>
-							<td>161</td>
-							<td>43</td>
-							<td>204</td>
-						</tr>
-						<tr>
-							<td>X => Y</td>
-							<td>169</td>
-							<td>47</td>
-							<td>216</td>
-						</tr>
-						<tr>
-							<td>X => English</td>
-							<td>136</td>
-							<td>47</td>
-							<td>183</td>
-						</tr>
-						<tr>
-							<td>Total</td>
-							<td>466</td>
-							<td>137</td>
-							<td>603</td>
-						</tr>
-					</tbody>
-					<br>
-					<!-- <caption>Number of tables and premise-hypothesis
-					pairs for each data split</caption> -->
-				</table>
-                                <caption><strong>Table : </strong>Human-Assisted Wikipedia infobox updates: Accept/Reject rate for different flows of information.</caption>
+			</figure>
+			<h2><a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Experimental Results</h2>
+			<div class="small-font">
+			<table>
+				
+				<thead>
+					<tr>
+						<th>Dataset</th>
+						<th colspan="4">WikiTableQuestions</th>
+						<th colspan="4">WikiSQL</th>
+						<th colspan="4">FetaQA</th>
+					</tr>
+					<tr>
+						<th>Model</th>
+						<th>EQ</th>
+						<th>AQ</th>
+						<th>IQ</th>
+						<th>VQ</th>
+						<th>EQ</th>
+						<th>AQ</th>
+						<th>IQ</th>
+						<th>VQ</th>
+						<th>EQ</th>
+						<th>AQ</th>
+						<th>IQ</th>
+						<th>VQ</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="midrule">
+						<td colspan="13">Partial Input Baseline</td>
+					</tr>
+					<tr>
+						<td>Gemini-1.5 Flash</td>
+						<td>40.99</td>
+						<td>27.38</td>
+						<td>48.95</td>
+						<td>31.4</td>
+						<td>39.14</td>
+						<td>28.71</td>
+						<td>62.22</td>
+						<td>28</td>
+						<td class="highlight">0.51</td>
+						<td>0.44</td>
+						<td class="highlight">0.44</td>
+						<td class="highlight">0.47</td>
+					</tr>
+					<tr>
+						<td>GPT-4o</td>
+						<td class="highlight">57.45</td>
+						<td class="highlight">38.02</td>
+						<td class="highlight">70.83</td>
+						<td class="highlight">42.40</td>
+						<td class="highlight">52.57</td>
+						<td class="highlight">43.86</td>
+						<td class="highlight">72.38</td>
+						<td class="highlight">39.00</td>
+						<td>0.51</td>
+						<td class="highlight">0.46</td>
+						<td>0.42</td>
+						<td>0.44</td>
+					</tr>
+					<tr>
+						<td>Llama-3 70B</td>
+						<td>41.13</td>
+						<td>26.48</td>
+						<td>43.75</td>
+						<td>31.8</td>
+						<td>41.117</td>
+						<td>30.75</td>
+						<td>61.27</td>
+						<td>30.6</td>
+						<td>0.52</td>
+						<td>0.46</td>
+						<td>0.45</td>
+						<td>0.48</td>
+					</tr>
+					<tr>
+						<td>Mixtral 8x7B</td>
+						<td>26.56</td>
+						<td>9.90</td>
+						<td>30.26</td>
+						<td>20.2</td>
+						<td>23.42</td>
+						<td>17.71</td>
+						<td>28.88</td>
+						<td>19.2</td>
+						<td>0.44</td>
+						<td>0.39</td>
+						<td>0.38</td>
+						<td>0.39</td>
+					</tr>
+					<tr class="midrule">
+						<td colspan="13">Oracle-Entity Replaced Baseline</td>
+					</tr>
+					<tr>
+						<td>Gemini-1.5 Flash</td>
+						<td>74.89</td>
+						<td>78.19</td>
+						<td>54.86</td>
+						<td>-</td>
+						<td>82.28</td>
+						<td>81.86</td>
+						<td>77.46</td>
+						<td>-</td>
+						<td class="highlight">0.56</td>
+						<td class="highlight">0.50</td>
+						<td>0.41</td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td>GPT-4o</td>
+						<td class="highlight">87.80</td>
+						<td class="highlight">84.86</td>
+						<td class="highlight">84.55</td>
+						<td>-</td>
+						<td class="highlight">85.57</td>
+						<td class="highlight">82.71</td>
+						<td class="highlight">79.05</td>
+						<td>39.00</td>
+						<td>0.53</td>
+						<td>0.48</td>
+						<td class="highlight">0.43</td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td>Llama-3 70B</td>
+						<td>75.74</td>
+						<td>75.31</td>
+						<td>58.85</td>
+						<td>-</td>
+						<td>78.28</td>
+						<td>78.57</td>
+						<td>68.25</td>
+						<td>-</td>
+						<td>0.49</td>
+						<td>0.46</td>
+						<td>0.41</td>
+						<td>-</td>
+					</tr>
+					<tr>
+						<td>Mixtral 8x7B</td>
+						<td>54.89</td>
+						<td>53.87</td>
+						<td>40.69</td>
+						<td>-</td>
+						<td>59.28</td>
+						<td>69.28</td>
+						<td>33.96</td>
+						<td>-</td>
+						<td>0.44</td>
+						<td>0.41</td>
+						<td>0.33</td>
+						<td>-</td>
+					</tr>
+					<tr class="midrule">
+						<td colspan="13">Image-Captioning Baseline</td>
+					</tr>
+					<tr>
+						<td>Gemini-1.5 Flash</td>
+						<td>52.34</td>
+						<td>42.16</td>
+						<td>51.39</td>
+						<td>42.2</td>
+						<td>50.42</td>
+						<td>40.85</td>
+						<td>67.30</td>
+						<td>46.6</td>
+						<td>0.57</td>
+						<td>0.46</td>
+						<td>0.42</td>
+						<td>0.43</td>
+					</tr>
+					<tr class="midrule">
+						<td colspan="13">Table-as-an-Image Baseline</td>
+					</tr>
+					<tr>
+						<td>Gemini-1.5 Flash</td>
+						<td>44.22</td>
+						<td>25.65</td>
+						<td>41.01</td>
+						<td>37.8</td>
+						<td>47.08</td>
+						<td>35.75</td>
+						<td>52.38</td>
+						<td>35.25</td>
+						<td>0.62</td>
+						<td>0.43</td>
+						<td>0.42</td>
+						<td>0.47</td>
+					</tr>
+					<tr>
+						<td>GPT-4o</td>
+						<td>66.12</td>
+						<td>50.60</td>
+						<td>62.12</td>
+						<td>46.0</td>
+						<td>72.28</td>
+						<td>64.82</td>
+						<td>58.49</td>
+						<td>32.6</td>
+						<td>0.62</td>
+						<td>0.46</td>
+						<td>0.43</td>
+						<td>0.50</td>
+					</tr>
+					<tr>
+						<td>Llama-3 70B</td>
+						<td>57.76</td>
+						<td>41.90</td>
+						<td>45.54</td>
+						<td>42.1</td>
+						<td>55.24</td>
+						<td>48.54</td>
+						<td>59.84</td>
+						<td>45.8</td>
+						<td>0.56</td>
+						<td>0.45</td>
+						<td>0.41</td>
+						<td>0.44</td>
+					</tr>
+					<tr>
+						<td>Mixtral 8x7B</td>
+						<td>40.34</td>
+						<td>20.38</td>
+						<td>41.16</td>
+						<td>30.9</td>
+						<td>38.74</td>
+						<td>29.29</td>
+						<td>39.12</td>
+						<td>30.9</td>
+						<td>0.55</td>
+						<td>0.43</td>
+						<td>0.41</td>
+						<td>0.42</td>
+					</tr>
+				</tbody>
+			</table>
 			</div>
-			<!-- <br><br>
+			<caption>Results on sampled subset of MMTabQA. Substring match is reported for Wiki-related data sources and ROUGE-L is reported for FetaQA data source. EQ - Explicit Questions, AQ - Answer-Mention Questions, IQ - Implicit Questions, VQ - Visual Questions. Best performing models are highlighted in red.</caption>
+						<!-- <br><br>
 			<div style="text-align:center;">
 				<table>
 					<thead>
@@ -465,7 +430,42 @@
 
 			<h2><a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>People</h2>
 			<p style="text-align: justify;"> The InfoSync dataset is prepared by collaboration of across multiple institutions <a href="https://www.cs.utah.edu/">University of Utah</a>, <a href="https://www.iitg.ac.in/cse/"> IIT Guwahati</a>,<a href="https://www.ctae.ac.in/"> CTAE</a>   and <a href="https://www.bloomberg.com/company/"> Bloomberg LP</a> by the following people: </p>
-			<figure>
+
+			<figure style="display: flex; flex-wrap: wrap; justify-content: center;">
+          <a href="https://www.linkedin.com/in/koseii/">
+            <img src="figures/suyash.jpg" style="width:150px; height: 150px; margin: 10px;">
+            <figcaption>Suyash Mathur</figcaption>
+        </a>
+        <a href="https://www.linkedin.com/in/purvi-chaurasia/">
+          <img src="figures/jainit.jpeg" style="width:150px; height: 150px; margin: 10px;">
+          <figcaption>Jainit Bafna</figcaption>
+      </a>
+		<a href="https://www.linkedin.com/in/yvarun25221/">
+			<img src="figures/kunal.jpeg" style="width:150px; height: 150px; margin: 10px;">
+			<figcaption>Kunal Kartik</figcaption>
+		</a>
+		<a href="https://www.linkedin.com/in/pranshu-pandya/">
+		<img src="figures/harshita.jpeg" style="width:150px; height: 150px; margin: 10px;">
+		<figcaption>Harshita Khandelwal</figcaption>
+	</a>
+	<a href="https://www.linkedin.com/in/vatsal-gupta-iitg/">
+		<img src="figures/manish.jpeg" style="width:150px; height: 150px; margin: 10px;">
+		<figcaption>Manish Shrivastava</figcaption>
+	</a>
+	<a href="https://vgupta123.github.io">
+	<img src="figures/vivekg.jpg" style="width:150px; height: 150px; margin: 10px;">
+	<figcaption>Vivek Gupta</figcaption>
+	</a>
+	<a href="https://vgupta123.github.io">
+		<img src="figures/mohit.jpeg" style="width:150px; height: 150px; margin: 10px;">
+		<figcaption>Mohit Bansal</figcaption>
+		</a>
+	<a href="https://www.cis.upenn.edu/~danroth/">
+	<img src="figures/dan.jpeg" style="width:150px; height: 150px; margin: 10px;">
+	<figcaption>Dan Roth</figcaption>
+	</a>
+      </figure> 
+			<!-- <figure>
 				<img src="figures/suyash.jpg" width="140" height="120">
 				<img src="figures/jainit.jpeg" width="140" height="120">
 				<img src="figures/kunal.jpg" width="140" height="120">
@@ -476,32 +476,24 @@
 				<img src="figures/dan.jpeg" width="140" height="120">
 
 				<figcaption>From left to right <a href="https://www.linkedin.com/in/siddharth-khincha-644a70203">Siddharth Khincha</a>,<a href="https://www.linkedin.com/in/chelsi-jain-7b0734192">Chelsi Jain</a>, <a href="https://vgupta123.github.io">Vivek Gupta*</a>,<a href="https://tushaarkataria.github.io/">Tushar Kataria*</a> and <a href="https://imsure318.github.io/">Shuo Zhang</a>. </figcaption>
-			</figure>
+			</figure> -->
 			<h2><a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Citation</h2>
 			<p style="text-align: justify;"> Please cite our paper as below if you use the InfoSync dataset.</p>
-			<pre><code> @inproceedings{khincha-etal-2023-infosync,
-    title = "{I}nfo{S}ync: Information Synchronization across Multilingual Semi-structured Tables",
-    author = "Khincha, Siddharth  and
-      Jain, Chelsi  and
-      Gupta, Vivek  and
-      Kataria, Tushar  and
-      Zhang, Shuo",
-    booktitle = "Findings of the Association for Computational Linguistics: ACL 2023",
-    month = jul,
-    year = "2023",
-    address = "Toronto, Canada",
-    publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2023.findings-acl.159",
-    pages = "2536--2559",
-    abstract = "Information Synchronization of semi-structured data across languages is challenging. For example, Wikipedia tables in one language need to be synchronized with others. To address this problem, we introduce a new dataset InfoSync and a two-step method for tabular synchronization. InfoSync contains 100K entity-centric tables (Wikipedia Infoboxes) across 14 languages, of which a subset ({\textasciitilde}3.5K pairs) are manually annotated. The proposed method includes 1) Information Alignment to map rows and 2) Information Update for updating missing/outdated information for aligned tables across multilingual tables. When evaluated on InfoSync, information alignment achieves an F1 score of 87.91 (en {\textless}-{\textgreater} non-en). To evaluate information updation, we perform human-assisted Wikipedia edits on Infoboxes for 532 table pairs. Our approach obtains an acceptance rate of 77.28{\%} on Wikipedia, showing the effectiveness of the proposed method.",
-} 
+			<pre><code>@misc{mathur2024knowledgeawarereasoningmultimodalsemistructured,
+	title={Knowledge-Aware Reasoning over Multimodal Semi-structured Tables}, 
+	author={Suyash Vardhan Mathur and Jainit Sushil Bafna and Kunal Kartik and Harshita Khandelwal and Manish Shrivastava and Vivek Gupta and Mohit Bansal and Dan Roth},
+	year={2024},
+	eprint={2408.13860},
+	archivePrefix={arXiv},
+	primaryClass={cs.CL},
+	url={https://arxiv.org/abs/2408.13860}, 
+}
 </code></pre>
 			<h2><a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Acknowledgement</h2>
-			<p style="text-align: justify;">Authors thank members of the <a href="https://svivek.com/">Utah NLP group</a> for their valuable insights and
-			suggestions at various stages of the project; and <a href="https://2023.aclweb.org/">ACL 2023</a> reviewers for pointers to
-			related works, corrections, and helpful comments. Authors thank the largest free resource <a href="https://en.wikipedia.org/wiki/Main_Page"> Wikipedia</a> for InfoSync tables.</p>
+			<p style="text-align: justify;">Research was sponsored by the Army Research Office and was accomplished under Grant Number W911NF-20-1-0080. The views and conclusions contained in this document are those of the authors and should not be interpreted as representing the official policies, either expressed or implied,
+				of the Army Research Office or the U.S. Government. The U.S. Government is authorized to reproduce and distribute reprints for Government purposes notwithstanding any copyright notation herein. This work was partially funded by ONR Contract N00014-19-1-2620. Lastly, we extend our appreciation to the reviewing team
+				for their insightful comments.
 			<footer class="site-footer">
-				<span class="site-footer-owner"><a href="https://github.com/Info-Sync/InfoSync">InfoSync</a> is maintained by <a href="https://vgupta123.github.io">Vivek Gupta</a>.</span>
 				<span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman</a> theme by <a href="https://github.com/jasonlong">jasonlong</a>.</span>
 			</footer>
 		</section>
