@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -66,7 +66,7 @@ img {vertical-align: middle;}
 }
 
 /* The dots/bullets/indicators */
-.dotinactive {
+.dot {
   cursor: pointer;
   height: 15px;
   width: 15px;
@@ -89,16 +89,6 @@ img {vertical-align: middle;}
   animation-duration: 1.5s;
 }
 
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
@@ -108,175 +98,86 @@ img {vertical-align: middle;}
 <body>
 
 <div class="slideshow-container">
+  <div id="slides-container"></div>
 
-<div class='mySlides fade'><iframe src='data/T1.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T2.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T3.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T4.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T5.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T6.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T7.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T8.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T9.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T10.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T11.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T12.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T13.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T14.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T15.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T16.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T17.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T18.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T19.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T20.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T21.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T22.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T23.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T24.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T25.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T26.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<!-- <div class='mySlides fade'><iframe src='data/T27.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div> -->
-
-<!--<div class='mySlides fade'><iframe src='data/T1264.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1252.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T927.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1967.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1601.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T89.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T2401.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1176.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1206.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T858.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T2215.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T2473.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T2372.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T2171.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1836.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1969.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T303.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1048.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1370.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T2507.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T819.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T2447.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1001.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T711.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T565.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T485.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T553.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T790.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T501.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T2561.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T533.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1432.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T774.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1435.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1707.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T822.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1494.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T595.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1493.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T2173.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T520.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1703.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1691.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T2074.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T2072.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T292.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1386.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T2604.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T33.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T2159.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T381.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T2311.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T663.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T583.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T2566.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1295.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1126.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T508.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T2418.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T86.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T306.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T2065.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T2190.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T2550.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T420.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T538.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T2515.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1553.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1338.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1541.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1274.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T2279.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1146.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T370.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T717.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1319.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T138.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1659.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T882.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T2574.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T471.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T2185.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1091.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T592.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1628.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1007.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1474.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T2323.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1686.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T930.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T2335.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T849.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1088.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T546.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T981.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T2172.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1129.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T169.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T1761.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div>
-<div class='mySlides fade'><iframe src='data/T647.html'frameborder='0'style='position: relative; height: 100vh; width:100%; margin: 5vh 0%;  '></iframe></div> -->
-
-
-
-
-
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
-
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
 </div>
 <br>
 
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-</div>
+<div style="text-align:center" id="dots-container"></div>
 
 <script>
-var slideIndex = 1;
-showSlides(slideIndex);
+  const numPages = 500; // Set the number of pages here
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+  const slidesContainer = document.getElementById('slides-container');
+  const dotsContainer = document.getElementById('dots-container');
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+  for (let i = 1; i <= numPages; i++) {
+    // Create slide elements
+    const slideDiv = document.createElement('div');
+    slideDiv.classList.add('mySlides', 'fade');
+    const iframe = document.createElement('iframe');
+    iframe.dataset.src = `data/T_${i}.html`; // Lazy load src
+    iframe.frameborder = '0';
+    iframe.style.position = 'relative';
+    iframe.style.height = '100vh';
+    iframe.style.width = '100%';
+    iframe.style.margin = '5vh 0%';
+    slideDiv.appendChild(iframe);
+    slidesContainer.appendChild(slideDiv);
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
+    // Create dot elements
+    const dotSpan = document.createElement('span');
+    dotSpan.classList.add('dot');
+    dotSpan.onclick = () => currentSlide(i);
+    dotsContainer.appendChild(dotSpan);
   }
-  slides[slideIndex-1].style.display = "block";  
-}
+
+  // Intersection Observer for lazy loading iframes
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const iframe = entry.target.querySelector('iframe');
+        if (iframe && !iframe.src) {
+          iframe.src = iframe.dataset.src; // Load the iframe content
+        }
+        observer.unobserve(entry.target); // Stop observing once loaded
+      }
+    });
+  });
+
+  document.querySelectorAll('.mySlides').forEach(slide => {
+    observer.observe(slide);
+  });
+
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
 </script>
 
 </body>
-</html> 
+</html>
