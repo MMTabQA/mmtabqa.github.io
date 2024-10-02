@@ -423,10 +423,10 @@ th {
   padding: 0;
 }
 
-.highlight {
+#highlight {
   background-color: #FFCCC9;
 }
-.midrule {
+#midrule {
   border-top: 2px solid black;
   border-bottom: 2px solid black;
 }
@@ -434,10 +434,10 @@ caption {
   margin: 10px 0;
   font-weight: bold;
 }
-.small-font {
+#small-font {
 font-size: 0.5em; /* Adjust the size as needed */
 }
 
-th, td {
+#th, td {
 text-align: center; /* Center align all text */
 }
